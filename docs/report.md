@@ -1,6 +1,6 @@
 # EditTrades call tracker report
 
-Generated 2026-09-24 03:23Z. R is gross, before fees and slippage. Not evidence of an edge. Scores the engine's calls against later closed candles.
+Generated 2026-09-24 05:24Z. R is gross, before fees and slippage. Not evidence of an edge. Scores the engine's calls against later closed candles.
 
 ## Testing phase
 
@@ -18,7 +18,7 @@ _provisional; not evidence of an edge_
 
 | Expectancy 7d | Scored 7d | Win rate 7d | Fills 7d | Losing streak 7d | Avg win R 7d | Last capture |
 | --- | --- | --- | --- | --- | --- | --- |
-| [NO SCORED CALLS YET] | 0 | – | 0 / 0 | 0 | – | 2026-09-24 03:23Z |
+| [NO SCORED CALLS YET] | 0 | – | 0 / 0 | 0 | – | 2026-09-24 05:24Z |
 
 
 ## Class check
@@ -28,7 +28,7 @@ _provisional; not evidence of an edge_
 | Class | Calls | Scored | Win rate | Exp. (gross R) | TP1 / Stop | Open | Not filled | No levels | Levels from (plan / candidate) | Verdict |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | GOOD | 0 | 0 | – | – | 0 / 0 | 0 | 0 | 0 | 0 / 0 | [0 SCORED · TOO FEW TO JUDGE] |
-| WATCH | 5 | 4 | 0% | −1.00R | 0 / 4 | 0 | 1 | 0 | 0 / 4 | [4 SCORED · TOO FEW TO JUDGE] |
+| WATCH | 7 | 4 | 0% | −1.00R | 0 / 4 | 2 | 1 | 0 | 0 / 4 | [4 SCORED · TOO FEW TO JUDGE] |
 | BAD | 4 | 1 | 100% | +1.56R | 1 / 0 | 0 | 0 | 3 | 1 / 0 | [1 SCORED · TOO FEW TO JUDGE] |
 
 
@@ -39,7 +39,10 @@ WATCH and BAD are scored as if taken: entry at the flag breakout, stop at invali
 
 _provisional; not evidence of an edge_
 
-_none yet_
+| Called | Symbol | Call | TF | Dir | Entry / stop / TP1 | Status |
+| --- | --- | --- | --- | --- | --- | --- |
+| 2026-09-24 05:24Z | BTC | WATCH | 1m | short | 84113.5 / 84200.8 / 83986.915 | pending |
+| 2026-09-24 05:24Z | SOL | WATCH | 3m | long | 115.94 / 115.45 / 117.5815 | pending |
 
 
 ## Last 7d
@@ -50,14 +53,14 @@ By class:
 
 | Class | Calls | Fills | TP1 | Stop | Open | Win rate | Exp. (gross R) | Avg net R:R (plan) | Max loss streak | Median min to TP1 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| WATCH | 5 | 4 | 0 | 4 | 0 | 0% | −1.00R | – | 4 | – |
+| WATCH | 7 | 4 | 0 | 4 | 2 | 0% | −1.00R | – | 4 | – |
 | BAD | 4 | 1 | 1 | 0 | 0 | 100% | +1.56R | 0.17 | 0 | 78 |
 
 By reason:
 
 | Reason | Calls | Fills | TP1 | Stop | Open | Win rate | Exp. (gross R) | Avg net R:R (plan) | Max loss streak | Median min to TP1 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| need_confirmed_flag_plan | 5 | 4 | 0 | 4 | 0 | 0% | −1.00R | – | 4 | – |
+| need_confirmed_flag_plan | 7 | 4 | 0 | 4 | 2 | 0% | −1.00R | – | 4 | – |
 | chase | 3 | 0 | 0 | 0 | 0 | – | – | – | 0 | – |
 | rr_below_min | 1 | 1 | 1 | 0 | 0 | 100% | +1.56R | 0.17 | 0 | 78 |
 
@@ -74,14 +77,14 @@ By class:
 
 | Class | Calls | Fills | TP1 | Stop | Open | Win rate | Exp. (gross R) | Avg net R:R (plan) | Max loss streak | Median min to TP1 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| WATCH | 5 | 4 | 0 | 4 | 0 | 0% | −1.00R | – | 4 | – |
+| WATCH | 7 | 4 | 0 | 4 | 2 | 0% | −1.00R | – | 4 | – |
 | BAD | 4 | 1 | 1 | 0 | 0 | 100% | +1.56R | 0.17 | 0 | 78 |
 
 By reason:
 
 | Reason | Calls | Fills | TP1 | Stop | Open | Win rate | Exp. (gross R) | Avg net R:R (plan) | Max loss streak | Median min to TP1 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| need_confirmed_flag_plan | 5 | 4 | 0 | 4 | 0 | 0% | −1.00R | – | 4 | – |
+| need_confirmed_flag_plan | 7 | 4 | 0 | 4 | 2 | 0% | −1.00R | – | 4 | – |
 | chase | 3 | 0 | 0 | 0 | 0 | – | – | – | 0 | – |
 | rr_below_min | 1 | 1 | 1 | 0 | 0 | 100% | +1.56R | 0.17 | 0 | 78 |
 
@@ -96,7 +99,7 @@ _provisional; not evidence of an edge_
 
 | Day | Calls | GOOD | WATCH | BAD | Ready | Fills | TP1 | Stop | Exp. |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 2026-09-24 | 5 | 0 | 2 | 3 | 0 | 0 | 0 | 0 | – |
+| 2026-09-24 | 7 | 0 | 4 | 3 | 0 | 0 | 0 | 0 | – |
 | 2026-09-23 | 4 | 0 | 3 | 1 | 0 | 0 | 0 | 0 | – |
 
 
@@ -104,4 +107,4 @@ _provisional; not evidence of an edge_
 
 _provisional; not evidence of an edge_
 
-Captures 18, gaps 15, DATA_UNAVAILABLE 0, mark drift |bps| median 1.5 / max 3.7, missing 1m candles 0.
+Captures 21, gaps 18, DATA_UNAVAILABLE 0, mark drift |bps| median 1.7 / max 7.7, missing 1m candles 0.
