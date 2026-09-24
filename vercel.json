@@ -2,5 +2,8 @@
   "outputDirectory": "docs",
   "buildCommand": "",
   "framework": null,
-  "github": { "silent": true }
+  "github": {
+    "silent": true
+  },
+  "ignoreCommand": "git log -1 --pretty=%B | grep -qF \"[skip deploy]\""
 }
