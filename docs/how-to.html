@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>EditTrades How-To</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Doto:wght@700&family=Space+Grotesk:wght@400;500&family=Space+Mono:wght@400&display=swap">
+<style>
+:root{
+  --black:#F5F5F5;--surface:#FFFFFF;--border:#E8E8E8;--border-visible:#CCCCCC;--seg-empty:#E0E0E0;
+  --text-disabled:#999999;--text-secondary:#666666;--text-primary:#1A1A1A;--text-display:#000000;
+  --success:#4A9E5C;--warning:#D4A843;--accent:#D71921;
+  --fs-sm:12px;--fs-md:24px;--fs-hero:clamp(88px,26vw,160px);
+  --grotesk:"Space Grotesk","DM Sans",system-ui,sans-serif;--mono:"Space Mono","SF Mono",ui-monospace,monospace;--doto:"Doto","Space Mono",monospace;
+  color-scheme:light}
+@media (prefers-color-scheme: light){:root:not([data-theme="dark"]){--black:#F5F5F5;--surface:#FFFFFF;--border:#E8E8E8;--border-visible:#CCCCCC;--seg-empty:#E0E0E0;--text-disabled:#999999;--text-secondary:#666666;--text-primary:#1A1A1A;--text-display:#000000;color-scheme:light}}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--black:#000000;--surface:#111111;--border:#222222;--border-visible:#333333;--seg-empty:#222222;--text-disabled:#666666;--text-secondary:#999999;--text-primary:#E8E8E8;--text-display:#FFFFFF;color-scheme:dark}}
+:root[data-theme="dark"]{--black:#000000;--surface:#111111;--border:#222222;--border-visible:#333333;--seg-empty:#222222;--text-disabled:#666666;--text-secondary:#999999;--text-primary:#E8E8E8;--text-display:#FFFFFF;color-scheme:dark}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--black);color:var(--text-primary);font:400 var(--fs-sm)/1.5 var(--grotesk)}
+main{max-width:1100px;margin:0 auto;padding:0 16px}
+.label,.prov-tag,.edge-strip,th,dt,.inst-sub,.mono-note,.empty,.empty-inline,.progress-val,.status-word,.track-val,.hero-n{font-family:var(--mono);font-size:var(--fs-sm);text-transform:uppercase;letter-spacing:.08em}
+.label,dt,th,.inst-sub{color:var(--text-secondary)}
+.prov-tag{color:var(--text-disabled)}
+.edge-strip{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 16px;padding:16px 0;color:var(--text-disabled)}
+#tracker-top-edge-strip{border-bottom:1px solid var(--border)}
+#tracker-bottom-edge-strip{border-top:1px solid var(--border);margin-top:64px;padding-bottom:32px}
+section{margin-top:48px}
+.section-head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding-bottom:8px;border-bottom:1px solid var(--border-visible);margin-bottom:16px}
+h2{margin:0;font:500 var(--fs-md)/1.2 var(--grotesk);letter-spacing:-.01em;color:var(--text-display)}
+h3{margin:24px 0 8px;font:400 var(--fs-sm)/1.2 var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--text-secondary)}
+.hero{margin-top:48px}
+.hero .section-head{border-bottom:0;padding-bottom:0;margin-bottom:0}
+.hero-empty{color:var(--text-disabled)}.hero-empty-note{margin:0 0 8px}
+.hero-value{font-family:var(--doto);font-weight:700;font-size:var(--fs-hero);line-height:1;letter-spacing:-.03em;color:var(--text-display);margin:16px 0 8px;font-variant-numeric:tabular-nums}
+.hero-unit{font-family:var(--mono);font-weight:400;font-size:var(--fs-md);letter-spacing:0;vertical-align:top;margin-left:8px;color:var(--text-secondary)}
+.hero-empty{font-size:var(--fs-md);font-family:var(--mono);font-weight:400;letter-spacing:.04em;margin:32px 0 16px}
+.hero-n{color:var(--text-primary)}
+.edge-note{margin:8px 0 0;max-width:36em;color:var(--text-secondary)}
+.instruments{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 16px}
+@media (min-width:760px){.instruments{grid-template-columns:repeat(5,minmax(0,1fr))}}
+.instrument{display:flex;flex-direction:column;gap:8px;min-width:0}
+.inst-value{font:400 var(--fs-md)/1.1 var(--mono);color:var(--text-display);font-variant-numeric:tabular-nums}
+.inst-value .empty-inline{display:block;font-size:var(--fs-sm);line-height:1.5;color:var(--text-secondary)}
+.seg{display:grid;gap:2px}
+.seg i{display:block;background:var(--seg-empty)}
+.seg i.on{background:var(--text-display)}
+.seg-std i{height:8px}
+.seg-hero i{height:16px}
+.ibar{height:4px;background:var(--seg-empty)}
+.ibar i{display:block;height:100%;background:var(--text-display)}
+.st-good{color:var(--success)!important}
+.st-warn{color:var(--warning)!important}
+.st-bad{color:var(--accent)!important}
+.dim{color:var(--text-disabled)!important}
+.note{margin:16px 0 0;color:var(--text-secondary)}
+.mono-note{margin:16px 0 0;color:var(--text-secondary)}
+.empty{margin:8px 0;color:var(--text-secondary)}
+.empty-inline{color:var(--text-secondary)}
+dl{margin:0}
+dd{margin:0}
+.stat-row{display:flex;justify-content:space-between;gap:16px;padding:8px 0;border-bottom:1px solid var(--border)}
+.stat-row dd{font-family:var(--mono);text-align:right;color:var(--text-primary);letter-spacing:.04em}
+.status-word{color:var(--text-display)}
+.progress{margin-top:24px}
+.progress-head{display:flex;justify-content:space-between;gap:16px;margin-bottom:8px}
+.progress-val{color:var(--text-display)}
+.track-row{display:grid;grid-template-columns:1fr auto;gap:4px 16px;padding:12px 0;border-bottom:1px solid var(--border)}
+.track-row dt{grid-column:1}
+.track-val{grid-column:2;grid-row:1;text-align:right;color:var(--text-primary);white-space:nowrap}
+.track-why{grid-column:1 / -1;color:var(--text-primary)}
+@media (min-width:760px){.track-row{grid-template-columns:200px 1fr auto}.track-why{grid-column:2;grid-row:1}.track-val{grid-column:3}}
+.table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;font:400 var(--fs-sm)/1.4 var(--mono);font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:8px 16px 8px 0;white-space:nowrap}
+th{font-weight:400;border-bottom:1px solid var(--border-visible)}
+td{border-bottom:1px solid var(--border);color:var(--text-primary)}
+th.num,td.num{text-align:right;padding:8px 0 8px 16px}
+.nav-link{color:var(--text-display);text-decoration:none;border-bottom:1px solid var(--border-visible)}
+.nav-link:hover{border-bottom-color:var(--text-display)}
+.howto-text{margin:16px 0 0;max-width:42em;font-size:14px;line-height:1.6;color:var(--text-primary)}
+#howto-intro-title{margin:0;font:500 clamp(32px,7vw,56px)/1.05 var(--grotesk);letter-spacing:-.02em;color:var(--text-display)}
+.howto-steps,.howto-list{margin:0;padding-left:20px;max-width:42em;font-size:14px;line-height:1.6}
+.howto-steps li,.howto-list li{padding:6px 0}
+.howto-prompt{margin:8px 0 0;padding:12px 16px;background:var(--surface);border:1px solid var(--border);font:400 var(--fs-sm)/1.5 var(--mono);color:var(--text-primary);white-space:pre-wrap;overflow-wrap:anywhere}
+
+</style>
+</head>
+<body>
+<main id="howto-page-main">
+<header class="edge-strip" id="howto-top-edge-strip"><span id="howto-page-title">EDITTRADES / HOW TO USE WITH CHATGPT</span><a class="nav-link" id="howto-back-link" href="index.html">← CALL TRACKER</a></header>
+<section id="howto-intro-section" data-section="howto-intro-section" class="hero"><h1 id="howto-intro-title">Talk to the engine, not around it.</h1><p class="howto-text" id="howto-intro-text">The EditTrades GPT reads a closed-candle snapshot of BTC, ETH and SOL from the engine before every answer. The engine owns the trade levels (entry, stop, targets, R:R). The GPT&#39;s job is to report them, explain them and size them against your wallet. Use it as a second pair of eyes with fixed rules, not as an oracle.</p></section>
+<section id="howto-session-section" data-section="howto-session-section"><div class="section-head" id="howto-session-section-head"><h2>A session, step by step</h2><span class="prov-tag">GUIDE</span></div><ol class="howto-steps" id="howto-session-steps"><li>Open a fresh chat for each session so no old prices carry over.</li><li>Send &quot;signals&quot;. Read the call line first (GO IN / HOLD / DON&#39;T), then the DATA block at the bottom to confirm the snapshot is current.</li><li>If nothing is actionable, send &quot;forming&quot;. Note each Confirmation price and Thesis Eliminated price, and set alerts on your chart.</li><li>When an alert fires, send &quot;signals&quot; again. Only act if the plan is now ready and the call says GO IN.</li><li>Enter at the quoted entry, place the quoted Stop Loss right away, and use the quoted leverage or less (never above max).</li><li>Once in, send your position details (entry, size, collateral, leverage, liquidation) to get HOLD / REDUCE / EXIT guidance and an executable protective stop.</li><li>Respect the Time Stop: when it passes, ask again and reassess.</li></ol></section>
+<section id="howto-commands-section" data-section="howto-commands-section"><div class="section-head" id="howto-commands-section-head"><h2>Commands</h2><span class="prov-tag">GUIDE</span></div><p class="howto-text" id="howto-commands-note">Type these as the whole message. Case doesn&#39;t matter.</p><dl class="track-list" id="howto-commands-list"><div class="track-row" id="howto-cmd-signals-row"><dt>signals</dt><dd class="track-why">BTC, ETH and SOL, longs and shorts. The strongest actionable asset gets the full call (thesis, GO IN / HOLD / DON&#39;T, entry, stops, targets, size). The others get one NO TRADE line each with the trigger to watch.</dd><dd class="track-val">START HERE</dd></div><div class="track-row" id="howto-cmd-trades-row"><dt>trades</dt><dd class="track-why">Same answer as signals.</dd><dd class="track-val">= SIGNALS</dd></div><div class="track-row" id="howto-cmd-forming-row"><dt>forming</dt><dd class="track-why">Flags still building on 1m / 3m / 5m, both directions: what confirms them, what kills them, when to check back. No entries or sizing.</dd><dd class="track-val">WATCHLIST</dd></div><div class="track-row" id="howto-cmd-flags-row"><dt>flags</dt><dd class="track-why">Every flag candidate per asset in every state, including failed and expired, with the engine&#39;s quality decision and reasons.</dd><dd class="track-val">FULL LIST</dd></div><div class="track-row" id="howto-cmd-track-row"><dt>track</dt><dd class="track-why">Send with a chart screenshot or a described setup you are NOT in. Replies with five lines only: TRACK YES/NO, entry condition, window, thesis null, expected trade time.</dd><dd class="track-val">SCREENSHOT</dd></div><div class="track-row" id="howto-cmd-balance-row"><dt>balance</dt><dd class="track-why">Wallet balance, exposure and P&amp;L only.</dd><dd class="track-val">ACCOUNT</dd></div><div class="track-row" id="howto-cmd-data-check-row"><dt>data check</dt><dd class="track-why">Only the data block: when the snapshot was generated, the last closed candle, schema and config version, warnings.</dd><dd class="track-val">FRESHNESS</dd></div></dl></section>
+<section id="howto-reading-section" data-section="howto-reading-section"><div class="section-head" id="howto-reading-section-head"><h2>Reading an answer</h2><span class="prov-tag">GUIDE</span></div><dl class="track-list" id="howto-reading-list"><div class="track-row" id="howto-read-call-row"><dt>GO IN / HOLD / DON&#39;T</dt><dd class="track-why">Three percentages that add to 100. GO IN needs at least 65% plus a ready engine plan, entry, confirmation, stop, targets and acceptable wallet risk. Anything less is HOLD or DON&#39;T.</dd><dd class="track-val">≥ 65% TO ACT</dd></div><div class="track-row" id="howto-read-class-row"><dt>Recommendation class</dt><dd class="track-why">The engine&#39;s 21/200 flag call: GOOD, WATCH, BAD or DATA_UNAVAILABLE, with Supports / Against / Unknown / What changes. The GPT reports it; it does not recompute it.</dd><dd class="track-val">ENGINE CALL</dd></div><div class="track-row" id="howto-read-plan-row"><dt>Plan status</dt><dd class="track-why">ready = eligible for GO IN at the quoted levels. conditional = wait for the entry condition. rejected = no trade, with a reason code (chase, rr_below_min, room_at_entry…).</dd><dd class="track-val">TRADE AUTHORITY</dd></div><div class="track-row" id="howto-read-thesis-row"><dt>Thesis Eliminated</dt><dd class="track-why">The price where the idea is wrong. For a long it sits at or below the zone low; for a short at or above the zone high. Never inside the zone.</dd><dd class="track-val">KILL LEVEL</dd></div><div class="track-row" id="howto-read-stop-row"><dt>Stop Loss</dt><dd class="track-why">The executable exit, with a buffer past Thesis Eliminated. Scalp stops are capped at 3% from entry.</dd><dd class="track-val">EXIT</dd></div><div class="track-row" id="howto-read-rr-row"><dt>R:R</dt><dd class="track-why">Trades need about 3R to TP1 before fees. Under 1R to TP1 is always DON&#39;T.</dd><dd class="track-val">≥ 3R GROSS</dd></div><div class="track-row" id="howto-read-mark-row"><dt>Mark drift</dt><dd class="track-why">Stops and liquidation hit on the Pyth mark, not the Kraken close. The GPT flags it when the gap is over 10 bps.</dd><dd class="track-val">CHECK &gt; 10 BPS</dd></div><div class="track-row" id="howto-read-data-row"><dt>DATA block</dt><dd class="track-why">Every trade answer ends with Generated At and Closed Through. If they are old, or warnings are listed, ask again before acting.</dd><dd class="track-val">ALWAYS CHECK</dd></div></dl></section>
+<section id="howto-follow-ups-section" data-section="howto-follow-ups-section"><div class="section-head" id="howto-follow-ups-section-head"><h2>Good follow-up questions</h2><span class="prov-tag">GUIDE</span></div><pre class="howto-prompt" id="howto-follow-why">Why is the BTC plan rejected?</pre><pre class="howto-prompt" id="howto-follow-changes">What would make ETH GOOD instead of WATCH?</pre><pre class="howto-prompt" id="howto-follow-bias">What&#39;s your bias on SOL right now?</pre><pre class="howto-prompt" id="howto-follow-coil">What&#39;s happening with the ETH 1h coil?</pre><pre class="howto-prompt" id="howto-follow-position">I&#39;m long BTC, entry 61000, 5x, liquidation 52400, collateral $2000. What should I do?</pre><p class="howto-text" id="howto-follow-note">For an open position, always give entry, size or notional, collateral, leverage and liquidation price. Without them it can&#39;t check that your stop clears liquidation.</p></section>
+<section id="howto-donts-section" data-section="howto-donts-section"><div class="section-head" id="howto-donts-section-head"><h2>What not to do</h2><span class="prov-tag">GUIDE</span></div><ul class="howto-list" id="howto-donts-list"><li>Don&#39;t ask it to lower the 65% threshold, widen a scalp stop past 3%, or &quot;just give me an entry&quot;. NO TRADE is a valid answer.</li><li>Don&#39;t act on an entry the engine didn&#39;t produce. If the GPT offers its own level, it must show R:R, $ loss and wallet risk, and it is labeled legacy or provisional.</li><li>Don&#39;t reuse numbers from earlier in the chat. Prices move; ask again so it pulls a fresh snapshot.</li><li>Don&#39;t treat confidence as win odds. It measures how strong the setup looks, not how likely it is to pay.</li><li>Counter-trend against the 4h is allowed, but size smaller and keep targets inside the next higher-timeframe level.</li><li>When it asks for a screenshot (visual confirmation), send the chart it names before any GO IN.</li></ul></section>
+<section id="howto-tracker-section" data-section="howto-tracker-section"><div class="section-head" id="howto-tracker-section-head"><h2>How this ties to the tracker</h2><span class="prov-tag">GUIDE</span></div><p class="howto-text" id="howto-tracker-text">The call tracker records the same engine calls every 30 minutes and scores them against later candles. Until it has enough scored plans, every number there is provisional. Check it before trusting a class: if GOOD calls are losing, that matters more than any single answer in the chat.</p><p class="howto-text" id="howto-tracker-link-row"><a class="nav-link" id="howto-tracker-link" href="index.html">OPEN THE CALL TRACKER →</a></p></section>
+<footer class="edge-strip" id="howto-bottom-edge-strip"><span id="howto-footer-note">NOT FINANCIAL ADVICE · THE ENGINE NEVER EXECUTES TRADES · YOU PLACE EVERY ORDER</span></footer>
+</main>
+</body>
+</html>
