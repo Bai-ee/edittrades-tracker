@@ -1,15 +1,15 @@
 # EditTrades call tracker report
 
-Generated 2026-09-24 18:27Z. R is gross, before fees and slippage. Not evidence of an edge. Scores the engine's calls against later closed candles.
+Generated 2026-09-24 18:34Z. R is gross, before fees and slippage. Not evidence of an edge. Scores the engine's calls against later closed candles.
 
 ## Testing phase
 
 _provisional; not evidence of an edge_
 
 - Status: RUNNING
-- Phase: Phase 4 forward paper record, start 2026-09-23, ends 2026-10-07
+- Phase: Phase 5 forward record (net-gated rules), start 2026-09-24, ends 2026-10-08
 - Target: 14 days / >= 30 scored plans
-- Progress: day 2 / 14, plans scored 1 / 30
+- Progress: day 1 / 14, plans scored 1 / 30
 - Frozen during the window: no threshold tuning
 
 ## Summary
@@ -28,8 +28,8 @@ _provisional; not evidence of an edge_
 | Class | Calls | Scored | Win rate | Exp. (gross R) | TP1 / Stop | Open | Not filled | No levels | Levels from (plan / candidate) | Verdict |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | GOOD | 1 | 1 | 0% | −1.00R | 0 / 1 | 0 | 0 | 0 | 1 / 0 | [1 SCORED · TOO FEW TO JUDGE] |
-| WATCH | 51 | 26 | 19.2% | −0.15R | 5 / 21 | 4 | 14 | 7 | 0 / 26 | FILTER CONFIRMED |
-| BAD | 72 | 14 | 57.1% | −0.03R | 8 / 6 | 1 | 9 | 48 | 14 / 0 | FILTER CONFIRMED |
+| WATCH | 48 | 24 | 20.8% | −0.08R | 5 / 19 | 4 | 13 | 7 | 0 / 24 | FILTER CONFIRMED |
+| BAD | 71 | 13 | 53.9% | −0.15R | 7 / 6 | 1 | 9 | 48 | 13 / 0 | FILTER CONFIRMED |
 
 
 WATCH and BAD are scored as if taken: entry at the flag breakout, stop at invalidation, TP1 at the measured move. Counterfactual only: never counted in the 30-plan target or the expectancy above.
