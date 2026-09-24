@@ -1,14 +1,24 @@
 # EditTrades call tracker report
 
-Generated 2026-09-23 23:55Z. R is gross, before fees and slippage.
+Generated 2026-09-24 00:06Z. R is gross, before fees and slippage. Not evidence of an edge. Scores the engine's calls against later closed candles.
+
+## Testing phase
+
+_provisional; not evidence of an edge_
+
+- Status: RUNNING
+- Phase: Phase 4 forward paper record, start 2026-09-23, ends 2026-10-07
+- Target: 14 days / >= 30 scored plans
+- Progress: day 2 / 14, plans scored 0 / 30
+- Frozen during the window: no threshold tuning
 
 ## Summary
 
 _provisional; not evidence of an edge_
 
-| Last capture | Calls today | GOOD today | Fills 7d | Win rate 7d | Expectancy 7d | Losing streak 7d |
+| Expectancy 7d | Scored 7d | Win rate 7d | Fills 7d | Losing streak 7d | Avg win R 7d | Last capture |
 | --- | --- | --- | --- | --- | --- | --- |
-| 2026-09-23 23:55Z | 4 | 0 | 0 | – | – | 0 |
+| [NO SCORED CALLS YET] | 0 | – | 0 / 0 | 0 | – | 2026-09-23 23:55Z |
 
 
 ## Open calls
