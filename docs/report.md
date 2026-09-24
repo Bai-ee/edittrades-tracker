@@ -1,6 +1,6 @@
 # EditTrades call tracker report
 
-Generated 2026-09-24 01:41Z. R is gross, before fees and slippage. Not evidence of an edge. Scores the engine's calls against later closed candles.
+Generated 2026-09-24 01:57Z. R is gross, before fees and slippage. Not evidence of an edge. Scores the engine's calls against later closed candles.
 
 ## Testing phase
 
@@ -18,16 +18,14 @@ _provisional; not evidence of an edge_
 
 | Expectancy 7d | Scored 7d | Win rate 7d | Fills 7d | Losing streak 7d | Avg win R 7d | Last capture |
 | --- | --- | --- | --- | --- | --- | --- |
-| [NO SCORED CALLS YET] | 0 | – | 0 / 0 | 0 | – | 2026-09-24 00:33Z |
+| [NO SCORED CALLS YET] | 0 | – | 0 / 0 | 0 | – | 2026-09-24 01:57Z |
 
 
 ## Open calls
 
 _provisional; not evidence of an edge_
 
-| Called | Symbol | Call | TF | Dir | Entry / stop / TP1 | Status |
-| --- | --- | --- | --- | --- | --- | --- |
-| 2026-09-23 23:55Z | BTC | BAD | 5m | short | 84421.6 / 84563.5 / 84200.8 | open |
+_none yet_
 
 
 ## Last 7d
@@ -38,16 +36,16 @@ By class:
 
 | Class | Calls | Fills | TP1 | Stop | Open | Win rate | Exp. (gross R) | Avg net R:R (plan) | Max loss streak | Median min to TP1 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| WATCH | 4 | 0 | 0 | 0 | 0 | – | – | – | 0 | – |
-| BAD | 2 | 1 | 0 | 0 | 1 | – | – | 0.17 | 0 | – |
+| WATCH | 5 | 0 | 0 | 0 | 0 | – | – | – | 0 | – |
+| BAD | 2 | 1 | 1 | 0 | 0 | 100% | +1.56R | 0.17 | 0 | 78 |
 
 By reason:
 
 | Reason | Calls | Fills | TP1 | Stop | Open | Win rate | Exp. (gross R) | Avg net R:R (plan) | Max loss streak | Median min to TP1 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| need_confirmed_flag_plan | 4 | 0 | 0 | 0 | 0 | – | – | – | 0 | – |
+| need_confirmed_flag_plan | 5 | 0 | 0 | 0 | 0 | – | – | – | 0 | – |
 | chase | 1 | 0 | 0 | 0 | 0 | – | – | – | 0 | – |
-| rr_below_min | 1 | 1 | 0 | 0 | 1 | – | – | 0.17 | 0 | – |
+| rr_below_min | 1 | 1 | 1 | 0 | 0 | 100% | +1.56R | 0.17 | 0 | 78 |
 
 Ready plans by symbol:
 
@@ -62,16 +60,16 @@ By class:
 
 | Class | Calls | Fills | TP1 | Stop | Open | Win rate | Exp. (gross R) | Avg net R:R (plan) | Max loss streak | Median min to TP1 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| WATCH | 4 | 0 | 0 | 0 | 0 | – | – | – | 0 | – |
-| BAD | 2 | 1 | 0 | 0 | 1 | – | – | 0.17 | 0 | – |
+| WATCH | 5 | 0 | 0 | 0 | 0 | – | – | – | 0 | – |
+| BAD | 2 | 1 | 1 | 0 | 0 | 100% | +1.56R | 0.17 | 0 | 78 |
 
 By reason:
 
 | Reason | Calls | Fills | TP1 | Stop | Open | Win rate | Exp. (gross R) | Avg net R:R (plan) | Max loss streak | Median min to TP1 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| need_confirmed_flag_plan | 4 | 0 | 0 | 0 | 0 | – | – | – | 0 | – |
+| need_confirmed_flag_plan | 5 | 0 | 0 | 0 | 0 | – | – | – | 0 | – |
 | chase | 1 | 0 | 0 | 0 | 0 | – | – | – | 0 | – |
-| rr_below_min | 1 | 1 | 0 | 0 | 1 | – | – | 0.17 | 0 | – |
+| rr_below_min | 1 | 1 | 1 | 0 | 0 | 100% | +1.56R | 0.17 | 0 | 78 |
 
 Ready plans by symbol:
 
@@ -84,7 +82,7 @@ _provisional; not evidence of an edge_
 
 | Day | Calls | GOOD | WATCH | BAD | Ready | Fills | TP1 | Stop | Exp. |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 2026-09-24 | 2 | 0 | 1 | 1 | 0 | 0 | 0 | 0 | – |
+| 2026-09-24 | 3 | 0 | 2 | 1 | 0 | 0 | 0 | 0 | – |
 | 2026-09-23 | 4 | 0 | 3 | 1 | 0 | 0 | 0 | 0 | – |
 
 
@@ -92,4 +90,4 @@ _provisional; not evidence of an edge_
 
 _provisional; not evidence of an edge_
 
-Captures 9, gaps 6, DATA_UNAVAILABLE 0, mark drift |bps| median 1.7 / max 3.4, missing 1m candles 0.
+Captures 12, gaps 9, DATA_UNAVAILABLE 0, mark drift |bps| median 1.5 / max 3.4, missing 1m candles 0.
