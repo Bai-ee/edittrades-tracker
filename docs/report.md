@@ -1,6 +1,6 @@
 # EditTrades call tracker report
 
-Generated 2026-09-24 02:25Z. R is gross, before fees and slippage. Not evidence of an edge. Scores the engine's calls against later closed candles.
+Generated 2026-09-24 02:34Z. R is gross, before fees and slippage. Not evidence of an edge. Scores the engine's calls against later closed candles.
 
 ## Testing phase
 
@@ -21,6 +21,20 @@ _provisional; not evidence of an edge_
 | [NO SCORED CALLS YET] | 0 | – | 0 / 0 | 0 | – | 2026-09-24 02:21Z |
 
 
+## Class check
+
+_provisional; not evidence of an edge_
+
+| Class | Calls | Scored | Win rate | Exp. (gross R) | TP1 / Stop | Open | Not filled | No levels | Levels from (plan / candidate) | Verdict |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| GOOD | 0 | 0 | – | – | 0 / 0 | 0 | 0 | 0 | 0 / 0 | [0 SCORED · TOO FEW TO JUDGE] |
+| WATCH | 5 | 4 | 0% | −1.00R | 0 / 4 | 0 | 1 | 0 | 0 / 4 | [4 SCORED · TOO FEW TO JUDGE] |
+| BAD | 2 | 1 | 100% | +1.56R | 1 / 0 | 0 | 0 | 1 | 1 / 0 | [1 SCORED · TOO FEW TO JUDGE] |
+
+
+WATCH and BAD are scored as if taken: entry at the flag breakout, stop at invalidation, TP1 at the measured move. Counterfactual only: never counted in the 30-plan target or the expectancy above.
+
+
 ## Open calls
 
 _provisional; not evidence of an edge_
@@ -36,14 +50,14 @@ By class:
 
 | Class | Calls | Fills | TP1 | Stop | Open | Win rate | Exp. (gross R) | Avg net R:R (plan) | Max loss streak | Median min to TP1 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| WATCH | 5 | 0 | 0 | 0 | 0 | – | – | – | 0 | – |
+| WATCH | 5 | 4 | 0 | 4 | 0 | 0% | −1.00R | – | 4 | – |
 | BAD | 2 | 1 | 1 | 0 | 0 | 100% | +1.56R | 0.17 | 0 | 78 |
 
 By reason:
 
 | Reason | Calls | Fills | TP1 | Stop | Open | Win rate | Exp. (gross R) | Avg net R:R (plan) | Max loss streak | Median min to TP1 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| need_confirmed_flag_plan | 5 | 0 | 0 | 0 | 0 | – | – | – | 0 | – |
+| need_confirmed_flag_plan | 5 | 4 | 0 | 4 | 0 | 0% | −1.00R | – | 4 | – |
 | chase | 1 | 0 | 0 | 0 | 0 | – | – | – | 0 | – |
 | rr_below_min | 1 | 1 | 1 | 0 | 0 | 100% | +1.56R | 0.17 | 0 | 78 |
 
@@ -60,14 +74,14 @@ By class:
 
 | Class | Calls | Fills | TP1 | Stop | Open | Win rate | Exp. (gross R) | Avg net R:R (plan) | Max loss streak | Median min to TP1 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| WATCH | 5 | 0 | 0 | 0 | 0 | – | – | – | 0 | – |
+| WATCH | 5 | 4 | 0 | 4 | 0 | 0% | −1.00R | – | 4 | – |
 | BAD | 2 | 1 | 1 | 0 | 0 | 100% | +1.56R | 0.17 | 0 | 78 |
 
 By reason:
 
 | Reason | Calls | Fills | TP1 | Stop | Open | Win rate | Exp. (gross R) | Avg net R:R (plan) | Max loss streak | Median min to TP1 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| need_confirmed_flag_plan | 5 | 0 | 0 | 0 | 0 | – | – | – | 0 | – |
+| need_confirmed_flag_plan | 5 | 4 | 0 | 4 | 0 | 0% | −1.00R | – | 4 | – |
 | chase | 1 | 0 | 0 | 0 | 0 | – | – | – | 0 | – |
 | rr_below_min | 1 | 1 | 1 | 0 | 0 | 100% | +1.56R | 0.17 | 0 | 78 |
 
