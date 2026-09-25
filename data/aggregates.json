@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-09-25T04:57:14.963Z",
+  "generatedAt": "2026-09-25T05:07:16.605Z",
   "label": "provisional; not evidence of an edge",
   "rUnits": "gross_R_before_fees_slippage",
   "tiles": {
-    "lastCapture": "2026-09-25T04:57:13.178Z",
-    "lastClosedThrough": "2026-09-25T04:57:00.000Z",
+    "lastCapture": "2026-09-25T05:07:14.332Z",
+    "lastClosedThrough": "2026-09-25T05:07:00.000Z",
     "callsToday": 38,
     "goodToday": 0,
     "fills7d": 1,
@@ -15501,7 +15501,7 @@
     }
   ],
   "captures": {
-    "captures": 471,
+    "captures": 474,
     "symbols": [
       "BTC",
       "ETH",
@@ -15511,22 +15511,22 @@
     "longestGapMinutes": 121,
     "dataUnavailable": 0,
     "markDriftBps": {
-      "samples": 468,
+      "samples": 471,
       "medianAbs": 1.8,
       "p95Abs": 7.7,
       "maxAbs": 17.9,
       "notOk": 3
     },
     "candles1m": {
-      "BTC": 2462,
-      "ETH": 2462,
-      "SOL": 2462
+      "BTC": 2472,
+      "ETH": 2472,
+      "SOL": 2472
     },
     "missing1mCandles": 0
   },
   "activity": {
     "firstRun": "2026-09-23T23:28:00.000Z",
-    "runs": 157,
+    "runs": 158,
     "runTimes48h": [
       "2026-09-23T23:28:00.000Z",
       "2026-09-23T23:55:00.000Z",
@@ -15684,7 +15684,8 @@
       "2026-09-25T04:27:00.000Z",
       "2026-09-25T04:37:00.000Z",
       "2026-09-25T04:47:00.000Z",
-      "2026-09-25T04:57:00.000Z"
+      "2026-09-25T04:57:00.000Z",
+      "2026-09-25T05:07:00.000Z"
     ],
     "recCalls24h": 205,
     "good24h": 1,
@@ -15743,53 +15744,55 @@
   "alerts": {
     "label": "provisional; not evidence of an edge",
     "tiles": {
-      "alerts7d": 9,
-      "alertsToday": 9,
+      "alerts7d": 11,
+      "alertsToday": 11,
       "medianLatencyMin": 1.7,
-      "latencyN": 9,
+      "latencyN": 11,
       "laterGoodRate": 0,
-      "laterGoodN": 9,
-      "beReadyToGoRate": null,
-      "beReadyN": 0,
-      "transitions24h": 60,
+      "laterGoodN": 11,
+      "beReadyToGoRate": 0,
+      "beReadyN": 1,
+      "transitions24h": 83,
       "transitionsPerHour": {
-        "1m": 32,
-        "3m": 19,
-        "5m": 9
+        "1m": 47,
+        "3m": 23,
+        "5m": 13
       }
     },
     "byKind7d": {
-      "WATCH": 5,
+      "WATCH": 6,
       "TRIGGERING": 3,
-      "BREAKOUT": 1
+      "BREAKOUT": 1,
+      "SETUP": 1
     },
     "byVerdict7d": {
-      "WAIT": 5,
-      "BE READY": 3,
+      "WAIT": 6,
+      "BE READY": 4,
       "STAND DOWN": 1
     },
     "byOutcome7d": {
       "pending": 6,
-      "void": 3
+      "void": 5
     },
     "byDay": [
       {
         "day": "2026-09-25",
-        "alerts": 9,
+        "alerts": 11,
         "byKind": {
-          "WATCH": 5,
+          "WATCH": 6,
           "TRIGGERING": 3,
-          "BREAKOUT": 1
+          "BREAKOUT": 1,
+          "SETUP": 1
         },
         "byVerdict": {
-          "WAIT": 5,
-          "BE READY": 3,
+          "WAIT": 6,
+          "BE READY": 4,
           "STAND DOWN": 1
         },
         "medianLatencyMin": 1.7,
         "laterGood": 0,
-        "laterGoodOf": 9,
-        "transitions": 60
+        "laterGoodOf": 11,
+        "transitions": 83
       }
     ]
   },
