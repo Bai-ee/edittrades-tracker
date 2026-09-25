@@ -1,6 +1,6 @@
 # EditTrades call tracker report
 
-Generated 2026-09-25 02:07Z. R is gross, before fees and slippage. Not evidence of an edge. Scores the engine's calls against later closed candles.
+Generated 2026-09-25 02:17Z. R is gross, before fees and slippage. Not evidence of an edge. Scores the engine's calls against later closed candles.
 
 ## Testing phase
 
@@ -19,7 +19,7 @@ _provisional; not evidence of an edge_
 
 | Expectancy 7d | Scored 7d | Win rate 7d | Fills 7d | Losing streak 7d | Avg win R 7d | Last capture |
 | --- | --- | --- | --- | --- | --- | --- |
-| −1.00R | 1 | 0% | 1 / 1 | 1 | – | 2026-09-25 02:07Z |
+| −1.00R | 1 | 0% | 1 / 1 | 1 | – | 2026-09-25 02:17Z |
 
 
 ## Class check
@@ -30,7 +30,7 @@ _provisional; not evidence of an edge_
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | GOOD | 1 | 1 | 0% | −1.00R | 0 / 1 | 0 | 0 | 0 | 1 / 0 | [1 SCORED · TOO FEW TO JUDGE] |
 | WATCH | 74 | 38 | 13.2% | −0.42R | 5 / 33 | 1 | 27 | 8 | 0 / 38 | FILTER CONFIRMED |
-| BAD | 120 | 30 | 43.3% | −0.28R | 13 / 17 | 0 | 17 | 73 | 30 / 0 | FILTER CONFIRMED |
+| BAD | 121 | 30 | 43.3% | −0.28R | 13 / 17 | 0 | 17 | 74 | 30 / 0 | FILTER CONFIRMED |
 
 
 WATCH and BAD are scored as if taken: entry at the flag breakout, stop at invalidation, TP1 at the measured move. Counterfactual only: never counted in the 30-plan target or the expectancy above.
@@ -53,7 +53,7 @@ By class:
 
 | Class | Calls | Fills | TP1 | Stop | Open | Win rate | Exp. (gross R) | Net exp. (net of fees) | Avg net R:R (plan) | Max loss streak | Median min to TP1 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| BAD | 121 | 31 | 14 | 17 | 0 | 45.2% | −0.22R | −1.75R | 0.36 | 5 | 7 |
+| BAD | 122 | 31 | 14 | 17 | 0 | 45.2% | −0.22R | −1.75R | 0.36 | 5 | 7 |
 | WATCH | 77 | 41 | 5 | 35 | 1 | 12.5% | −0.45R | −1.64R | – | 23 | 23 |
 | GOOD | 1 | 1 | 0 | 1 | 0 | 0% | −1.00R | −3.13R | 0.07 | 1 | – |
 
@@ -64,7 +64,7 @@ By reason:
 | need_confirmed_flag_plan | 77 | 41 | 5 | 35 | 1 | 12.5% | −0.45R | −1.64R | – | 23 | 23 |
 | rr_below_min | 48 | 31 | 14 | 17 | 0 | 45.2% | −0.22R | −1.75R | 0.36 | 5 | 7 |
 | room_at_entry | 45 | 0 | 0 | 0 | 0 | – | – | – | – | 0 | – |
-| chase | 28 | 0 | 0 | 0 | 0 | – | – | – | – | 0 | – |
+| chase | 29 | 0 | 0 | 0 | 0 | – | – | – | – | 0 | – |
 | ready_flag_plan | 1 | 1 | 0 | 1 | 0 | 0% | −1.00R | −3.13R | 0.07 | 1 | – |
 
 Ready plans by symbol:
@@ -82,7 +82,7 @@ By class:
 
 | Class | Calls | Fills | TP1 | Stop | Open | Win rate | Exp. (gross R) | Net exp. (net of fees) | Avg net R:R (plan) | Max loss streak | Median min to TP1 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| BAD | 121 | 31 | 14 | 17 | 0 | 45.2% | −0.22R | −1.75R | 0.36 | 5 | 7 |
+| BAD | 122 | 31 | 14 | 17 | 0 | 45.2% | −0.22R | −1.75R | 0.36 | 5 | 7 |
 | WATCH | 77 | 41 | 5 | 35 | 1 | 12.5% | −0.45R | −1.64R | – | 23 | 23 |
 | GOOD | 1 | 1 | 0 | 1 | 0 | 0% | −1.00R | −3.13R | 0.07 | 1 | – |
 
@@ -93,7 +93,7 @@ By reason:
 | need_confirmed_flag_plan | 77 | 41 | 5 | 35 | 1 | 12.5% | −0.45R | −1.64R | – | 23 | 23 |
 | rr_below_min | 48 | 31 | 14 | 17 | 0 | 45.2% | −0.22R | −1.75R | 0.36 | 5 | 7 |
 | room_at_entry | 45 | 0 | 0 | 0 | 0 | – | – | – | – | 0 | – |
-| chase | 28 | 0 | 0 | 0 | 0 | – | – | – | – | 0 | – |
+| chase | 29 | 0 | 0 | 0 | 0 | – | – | – | – | 0 | – |
 | ready_flag_plan | 1 | 1 | 0 | 1 | 0 | 0% | −1.00R | −3.13R | 0.07 | 1 | – |
 
 Ready plans by symbol:
@@ -109,7 +109,7 @@ _provisional; not evidence of an edge_
 
 | Day | Calls | GOOD | WATCH | BAD | Ready | Fills | TP1 | Stop | Exp. |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 2026-09-25 | 23 | 0 | 9 | 14 | 0 | 0 | 0 | 0 | – |
+| 2026-09-25 | 24 | 0 | 9 | 15 | 0 | 0 | 0 | 0 | – |
 | 2026-09-24 | 172 | 1 | 65 | 106 | 1 | 1 | 0 | 1 | −1.00R |
 | 2026-09-23 | 4 | 0 | 3 | 1 | 0 | 0 | 0 | 0 | – |
 
@@ -118,4 +118,4 @@ _provisional; not evidence of an edge_
 
 _provisional; not evidence of an edge_
 
-Captures 423, gaps 21, DATA_UNAVAILABLE 0, mark drift |bps| median 1.9 / max 17.9, missing 1m candles 0.
+Captures 426, gaps 21, DATA_UNAVAILABLE 0, mark drift |bps| median 1.9 / max 17.9, missing 1m candles 0.
