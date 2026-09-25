@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-09-25T11:17:17.002Z",
+  "generatedAt": "2026-09-25T11:27:14.008Z",
   "label": "provisional; not evidence of an edge",
   "rUnits": "gross_R_before_fees_slippage",
   "tiles": {
-    "lastCapture": "2026-09-25T11:17:14.256Z",
-    "lastClosedThrough": "2026-09-25T11:17:00.000Z",
-    "callsToday": 96,
+    "lastCapture": "2026-09-25T11:27:12.667Z",
+    "lastClosedThrough": "2026-09-25T11:27:00.000Z",
+    "callsToday": 98,
     "goodToday": 0,
     "fills7d": 1,
     "winRate7d": 0,
@@ -16,8 +16,8 @@
     "setupsPerDay7d": 0.143
   },
   "totals": {
-    "outcomes": 438,
-    "recCalls": 272,
+    "outcomes": 440,
+    "recCalls": 274,
     "tradable": {
       "calls": 1,
       "fills": 1,
@@ -85,12 +85,12 @@
         },
         {
           "key": "WATCH",
-          "calls": 107,
+          "calls": 109,
           "fills": 48,
           "wins": 8,
           "losses": 40,
           "open": 0,
-          "pending": 1,
+          "pending": 3,
           "expired": 0,
           "notFilled": 48,
           "rejected": 0,
@@ -129,12 +129,12 @@
       "byReason": [
         {
           "key": "need_confirmed_flag_plan",
-          "calls": 107,
+          "calls": 109,
           "fills": 48,
           "wins": 8,
           "losses": 40,
           "open": 0,
-          "pending": 1,
+          "pending": 3,
           "expired": 0,
           "notFilled": 48,
           "rejected": 0,
@@ -374,12 +374,12 @@
         },
         {
           "key": "WATCH",
-          "calls": 107,
+          "calls": 109,
           "fills": 48,
           "wins": 8,
           "losses": 40,
           "open": 0,
-          "pending": 1,
+          "pending": 3,
           "expired": 0,
           "notFilled": 48,
           "rejected": 0,
@@ -418,12 +418,12 @@
       "byReason": [
         {
           "key": "need_confirmed_flag_plan",
-          "calls": 107,
+          "calls": 109,
           "fills": 48,
           "wins": 8,
           "losses": 40,
           "open": 0,
-          "pending": 1,
+          "pending": 3,
           "expired": 0,
           "notFilled": 48,
           "rejected": 0,
@@ -623,9 +623,9 @@
   "byDay": [
     {
       "day": "2026-09-25",
-      "recCalls": 96,
+      "recCalls": 98,
       "good": 0,
-      "watch": 39,
+      "watch": 41,
       "bad": 57,
       "dataUnavailable": 0,
       "ready": 0,
@@ -662,6 +662,141 @@
     }
   ],
   "openCalls": [
+    {
+      "callId": "rec|BTC|WATCH|-|need_confirmed_flag_plan|2026-09-25T11:27:00.000Z",
+      "kind": "rec",
+      "symbol": "BTC",
+      "calledAt": "2026-09-25T11:27:00.000Z",
+      "capturedAt": "2026-09-25T11:27:12.667Z",
+      "configVersion": "2026.09.24-5",
+      "schemaVersion": "1.25.0",
+      "price": 84955.8,
+      "markDriftBps": 0.1,
+      "dims": {
+        "closedThrough": "2026-09-25T11:27:00.000Z",
+        "recClass": "WATCH",
+        "recReason": "need_confirmed_flag_plan",
+        "planStatusAtCall": null,
+        "candidateTimeframe": "3m",
+        "candidateDirection": "long",
+        "candidateState": "forming",
+        "topDown": "supports",
+        "topDownToken": "td:bull:3/4",
+        "ema200Side": "above",
+        "ema200Token": "ema200:3m:above",
+        "divergence": "mixed",
+        "source": "cron",
+        "supports": [
+          "candidate:3m-long-forming",
+          "td:bull:3/4",
+          "a200:7/7",
+          "ema200:3m:above",
+          "divergence_agrees",
+          "data_fresh"
+        ],
+        "opposes": [
+          "rr:2.11",
+          "level:15m:85256",
+          "divergence_conflicts"
+        ],
+        "unknowns": [
+          "ema200:1w:missing",
+          "4h:flat"
+        ]
+      },
+      "class": "WATCH",
+      "reasonCode": "need_confirmed_flag_plan",
+      "timeframe": "3m",
+      "direction": "long",
+      "candidateId": null,
+      "planStatus": null,
+      "planReasonCode": null,
+      "entry": 85155.3,
+      "stop": 84771.3,
+      "tp1": 85965.54000000001,
+      "grossRR": null,
+      "netRR": null,
+      "entryCondition": null,
+      "readiness": "no_plan",
+      "levelSource": "candidate",
+      "outcome": "pending",
+      "r": null,
+      "filledAt": null,
+      "resolvedAt": null,
+      "minutesToResolution": null,
+      "mode": "counterfactual_candidate",
+      "rUnits": "gross_R_before_fees_slippage",
+      "becameReady": null,
+      "readyCallId": null,
+      "scoredAt": "2026-09-25T11:27:13.357Z"
+    },
+    {
+      "callId": "rec|ETH|WATCH|-|need_confirmed_flag_plan|2026-09-25T11:27:00.000Z",
+      "kind": "rec",
+      "symbol": "ETH",
+      "calledAt": "2026-09-25T11:27:00.000Z",
+      "capturedAt": "2026-09-25T11:27:12.667Z",
+      "configVersion": "2026.09.24-5",
+      "schemaVersion": "1.25.0",
+      "price": 2727.33,
+      "markDriftBps": 0.2,
+      "dims": {
+        "closedThrough": "2026-09-25T11:27:00.000Z",
+        "recClass": "WATCH",
+        "recReason": "need_confirmed_flag_plan",
+        "planStatusAtCall": null,
+        "candidateTimeframe": "3m",
+        "candidateDirection": "long",
+        "candidateState": "forming",
+        "topDown": "supports",
+        "topDownToken": "td:bull:3/4",
+        "ema200Side": "above",
+        "ema200Token": "ema200:3m:above",
+        "divergence": "mixed",
+        "source": "cron",
+        "supports": [
+          "candidate:3m-long-forming",
+          "td:bull:3/4",
+          "a200:7/7",
+          "ema200:3m:above",
+          "divergence_agrees",
+          "data_fresh"
+        ],
+        "opposes": [
+          "ct:4h",
+          "level:15m:2745.15",
+          "divergence_conflicts"
+        ],
+        "unknowns": [
+          "ema200:1w:missing"
+        ]
+      },
+      "class": "WATCH",
+      "reasonCode": "need_confirmed_flag_plan",
+      "timeframe": "3m",
+      "direction": "long",
+      "candidateId": null,
+      "planStatus": null,
+      "planReasonCode": null,
+      "entry": 2735.26,
+      "stop": 2721.52,
+      "tp1": 2778.953200000001,
+      "grossRR": null,
+      "netRR": null,
+      "entryCondition": null,
+      "readiness": "no_plan",
+      "levelSource": "candidate",
+      "outcome": "pending",
+      "r": null,
+      "filledAt": null,
+      "resolvedAt": null,
+      "minutesToResolution": null,
+      "mode": "counterfactual_candidate",
+      "rUnits": "gross_R_before_fees_slippage",
+      "becameReady": null,
+      "readyCallId": null,
+      "scoredAt": "2026-09-25T11:27:13.357Z"
+    },
     {
       "callId": "rec|SOL|WATCH|-|need_confirmed_flag_plan|2026-09-25T11:17:00.000Z",
       "kind": "rec",
@@ -731,6 +866,141 @@
     }
   ],
   "dailyLog": [
+    {
+      "callId": "rec|BTC|WATCH|-|need_confirmed_flag_plan|2026-09-25T11:27:00.000Z",
+      "kind": "rec",
+      "symbol": "BTC",
+      "calledAt": "2026-09-25T11:27:00.000Z",
+      "capturedAt": "2026-09-25T11:27:12.667Z",
+      "configVersion": "2026.09.24-5",
+      "schemaVersion": "1.25.0",
+      "price": 84955.8,
+      "markDriftBps": 0.1,
+      "dims": {
+        "closedThrough": "2026-09-25T11:27:00.000Z",
+        "recClass": "WATCH",
+        "recReason": "need_confirmed_flag_plan",
+        "planStatusAtCall": null,
+        "candidateTimeframe": "3m",
+        "candidateDirection": "long",
+        "candidateState": "forming",
+        "topDown": "supports",
+        "topDownToken": "td:bull:3/4",
+        "ema200Side": "above",
+        "ema200Token": "ema200:3m:above",
+        "divergence": "mixed",
+        "source": "cron",
+        "supports": [
+          "candidate:3m-long-forming",
+          "td:bull:3/4",
+          "a200:7/7",
+          "ema200:3m:above",
+          "divergence_agrees",
+          "data_fresh"
+        ],
+        "opposes": [
+          "rr:2.11",
+          "level:15m:85256",
+          "divergence_conflicts"
+        ],
+        "unknowns": [
+          "ema200:1w:missing",
+          "4h:flat"
+        ]
+      },
+      "class": "WATCH",
+      "reasonCode": "need_confirmed_flag_plan",
+      "timeframe": "3m",
+      "direction": "long",
+      "candidateId": null,
+      "planStatus": null,
+      "planReasonCode": null,
+      "entry": 85155.3,
+      "stop": 84771.3,
+      "tp1": 85965.54000000001,
+      "grossRR": null,
+      "netRR": null,
+      "entryCondition": null,
+      "readiness": "no_plan",
+      "levelSource": "candidate",
+      "outcome": "pending",
+      "r": null,
+      "filledAt": null,
+      "resolvedAt": null,
+      "minutesToResolution": null,
+      "mode": "counterfactual_candidate",
+      "rUnits": "gross_R_before_fees_slippage",
+      "becameReady": null,
+      "readyCallId": null,
+      "scoredAt": "2026-09-25T11:27:13.357Z"
+    },
+    {
+      "callId": "rec|ETH|WATCH|-|need_confirmed_flag_plan|2026-09-25T11:27:00.000Z",
+      "kind": "rec",
+      "symbol": "ETH",
+      "calledAt": "2026-09-25T11:27:00.000Z",
+      "capturedAt": "2026-09-25T11:27:12.667Z",
+      "configVersion": "2026.09.24-5",
+      "schemaVersion": "1.25.0",
+      "price": 2727.33,
+      "markDriftBps": 0.2,
+      "dims": {
+        "closedThrough": "2026-09-25T11:27:00.000Z",
+        "recClass": "WATCH",
+        "recReason": "need_confirmed_flag_plan",
+        "planStatusAtCall": null,
+        "candidateTimeframe": "3m",
+        "candidateDirection": "long",
+        "candidateState": "forming",
+        "topDown": "supports",
+        "topDownToken": "td:bull:3/4",
+        "ema200Side": "above",
+        "ema200Token": "ema200:3m:above",
+        "divergence": "mixed",
+        "source": "cron",
+        "supports": [
+          "candidate:3m-long-forming",
+          "td:bull:3/4",
+          "a200:7/7",
+          "ema200:3m:above",
+          "divergence_agrees",
+          "data_fresh"
+        ],
+        "opposes": [
+          "ct:4h",
+          "level:15m:2745.15",
+          "divergence_conflicts"
+        ],
+        "unknowns": [
+          "ema200:1w:missing"
+        ]
+      },
+      "class": "WATCH",
+      "reasonCode": "need_confirmed_flag_plan",
+      "timeframe": "3m",
+      "direction": "long",
+      "candidateId": null,
+      "planStatus": null,
+      "planReasonCode": null,
+      "entry": 2735.26,
+      "stop": 2721.52,
+      "tp1": 2778.953200000001,
+      "grossRR": null,
+      "netRR": null,
+      "entryCondition": null,
+      "readiness": "no_plan",
+      "levelSource": "candidate",
+      "outcome": "pending",
+      "r": null,
+      "filledAt": null,
+      "resolvedAt": null,
+      "minutesToResolution": null,
+      "mode": "counterfactual_candidate",
+      "rUnits": "gross_R_before_fees_slippage",
+      "becameReady": null,
+      "readyCallId": null,
+      "scoredAt": "2026-09-25T11:27:13.357Z"
+    },
     {
       "callId": "rec|BTC|BAD|BTC:3m:long:2026-09-25T10:06:00.000Z|chase|2026-09-25T11:17:00.000Z",
       "kind": "rec",
@@ -19304,7 +19574,7 @@
     }
   ],
   "captures": {
-    "captures": 588,
+    "captures": 591,
     "symbols": [
       "BTC",
       "ETH",
@@ -19314,22 +19584,22 @@
     "longestGapMinutes": 121,
     "dataUnavailable": 0,
     "markDriftBps": {
-      "samples": 582,
+      "samples": 585,
       "medianAbs": 1.8,
       "p95Abs": 7.6,
       "maxAbs": 20.1,
       "notOk": 6
     },
     "candles1m": {
-      "BTC": 2842,
-      "ETH": 2842,
-      "SOL": 2842
+      "BTC": 2852,
+      "ETH": 2852,
+      "SOL": 2852
     },
     "missing1mCandles": 0
   },
   "activity": {
     "firstRun": "2026-09-23T23:28:00.000Z",
-    "runs": 196,
+    "runs": 197,
     "runTimes48h": [
       "2026-09-23T23:28:00.000Z",
       "2026-09-23T23:55:00.000Z",
@@ -19526,7 +19796,8 @@
       "2026-09-25T10:47:00.000Z",
       "2026-09-25T10:57:00.000Z",
       "2026-09-25T11:07:00.000Z",
-      "2026-09-25T11:17:00.000Z"
+      "2026-09-25T11:17:00.000Z",
+      "2026-09-25T11:27:00.000Z"
     ],
     "recCalls24h": 216,
     "good24h": 1,
@@ -19554,11 +19825,11 @@
       },
       {
         "key": "WATCH",
-        "calls": 104,
+        "calls": 106,
         "scored": 46,
         "wins": 8,
         "losses": 38,
-        "open": 1,
+        "open": 3,
         "notFilled": 47,
         "noLevels": 10,
         "winRate": 0.1739,
@@ -19585,57 +19856,57 @@
   "alerts": {
     "label": "provisional; not evidence of an edge",
     "tiles": {
-      "alerts7d": 114,
-      "alertsToday": 114,
+      "alerts7d": 115,
+      "alertsToday": 115,
       "medianLatencyMin": 0.8,
-      "latencyN": 114,
+      "latencyN": 115,
       "laterGoodRate": 0,
-      "laterGoodN": 114,
+      "laterGoodN": 115,
       "beReadyToGoRate": 0,
-      "beReadyN": 28,
-      "transitions24h": 805,
+      "beReadyN": 30,
+      "transitions24h": 822,
       "transitionsPerHour": {
-        "1m": 71.15,
-        "3m": 25.22,
-        "5m": 20.99
+        "1m": 70.75,
+        "3m": 25.2,
+        "5m": 21.07
       }
     },
     "byKind7d": {
-      "WATCH": 50,
+      "WATCH": 51,
       "TRIGGERING": 28,
       "BREAKOUT": 33,
       "SETUP": 3
     },
     "byVerdict7d": {
-      "WAIT": 50,
+      "WAIT": 51,
       "BE READY": 31,
       "STAND DOWN": 33
     },
     "byOutcome7d": {
-      "void": 41,
-      "pending": 10,
-      "confirmed": 61,
+      "void": 42,
+      "pending": 9,
+      "confirmed": 62,
       "expired": 2
     },
     "byDay": [
       {
         "day": "2026-09-25",
-        "alerts": 114,
+        "alerts": 115,
         "byKind": {
-          "WATCH": 50,
+          "WATCH": 51,
           "TRIGGERING": 28,
           "BREAKOUT": 33,
           "SETUP": 3
         },
         "byVerdict": {
-          "WAIT": 50,
+          "WAIT": 51,
           "BE READY": 31,
           "STAND DOWN": 33
         },
         "medianLatencyMin": 0.8,
         "laterGood": 0,
-        "laterGoodOf": 114,
-        "transitions": 805
+        "laterGoodOf": 115,
+        "transitions": 822
       }
     ]
   },
