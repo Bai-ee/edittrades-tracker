@@ -1,5 +1,32 @@
 # Changelog
 
+## 2026-09-25 — Telegram two-line alerts with one bold verdict; void-drift dedup (not deployed)
+
+Delivery-only; no rule, threshold, schema or config change. GPT instructions untouched.
+
+- Every flag alert is two lines. Line 1: `KIND · SYM tf DIR [forming, WATCH only] · brk · void · meas <R>` plus `counter-trend (td:<s> n/4)` only when the top-down sentiment opposes the direction; "confirmed" dropped from BREAKOUT. Line 2: one bold verdict — `GET IN NOW` (own plan ready: entry · stop · TP1 (R) · net), `BE READY (Xm)` (conditional plan, own SETUP incl. chase-rejected "no chase; enter on a retest of X that holds below", or TRIGGERING), `WAIT (Xm)` (forming), `STAND DOWN` (`<r>R room to <level> (<source>); needs 2.5R` | `entry X inside support|resistance` | `stop N% > 3% cap` | plain words). No reason codes, remedy sentences or "plan rejected:" in any alert.
+- GOOD alert uses the same shape (`GOOD · …` / `GET IN NOW …`) and keeps its chart; SETUP alert uses the BREAKOUT/BE READY shape. A BREAKOUT that already carries its own candidate's SETUP line no longer sends a second SETUP alert (remembered, not sent).
+- `/signals`: one line per symbol `<b>VERDICT (Xm)</b> · SYM · reason`, a `SETUP · …` line when setup≠null, then the one-line DATA. `/why` keeps the GPT SETUP line.
+- Dedup signature drops the void level: `symbol|tf|direction|breakout`; a breakout within 0.05% of a remembered one is the same flag (no re-alert for 60 min unless it escalates forming → triggering → confirmed; GOOD keeps candidate-id dedup). Older 5-part signatures in state still match. `test:telegram` 70 → 73 (five owner examples as long + short snapshots, void/breakout drift, escalation pass-through, no-reason-code regex).
+
+## 2026-09-25 — Telegram alert fixes: signature dedup, per-alert readiness (not deployed)
+
+Delivery-only; no rule, threshold, schema or config change.
+
+- Dedup: WATCH/TRIGGERING/BREAKOUT/SETUP also key on `symbol|tf|direction|breakout|invalidation` (2 dp), kept in `telegram/state.json` `watch.sigs` for 60 min (last 200). A re-detected forming flag whose candidateId shifted no longer re-alerts (prod 2026-09-25 02:25–02:28Z: one BTC 3m WATCH sent 3×). TRIGGERING/BREAKOUT pass once each as escalations; SETUP once. The 15-min per-symbol cooldown still gates new WATCHes; a TRIGGERING on a signature that had a WATCH passes it. candidateId memory kept.
+- Readiness per alert, not the symbol verdict: WATCH `WAIT (<eta>m)`, TRIGGERING/SETUP `BE READY (<eta>m)` (eta to that candidate timeframe's next close from asOf), BREAKOUT `GET IN NOW` (its plan ready) / `BE READY` (conditional or its SETUP) / `STAND DOWN — <short reason>` (rr, entry inside zone, chase retest, stop cap, else the code). The long remedy sentence is never the call line.
+- WATCH line: `meas <R>` plus ` · room <r>R to <level> (<source>)` when the room belongs to that candidate; SETUP/BREAKOUT Room line only for their own candidate. GOOD alerts, buttons, health alerts and `/signals` unchanged. `test:telegram` 67 → 70.
+
+## 2026-09-24 — Delivery pass: readiness call, room line, one-line DATA (schema 1.25.0, not deployed)
+
+Owner asks 2026-09-24 evening. Additive, no rule/threshold/config change (two-week freeze), configVersion unchanged; schema 1.24.0 → **1.25.0**. MCP untouched.
+
+- `flagRecommendation.action = {call, etaMin, at, note}` (`lib/flagRecommendation.js`, pure, from fields already computed): `GET IN NOW` on GOOD; `BE READY` for a conditional plan or a SETUP, `etaMin`/`at` = next close of that timeframe after `asOf` (the symbol's 1m closedThrough), note = the trigger sentence; `WAIT` for a WATCH naming a forming/triggering candidate (eta to its next close, note = change condition); `STAND DOWN` for BAD without a setup, DATA_UNAVAILABLE, or nothing forming (etaMin null).
+- `flagRecommendation.room = {toLevel, levelPrice, levelSource, pts, r, stop}`: entry to the first level ahead (TP1 cap zone edge, e.g. `15m resistance`, else the measured move) in points and R vs the stop, for the live plan, else the SETUP, else a rejected plan with levels; null otherwise.
+- GPT instructions (`docs/GPT_INSTRUCTIONS.md`, 7939 units / 7982 bytes): `[CALL] — ` prefix on asset lines, `Room:` on NO TRADE/SETUP lines, one-line DATA (`Data: closed HH:MMZ · status · schema·config`, `Warnings:` only when any), `getScalpContext(compact=true only)`, SETUP LINE only when `setup≠null`. Bytes freed by wording/arrow swaps, no rule dropped.
+- Telegram: `/signals` mirrors the GPT format (call prefix, Room line, one-line DATA); GOOD, SETUP, WATCH, TRIGGERING and BREAKOUT alerts carry the readiness call and room line.
+- `openapi/scalp-context.yaml`: `ReadinessAction`, `RoomAhead` schemas. Tests: `test:flagrec` 24 → 28, `test:flagrec:fixtures` 17 → 18, `test:telegram` 64 → 67; schemaVersion assertions updated.
+
 ## 2026-09-24 — Telegram alert levels + quiet hours (not deployed)
 
 - Telegram incident fix (delivery-only): `telegram/state.json` carries `stateVersion` 2 and `parseState` never throws (v1 state migrates, prefs default, memory arrays default empty, unknown fields kept; corrupt or wrong-type state resets with `reason=state_reset`); cron and webhook log `msg="<err.message>"` (200 chars, secrets redacted) on state failures; `telegram/health.json` counts consecutive cron failures (overwrite, no ETag) and sends ALERTS CRON FAILING on the 3rd, then hourly, and ALERTS CRON RECOVERED once; `/status` shows the count and last reason. `test:telegram` 58 → 64.
