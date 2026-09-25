@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-09-25T14:57:17.971Z",
+  "generatedAt": "2026-09-25T15:07:14.220Z",
   "label": "provisional; not evidence of an edge",
   "rUnits": "gross_R_before_fees_slippage",
   "tiles": {
-    "lastCapture": "2026-09-25T14:57:15.175Z",
-    "lastClosedThrough": "2026-09-25T14:57:00.000Z",
+    "lastCapture": "2026-09-25T15:07:12.727Z",
+    "lastClosedThrough": "2026-09-25T15:07:00.000Z",
     "callsToday": 127,
     "goodToday": 1,
     "fills7d": 2,
@@ -86,11 +86,11 @@
         {
           "key": "WATCH",
           "calls": 122,
-          "fills": 55,
+          "fills": 56,
           "wins": 9,
           "losses": 44,
-          "open": 2,
-          "pending": 1,
+          "open": 3,
+          "pending": 0,
           "expired": 0,
           "notFilled": 56,
           "rejected": 0,
@@ -130,11 +130,11 @@
         {
           "key": "need_confirmed_flag_plan",
           "calls": 120,
-          "fills": 53,
+          "fills": 54,
           "wins": 9,
           "losses": 42,
-          "open": 2,
-          "pending": 1,
+          "open": 3,
+          "pending": 0,
           "expired": 0,
           "notFilled": 56,
           "rejected": 0,
@@ -438,11 +438,11 @@
         {
           "key": "WATCH",
           "calls": 122,
-          "fills": 55,
+          "fills": 56,
           "wins": 9,
           "losses": 44,
-          "open": 2,
-          "pending": 1,
+          "open": 3,
+          "pending": 0,
           "expired": 0,
           "notFilled": 56,
           "rejected": 0,
@@ -482,11 +482,11 @@
         {
           "key": "need_confirmed_flag_plan",
           "calls": 120,
-          "fills": 53,
+          "fills": 54,
           "wins": 9,
           "losses": 42,
-          "open": 2,
-          "pending": 1,
+          "open": 3,
+          "pending": 0,
           "expired": 0,
           "notFilled": 56,
           "rejected": 0,
@@ -889,16 +889,16 @@
       "entryCondition": null,
       "readiness": "no_plan",
       "levelSource": "candidate",
-      "outcome": "pending",
+      "outcome": "open",
       "r": null,
-      "filledAt": null,
+      "filledAt": "2026-09-25T14:57:00.000Z",
       "resolvedAt": null,
       "minutesToResolution": null,
       "mode": "counterfactual_candidate",
       "rUnits": "gross_R_before_fees_slippage",
       "becameReady": null,
       "readyCallId": null,
-      "scoredAt": "2026-09-25T14:57:17.391Z"
+      "scoredAt": "2026-09-25T15:07:13.488Z"
     },
     {
       "callId": "rec|SOL|BAD|SOL:3m:long:2026-09-25T13:33:00.000Z|rr_below_min|2026-09-25T14:40:00.000Z",
@@ -1233,16 +1233,16 @@
       "entryCondition": null,
       "readiness": "no_plan",
       "levelSource": "candidate",
-      "outcome": "pending",
+      "outcome": "open",
       "r": null,
-      "filledAt": null,
+      "filledAt": "2026-09-25T14:57:00.000Z",
       "resolvedAt": null,
       "minutesToResolution": null,
       "mode": "counterfactual_candidate",
       "rUnits": "gross_R_before_fees_slippage",
       "becameReady": null,
       "readyCallId": null,
-      "scoredAt": "2026-09-25T14:57:17.391Z"
+      "scoredAt": "2026-09-25T15:07:13.488Z"
     },
     {
       "callId": "rec|SOL|BAD|SOL:3m:long:2026-09-25T13:33:00.000Z|rr_below_min|2026-09-25T14:40:00.000Z",
@@ -22219,7 +22219,7 @@
     }
   ],
   "captures": {
-    "captures": 657,
+    "captures": 660,
     "symbols": [
       "BTC",
       "ETH",
@@ -22229,22 +22229,22 @@
     "longestGapMinutes": 121,
     "dataUnavailable": 0,
     "markDriftBps": {
-      "samples": 651,
+      "samples": 654,
       "medianAbs": 2,
       "p95Abs": 8.6,
       "maxAbs": 20.1,
       "notOk": 6
     },
     "candles1m": {
-      "BTC": 3062,
-      "ETH": 3062,
-      "SOL": 3062
+      "BTC": 3072,
+      "ETH": 3072,
+      "SOL": 3072
     },
     "missing1mCandles": 0
   },
   "activity": {
     "firstRun": "2026-09-23T23:28:00.000Z",
-    "runs": 219,
+    "runs": 220,
     "runTimes48h": [
       "2026-09-23T23:28:00.000Z",
       "2026-09-23T23:55:00.000Z",
@@ -22464,7 +22464,8 @@
       "2026-09-25T14:27:00.000Z",
       "2026-09-25T14:37:00.000Z",
       "2026-09-25T14:47:00.000Z",
-      "2026-09-25T14:57:00.000Z"
+      "2026-09-25T14:57:00.000Z",
+      "2026-09-25T15:07:00.000Z"
     ],
     "recCalls24h": 215,
     "good24h": 1,
@@ -22529,13 +22530,13 @@
       "latencyN": 164,
       "laterGoodRate": 0.0063,
       "laterGoodN": 160,
-      "beReadyToGoRate": 0,
-      "beReadyN": 42,
-      "transitions24h": 1270,
+      "beReadyToGoRate": 0.0227,
+      "beReadyN": 44,
+      "transitions24h": 1293,
       "transitionsPerHour": {
-        "1m": 74.48,
-        "3m": 28.12,
-        "5m": 18.05
+        "1m": 74.45,
+        "3m": 28.71,
+        "5m": 17.77
       }
     },
     "byKind7d": {
@@ -22579,7 +22580,7 @@
         "medianLatencyMin": 0.8,
         "laterGood": 1,
         "laterGoodOf": 160,
-        "transitions": 1270
+        "transitions": 1293
       }
     ]
   },
