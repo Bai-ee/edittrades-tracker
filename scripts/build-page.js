@@ -30,15 +30,15 @@
 import path from 'node:path';
 import { writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
-import { parseArgs, ensureDir, readJsonl, readJson, readWallet, outcomesFile, readJournal, journalOutcomesFile } from './store.js';
+import { parseArgs, ensureDir, readJsonl, readJson, readWallet, outcomesFile, readJournal, journalOutcomesFile, telegramStatusFile } from './store.js';
 import { aggregateDataDir } from './aggregate.js';
 import { pathsFile, pathsSummary } from './paths.js';
 import { calibrationFile } from './calibration.js';
 import { shadowOutcomesFile, shadowSummaryFile } from './shadow.js';
-import { vbShadowOutcomesFile, vbShadowSummaryFile } from './vb-shadow.js';
+import { v3ShadowOutcomesFile, v3ShadowSummaryFile } from './v3-shadow.js';
 import { PATHS } from './flag-paths.js';
 import {
-  chartKit, chartScript, callVia, equityRows, journalEquityRows, walletMarks, filterValues, walletChartRows, jsonForScript,
+  chartKit, chartScript, callVia, equityRows, journalEquityRows, setupEquityRows, walletMarks, filterValues, walletChartRows, jsonForScript,
   FILTER_DIMS, WALLET_RANGES, DEFAULT_WALLET_RANGE, NO_SCORED_CHART, NO_WALLET, NO_JOURNAL, NO_JOURNAL_TRADES, CHART_CSS
 } from './charts.js';
 import { PAGE_CSS } from './page-style.js';
@@ -50,17 +50,19 @@ export const EDGE_NOTE = "Not evidence of an edge. Scores the engine's calls aga
 export const NO_SCORED = '[NO SCORED CALLS YET]';
 
 // Active testing phase (docs/MASTER_PLAN_T6_FEE_AWARE_FLAGS.md Phase 1). Edit here when the phase changes.
-export const PHASE_NAME = 'Phase 5 forward record (net-gated rules)';
+// PHASE_START deliberately NOT moved for "D-variant revised" (owner decision
+// 2026-09-24, docs/OWNER_DECISIONS_2026-09-24.md) - the window continues, it does not
+// restart; the rule-change note lives in the dynamic configBoundary marker instead
+// (aggregate.js's configBoundary, rendered by configBoundaryNote below), not a
+// manually-maintained restart note.
+export const PHASE_NAME = 'Phase 5 forward record (2.5R gross, net gate off)';
 export const PHASE_START = '2026-09-24';
 export const PHASE_DAYS = 14;
 export const PHASE_TARGET_PLANS = 30;
+// Owner decision "D-variant revised" (docs/OWNER_DECISIONS_2026-09-24.md): thresholds stay
+// frozen through the testing window; the first day tuning may resume.
+export const FROZEN_UNTIL = '2026-10-08';
 const PHASE_START_MS = Date.parse(`${PHASE_START}T00:00:00Z`);
-
-// T6 phase 1 window restart (owner decision D1, variant V1c, config 2026.09.24-3): edit
-// alongside PHASE_NAME/PHASE_START on the next restart, or drop once the next phase
-// makes it stale. Aggregates keep every earlier call - phaseStartMs only moves the
-// testing-phase target window forward, nothing is deleted (docs/MASTER_PLAN_T6_FEE_AWARE_FLAGS.md).
-export const RESTART_NOTE = 'Window restarted 2026-09-24: GOOD now requires net R:R ≥ 2.0 after fees (flagPlan.minNetRR) and flags stay on 1m/3m/5m (unchanged). Earlier calls kept for reference.';
 
 // Tracker schedule. Must match the cron in repo-template/.github/workflows/track.yml.
 export const SCHEDULE_MINUTES = [7, 17, 27, 37, 47, 57];
@@ -209,6 +211,17 @@ function inlineBar(id, ratio) {
   return `<div class="ibar" id="${id}" role="img" aria-label="${Math.round(w)}%"><i style="width:${w.toFixed(1)}%"></i></div>`;
 }
 
+/**
+ * Config-boundary marker (T6 completion plan C3): the most recent configVersion
+ * change, gross + net expectancy before/after it, side by side. Empty string (no
+ * markup at all) when `cb` is null - single configVersion throughout, nothing to mark.
+ */
+function configBoundaryNote(cb) {
+  if (!cb) return '';
+  const seg = (s) => `n=${s.n} exp=${rVal(s.expectancy)} net=${rVal(s.netExpectancy)}`;
+  return `<p class="mono-note" id="testing-phase-config-boundary-note">CONFIG ${esc(cb.fromVersion)} &rarr; ${esc(cb.toVersion)} AT ${esc(time(cb.at))} - BEFORE (${esc(seg(cb.before))}) / AFTER (${esc(seg(cb.after))})</p>`;
+}
+
 /** One instrument = one small bento tile (a div, so no PROVISIONAL chip of its own). */
 function instrument(id, label, valueHtml, visual = '', subText = '', span = { sm: 1, lg: 3 }) {
   return tile({
@@ -228,8 +241,8 @@ function segButtons(dim, values, activeVal) {
   return values.map(([v, label]) => `<button type="button" class="seg-btn${v === activeVal ? ' is-on' : ''}" data-dim="${esc(dim)}" data-val="${esc(v)}" aria-pressed="${v === activeVal}">${esc(label)}</button>`).join('');
 }
 
-function equityBody(rows, nowMs, you = []) {
-  const values = filterValues([...rows, ...you]);
+function equityBody(rows, nowMs, you = [], setup = []) {
+  const values = filterValues([...rows, ...you, ...setup]);
   const stats = kit.equityStats(rows);
   const legend = `<div class="chart-legend" id="equity-chart-legend">`
     + `<span><svg class="swatch" viewBox="0 0 24 8" aria-hidden="true"><line class="line-main" x1="0" x2="24" y1="4" y2="4"/></svg>ENGINE CALLS</span>`
@@ -244,9 +257,9 @@ function equityBody(rows, nowMs, you = []) {
     + `<div class="chart-readout" id="equity-you-readout">${kit.youReadoutHtml(kit.equityStats(you), NO_JOURNAL_TRADES)}</div>`
     + `<div class="chart-frame-box" id="equity-chart-frame">${kit.equitySvg('equity-chart-svg', rows, SSR_WIDTH, nowMs, NO_SCORED_CHART, you)}</div>`
     + legend
-    + sub('equity-chart-caption-sub', 'How to read this chart', `<p class="note" id="equity-chart-caption">Cumulative gross R of scored ready flag plans, 1R risked per call: TP1 = +R to TP1 as walked by the scorer, stop = ${MINUS}1R. Not filled and expired calls are excluded; open calls are the hollow last point. Before fees and slippage. The dashed line is your journal trades: scored the same way from your entry, stop and TP1, or your reported R when you logged a close; filters apply through the engine call each trade links to.</p>`)
+    + sub('equity-chart-caption-sub', 'How to read this chart', `<p class="note" id="equity-chart-caption">Cumulative gross R of scored ready flag plans, 1R risked per call: TP1 = +R to TP1 as walked by the scorer, stop = ${MINUS}1R. Not filled and expired calls are excluded; open calls are the hollow last point. Before fees and slippage. The dashed line is your journal trades: scored the same way from your entry, stop and TP1, or your reported R when you logged a close; filters apply through the engine call each trade links to. SETUPs (T6 completion plan C2) are what-if only, shown in the filter table below, not the line above - never entered, walked forward only if the trigger actually occurred.</p>`)
     + filters
-    + sub('equity-filter-table-sub', 'By filter', `<div class="table-scroll" id="equity-filter-table-scroll">${kit.filterTableHtml(rows, {}, FILTER_DIMS, you)}</div>`);
+    + sub('equity-filter-table-sub', 'By filter', `<div class="table-scroll" id="equity-filter-table-scroll">${kit.filterTableHtml(rows, {}, FILTER_DIMS, you, setup)}</div>`);
 }
 
 function walletBody(rows, goods, nowMs, marks = []) {
@@ -507,33 +520,32 @@ function shadowBody(summary, rows) {
       table('breakout-shadow-list-table', ['Time', 'Symbol', 'TF', 'Dir', 'Entry / stop / TP1', 'Outcome', 'R'], shadowListRows(rows), NO_SHADOW));
 }
 
-// ---------- V-B shadow (T6 completion plan D-variant, owner-approved 2026-09-24; shadow mode, never traded) ----------
+// ---------- 3R shadow, former live rule (T6 completion plan "D-variant revised", owner decision 2026-09-24; shadow mode, never traded) ----------
 
-export const NO_VB_SHADOW = '[NO V-B SHADOW ENTRIES YET]';
-export const VB_SHADOW_MIN_N = 20;
-export const VB_SHADOW_TOO_FEW = 'TOO FEW CALLS';
-// Cannot backfill: flagTradePlan.shadow only exists on rows captured after the engine
-// deploy that ships it (Step A + B2) goes live. Edit this line to "Accruing since
-// <ISO deploy time>" once that deploy completes - same pattern as PHASE_START/
-// RESTART_NOTE above.
-export const VB_SHADOW_ACCRUAL_NOTE = 'Not yet accruing - pending the engine deploy that ships flagTradePlan.shadow (Step A + B2), held by the Vercel daily deployment cap; ETA ~2026-09-25 12:30 CDT.';
-export const VB_SHADOW_NOTE = `Shadow mode: gross minRR lowered to 2.5 (T6 completion plan D-variant, docs/OWNER_DECISIONS_2026-09-24.md), computed by the engine itself with real ATR and retest-hold - not an approximation, never traded, never feeds flagTradePlan/flagRecommendation/class logic or any gate. ${VB_SHADOW_ACCRUAL_NOTE} Revisit 2026-10-07, n >= 20 scored plans each side (this vs V1c live) - see docs/OWNER_DECISIONS_2026-09-24.md.`;
+export const NO_V3_SHADOW = '[NO 3R SHADOW ENTRIES YET]';
+export const V3_SHADOW_MIN_N = 20;
+export const V3_SHADOW_TOO_FEW = 'TOO FEW CALLS';
+// Cannot backfill: flagTradePlan.shadow.v3 only exists on rows captured after this
+// deploy goes live. Edit this line again if the deploy timeline changes - same
+// pattern as PHASE_START above.
+export const V3_SHADOW_ACCRUAL_NOTE = 'Accruing since this deploy (D-variant revised, 2026-09-24) - nothing captured before that carries a v3 shadow field.';
+export const V3_SHADOW_NOTE = `Shadow mode: the former live rule (gross minRR 3.0) kept as a comparator now that the live rule is gross minRR 2.5; the net gate is off in both, so only the gross floor differs (owner decision "D-variant revised", docs/OWNER_DECISIONS_2026-09-24.md - lean toward producing GOOD calls so the strategy can be tracked and tweaked) - computed by the engine itself with real ATR and retest-hold, not an approximation, never traded, never feeds flagTradePlan/flagRecommendation/class logic or any gate. ${V3_SHADOW_ACCRUAL_NOTE}`;
 
-export const EMPTY_VB_SHADOW_SUMMARY = {
+export const EMPTY_V3_SHADOW_SUMMARY = {
   generatedAt: null, n: 0, resolvedN: 0, open: 0, expired: 0, winRate: null, grossExpectancyR: null, netExpectancyR: null, netExpectancyR_dirCost: null
 };
 
-function vbShadowSummaryBody(summary) {
-  const row = summary.n < VB_SHADOW_MIN_N
-    ? ['V-B (minRR 2.5)', summary.n, { v: VB_SHADOW_TOO_FEW, cls: 'dim' }, dash, dash, dash]
-    : ['V-B (minRR 2.5)', summary.n, pct(summary.winRate),
+function v3ShadowSummaryBody(summary) {
+  const row = summary.n < V3_SHADOW_MIN_N
+    ? ['3R (minRR 3.0, former live)', summary.n, { v: V3_SHADOW_TOO_FEW, cls: 'dim' }, dash, dash, dash]
+    : ['3R (minRR 3.0, former live)', summary.n, pct(summary.winRate),
       { v: rVal(summary.grossExpectancyR), cls: rStatus(summary.grossExpectancyR) },
       { v: rVal(summary.netExpectancyR), cls: rStatus(summary.netExpectancyR) },
       { v: rVal(summary.netExpectancyR_dirCost), cls: rStatus(summary.netExpectancyR_dirCost) }];
-  return table('vb-shadow-summary-table', ['Variant', 'N', 'Win rate', 'Exp. (gross R)', 'Net exp. (flat 0.20%)', 'Net exp. (dir-cost)'], [row], NO_VB_SHADOW, 1);
+  return table('v3-shadow-summary-table', ['Variant', 'N', 'Win rate', 'Exp. (gross R)', 'Net exp. (flat 0.20%)', 'Net exp. (dir-cost)'], [row], NO_V3_SHADOW, 1);
 }
 
-function vbShadowListRows(rows) {
+function v3ShadowListRows(rows) {
   return [...rows]
     .filter((r) => r && r.outcome)
     .sort((a, b) => Date.parse(b.readyAt || 0) - Date.parse(a.readyAt || 0))
@@ -542,11 +554,11 @@ function vbShadowListRows(rows) {
       { v: r.outcome, cls: outcomeStatus(r.outcome) }, { v: rVal(r.r), cls: rStatus(r.r) }]);
 }
 
-function vbShadowBody(summary, rows) {
-  if (!summary.n) return `<p class="empty" id="vb-shadow-empty">${esc(NO_VB_SHADOW)}</p>`;
-  return vbShadowSummaryBody(summary)
-    + sub('vb-shadow-list-sub', 'Last 20 V-B shadow entries',
-      table('vb-shadow-list-table', ['Ready at', 'Symbol', 'TF', 'Dir', 'Entry / stop / TP1', 'Outcome', 'R'], vbShadowListRows(rows), NO_VB_SHADOW));
+function v3ShadowBody(summary, rows) {
+  if (!summary.n) return `<p class="empty" id="v3-shadow-empty">${esc(NO_V3_SHADOW)}</p>`;
+  return v3ShadowSummaryBody(summary)
+    + sub('v3-shadow-list-sub', 'Last 20 3R shadow entries',
+      table('v3-shadow-list-table', ['Ready at', 'Symbol', 'TF', 'Dir', 'Entry / stop / TP1', 'Outcome', 'R'], v3ShadowListRows(rows), NO_V3_SHADOW));
 }
 
 // ---------- page ----------
@@ -556,6 +568,26 @@ function vbShadowBody(summary, rows) {
  * @param {{outcomes?: Array<Object>, wallet?: Array<Object>}} [data] - raw outcome rows and
  *   wallet.jsonl rows for the charts (both optional; empty charts render their empty state)
  */
+/**
+ * Status "Alerts" fact (T-1 Telegram, docs/PLAN_TELEGRAM.md): last alert, alerts today and
+ * the Telegram cron's heartbeat age, from data/telegram-status.json (collect.js). The cron
+ * saves its heartbeat at most every 10 minutes, so the age reads up to ~10 min high.
+ * @param {Object|null} tg - telegramStatusFromState output, or null before the first pull
+ * @param {number} nowMs
+ * @returns {string} one status-fact <div>
+ */
+export function alertsFact(tg, nowMs) {
+  const none = !tg || (!tg.lastAlert && !tg.cronLastRunAt);
+  const today = new Date(nowMs).toISOString().slice(0, 10);
+  const count = tg && tg.alertsDay === today ? tg.alertsToday : 0;
+  const cronMs = tg && tg.cronLastRunAt ? Date.parse(tg.cronLastRunAt) : NaN;
+  const cronText = Number.isFinite(cronMs) ? `TELEGRAM CRON ${Math.max(0, Math.round((nowMs - cronMs) / 60_000))} MIN AGO` : 'TELEGRAM CRON NOT SEEN';
+  const main = none ? '[NO ALERTS YET]'
+    : tg.lastAlert ? `${tg.lastAlert.kind || 'ALERT'}${tg.lastAlert.symbol ? ` ${tg.lastAlert.symbol}` : ''} · ${count} today` : `[NO ALERTS YET] · ${count} today`;
+  return `<div class="status-fact" id="system-alerts-fact"><dt>Alerts</dt><dd id="system-alerts-last">${esc(main)}</dd>`
+    + `<dd class="fact-sub" id="system-alerts-sub">${esc(tg && tg.lastAlert ? `${time(tg.lastAlert.at)} · ${cronText}` : cronText)}</dd></div>`;
+}
+
 export function renderHtml(agg, data = {}) {
   const t = agg.tiles;
   const nowMs = Date.parse(agg.generatedAt);
@@ -565,6 +597,7 @@ export function renderHtml(agg, data = {}) {
   const journal = Array.isArray(data.journal) ? data.journal : [];
   const journalOutcomes = Array.isArray(data.journalOutcomes) ? data.journalOutcomes : [];
   const youRows = journalEquityRows(journalOutcomes);
+  const setupRows = setupEquityRows(outcomes);
   const marks = walletMarks(journal, journalOutcomes);
   const ev = engineVsYou(outcomes, journal, journalOutcomes);
   const goods = outcomes.filter((r) => r.kind === 'rec' && r.class === 'GOOD' && r.calledAt).map((r) => r.calledAt);
@@ -572,8 +605,8 @@ export function renderHtml(agg, data = {}) {
   const calibration = data.calibration && typeof data.calibration === 'object' ? data.calibration : EMPTY_CALIBRATION;
   const shadowRows = Array.isArray(data.shadowOutcomes) ? data.shadowOutcomes : [];
   const shadowSum = data.shadowSummary && typeof data.shadowSummary === 'object' ? data.shadowSummary : EMPTY_SHADOW_SUMMARY;
-  const vbShadowRows = Array.isArray(data.vbShadowOutcomes) ? data.vbShadowOutcomes : [];
-  const vbShadowSum = data.vbShadowSummary && typeof data.vbShadowSummary === 'object' ? data.vbShadowSummary : EMPTY_VB_SHADOW_SUMMARY;
+  const v3ShadowRows = Array.isArray(data.v3ShadowOutcomes) ? data.v3ShadowOutcomes : [];
+  const v3ShadowSum = data.v3ShadowSummary && typeof data.v3ShadowSummary === 'object' ? data.v3ShadowSummary : EMPTY_V3_SHADOW_SUMMARY;
   const w7 = agg.windows['7d'];
   const t7 = w7.tradable;
   const scored7 = t7.wins + t7.losses;
@@ -615,8 +648,8 @@ export function renderHtml(agg, data = {}) {
   // Breakout entry shadow (T4 P4): breakout-close entry scored but never traded, vs retest. Shadow mode only.
   const breakoutShadowSection = section('breakout-shadow-section', 'Breakout entry (shadow, not traded)', shadowBody(shadowSum, shadowRows), { sm: 2, lg: 12, foot: SHADOW_NOTE });
 
-  // V-B shadow (T6 completion plan D-variant): gross minRR 2.5, computed by the engine itself. Shadow mode only.
-  const vbShadowSection = section('vb-shadow-section', 'V-B shadow · gross minRR 2.5 (not traded)', vbShadowBody(vbShadowSum, vbShadowRows), { sm: 2, lg: 12, foot: VB_SHADOW_NOTE });
+  // 3R shadow, former live rule (T6 completion plan "D-variant revised"): gross minRR 3.0, computed by the engine itself. Shadow mode only.
+  const v3ShadowSection = section('v3-shadow-section', '3R shadow (former live rule) · gross minRR 3.0 (not traded)', v3ShadowBody(v3ShadowSum, v3ShadowRows), { sm: 2, lg: 12, foot: V3_SHADOW_NOTE });
 
   // Secondary: instruments, one small tile each.
   const good7 = (w7.byClass.find((g) => g.key === 'GOOD') || { calls: 0 }).calls;
@@ -632,7 +665,13 @@ export function renderHtml(agg, data = {}) {
     instrument('tile-losing-streak-7d', 'Losing streak',
       `<span class="${t.losingStreak7d >= 5 ? 'st-bad' : t.losingStreak7d ? '' : 'dim'}">${t.losingStreak7d}</span>`, '', 'MAX CONSECUTIVE STOPS'),
     instrument('tile-avg-r-7d', 'Avg win R',
-      isNum(t7.avgWinR) ? `<span class="${rStatus(t7.avgWinR)}">${esc(rVal(t7.avgWinR))}</span>` : emptyInline(), '', 'GROSS R AT TP1', { sm: 1, lg: 3 })
+      isNum(t7.avgWinR) ? `<span class="${rStatus(t7.avgWinR)}">${esc(rVal(t7.avgWinR))}</span>` : emptyInline(), '', 'GROSS R AT TP1', { sm: 1, lg: 3 }),
+    // T6 completion plan C3: visibility tiles - how often does the owner's chat see a
+    // GOOD call or a SETUP line, not just the 7-day expectancy above.
+    instrument('tile-good-per-hour-7d', 'GOOD / hour',
+      isNum(t.goodPerHour7d) ? `<span class="${t.goodPerHour7d ? '' : 'dim'}">${esc(num(t.goodPerHour7d, 3))}</span>` : emptyInline(), '', `${good7} GOOD / 7d`, { sm: 1, lg: 3 }),
+    instrument('tile-setups-per-day-7d', 'SETUPs / day',
+      isNum(t.setupsPerDay7d) ? `<span class="${t.setupsPerDay7d ? '' : 'dim'}">${esc(num(t.setupsPerDay7d, 2))}</span>` : emptyInline(), '', 'DISTINCT SETUP CANDIDATES / 7d', { sm: 1, lg: 3 })
   ];
 
   // System status: is the automated job running? Re-evaluated in the browser by statusScript().
@@ -662,7 +701,9 @@ export function renderHtml(agg, data = {}) {
     + `<div class="status-fact" id="system-last-run-fact"><dt>Last run</dt><dd id="system-last-run-age">${esc(status.mins === null ? 'none yet' : `${status.mins} min ago`)}</dd><dd class="fact-sub" id="system-last-run-time">${esc(time(t.lastCapture))}</dd></div>`
     + `<div class="status-fact" id="system-next-run-fact"><dt>Next run</dt><dd id="system-next-run">${esc(next ? `in ${Math.max(1, Math.ceil((next - nowMs) / 60_000))} min` : dash)}</dd><dd class="fact-sub">EVERY 10 MIN · :07 :17 … :57 UTC</dd></div>`
     + `<div class="status-fact" id="system-runs-fact"><dt>Runs · 24 h</dt><dd id="system-runs-24h">${runs24h} / ${expected24h || dash}</dd><dd class="fact-sub">${act.runs} since ${esc(act.firstRun ? act.firstRun.slice(0, 10) : dash)}</dd></div>`
+    + alertsFact(data.telegram || null, nowMs)
     + `</dl>`
+    + `<p class="note status-channel-note" id="system-alerts-channel-note">Alerts: Telegram @EditTrades_Bot · <a class="nav-link" id="system-alerts-channel-link" href="how-to.html#howto-telegram-section">how alerts work →</a></p>`
     + `<div class="heartbeat-wrap" id="system-heartbeat-wrap"><div class="heartbeat" id="system-heartbeat" style="grid-template-columns:repeat(${HEARTBEAT_SLOTS},1fr)" role="img" aria-label="${slotsHit} of ${expectedSlots} half-hour slots in the last 24 hours had a run">${beats}</div>`
     + `<div class="heartbeat-axis" id="system-heartbeat-axis"><span>24 H AGO</span><span class="heartbeat-key"><i class="on"></i>RUN <i class="miss"></i>MISSED</span><span>BUILT ${esc(time(agg.generatedAt).slice(11))}</span></div></div>`;
   const statusTile = tile({
@@ -688,9 +729,10 @@ export function renderHtml(agg, data = {}) {
     + `<div class="stat-row"><dt>Phase</dt><dd>${esc(PHASE_NAME.toUpperCase())}</dd></div>`
     + `<div class="stat-row"><dt>Done when</dt><dd>DAY ${PHASE_DAYS} AND ≥ ${PHASE_TARGET_PLANS} SCORED PLANS</dd></div>`
     + `<div class="stat-row"><dt>Then</dt><dd>ONE CALIBRATION PASS WITH YOU</dd></div>`
+    + `<div class="stat-row" id="testing-phase-frozen-row"><dt>Thresholds</dt><dd>FROZEN UNTIL ${esc(FROZEN_UNTIL)}</dd></div>`
     + `</dl>`
-    + `<p class="mono-note" id="testing-phase-frozen">FROZEN DURING THE WINDOW: NO THRESHOLD TUNING. ALL LABELS PROVISIONAL.</p>`
-    + `<p class="mono-note" id="testing-phase-restart-note">${esc(RESTART_NOTE)}</p>`;
+    + `<p class="mono-note" id="testing-phase-frozen">LIVE RULES: GROSS MINRR 2.5, NET GATE OFF (NET R SHOWN), 3R AS SHADOW. NO TUNING UNTIL ${esc(FROZEN_UNTIL)}. CONFIG BOUNDARY MARKED AT EACH CONFIGVERSION CHANGE; STATS SPLIT BEFORE / AFTER. ALL LABELS PROVISIONAL.</p>`
+    + configBoundaryNote(agg.configBoundary);
 
   // Activity, last 24 h.
   const activityBody = `<dl class="stat-rows" id="activity-24h-rows">`
@@ -763,12 +805,12 @@ export function renderHtml(agg, data = {}) {
     }),
     zone({
       id: 'zone-performance', title: 'Performance', sub: 'Last 7 days · gross R, before fees',
-      tiles: [hero, classCheck, flagPathsSection, pathCalibrationSection, breakoutShadowSection, vbShadowSection, ...instruments]
+      tiles: [hero, classCheck, flagPathsSection, pathCalibrationSection, breakoutShadowSection, v3ShadowSection, ...instruments]
     }),
     zone({
       id: 'zone-charts', title: 'Charts', sub: 'Engine calls, your trades, wallet',
       tiles: [
-        section('equity-chart-section', 'Engine-call equity curve', equityBody(eqRows, nowMs, youRows)),
+        section('equity-chart-section', 'Engine-call equity curve', equityBody(eqRows, nowMs, youRows, setupRows)),
         section('wallet-chart-section', 'Wallet value', walletBody(walletRows, goods, nowMs, marks))
       ]
     }),
@@ -821,7 +863,7 @@ ${topStrip}
 ${body}
 ${bottomStrip}
 </main>
-<script type="application/json" id="tracker-calls-data">${jsonForScript({ now: agg.generatedAt, dims: FILTER_DIMS, rows: eqRows, you: youRows })}</script>
+<script type="application/json" id="tracker-calls-data">${jsonForScript({ now: agg.generatedAt, dims: FILTER_DIMS, rows: eqRows, you: youRows, setup: setupRows })}</script>
 <script type="application/json" id="tracker-wallet-data">${jsonForScript({ now: agg.generatedAt, range: DEFAULT_WALLET_RANGE, rows: walletRows, good: goods, marks })}</script>
 <script>${chartScript()}${statusScript()}</script>
 </body>
@@ -849,7 +891,7 @@ export function renderReport(agg) {
   const out = [];
   out.push(`# EditTrades call tracker report\n\nGenerated ${time(agg.generatedAt)}. R is gross, before fees and slippage. ${EDGE_NOTE}\n`);
   out.push(`## Testing phase\n\n_${PROVISIONAL}_\n`);
-  out.push(`- Status: ${phase.status}\n- Phase: ${PHASE_NAME}, start ${PHASE_START}, ends ${phase.endDate}\n- Target: ${PHASE_DAYS} days / >= ${PHASE_TARGET_PLANS} scored plans\n- Progress: day ${phase.elapsed} / ${PHASE_DAYS}, plans scored ${isNum(phase.scored) ? phase.scored : dash} / ${PHASE_TARGET_PLANS}\n- Frozen during the window: no threshold tuning\n`);
+  out.push(`- Status: ${phase.status}\n- Phase: ${PHASE_NAME}, start ${PHASE_START}, ends ${phase.endDate}\n- Thresholds frozen until ${FROZEN_UNTIL}\n- Target: ${PHASE_DAYS} days / >= ${PHASE_TARGET_PLANS} scored plans\n- Progress: day ${phase.elapsed} / ${PHASE_DAYS}, plans scored ${isNum(phase.scored) ? phase.scored : dash} / ${PHASE_TARGET_PLANS}\n- Frozen during the window: no threshold tuning\n`);
   out.push(`## Summary\n\n_${PROVISIONAL}_\n`);
   out.push(mdTable(['Expectancy 7d', 'Scored 7d', 'Win rate 7d', 'Fills 7d', 'Losing streak 7d', 'Avg win R 7d', 'Last capture'],
     [[isNum(t.expectancy7d) ? rVal(t.expectancy7d) : NO_SCORED, t7.wins + t7.losses, pct(t.winRate7d), `${t7.fills} / ${t7.calls}`, t.losingStreak7d, rVal(t7.avgWinR), time(t.lastCapture)]]));
@@ -882,9 +924,10 @@ export function buildPage(dataDir, outDir, nowMs = Date.now()) {
   writeFileSync(htmlFile, renderHtml(agg, {
     outcomes: readJsonl(outcomesFile(dataDir)), wallet: readWallet(dataDir),
     journal: readJournal(dataDir), journalOutcomes: readJsonl(journalOutcomesFile(dataDir)),
+    telegram: readJson(telegramStatusFile(dataDir), null),
     paths: readJsonl(pathsFile(dataDir)), calibration: readJson(calibrationFile(dataDir), null),
     shadowOutcomes: readJsonl(shadowOutcomesFile(dataDir)), shadowSummary: readJson(shadowSummaryFile(dataDir), null),
-    vbShadowOutcomes: readJsonl(vbShadowOutcomesFile(dataDir)), vbShadowSummary: readJson(vbShadowSummaryFile(dataDir), null)
+    v3ShadowOutcomes: readJsonl(v3ShadowOutcomesFile(dataDir)), v3ShadowSummary: readJson(v3ShadowSummaryFile(dataDir), null)
   }));
   writeFileSync(mdFile, renderReport(agg));
   writeFileSync(howToFile, renderHowTo());

@@ -83,7 +83,7 @@ footer.edge-strip{border-top:1px solid var(--border);margin-top:var(--zone-gap);
 .status-big{font:400 var(--fs-md)/1 var(--mono);letter-spacing:.08em}
 .status-desc{flex:1 1 100%;color:var(--text-secondary)}
 @media (min-width:760px){.status-desc{flex:1 1 20em;text-align:right}}
-.status-facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--sp-3);padding:var(--sp-4) 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.status-facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--sp-3);padding:var(--sp-4) 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
 .status-fact{display:flex;flex-direction:column;gap:var(--sp-1);min-width:0}
 .status-fact dt{font:400 var(--fs-sm)/1.3 var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--text-secondary)}
 .status-fact dd{font:400 var(--fs-title)/1.2 var(--mono);color:var(--text-display);font-variant-numeric:tabular-nums}
@@ -191,4 +191,14 @@ th.num,td.num{text-align:right;padding:var(--sp-2) 0 var(--sp-2) var(--sp-4)}
 .howto-list li{padding:var(--sp-3) 0;border-bottom:1px solid var(--border)}
 .howto-list li:first-child{padding-top:0}
 .howto-list li:last-child{border-bottom:0;padding-bottom:0}
+.howto-list + .howto-list,.def-list + .howto-list{padding-top:var(--sp-3);border-top:1px solid var(--border)}
+.cmd-inline{font:400 var(--fs-sm)/1.4 var(--mono);letter-spacing:.04em;color:var(--text-display)}
+.menu-keys{display:flex;flex-direction:column;gap:var(--sp-2)}
+.menu-row{display:flex;gap:var(--sp-2)}
+.menu-key{flex:1 1 0;min-width:0;min-height:44px;display:flex;align-items:center;justify-content:center;padding:0 var(--sp-2);background:var(--black);border:1px solid var(--border-visible);border-radius:var(--radius-sm);font:400 var(--fs-sm)/1.2 var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--text-primary);text-align:center}
+.rules-table td{white-space:normal;vertical-align:top}
+.rules-table td.rule-name{white-space:nowrap;color:var(--text-display)}
+.rules-table td.rule-value{min-width:16em;font-family:var(--grotesk);font-size:var(--fs-body);letter-spacing:0}
+.rules-table td.rule-src{min-width:12em;color:var(--text-secondary)}
+.status-channel-note{margin:0}
 `;

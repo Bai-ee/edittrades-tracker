@@ -1,5 +1,108 @@
 # Changelog
 
+## 2026-09-24 — Telegram alert levels + quiet hours (not deployed)
+
+- Telegram incident fix (delivery-only): `telegram/state.json` carries `stateVersion` 2 and `parseState` never throws (v1 state migrates, prefs default, memory arrays default empty, unknown fields kept; corrupt or wrong-type state resets with `reason=state_reset`); cron and webhook log `msg="<err.message>"` (200 chars, secrets redacted) on state failures; `telegram/health.json` counts consecutive cron failures (overwrite, no ETag) and sends ALERTS CRON FAILING on the 3rd, then hourly, and ALERTS CRON RECOVERED once; `/status` shows the count and last reason. `test:telegram` 58 → 64.
+- `/alerts good|setup|watch` (default `setup`; `watch` adds one-line WATCH/TRIGGERING for new forming/triggering flags, deduped over 200 ids, 15-min per-symbol cooldown) and `/alerts quiet HH-HH|off` (default 01-05 America/Chicago, every day, silent not dropped), saved in `telegram/state.json` `prefs`; `TELEGRAM_QUIET_HOURS` retired. Notification-only: no engine, threshold, schema or config change.
+- Telegram BREAKOUT alert: once per candidate when it first confirms, every alert level, with Why/Chart/Took it/Skipped. Chase-rejected confirmed flags that clear every other gate now publish a retest SETUP (`wait for a <tf> retest of <entry> that holds above|below it`); live plan and class unchanged.
+- Telegram `/flags` (Flags label, Charts → All flags) sends chart albums of every live flag after the text summary: one `sendMediaGroup` per symbol, one chart per symbol+timeframe, max 9 images, 6 s render budget each with a `[chart unavailable]` text fallback; webhook `maxDuration` 60.
+- Telegram buttons: persistent reply keyboard, Charts/Alerts inline pickers, Why/Chart/Took it/Skipped on GOOD, SETUP and `/signals` (`callback_query`; setWebhook `allowed_updates` must be `["message","callback_query"]`).
+
+## 2026-09-24 — T-1 Telegram alerts + read commands (branch `upgrade-signal-engine`, not deployed)
+
+Plan: `docs/PLAN_TELEGRAM.md` (owner-approved 2026-09-24). Read-only toward the engine and
+never execution: no engine rule, threshold, schema (1.24.0) or config (2026.09.24-5) change.
+
+- `api/telegram-webhook.js` (new, `POST /api/telegram-webhook`): secret header
+  (`TELEGRAM_WEBHOOK_SECRET`, else 403), owner allowlist (`TELEGRAM_ALLOWED_USER_IDS`, else
+  200 and silence). Commands `/signals`, `/why SYM`, `/flags [SYM]`, `/chart SYM TF`,
+  `/wallet`, `/journal [n]`, `/status`, `/log text`, `/testalert`, `/help`. No trade commands.
+- `api/telegram-cron.js` (new, `GET /api/telegram-cron`, `vercel.json` `crons` every
+  minute, `CRON_SECRET` bearer): one build per run; alerts only on transitions (NEW GOOD with
+  chart, NEW SETUP, GOOD ended, data or mark problems over 5 min, repeated at most every
+  30 min). State in Blob `telegram/state.json`, claimed with the ETag before sending.
+- `lib/telegram.js` (new): pure formatters (GPT FORMAT lines incl. the SETUP line), the alert
+  state machine (dedup by candidate id), Bot API client (HTML, chunked under 4,000 chars,
+  5 s timeout, never throws).
+- `api/journal.js`: `appendRecord`/`readRecent` exported so `/log` and `/journal` use the
+  exact REST path. `lib/journalSchema.js`: records gain a server-stamped `source`
+  (`"telegram"` from the bot, `null` from the GPT Action; never read from the body).
+- Tracker: `collect.js` pulls `telegram/state.json` into a whitelisted
+  `data/telegram-status.json`; the Status section gains an "Alerts" fact (last alert, alerts
+  today, cron age; `[NO ALERTS YET]` before the first alert).
+- `vercel.json`: routes for both functions before the catch-all, `crons` entry.
+- Docs: connector doc endpoint/env/verify/test tables, `DOCUMENTATION_INDEX.md`,
+  `ARCHITECTURE_MAP.json` (Delivery stage, `TELEGRAM` delivery chip on Calls and Trade plan),
+  `openapi/scalp-context.yaml` `JournalRecord.source`.
+
+Tests: new `test:telegram` 32; `test:journal` 19, `test:mcp` 52 unchanged. Owner steps: set
+`TELEGRAM_BOT_TOKEN`, `TELEGRAM_ALLOWED_USER_IDS`, `TELEGRAM_WEBHOOK_SECRET`, `CRON_SECRET`;
+register the webhook with `secret_token`; `/start` then `/status`.
+
+## 2026-09-24 — D-variant revised: minRR 2.5 live, net gate off, 3R shadow (branch `upgrade-signal-engine`)
+
+Owner decision, supersedes D-variant (`docs/OWNER_DECISIONS_2026-09-24.md`): lean toward
+producing GOOD calls so the strategy can be tracked and tweaked. Config-only; schema
+unchanged at 1.24.0, configVersion 2026.09.24-4 → **2026.09.24-5**.
+
+- `config/engine.json`: `flagPlan.minRR` 3.0 → **2.5** (the sign-off Step B2 deferred to
+  2026-10-07 is granted directly). `flagPlan.minNetRR` 2.0 → **null** (net gate off);
+  `netRR`/`costR` stay published on every plan.
+- `lib/flagRecommendation.js`: with the net gate off, a thin net R:R no longer rejects
+  (`fees_heavy`/BAD) - it's a non-blocking `net_rr_low` warning ("thin after fees") at a
+  fixed 1.0R floor, independent of `minRR`/`minNetRR`. The net gate still rejects
+  (`fees_heavy`) when `minNetRR` is explicitly set via override (research only now).
+- `services/scalpContext.js`: shadow variants flip from V-B (`{id:'vB', minRR:2.5}`) to
+  **v3** (`{id:'v3', minRR:3.0}`) - the former live rule is now the shadow comparator.
+  `scripts/tracker/vb-shadow.js` renamed to `v3-shadow.js` (full symbol/file rename, same
+  mechanism); `build-page.js`'s tile relabeled "3R shadow (former live rule)".
+  `scripts/tracker/shadow.js`'s `SHADOW_CFG.minRR` (a hand-mirrored copy of
+  `config/engine.json`, parity-tested) also moves 3.0 → 2.5.
+- Tracking window continues unbroken from 2026-09-23 (`PHASE_START` unchanged, restart
+  note removed); `aggregate.js`'s `configBoundary` (Step C) now carries this transition
+  automatically, splitting before/after stats on the page.
+- `docs/GPT_INSTRUCTIONS.md`: `flagTradePlan=trade authority` line drops the net R:R
+  number, adds `net_rr_low(netRR<1.0)→non-blocking,say "thin after fees"`. 7987/7990 units.
+
+Tests: `test:flagrec` 23 → 24 (net-gate-override case for `fees_heavy` added alongside
+the revised default-off `net_rr_low` case); `test:flagplan`/`test:tracker`/
+`test:flagrec:fixtures`/`test:config`/`test:archmap` fixtures updated for the new
+thresholds and the vb→v3 rename, counts unchanged. 27 suites, all green; `check:gpt` OK
+(7987/7990); `git diff --check` clean; payload bytes unaffected (values only, no shape
+change). Details: `docs/OWNER_DECISIONS_2026-09-24.md` ("D-variant revised").
+
+## 2026-09-24 — T6 completion plan Step C: SETUP tier, dir-cost, config-boundary marker (branch `upgrade-signal-engine`)
+
+Owner-approved after Step A + B2 deployed live at schema 1.23.0. Not deployed - stops for the gate. Schema 1.23.0 → **1.24.0**, configVersion 2026.09.24-3 → **2026.09.24-4**.
+
+- **C1 (D-cost applied live)**: `config/engine.json` risk.costBpsByDirection `{long:34, short:14}`.
+  `lib/flagTradePlan.js`'s `costRFraction`/`netRiskReward` take an optional `direction` -
+  `flagTradePlan.netRR`/`costR` are now direction-dependent on every plan and shadow
+  variant (a long's cost is harsher than a short's at the same gross R:R - never assume
+  symmetric net numbers). `scripts/tracker/costs.js` mirrors it so the tracker's real
+  GOOD-call net expectancy and `vb-shadow.js` share the same cost model.
+  `scripts/tracker/breakout-entry.js`'s own vendored `netRiskReward` deliberately
+  untouched (frozen/unpublished T4 P4 feature).
+- **C2 (SETUP tier)**: `flagRecommendation.setup` - the best still-conditional candidate
+  in the pool, computed once in `buildFlagTradePlan` (reuses its own attempts pass),
+  distinct from `flagTradePlan`, published in the default payload, informational only
+  (never GO IN). Tracker: `score.js`'s `kind:'setup'`/`counterfactual_setup` what-if
+  scoring, `aggregate.js` tiles `goodPerHour7d`/`setupsPerDay7d`, `charts.js`'s
+  `setupEquityRows` in the equity filter table.
+- **C3 (tracker)**: `aggregate.js`'s `configBoundary` - the most recent configVersion
+  transition, gross+net stats before/after, on the page. Net R alongside gross
+  wherever gross is shown: `chartKit`'s readouts and filter table gain a vendored
+  dir-cost net column.
+- **C4**: `FLAG_TF_RANK`/`FLAG_TF_ORDER` gain 15m/1h entries, inert today
+  (`flag.timeframes` stays 1m/3m/5m), ready with no code change if ever widened.
+- **C5**: GPT instructions - `SETUP LINE` in `signals`, `flagRecommendation.setup`
+  rule, `dir-priced` net-R wording; mark rule (RISK) untouched. 7744 → 7988 units.
+
+Tests: `test:flagplan` 59 → 67, `test:tracker` 93 → 110, `test:flagrec` 20 → 23,
+`test:scalp` 120 → 121; `test:config`/`test:geometry`/`test:pattern` schemaVersion
+assertions updated to 1.24.0, counts unchanged. 26 suites, all green; `check:gpt` OK
+(7988/7990); `git diff --check` clean. Details: `docs/EDITTRADES_MCP_CONNECTOR.md`.
+
 ## 2026-09-24 — System map + changelog page (branch `upgrade-signal-engine`)
 
 `docs/ARCHITECTURE_MAP.json` (every lib/services/api/config/scripts/tracker file, by pipeline stage) drives a generated tracker page `changelog.html` (`scripts/tracker/changelog-page.js`, `build-changelog.js`, `npm run tracker:changelog`); new suite `test:archmap` keeps the map, CHANGELOG schema entries and test names in step with the code. No engine, payload, schema, config or MCP change.
