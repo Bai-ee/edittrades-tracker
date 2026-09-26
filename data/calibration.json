@@ -1,29 +1,29 @@
 {
-  "generatedAt": "2026-09-26T14:27:16.806Z",
-  "n": 507,
+  "generatedAt": "2026-09-26T14:37:15.143Z",
+  "n": 510,
   "phases": {
     "tightening": {
-      "n": 390,
-      "brier": 0.6222,
-      "baselineBrier": 0.6017,
+      "n": 391,
+      "brier": 0.6227,
+      "baselineBrier": 0.6033,
       "baseline": {
-        "retest_go": 8.46,
-        "runner": 9.23,
-        "false_break": 12.31,
-        "fail_first": 59.74,
-        "chop": 10.26
+        "retest_go": 8.7,
+        "runner": 9.21,
+        "false_break": 12.28,
+        "fail_first": 59.59,
+        "chop": 10.23
       }
     },
     "broken": {
-      "n": 117,
-      "brier": 0.8154,
-      "baselineBrier": 0.7409,
+      "n": 119,
+      "brier": 0.8161,
+      "baselineBrier": 0.7396,
       "baseline": {
-        "retest_go": 27.35,
-        "runner": 31.62,
-        "false_break": 21.37,
+        "retest_go": 27.73,
+        "runner": 31.93,
+        "false_break": 21.01,
         "fail_first": 0,
-        "chop": 19.66
+        "chop": 19.33
       }
     }
   },
@@ -37,9 +37,9 @@
       },
       {
         "bucket": "10-20",
-        "n": 251,
+        "n": 254,
         "meanPredicted": 14.4,
-        "realisedRate": 13.9
+        "realisedRate": 14.2
       },
       {
         "bucket": "20-30",
@@ -93,7 +93,7 @@
     "fail_first": [
       {
         "bucket": "0-10",
-        "n": 117,
+        "n": 119,
         "meanPredicted": 0,
         "realisedRate": 0
       },
@@ -111,9 +111,9 @@
       },
       {
         "bucket": "30-40",
-        "n": 113,
+        "n": 114,
         "meanPredicted": 36.5,
-        "realisedRate": 52.2
+        "realisedRate": 51.8
       },
       {
         "bucket": "40-50",
@@ -154,8 +154,8 @@
     ]
   },
   "likely": {
-    "n": 507,
-    "hitRate": 49.7
+    "n": 510,
+    "hitRate": 49.4
   },
   "chase": {
     "highElevated": {
@@ -163,8 +163,8 @@
       "runnerRate": 27.1
     },
     "low": {
-      "n": 437,
-      "runnerRate": 12.4
+      "n": 440,
+      "runnerRate": 12.5
     }
   }
 }
