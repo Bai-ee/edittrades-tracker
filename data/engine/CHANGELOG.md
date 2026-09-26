@@ -1,5 +1,19 @@
 # Changelog
 
+## 2026-09-26 — T-9 v2: wallet strategy profiles (steady/aggressive), tier, boost, goal pace, website (code and tests only; not deployed)
+
+No engine rule, threshold, cap, gate or schema change beyond the additive pieces below (frozen until 2026-10-08). Nothing changes for the owner until they act: the active profile defaults to `steady` (numerically close to, but not identical to, the pre-T-9 flat defaults — an explicit owner decision, not a regression), and `aggressive` never sizes a real order unless the owner switches to it by PIN. Master prompt: pasted by the owner, "Agent L (Sonnet): wallet strategy profiles (steady/aggressive), Telegram switch, parallel tracking, tiers/boost/goals, site definitions (T-9 v2)". Baseline: HEAD of `upgrade-signal-engine` (1a644e7). Built on branch `risk-profiles` (worktree), not merged.
+
+- **Profiles** (`lib/execution/riskPolicy.js` `PROFILES`): `steady` (1%/trade, 2% ceiling, 25%/15% exposure, 3%/8% drawdown, 1.5%/1.0% min stop long/short) and `aggressive` (2.5%/trade, 3% ceiling, 50%/30% exposure, 6%/15% drawdown, 1.0%/0.7% min stop) — additive: every pre-T-9 `riskPolicy.js` export/signature is unchanged, all 31 legacy `test-risk-policy.js` assertions pass verbatim. `evaluateRiskPolicy` gains an opt-in `stop_too_tight` reason when the caller's `policy.minStopPct` is set.
+- **Tier** (`lib/tier.js`, new): pure `classifyTier(rec)` — A/B/C off a flagRecommendation record's own `readiness`/`qualityBand`/`clarity.gate.passable` (+ the T-13 net-floor field when present, ignored otherwise); a manual `/order` (no record) is always C. Scales that profile's risk budget (`tieredPolicyConfig`) and, for `steady`'s `leverageRule: 'half'`, halves suggested leverage for non-A tiers (`applyLeverageRule`).
+- **Switch**: `state.prefs.risk.profile` (default `steady`, never written until the owner acts). `/risk profile steady|aggressive [PIN]` and `[Steady ✔] [Aggressive]` inline buttons on `/risk`; owner + PIN, same auto-kill guard as `/arm` (`lib/execution/executor.js` `switchProfile`). `/risk pct` bounds by the ACTIVE profile's own ceiling; `/risk reset` clears numeric overrides only, never the active profile.
+- **Parallel tracking**: every `preflight`/`createTicket` call evaluates BOTH profiles on the same intent (`evaluateAllProfiles`), stamped on `order.profiles`, the audit `preflight`/`ticket`/`fill` lines, and the journal open record's `execRef.profiles` (`lib/journalSchema.js`, additive sanitizer). Informational only — never gates the order.
+- **Boost**: single-use ⚡ button on an open ticket, replaces it with one sized at the next tier's multiplier (scaling the ORIGINAL requested size, not the wallet-based `suggestedSizeUsd` — that figure is sized off the stop distance alone and would blow through `maxExposurePct` on most calls). Refused under drawdown/exposure/equity-unavailable/already-tier-A exactly like any other preflight; the original ticket survives a refused boost.
+- **Goal**: `/risk goal EQUITY_USD by DATE` / `/risk goal off` — a straight-line pace check (`goalAheadFraction`), descriptive only. At ≥25% ahead of pace, `applyGoalPaceTightening` scales both drawdown caps down (never up) for that profile.
+- **Website** (`scripts/tracker/risk-page.js`, `scripts/tracker/profiles.js`, both new): `risk.html` — the profile table, which profile is live (`telegramStatusFromState` whitelist gains `riskProfile`), an equity-curve chart (real wallet, reconstructed from execution journal closes' `resultUsd` off a documented `BOT_WALLET_START_EQUITY_USD` = $520, overlaid with both profiles' virtual live curves sized off `execRef.profiles[profile].riskUsd`), trades toward each profile's 30-trade evaluation (live-taken vs. as-if on every scored GOOD call), and the evaluation rule. `index.html` gets a teaser tile linking to it; `how-to.html` documents the switch, Boost and goal.
+- Tests: `test-risk-policy.js` 31 → 49, `test-execution.js` 75 → 88, `test-telegram.js` 133 → 145, `test-tracker.js` 114 → 122; new `test:riskpolicy` script (`package.json`). All fourteen `npm run test:*` suites plus `test:riskpolicy` green; `git diff --check` clean.
+- Known simplifications, flagged rather than hidden: the as-if virtual curve sizes every scored GOOD call at tier B (multiplier 1) since `qualityBand`/`clarity.gate` do not survive `extractCalls`/`scoreCalls`'s call-row shape — not the exact tier a live order of that call would have gotten. The "real" wallet equity curve is reconstructed from journal data starting at a documented constant, not a live read of the execution signing wallet's own equity history (no such history is synced anywhere yet). `/risk profile`'s "within 60 s" prompt window is not separately time-boxed (stateless — the PIN + owner + auto-kill guard is the real gate, matching `/confirm`'s existing pattern). `docs/EDITTRADES_MCP_CONNECTOR.md` is untouched — MCP never reaches `lib/execution` (hard rule) and none of this is schema-visible there.
+
 ## 2026-09-26 — T-13: net-floor shadow (NF) + trade chart on entry / taken (shadow + presentation only)
 
 Branch `net-floor` (Agent J). Live rules unchanged (gross `flagPlan.minRR` 2.5, room / chase / retest, alert levels, caps, dedup); NF is shadow only until the freeze ends 2026-10-08. No new library, no env, no deploy, no GPT text change (`check:gpt` unchanged). Additive fields, no schemaVersion bump on this branch (the orchestrator assigns one at merge).
@@ -18,6 +32,28 @@ Tracker (`scripts/tracker/`) and its tests only; no engine, alert-content or rul
 - `aggregate.js`: when `good-call-outcomes.jsonl` has rows in a window, `classCheck`'s GOOD row, `windowBlock`'s tradable/bySymbol/byTimeframe stats and the phase block's 30-plan target read from it instead of the capture-only ready-plan rows — the headline 7d tiles, the phase progress bar and the class-check GOOD row now count every GOOD the engine emitted, not just the ones a 10-minute poll caught. Empty/missing keeps the old capture-only behavior. New GOOD-row fields `oneMinLogCalls` / `capturedCalls` / `medianGoodWindowMin`; new top-level `goodCallLogSince`.
 - Page + report: class-check table gains three GOOD-only columns (`Calls (1-min log)`, `Of which captured`, `Median GOOD window (min)`; dash elsewhere) and a one-line note under the table (`#class-check-good-log-note`): "GOOD calls come from the engine's 1-minute alert log since \<date\>; before that from 10-minute captures."
 - Tests: `test:tracker` 114 → 120 (merge/dedup, alert-sourced scoring, backfill idempotent, capture-only fallback, GOOD window length, classCheck + phase target wiring, page/report rendering). `git diff --check` clean.
+
+## 2026-09-26 — T-10: call-frequency study on the live rules (research only, no config/lib change)
+
+Branch `frequency-study` (worktree). Owner question: live rules read ~1.3 GOOD calls/day
+(tracker), owner wants ~10/day. `scripts/replay-rules.js` gains 9 new variants (`L0`
+baseline alias of `V0`, `L1a`/`L1b` gross minRR 2.25/2.0, `L2` room-blocked treated as
+WAIT not a hard reject, `L3` readiness on breakout close (retest-hold off), `L4`
+alert/plan timeframes 1m+3m+5m, `L5`/`L6`/`L7` combos) and a new `gate: 'ruleVariant'`
+(`buildRuleVariantPlan`/`evaluateRoom`/`observeBreakoutClose`/`makeRuleVariantCollector`)
+for the two rules `setConfigOverride` cannot reach (room-block and retest-hold live
+inside `lib/flagTradePlan.js`'s private `buildPlanAttempt`) — same precedent as the
+existing `V5`/`V6` alternate-construction gates, never touching detection or `lib/`.
+`coverageStats` gains `daysWithGoodAtLeast5` (`daysWithAtLeast`, exported). Full sweep run
+on `test/fixtures/history/deep60-2026-09-24/` (85.5 days, `--step 5` — step 1 would run
+~45 min/variant, does not fit); report: `docs/FREQUENCY_STUDY_2026-09-26.md`. Headline:
+`L4` is a no-op (GOOD alerts are never `alertTimeframes`-filtered in `lib/telegram.js`);
+every variant is net-negative on this window at every cost convention tried, and mean net
+R is heavily outlier-dominated by a handful of near-zero-stop-distance BTC candidates
+concentrated in the pre-September (backfilled) portion of `deep60` — flagged for the
+owner, not fixed here. No recommendation to change rules; no config/deploy/push.
+`test-replay-rules.js` 26 → 35 (new variant + gate coverage, fixture-gated, fails not
+skips). `npm run test:rules` and `test:replay` green; `git diff --check` clean.
 
 ## 2026-09-25 — T-7: Telegram focus mode + Open from any levelled alert (presentation and routing only, nothing enabled)
 
