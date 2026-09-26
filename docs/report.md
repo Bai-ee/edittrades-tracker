@@ -1,6 +1,6 @@
 # EditTrades call tracker report
 
-Generated 2026-09-26 17:57Z. R is gross, before fees and slippage. Not evidence of an edge. Scores the engine's calls against later closed candles.
+Generated 2026-09-26 18:07Z. R is gross, before fees and slippage. Not evidence of an edge. Scores the engine's calls against later closed candles.
 
 ## Testing phase
 
@@ -26,11 +26,11 @@ _provisional; not evidence of an edge_
 
 _provisional; not evidence of an edge_
 
-| Class | Calls | Scored | Win rate | Exp. (gross R) | TP1 / Stop | Open | Not filled | No levels | Levels from (plan / candidate) | Verdict |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| GOOD | 5 | 5 | 40% | +0.47R | 2 / 3 | 0 | 0 | 0 | 5 / 0 | WORKING |
-| WATCH | 207 | 85 | 20% | −0.10R | 17 / 68 | 2 | 103 | 17 | 4 / 81 | FILTER CONFIRMED |
-| BAD | 293 | 69 | 40.6% | −0.31R | 28 / 41 | 0 | 40 | 184 | 69 / 0 | FILTER CONFIRMED |
+| Class | Calls | Scored | Win rate | Exp. (gross R) | TP1 / Stop | Open | Not filled | No levels | Levels from (plan / candidate) | Calls (1-min log) | Of which captured | Median GOOD window (min) | Verdict |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| GOOD | 5 | 5 | 40% | +0.47R | 2 / 3 | 0 | 0 | 0 | 5 / 0 | 0 | 0 | – | WORKING |
+| WATCH | 207 | 85 | 20% | −0.10R | 17 / 68 | 2 | 103 | 17 | 4 / 81 | – | – | – | FILTER CONFIRMED |
+| BAD | 293 | 69 | 40.6% | −0.31R | 28 / 41 | 0 | 40 | 184 | 69 / 0 | – | – | – | FILTER CONFIRMED |
 
 
 WATCH and BAD are scored as if taken: entry at the flag breakout, stop at invalidation, TP1 at the measured move. Counterfactual only: never counted in the 30-plan target or the expectancy above.
@@ -121,6 +121,13 @@ _provisional; not evidence of an edge_
 | 2026-09-25 | 191 | 2 | 83 | 106 | 2 | 2 | 0 | 2 | −1.00R |
 | 2026-09-24 | 172 | 1 | 65 | 106 | 1 | 1 | 0 | 1 | −1.00R |
 | 2026-09-23 | 4 | 0 | 3 | 1 | 0 | 0 | 0 | 0 | – |
+
+
+## Net floor shadow (NF, not traded)
+
+_provisional; not evidence of an edge_
+
+[NO LIVE READY CALLS TO COMPARE YET]
 
 
 ## Data health
