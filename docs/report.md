@@ -1,6 +1,6 @@
 # EditTrades call tracker report
 
-Generated 2026-09-27 07:07Z. R is gross, before fees and slippage. Not evidence of an edge. Scores the engine's calls against later closed candles.
+Generated 2026-09-27 07:17Z. R is gross, before fees and slippage. Not evidence of an edge. Scores the engine's calls against later closed candles.
 
 ## Testing phase
 
@@ -19,7 +19,7 @@ _provisional; not evidence of an edge_
 
 | Expectancy 7d | Scored 7d | Win rate 7d | Fills 7d | Losing streak 7d | Avg win R 7d | Last capture |
 | --- | --- | --- | --- | --- | --- | --- |
-| +0.48R | 15 | 33.3% | 15 / 15 | 7 | +3.44R | 2026-09-27 07:07Z |
+| +0.48R | 15 | 33.3% | 15 / 15 | 7 | +3.44R | 2026-09-27 07:17Z |
 
 
 ## Class check
@@ -135,14 +135,14 @@ _provisional; not evidence of an edge_
 
 | Rule | Calls | Calls / day | Fills | Win rate | Exp. (gross R) | Net exp. (dir-cost) |
 | --- | --- | --- | --- | --- | --- | --- |
-| Live | 15 | 5.36 | 15 | 33.3% | +0.48R | −3.45R |
+| Live | 15 | 5.35 | 15 | 33.3% | +0.48R | −3.45R |
 | NF | 0 | 0 | 0 | – | – | – |
 
-n=15 over 2.8 d (engine 0, backfill 15). Shadow mode: the same live ready calls, scored twice - Live with the plan's own stop, NF with the stop floored at max(0.5 x ATR(15m), 3 x round-trip cost: 0.34 % long / 0.14 % short), TP1 unchanged, taken only when gross >= 2.5R and net >= 1.0R. Net R charges the direction cost once per trade. Calls before the engine published flagTradePlan.shadow.NF are backfilled here (ATR from stored 15m candles, filled at the live ready close) - an approximation. Never traded; never feeds any gate, class or alert.
+n=15 over 2.81 d (engine 0, backfill 15). Shadow mode: the same live ready calls, scored twice - Live with the plan's own stop, NF with the stop floored at max(0.5 x ATR(15m), 3 x round-trip cost: 0.34 % long / 0.14 % short), TP1 unchanged, taken only when gross >= 2.5R and net >= 1.0R. Net R charges the direction cost once per trade. Calls before the engine published flagTradePlan.shadow.NF are backfilled here (ATR from stored 15m candles, filled at the live ready close) - an approximation. Never traded; never feeds any gate, class or alert.
 
 
 ## Data health
 
 _provisional; not evidence of an edge_
 
-Captures 1407, gaps 21, DATA_UNAVAILABLE 0, mark drift |bps| median 1.3 / max 20.1, missing 1m candles 0.
+Captures 1410, gaps 21, DATA_UNAVAILABLE 0, mark drift |bps| median 1.3 / max 20.1, missing 1m candles 0.
