@@ -1,6 +1,6 @@
 # EditTrades call tracker report
 
-Generated 2026-09-28 05:56Z. R is gross, before fees and slippage. Not evidence of an edge. Scores the engine's calls against later closed candles.
+Generated 2026-09-28 05:57Z. R is gross, before fees and slippage. Not evidence of an edge. Scores the engine's calls against later closed candles.
 
 ## Testing phase
 
@@ -19,7 +19,7 @@ _provisional; not evidence of an edge_
 
 | Expectancy 7d | Scored 7d | Win rate 7d | Fills 7d | Losing streak 7d | Avg win R 7d | Last capture |
 | --- | --- | --- | --- | --- | --- | --- |
-| +0.51R | 17 | 35.3% | 17 / 17 | 7 | +3.29R | 2026-09-28 05:56Z |
+| +0.51R | 17 | 35.3% | 17 / 17 | 7 | +3.29R | 2026-09-28 05:57Z |
 
 
 ## Class check
@@ -155,4 +155,4 @@ _provisional; not evidence of an edge_
 
 _provisional; not evidence of an edge_
 
-Captures 1833, gaps 21, DATA_UNAVAILABLE 0, mark drift |bps| median 1.4 / max 26.2, missing 1m candles 0.
+Captures 1836, gaps 21, DATA_UNAVAILABLE 0, mark drift |bps| median 1.4 / max 26.2, missing 1m candles 0.
