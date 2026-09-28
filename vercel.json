@@ -7,5 +7,12 @@
   },
   "git": {
     "deploymentEnabled": false
-  }
+  },
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "destination": "https://bai-ee.github.io/edittrades-tracker/$1",
+      "permanent": true
+    }
+  ]
 }
