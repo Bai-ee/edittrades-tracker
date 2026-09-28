@@ -1,6 +1,6 @@
 # EditTrades call tracker report
 
-Generated 2026-09-28 08:07Z. R is gross, before fees and slippage. Not evidence of an edge. Scores the engine's calls against later closed candles.
+Generated 2026-09-28 08:11Z. R is gross, before fees and slippage. Not evidence of an edge. Scores the engine's calls against later closed candles.
 
 ## Testing phase
 
@@ -149,6 +149,13 @@ n=17 over 3.84 d (engine 0, backfill 17). NF (live since 2026-09-27): the same l
 _provisional; not evidence of an edge_
 
 [NO RETEST 1H SIGNALS YET]
+
+
+## HTF ENTRY · live
+
+_provisional; not evidence of an edge_
+
+[NO HTF ENTRY SIGNALS YET]
 
 
 ## Data health
