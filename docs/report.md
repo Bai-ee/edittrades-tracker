@@ -1,16 +1,72 @@
 # EditTrades call tracker report
 
-Generated 2026-09-28 13:17Z. R is gross, before fees and slippage. Not evidence of an edge. Scores the engine's calls against later closed candles.
+Generated 2026-09-28 13:26Z. R is gross, before fees and slippage. Not evidence of an edge. Scores the engine's calls against later closed candles.
+
+
+## Strategy scoreboard · each from its own start
+
+_provisional; not evidence of an edge_
+
+
+### Flag engine · net floor · LIVE · TRADABLE
+
+Since 2026-09-27 (days live 1.2).
+
+| Signals | Resolved | Wins | Win % | Net R mean | Net R median | Net R 90% LB | Max DD (R) | Toward 30 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 1 | 1 | 1 | 100% | +1.22R | +1.22R | – | 0 | 1 / 30 |
+
+TP1 or stop from the flag plan’s own levels, stop floored at the net floor (max(0.5x ATR15m, 3x round-trip cost)), capped at 3% from entry.
+
+
+### HTF-anchored entries · LIVE · TRADABLE
+
+Since 2026-09-28 (days live 0.2).
+
+[NO SIGNALS SINCE 2026-09-28]
+
+TP1 or stop from the 1h swing (NF-floored, 3% scalp-capped); target from the last 1h impulse projected from that swing.
+
+
+### RETEST 1H · PAPER
+
+Since 2026-09-27 (days live 1.2).
+
+[NO SIGNALS SINCE 2026-09-27]
+
+A RETEST_1H_EXIT alert closes it on a structure break, else a 7-day hold cap.
+
+
+### Spot EMA20 trend · PAPER
+
+Since 2026-09-26 (days live 2.6).
+
+| Paper equity | Buy & hold | Live flips | Days tracked |
+| --- | --- | --- | --- |
+| −0.12% | +0.08% | 0 | 1 |
+
+Flips the coin to USDC when its daily close drops back below EMA20.
+
+
+### Live wallet · Steady profile · WALLET
+
+Since 2026-09-26 (days live 1.6).
+
+| Equity now | Equity at start | Trades | Realized net | Kill/arm |
+| --- | --- | --- | --- | --- |
+| $522.74 | $523.01 | 0 | – | – |
+
+Daily/weekly drawdown kill switch; Steady profile caps $150 size / 100x / $5 per trade / $25 per day / 1 open position.
 
 ## Testing phase
 
 _provisional; not evidence of an edge_
 
 - Status: RUNNING
-- Phase: Phase 5 forward record (2.5R gross, net gate off), start 2026-09-24, ends 2026-10-08
+- Phase: Net-floor forward record (2.5R gross, net floor live), start 2026-09-27, ends 2026-10-11
 - Thresholds frozen until 2026-10-08
 - Target: 14 days / >= 30 scored plans
-- Progress: day 5 / 14, plans scored 17 / 30
+- Progress: day 2 / 14, plans scored 1 / 30
 - Frozen during the window: no threshold tuning
 
 ## Summary
@@ -19,7 +75,7 @@ _provisional; not evidence of an edge_
 
 | Expectancy 7d | Scored 7d | Win rate 7d | Fills 7d | Losing streak 7d | Avg win R 7d | Last capture |
 | --- | --- | --- | --- | --- | --- | --- |
-| +0.51R | 17 | 35.3% | 17 / 17 | 7 | +3.29R | 2026-09-28 13:17Z |
+| +2.51R | 1 | 100% | 1 / 1 | 0 | +2.51R | 2026-09-28 13:17Z |
 
 
 ## Class check
@@ -28,9 +84,9 @@ _provisional; not evidence of an edge_
 
 | Class | Calls | Scored | Win rate | Exp. (gross R) | TP1 / Stop | Open | Not filled | No levels | Levels from (plan / candidate) | Calls (1-min log) | Of which captured | Median GOOD window (min) | Verdict |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| GOOD | 17 | 17 | 35.3% | +0.51R | 6 / 11 | 0 | 0 | 0 | 17 / 0 | 15 | 6 | 4 | WORKING |
-| WATCH | 358 | 157 | 28% | +0.14R | 44 / 113 | 6 | 170 | 25 | 6 / 151 | – | – | – | FILTER MAY BE BLOCKING WINNERS |
-| BAD | 516 | 133 | 54.1% | −0.17R | 72 / 61 | 1 | 61 | 321 | 133 / 0 | – | – | – | FILTER CONFIRMED |
+| GOOD | 1 | 1 | 100% | +2.51R | 1 / 0 | 0 | 0 | 0 | 1 / 0 | 1 | 0 | – | [1 SCORED · TOO FEW TO JUDGE] |
+| WATCH | 99 | 51 | 31.4% | +0.14R | 16 / 35 | 6 | 36 | 6 | 0 / 51 | – | – | – | FILTER MAY BE BLOCKING WINNERS |
+| BAD | 153 | 51 | 74.5% | −0.02R | 38 / 13 | 1 | 16 | 85 | 51 / 0 | – | – | – | FILTER CONFIRMED |
 
 
 WATCH and BAD are scored as if taken: entry at the flag breakout, stop at invalidation, TP1 at the measured move. Counterfactual only: never counted in the 30-plan target or the expectancy above.
@@ -81,9 +137,7 @@ Ready plans by symbol:
 
 | Symbol | Calls | Fills | TP1 | Stop | Open | Win rate | Exp. (gross R) | Net exp. (net of fees) | Avg net R:R (plan) | Max loss streak | Median min to TP1 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| SOL | 10 | 10 | 1 | 9 | 0 | 10% | −0.63R | −2.54R | 1.55 | 8 | 1 |
-| ETH | 4 | 4 | 3 | 1 | 0 | 75% | +2.66R | −4.70R | 0.53 | 1 | 8 |
-| BTC | 3 | 3 | 2 | 1 | 0 | 66.7% | +1.45R | −2.84R | 0.07 | 1 | 3 |
+| ETH | 1 | 1 | 1 | 0 | 0 | 100% | +2.51R | +1.22R | 0.53 | 0 | 11 |
 
 
 ## Last 30d
@@ -113,9 +167,7 @@ Ready plans by symbol:
 
 | Symbol | Calls | Fills | TP1 | Stop | Open | Win rate | Exp. (gross R) | Net exp. (net of fees) | Avg net R:R (plan) | Max loss streak | Median min to TP1 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| SOL | 10 | 10 | 1 | 9 | 0 | 10% | −0.63R | −2.54R | 1.55 | 8 | 1 |
-| ETH | 4 | 4 | 3 | 1 | 0 | 75% | +2.66R | −4.70R | 0.53 | 1 | 8 |
-| BTC | 3 | 3 | 2 | 1 | 0 | 66.7% | +1.45R | −2.84R | 0.07 | 1 | 3 |
+| ETH | 1 | 1 | 1 | 0 | 0 | 100% | +2.51R | +1.22R | 0.53 | 0 | 11 |
 
 
 ## By day
