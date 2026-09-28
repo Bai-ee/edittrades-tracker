@@ -1,29 +1,29 @@
 {
-  "generatedAt": "2026-09-28T03:27:18.661Z",
-  "n": 870,
+  "generatedAt": "2026-09-28T03:37:16.794Z",
+  "n": 872,
   "phases": {
     "tightening": {
-      "n": 667,
-      "brier": 0.64,
-      "baselineBrier": 0.6281,
+      "n": 668,
+      "brier": 0.6405,
+      "baselineBrier": 0.6289,
       "baseline": {
-        "retest_go": 9.6,
-        "runner": 9.45,
-        "false_break": 13.49,
-        "fail_first": 56.97,
-        "chop": 10.49
+        "retest_go": 9.73,
+        "runner": 9.43,
+        "false_break": 13.47,
+        "fail_first": 56.89,
+        "chop": 10.48
       }
     },
     "broken": {
-      "n": 203,
-      "brier": 0.8408,
-      "baselineBrier": 0.7327,
+      "n": 204,
+      "brier": 0.8402,
+      "baselineBrier": 0.7323,
       "baseline": {
-        "retest_go": 31.03,
-        "runner": 31.03,
-        "false_break": 22.66,
+        "retest_go": 31.37,
+        "runner": 30.88,
+        "false_break": 22.55,
         "fail_first": 0,
-        "chop": 15.27
+        "chop": 15.2
       }
     }
   },
@@ -31,15 +31,15 @@
     "runner": [
       {
         "bucket": "0-10",
-        "n": 374,
+        "n": 375,
         "meanPredicted": 5.5,
         "realisedRate": 11.2
       },
       {
         "bucket": "10-20",
-        "n": 421,
+        "n": 422,
         "meanPredicted": 14.4,
-        "realisedRate": 15
+        "realisedRate": 14.9
       },
       {
         "bucket": "20-30",
@@ -93,7 +93,7 @@
     "fail_first": [
       {
         "bucket": "0-10",
-        "n": 203,
+        "n": 204,
         "meanPredicted": 0,
         "realisedRate": 0
       },
@@ -117,9 +117,9 @@
       },
       {
         "bucket": "40-50",
-        "n": 174,
+        "n": 175,
         "meanPredicted": 44.4,
-        "realisedRate": 56.9
+        "realisedRate": 56.6
       },
       {
         "bucket": "50-60",
@@ -154,8 +154,8 @@
     ]
   },
   "likely": {
-    "n": 870,
-    "hitRate": 46.9
+    "n": 872,
+    "hitRate": 46.8
   },
   "chase": {
     "highElevated": {
@@ -163,7 +163,7 @@
       "runnerRate": 23.8
     },
     "low": {
-      "n": 740,
+      "n": 742,
       "runnerRate": 12.8
     }
   }
