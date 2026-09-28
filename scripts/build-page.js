@@ -52,10 +52,12 @@ import {
 } from './charts.js';
 import { PAGE_CSS } from './page-style.js';
 import { tile, zone, sub, jumpNav } from './bento.js';
+import { homeHero, homeHeroScript, HOME_HERO_CSS } from './home-hero.js';
 import { renderHowTo } from './how-to-page.js';
 import { renderRisk } from './risk-page.js';
 import { renderStrategies } from './strategies-page.js';
 import { renderSpot, readSpotData } from './spot-page.js';
+import { renderProduct } from './product-page.js';
 import { computeProfileCurves } from './profiles.js';
 
 export const PROVISIONAL = 'provisional; not evidence of an edge';
@@ -759,14 +761,15 @@ export function renderHtml(agg, data = {}) {
   const c = agg.captures;
   const phase = phaseProgress(agg);
 
-  // Tertiary: top edge + jump nav.
+  // Top edge, homepage hero (home-hero.js), then the sticky jump nav.
   const topStrip = `<header class="edge-strip" id="tracker-top-edge-strip"><span id="tracker-page-title">EDITTRADES / CALL TRACKER</span>`
     + `<span id="tile-last-capture">LAST CAPTURE ${esc(ageText(t.lastCapture, agg.generatedAt))}</span></header>`
+    + homeHero(agg)
     + jumpNav('tracker-jump-nav', [
       ['#zone-system', 'Status'], ['#zone-performance', 'Performance'], ['#zone-charts', 'Charts'], ['#zone-you', 'Engine vs you'],
       ['#zone-wallet-strategies', 'Strategies'],
       ['#zone-calls', 'Calls'], ['#zone-alerts', 'Alerts'], ['#zone-breakdown', 'Breakdown'], ['#zone-reference', 'Data'],
-      ['how-to.html', 'How to use →', 'class="nav-link" id="tracker-how-to-link"'], ['risk.html', 'Risk & sizing →', 'class="nav-link" id="tracker-risk-link"'], ['strategies.html', 'Wallet strategies →', 'class="nav-link" id="tracker-strategies-link"'], ['spot.html', 'Spot trend →', 'class="nav-link" id="tracker-spot-trend-link"'], ['changelog.html', 'System map →', 'class="nav-link" id="tracker-system-map-link"']
+      ['how-to.html', 'How to use →', 'class="nav-link" id="tracker-how-to-link"'], ['risk.html', 'Risk & sizing →', 'class="nav-link" id="tracker-risk-link"'], ['strategies.html', 'Wallet strategies →', 'class="nav-link" id="tracker-strategies-link"'], ['spot.html', 'Spot trend →', 'class="nav-link" id="tracker-spot-trend-link"'], ['changelog.html', 'System map →', 'class="nav-link" id="tracker-system-map-link"'], ['product.html', 'What EditTrades is →', 'class="nav-link" id="tracker-product-link"']
     ]);
 
   // Primary: hero. Net (fees + slippage, costs.js) shown beside gross (T5 S1).
@@ -1017,7 +1020,7 @@ export function renderHtml(agg, data = {}) {
 <title>EditTrades Call Tracker</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Doto:wght@700&family=Space+Grotesk:wght@400;500&family=Space+Mono:wght@400&display=swap">
 <style>
-${PAGE_CSS}${CHART_CSS}
+${PAGE_CSS}${HOME_HERO_CSS}${CHART_CSS}
 </style>
 </head>
 <body>
@@ -1028,7 +1031,7 @@ ${bottomStrip}
 </main>
 <script type="application/json" id="tracker-calls-data">${jsonForScript({ now: agg.generatedAt, dims: FILTER_DIMS, rows: eqRows, you: youRows, setup: setupRows })}</script>
 <script type="application/json" id="tracker-wallet-data">${jsonForScript({ now: agg.generatedAt, range: DEFAULT_WALLET_RANGE, rows: walletRows, good: goods, marks })}</script>
-<script>${chartScript()}${statusScript()}</script>
+<script>${chartScript()}${statusScript()}${homeHeroScript()}</script>
 </body>
 </html>
 `;
@@ -1099,6 +1102,7 @@ export function buildPage(dataDir, outDir, nowMs = Date.now()) {
   const riskFile = path.join(outDir, 'risk.html');
   const strategiesFile = path.join(outDir, 'strategies.html');
   const spotFile = path.join(outDir, 'spot.html');
+  const productFile = path.join(outDir, 'product.html');
   const journal = readJournal(dataDir);
   const journalOutcomes = readJsonl(journalOutcomesFile(dataDir));
   const outcomes = readJsonl(outcomesFile(dataDir));
@@ -1119,7 +1123,8 @@ export function buildPage(dataDir, outDir, nowMs = Date.now()) {
   writeFileSync(riskFile, renderRisk());
   writeFileSync(strategiesFile, renderStrategies(profileCurves, telegram && telegram.riskProfile));
   writeFileSync(spotFile, renderSpot(readSpotData(dataDir)));
-  return { agg, htmlFile, mdFile, howToFile, riskFile, strategiesFile, spotFile };
+  writeFileSync(productFile, renderProduct());
+  return { agg, htmlFile, mdFile, howToFile, riskFile, strategiesFile, spotFile, productFile };
 }
 
 function main() {
