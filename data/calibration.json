@@ -1,29 +1,29 @@
 {
-  "generatedAt": "2026-09-30T03:07:21.955Z",
-  "n": 1337,
+  "generatedAt": "2026-09-30T03:17:19.448Z",
+  "n": 1339,
   "phases": {
     "tightening": {
-      "n": 1027,
-      "brier": 0.6463,
-      "baselineBrier": 0.6347,
+      "n": 1028,
+      "brier": 0.6464,
+      "baselineBrier": 0.6353,
       "baseline": {
-        "retest_go": 11.1,
-        "runner": 9.54,
-        "false_break": 13.05,
-        "fail_first": 56.28,
-        "chop": 10.03
+        "retest_go": 11.09,
+        "runner": 9.53,
+        "false_break": 13.04,
+        "fail_first": 56.23,
+        "chop": 10.12
       }
     },
     "broken": {
-      "n": 310,
-      "brier": 0.8342,
-      "baselineBrier": 0.7337,
+      "n": 311,
+      "brier": 0.8327,
+      "baselineBrier": 0.7344,
       "baseline": {
-        "retest_go": 32.26,
-        "runner": 29.68,
-        "false_break": 21.94,
+        "retest_go": 32.15,
+        "runner": 29.58,
+        "false_break": 21.86,
         "fail_first": 0,
-        "chop": 16.13
+        "chop": 16.4
       }
     }
   },
@@ -31,9 +31,9 @@
     "runner": [
       {
         "bucket": "0-10",
-        "n": 603,
+        "n": 605,
         "meanPredicted": 5.5,
-        "realisedRate": 10.8
+        "realisedRate": 10.7
       },
       {
         "bucket": "10-20",
@@ -93,7 +93,7 @@
     "fail_first": [
       {
         "bucket": "0-10",
-        "n": 310,
+        "n": 311,
         "meanPredicted": 0,
         "realisedRate": 0
       },
@@ -117,9 +117,9 @@
       },
       {
         "bucket": "40-50",
-        "n": 279,
+        "n": 280,
         "meanPredicted": 44.3,
-        "realisedRate": 55.9
+        "realisedRate": 55.7
       },
       {
         "bucket": "50-60",
@@ -154,8 +154,8 @@
     ]
   },
   "likely": {
-    "n": 1337,
-    "hitRate": 46.1
+    "n": 1339,
+    "hitRate": 46.2
   },
   "chase": {
     "highElevated": {
@@ -163,7 +163,7 @@
       "runnerRate": 27.5
     },
     "low": {
-      "n": 1148,
+      "n": 1150,
       "runnerRate": 12
     }
   }
