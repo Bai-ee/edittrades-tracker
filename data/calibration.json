@@ -1,29 +1,29 @@
 {
-  "generatedAt": "2026-10-01T21:57:20.713Z",
-  "n": 1779,
+  "generatedAt": "2026-10-01T22:07:22.943Z",
+  "n": 1782,
   "phases": {
     "tightening": {
-      "n": 1357,
-      "brier": 0.6542,
-      "baselineBrier": 0.6439,
+      "n": 1358,
+      "brier": 0.6544,
+      "baselineBrier": 0.6442,
       "baseline": {
-        "retest_go": 11.5,
+        "retest_go": 11.49,
         "runner": 9.87,
-        "false_break": 13.04,
-        "fail_first": 55.27,
-        "chop": 10.32
+        "false_break": 13.11,
+        "fail_first": 55.23,
+        "chop": 10.31
       }
     },
     "broken": {
-      "n": 422,
-      "brier": 0.8342,
-      "baselineBrier": 0.737,
+      "n": 424,
+      "brier": 0.8356,
+      "baselineBrier": 0.7374,
       "baseline": {
-        "retest_go": 32.23,
-        "runner": 28.44,
-        "false_break": 21.8,
+        "retest_go": 32.08,
+        "runner": 28.3,
+        "false_break": 22.17,
         "fail_first": 0,
-        "chop": 17.54
+        "chop": 17.45
       }
     }
   },
@@ -31,15 +31,15 @@
     "runner": [
       {
         "bucket": "0-10",
-        "n": 831,
+        "n": 832,
         "meanPredicted": 5.6,
         "realisedRate": 10.5
       },
       {
         "bucket": "10-20",
-        "n": 819,
+        "n": 821,
         "meanPredicted": 14.4,
-        "realisedRate": 16.5
+        "realisedRate": 16.4
       },
       {
         "bucket": "20-30",
@@ -93,7 +93,7 @@
     "fail_first": [
       {
         "bucket": "0-10",
-        "n": 422,
+        "n": 424,
         "meanPredicted": 0,
         "realisedRate": 0
       },
@@ -111,9 +111,9 @@
       },
       {
         "bucket": "30-40",
-        "n": 347,
-        "meanPredicted": 36.3,
-        "realisedRate": 48.7
+        "n": 348,
+        "meanPredicted": 36.4,
+        "realisedRate": 48.6
       },
       {
         "bucket": "40-50",
@@ -154,16 +154,16 @@
     ]
   },
   "likely": {
-    "n": 1779,
+    "n": 1782,
     "hitRate": 45.1
   },
   "chase": {
     "highElevated": {
-      "n": 243,
-      "runnerRate": 28.8
+      "n": 244,
+      "runnerRate": 28.7
     },
     "low": {
-      "n": 1536,
+      "n": 1538,
       "runnerRate": 12
     }
   }
