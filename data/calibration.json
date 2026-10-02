@@ -1,29 +1,29 @@
 {
-  "generatedAt": "2026-10-02T13:17:21.742Z",
-  "n": 1935,
+  "generatedAt": "2026-10-02T13:27:20.480Z",
+  "n": 1942,
   "phases": {
     "tightening": {
-      "n": 1473,
-      "brier": 0.6579,
-      "baselineBrier": 0.6481,
+      "n": 1478,
+      "brier": 0.6578,
+      "baselineBrier": 0.6498,
       "baseline": {
-        "retest_go": 11.88,
-        "runner": 9.98,
-        "false_break": 13.03,
-        "fail_first": 54.79,
-        "chop": 10.32
+        "retest_go": 11.84,
+        "runner": 9.95,
+        "false_break": 12.99,
+        "fail_first": 54.6,
+        "chop": 10.62
       }
     },
     "broken": {
-      "n": 462,
-      "brier": 0.8379,
-      "baselineBrier": 0.7365,
+      "n": 464,
+      "brier": 0.8368,
+      "baselineBrier": 0.737,
       "baseline": {
-        "retest_go": 32.47,
-        "runner": 28.14,
-        "false_break": 22.29,
+        "retest_go": 32.33,
+        "runner": 28.02,
+        "false_break": 22.41,
         "fail_first": 0,
-        "chop": 17.1
+        "chop": 17.24
       }
     }
   },
@@ -31,13 +31,13 @@
     "runner": [
       {
         "bucket": "0-10",
-        "n": 901,
+        "n": 906,
         "meanPredicted": 5.6,
-        "realisedRate": 11
+        "realisedRate": 10.9
       },
       {
         "bucket": "10-20",
-        "n": 895,
+        "n": 897,
         "meanPredicted": 14.3,
         "realisedRate": 16.3
       },
@@ -93,7 +93,7 @@
     "fail_first": [
       {
         "bucket": "0-10",
-        "n": 462,
+        "n": 464,
         "meanPredicted": 0,
         "realisedRate": 0
       },
@@ -111,9 +111,9 @@
       },
       {
         "bucket": "30-40",
-        "n": 379,
+        "n": 384,
         "meanPredicted": 36.3,
-        "realisedRate": 47.8
+        "realisedRate": 47.1
       },
       {
         "bucket": "40-50",
@@ -154,7 +154,7 @@
     ]
   },
   "likely": {
-    "n": 1935,
+    "n": 1942,
     "hitRate": 44.9
   },
   "chase": {
@@ -163,8 +163,8 @@
       "runnerRate": 28.7
     },
     "low": {
-      "n": 1674,
-      "runnerRate": 12.1
+      "n": 1681,
+      "runnerRate": 12
     }
   }
 }
