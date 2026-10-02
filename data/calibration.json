@@ -1,29 +1,29 @@
 {
-  "generatedAt": "2026-10-02T01:17:20.057Z",
-  "n": 1816,
+  "generatedAt": "2026-10-02T01:27:18.776Z",
+  "n": 1820,
   "phases": {
     "tightening": {
-      "n": 1386,
-      "brier": 0.6522,
-      "baselineBrier": 0.6439,
+      "n": 1388,
+      "brier": 0.6529,
+      "baselineBrier": 0.6446,
       "baseline": {
-        "retest_go": 11.54,
-        "runner": 9.74,
-        "false_break": 12.99,
-        "fail_first": 55.27,
-        "chop": 10.46
+        "retest_go": 11.6,
+        "runner": 9.73,
+        "false_break": 13.04,
+        "fail_first": 55.19,
+        "chop": 10.45
       }
     },
     "broken": {
-      "n": 430,
-      "brier": 0.834,
-      "baselineBrier": 0.738,
+      "n": 432,
+      "brier": 0.8344,
+      "baselineBrier": 0.7379,
       "baseline": {
-        "retest_go": 32.09,
-        "runner": 27.91,
-        "false_break": 22.33,
+        "retest_go": 32.18,
+        "runner": 27.78,
+        "false_break": 22.45,
         "fail_first": 0,
-        "chop": 17.67
+        "chop": 17.59
       }
     }
   },
@@ -31,13 +31,13 @@
     "runner": [
       {
         "bucket": "0-10",
-        "n": 846,
+        "n": 848,
         "meanPredicted": 5.6,
         "realisedRate": 10.3
       },
       {
         "bucket": "10-20",
-        "n": 837,
+        "n": 839,
         "meanPredicted": 14.4,
         "realisedRate": 16.2
       },
@@ -93,7 +93,7 @@
     "fail_first": [
       {
         "bucket": "0-10",
-        "n": 430,
+        "n": 432,
         "meanPredicted": 0,
         "realisedRate": 0
       },
@@ -123,9 +123,9 @@
       },
       {
         "bucket": "50-60",
-        "n": 337,
+        "n": 339,
         "meanPredicted": 55.4,
-        "realisedRate": 58.5
+        "realisedRate": 58.1
       },
       {
         "bucket": "60-70",
@@ -154,8 +154,8 @@
     ]
   },
   "likely": {
-    "n": 1816,
-    "hitRate": 45.3
+    "n": 1820,
+    "hitRate": 45.2
   },
   "chase": {
     "highElevated": {
@@ -163,7 +163,7 @@
       "runnerRate": 28.2
     },
     "low": {
-      "n": 1568,
+      "n": 1572,
       "runnerRate": 11.8
     }
   }
