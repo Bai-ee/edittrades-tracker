@@ -1,26 +1,47 @@
 {
-  "closedThrough": "2026-10-03T11:27:00.000Z",
+  "closedThrough": "2026-10-03T11:37:00.000Z",
   "board": [
     {
-      "ref": "2de65450",
-      "sym": "SOL",
+      "ref": "5af9b4aa",
+      "sym": "ETH",
       "tf": "1m",
-      "dir": "short",
-      "stage": "watch",
-      "st": "triggering",
+      "dir": "long",
+      "stage": "found",
+      "st": "proto",
       "lv": {
-        "ent": 119.24,
-        "stop": 119.39,
-        "inv": 119.39,
-        "tp1": 118.88,
-        "tp2": 118.5,
+        "ent": 2684.86,
+        "stop": 2684.62,
+        "inv": 2684.62,
+        "tp1": 2688.67,
+        "tp2": 2691.93,
         "tp2src": "level",
-        "rr": 2.4,
-        "cap": 119.18
+        "rr": 15.87,
+        "cap": 2685.36
       },
       "score": "2/7",
       "gate": true,
-      "tfs": "1m✅ 3m⚠️ 5m⚠️ 15m✅ 1h❌ 4h❌ 1d❌"
+      "tfs": "1m✅ 3m✅ 5m⚠️ 15m⚠️ 1h⚠️ 4h⚠️ 1d⚠️"
+    },
+    {
+      "ref": "3fbae411",
+      "sym": "SOL",
+      "tf": "1m",
+      "dir": "long",
+      "stage": "watch",
+      "st": "confirmed",
+      "lv": {
+        "ent": 119.37,
+        "stop": 119.27,
+        "inv": 119.27,
+        "tp1": 119.52,
+        "tp2": 119.55,
+        "tp2src": "level",
+        "rr": 1.5,
+        "cap": 119.42
+      },
+      "score": "3/7",
+      "gate": false,
+      "tfs": "1m⚠️ 3m✅ 5m⚠️ 15m❌ 1h✅ 4h✅ 1d⚠️"
     },
     {
       "ref": "9393332e",
@@ -39,34 +60,13 @@
         "rr": 1.55,
         "cap": 124.58
       },
-      "score": "2/7",
+      "score": "3/7",
       "gate": true,
-      "tfs": "1m❌ 3m⚠️ 5m⚠️ 15m❌ 1h✅ 4h✅ 1d⚠️"
-    },
-    {
-      "ref": "073e3f72",
-      "sym": "SOL",
-      "tf": "4h",
-      "dir": "short",
-      "stage": "watch",
-      "st": "forming",
-      "lv": {
-        "ent": 117.12,
-        "stop": 121.67,
-        "inv": 121.67,
-        "tp1": 111.03,
-        "tp2": 107.44,
-        "tp2src": "level",
-        "rr": 1.34,
-        "cap": 114.21
-      },
-      "score": "2/7",
-      "gate": false,
-      "tfs": "1m✅ 3m⚠️ 5m⚠️ 15m✅ 1h❌ 4h❌ 1d❌"
+      "tfs": "1m⚠️ 3m✅ 5m⚠️ 15m❌ 1h✅ 4h✅ 1d⚠️"
     }
   ],
   "pulse": {
-    "found": 72,
+    "found": 74,
     "opps": 28,
     "locked": 0,
     "since": "2026-10-03T01:38:43.876Z",
