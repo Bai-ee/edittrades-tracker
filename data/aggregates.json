@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-10-03T06:17:22.959Z",
+  "generatedAt": "2026-10-03T06:27:20.736Z",
   "label": "provisional; not evidence of an edge",
   "rUnits": "gross_R_before_fees_slippage",
   "tiles": {
-    "lastCapture": "2026-10-03T06:17:15.914Z",
-    "lastClosedThrough": "2026-10-03T06:17:00.000Z",
+    "lastCapture": "2026-10-03T06:27:14.879Z",
+    "lastClosedThrough": "2026-10-03T06:27:00.000Z",
     "callsToday": 51,
     "goodToday": 0,
     "fills7d": 1,
@@ -28391,7 +28391,7 @@
     }
   ],
   "captures": {
-    "captures": 4056,
+    "captures": 4059,
     "symbols": [
       "BTC",
       "ETH",
@@ -28401,24 +28401,23 @@
     "longestGapMinutes": 121,
     "dataUnavailable": 3,
     "markDriftBps": {
-      "samples": 4041,
+      "samples": 4044,
       "medianAbs": 1.6,
       "p95Abs": 7.8,
       "maxAbs": 26.2,
       "notOk": 15
     },
     "candles1m": {
-      "BTC": 14062,
-      "ETH": 14062,
-      "SOL": 14062
+      "BTC": 14072,
+      "ETH": 14072,
+      "SOL": 14072
     },
     "missing1mCandles": 0
   },
   "activity": {
     "firstRun": "2026-09-23T23:28:00.000Z",
-    "runs": 1352,
+    "runs": 1353,
     "runTimes48h": [
-      "2026-10-01T06:27:00.000Z",
       "2026-10-01T06:37:00.000Z",
       "2026-10-01T06:47:00.000Z",
       "2026-10-01T06:57:00.000Z",
@@ -28710,9 +28709,10 @@
       "2026-10-03T05:47:00.000Z",
       "2026-10-03T05:57:00.000Z",
       "2026-10-03T06:07:00.000Z",
-      "2026-10-03T06:17:00.000Z"
+      "2026-10-03T06:17:00.000Z",
+      "2026-10-03T06:27:00.000Z"
     ],
-    "recCalls24h": 197,
+    "recCalls24h": 196,
     "good24h": 0,
     "ready24h": 0,
     "lastGoodAt": "2026-09-27T08:47:00.000Z",
@@ -28786,23 +28786,23 @@
   "alerts": {
     "label": "provisional; not evidence of an edge",
     "tiles": {
-      "alerts7d": 594,
+      "alerts7d": 592,
       "alertsToday": 18,
       "medianLatencyMin": 0.8,
-      "latencyN": 584,
+      "latencyN": 582,
       "laterGoodRate": 0.0055,
-      "laterGoodN": 545,
+      "laterGoodN": 543,
       "beReadyToGoRate": 0.0667,
       "beReadyN": 15,
-      "transitions24h": 2624,
+      "transitions24h": 2626,
       "transitionsPerHour": {
-        "1m": 67.29,
-        "3m": 25.54,
-        "5m": 16.5
+        "1m": 67.42,
+        "3m": 25.58,
+        "5m": 16.42
       }
     },
     "byKind7d": {
-      "WATCH": 209,
+      "WATCH": 207,
       "EXEC": 10,
       "TRIGGERING": 101,
       "SETUP": 14,
@@ -28816,13 +28816,13 @@
       "LOCK_OPPORTUNITY": 14
     },
     "byVerdict7d": {
-      "STAND DOWN": 277,
+      "STAND DOWN": 275,
       "BE READY": 15,
       "GET IN NOW": 6,
       "WAIT": 243
     },
     "byOutcome7d": {
-      "void": 263,
+      "void": 261,
       "confirmed": 231,
       "none": 42,
       "tp1": 1,
@@ -28847,7 +28847,7 @@
         "medianLatencyMin": 0.8,
         "laterGood": 0,
         "laterGoodOf": 17,
-        "transitions": 613
+        "transitions": 629
       },
       {
         "day": "2026-10-02",
@@ -29166,8 +29166,8 @@
       "label": "Live wallet · Steady profile",
       "epochIso": "2026-09-26T22:08:00.000Z",
       "source": "constant",
-      "calls": 939,
-      "equityNowUsd": 522.73,
+      "calls": 940,
+      "equityNowUsd": 522.75,
       "equityStartUsd": 523.01,
       "trades": 0,
       "realizedNetUsd": null,
@@ -30639,9 +30639,9 @@
     "current": {
       "BTC:5m": {
         "direction": "no_call",
-        "confidence": 0,
-        "closedAt": "2026-10-03T06:15:00.000Z",
-        "refClose": 84613.6
+        "confidence": 0.2,
+        "closedAt": "2026-10-03T06:25:00.000Z",
+        "refClose": 84629.9
       },
       "BTC:15m": {
         "direction": "under",
@@ -30662,10 +30662,10 @@
         "refClose": 84684.3
       },
       "ETH:5m": {
-        "direction": "under",
-        "confidence": 0.6,
-        "closedAt": "2026-10-03T06:15:00.000Z",
-        "refClose": 2675.49
+        "direction": "no_call",
+        "confidence": 0.2,
+        "closedAt": "2026-10-03T06:25:00.000Z",
+        "refClose": 2676.57
       },
       "ETH:15m": {
         "direction": "under",
@@ -30687,9 +30687,9 @@
       },
       "SOL:5m": {
         "direction": "over",
-        "confidence": 0.4,
-        "closedAt": "2026-10-03T06:15:00.000Z",
-        "refClose": 119.43
+        "confidence": 1,
+        "closedAt": "2026-10-03T06:25:00.000Z",
+        "refClose": 119.57
       },
       "SOL:15m": {
         "direction": "no_call",
