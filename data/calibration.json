@@ -1,29 +1,29 @@
 {
-  "generatedAt": "2026-10-03T05:27:20.889Z",
-  "n": 2097,
+  "generatedAt": "2026-10-03T05:37:19.516Z",
+  "n": 2099,
   "phases": {
     "tightening": {
-      "n": 1589,
+      "n": 1590,
       "brier": 0.6598,
-      "baselineBrier": 0.6518,
+      "baselineBrier": 0.6516,
       "baseline": {
-        "retest_go": 11.96,
-        "runner": 9.82,
-        "false_break": 12.78,
-        "fail_first": 54.37,
-        "chop": 11.08
+        "retest_go": 11.95,
+        "runner": 9.81,
+        "false_break": 12.77,
+        "fail_first": 54.4,
+        "chop": 11.07
       }
     },
     "broken": {
-      "n": 508,
-      "brier": 0.8301,
-      "baselineBrier": 0.7355,
+      "n": 509,
+      "brier": 0.8311,
+      "baselineBrier": 0.7354,
       "baseline": {
-        "retest_go": 33.46,
-        "runner": 27.56,
-        "false_break": 21.26,
+        "retest_go": 33.4,
+        "runner": 27.7,
+        "false_break": 21.22,
         "fail_first": 0,
-        "chop": 17.72
+        "chop": 17.68
       }
     }
   },
@@ -31,9 +31,9 @@
     "runner": [
       {
         "bucket": "0-10",
-        "n": 975,
+        "n": 977,
         "meanPredicted": 5.6,
-        "realisedRate": 11
+        "realisedRate": 11.1
       },
       {
         "bucket": "10-20",
@@ -93,7 +93,7 @@
     "fail_first": [
       {
         "bucket": "0-10",
-        "n": 508,
+        "n": 509,
         "meanPredicted": 0,
         "realisedRate": 0
       },
@@ -111,9 +111,9 @@
       },
       {
         "bucket": "30-40",
-        "n": 411,
+        "n": 412,
         "meanPredicted": 36.3,
-        "realisedRate": 47.7
+        "realisedRate": 47.8
       },
       {
         "bucket": "40-50",
@@ -154,8 +154,8 @@
     ]
   },
   "likely": {
-    "n": 2097,
-    "hitRate": 44.9
+    "n": 2099,
+    "hitRate": 44.8
   },
   "chase": {
     "highElevated": {
@@ -163,8 +163,8 @@
       "runnerRate": 29.3
     },
     "low": {
-      "n": 1810,
-      "runnerRate": 11.7
+      "n": 1812,
+      "runnerRate": 11.8
     }
   }
 }
