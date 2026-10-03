@@ -1,5 +1,5 @@
 {
-  "closedThrough": "2026-10-03T13:17:00.000Z",
+  "closedThrough": "2026-10-03T13:27:00.000Z",
   "board": [
     {
       "ref": "196ca876",
@@ -7,7 +7,7 @@
       "tf": "5m",
       "dir": "short",
       "stage": "lockable",
-      "st": "triggering",
+      "st": "confirmed",
       "lv": {
         "ent": 2679.47,
         "stop": 2683.01,
@@ -16,32 +16,11 @@
         "tp2": 2672.76,
         "tp2src": "level",
         "rr": 1.88,
-        "cap": 2676.98
+        "cap": 2676.82
       },
       "score": "2/7",
       "gate": true,
       "tfs": "1m⚠️ 3m⚠️ 5m✅ 15m✅ 1h⚠️ 4h⚠️ 1d❌"
-    },
-    {
-      "ref": "5c3e6784",
-      "sym": "BTC",
-      "tf": "3m",
-      "dir": "long",
-      "stage": "found",
-      "st": "forming",
-      "lv": {
-        "ent": 84900,
-        "stop": 84805.7,
-        "inv": 84805.7,
-        "tp1": 85143.2,
-        "tp2": 86331,
-        "tp2src": "level",
-        "rr": 2.58,
-        "cap": 84955.5
-      },
-      "score": "4/7",
-      "gate": true,
-      "tfs": "1m⚠️ 3m✅ 5m✅ 15m⚠️ 1h✅ 4h✅ 1d⚠️"
     },
     {
       "ref": "4676a5c5",
@@ -60,9 +39,30 @@
         "rr": 1.92,
         "cap": 85108.39
       },
-      "score": "4/7",
+      "score": "3/5",
       "gate": true,
-      "tfs": "1m⚠️ 3m✅ 5m✅ 15m⚠️ 1h✅ 4h✅ 1d⚠️"
+      "tfs": "1m· 3m· 5m✅ 15m⚠️ 1h✅ 4h✅ 1d⚠️"
+    },
+    {
+      "ref": "e41013a5",
+      "sym": "BTC",
+      "tf": "4h",
+      "dir": "long",
+      "stage": "watch",
+      "st": "forming",
+      "lv": {
+        "ent": 85604,
+        "stop": 83860.7,
+        "inv": 83860.7,
+        "tp1": 89953.8,
+        "tp2": 92128.7,
+        "tp2src": "1.5x",
+        "rr": 2.5,
+        "cap": 86918.14
+      },
+      "score": "3/5",
+      "gate": true,
+      "tfs": "1m· 3m· 5m✅ 15m⚠️ 1h✅ 4h✅ 1d⚠️"
     }
   ],
   "pulse": {
