@@ -1,5 +1,5 @@
 {
-  "closedThrough": "2026-10-04T01:17:00.000Z",
+  "closedThrough": "2026-10-04T01:27:00.000Z",
   "board": [
     {
       "ref": "129274ba",
@@ -18,38 +18,17 @@
         "rr": 2.8,
         "cap": 120.68
       },
-      "score": "3/7",
+      "score": "4/7",
       "gate": true,
-      "tfs": "1m⚠️ 3m⚠️ 5m⚠️ 15m✅ 1h✅ 4h✅ 1d⚠️"
-    },
-    {
-      "ref": "39a8d6da",
-      "sym": "SOL",
-      "tf": "5m",
-      "dir": "long",
-      "stage": "lockable",
-      "st": "triggering",
-      "lv": {
-        "ent": 120.2,
-        "stop": 119.93,
-        "inv": 119.93,
-        "tp1": 120.84,
-        "tp2": 121.56,
-        "tp2src": "level",
-        "rr": 2.37,
-        "cap": 120.4
-      },
-      "score": "3/7",
-      "gate": true,
-      "tfs": "1m⚠️ 3m⚠️ 5m⚠️ 15m✅ 1h✅ 4h✅ 1d⚠️"
+      "tfs": "1m⚠️ 3m✅ 5m⚠️ 15m✅ 1h✅ 4h✅ 1d⚠️"
     },
     {
       "ref": "e72600fa",
       "sym": "BTC",
       "tf": "3m",
       "dir": "short",
-      "stage": "found",
-      "st": "forming",
+      "stage": "lockable",
+      "st": "confirmed",
       "lv": {
         "ent": 84740.1,
         "stop": 84801.8,
@@ -58,16 +37,37 @@
         "tp2": 84527.1,
         "tp2src": "level",
         "rr": 1.73,
-        "cap": 84701.29
+        "cap": 84702.27
       },
-      "score": "3/7",
+      "score": "2/7",
       "gate": true,
-      "tfs": "1m✅ 3m✅ 5m✅ 15m⚠️ 1h⚠️ 4h❌ 1d❌"
+      "tfs": "1m⚠️ 3m✅ 5m✅ 15m⚠️ 1h⚠️ 4h❌ 1d❌"
+    },
+    {
+      "ref": "39a8d6da",
+      "sym": "SOL",
+      "tf": "5m",
+      "dir": "long",
+      "stage": "found",
+      "st": "forming",
+      "lv": {
+        "ent": 120.37,
+        "stop": 119.93,
+        "inv": 119.93,
+        "tp1": 121.16,
+        "tp2": 121.56,
+        "tp2src": "level",
+        "rr": 1.8,
+        "cap": 120.57
+      },
+      "score": "4/7",
+      "gate": true,
+      "tfs": "1m⚠️ 3m✅ 5m⚠️ 15m✅ 1h✅ 4h✅ 1d⚠️"
     }
   ],
   "pulse": {
-    "found": 229,
-    "opps": 82,
+    "found": 230,
+    "opps": 83,
     "locked": 1,
     "since": "2026-10-03T01:38:43.876Z",
     "partial": true
