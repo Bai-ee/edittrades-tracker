@@ -1,13 +1,34 @@
 {
-  "closedThrough": "2026-10-04T03:37:00.000Z",
+  "closedThrough": "2026-10-04T03:47:00.000Z",
   "board": [
+    {
+      "ref": "ad0a929c",
+      "sym": "ETH",
+      "tf": "5m",
+      "dir": "long",
+      "stage": "lockable",
+      "st": "confirmed",
+      "lv": {
+        "ent": 2695.69,
+        "stop": 2689.77,
+        "inv": 2689.77,
+        "tp1": 2701.91,
+        "tp2": 2702.45,
+        "tp2src": "level",
+        "rr": 1.05,
+        "cap": 2697.98
+      },
+      "score": "4/7",
+      "gate": true,
+      "tfs": "1m⚠️ 3m✅ 5m✅ 15m✅ 1h✅ 4h⚠️ 1d⚠️"
+    },
     {
       "ref": "ecc41e27",
       "sym": "ETH",
       "tf": "15m",
       "dir": "long",
-      "stage": "found",
-      "st": "forming",
+      "stage": "lockable",
+      "st": "triggering",
       "lv": {
         "ent": 2695.69,
         "stop": 2689.77,
@@ -16,60 +37,39 @@
         "tp2": 2708.48,
         "tp2src": "level",
         "rr": 2.01,
-        "cap": 2700.36
+        "cap": 2700.64
       },
-      "score": "3/7",
+      "score": "4/7",
       "gate": true,
-      "tfs": "1m⚠️ 3m✅ 5m✅ 15m⚠️ 1h✅ 4h⚠️ 1d⚠️"
+      "tfs": "1m⚠️ 3m✅ 5m✅ 15m✅ 1h✅ 4h⚠️ 1d⚠️"
     },
     {
-      "ref": "9393332e",
+      "ref": "328a13e1",
       "sym": "SOL",
-      "tf": "4h",
+      "tf": "1m",
       "dir": "long",
-      "stage": "watch",
+      "stage": "found",
       "st": "forming",
       "lv": {
-        "ent": 120.72,
-        "stop": 117.12,
-        "inv": 117.12,
-        "tp1": 127.76,
-        "tp2": 131.28,
-        "tp2src": "1.5x",
-        "rr": 1.96,
-        "cap": 123.26
+        "ent": 121.19,
+        "stop": 120.79,
+        "inv": 120.79,
+        "tp1": 122.28,
+        "tp2": 122.79,
+        "tp2src": "level",
+        "rr": 2.73,
+        "cap": 121.43
       },
       "score": "5/7",
       "gate": true,
       "tfs": "1m✅ 3m✅ 5m✅ 15m⚠️ 1h✅ 4h✅ 1d⚠️"
-    },
-    {
-      "ref": "8b0ad43a",
-      "sym": "ETH",
-      "tf": "1h",
-      "dir": "long",
-      "stage": "watch",
-      "st": "confirmed",
-      "lv": {
-        "ent": 2690.64,
-        "stop": 2675.27,
-        "inv": 2675.27,
-        "tp1": 2715.4,
-        "tp2": 2737.61,
-        "tp2src": "level",
-        "rr": 1.61,
-        "cap": 2698.45
-      },
-      "score": "3/7",
-      "gate": true,
-      "tfs": "1m⚠️ 3m✅ 5m✅ 15m⚠️ 1h✅ 4h⚠️ 1d⚠️"
     }
   ],
   "pulse": {
-    "found": 227,
-    "opps": 87,
+    "found": 230,
+    "opps": 90,
     "locked": 1,
-    "since": "2026-10-03T03:37:16.552Z",
+    "since": "2026-10-03T03:47:16.983Z",
     "partial": false
   },
   "flowRules": {
