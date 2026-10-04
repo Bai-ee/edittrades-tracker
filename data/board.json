@@ -1,6 +1,32 @@
 {
-  "closedThrough": "2026-10-04T23:17:00.000Z",
+  "closedThrough": "2026-10-04T23:27:00.000Z",
   "board": [
+    {
+      "ref": "3c982298",
+      "sym": "BTC",
+      "tf": "1m",
+      "dir": "long",
+      "stage": "lockable",
+      "st": "triggering",
+      "lv": {
+        "ent": 86667.1,
+        "stop": 86569.2,
+        "inv": 86569.2,
+        "tp1": 86943,
+        "tp2": 87143.4,
+        "tp2src": "level",
+        "rr": 2.82,
+        "cap": 86754.01
+      },
+      "score": "6/7",
+      "gate": true,
+      "tfs": "1m✅ 3m✅ 5m✅ 15m✅ 1h✅ 4h✅ 1d⚠️",
+      "ev": {
+        "verdict": "GO",
+        "vol": "Volume STRONG · 3.2x avg · quiet flag → GO",
+        "mom": "RSI 63 · Stoch 48/39 rising · no divergence"
+      }
+    },
     {
       "ref": "61befdd1",
       "sym": "SOL",
@@ -20,7 +46,7 @@
       },
       "score": "5/7",
       "gate": true,
-      "tfs": "1m✅ 3m✅ 5m⚠️ 15m✅ 1h✅ 4h✅ 1d⚠️",
+      "tfs": "1m✅ 3m⚠️ 5m✅ 15m✅ 1h✅ 4h✅ 1d⚠️",
       "ev": {
         "verdict": "GO",
         "vol": "Volume OK · 2x avg → GO",
@@ -44,47 +70,21 @@
         "rr": 3.35,
         "cap": 86966.08
       },
-      "score": "5/7",
+      "score": "6/7",
       "gate": true,
-      "tfs": "1m⚠️ 3m✅ 5m✅ 15m✅ 1h✅ 4h✅ 1d⚠️",
+      "tfs": "1m✅ 3m✅ 5m✅ 15m✅ 1h✅ 4h✅ 1d⚠️",
       "ev": {
         "verdict": "CAUTION",
         "vol": "Volume OK · 0.9x avg → GO",
         "mom": "RSI 76 · Stoch 66/62 rising · no divergence"
       }
-    },
-    {
-      "ref": "ba2ad80a",
-      "sym": "ETH",
-      "tf": "15m",
-      "dir": "long",
-      "stage": "found",
-      "st": "forming",
-      "lv": {
-        "ent": 2735.63,
-        "stop": 2722.79,
-        "inv": 2722.79,
-        "tp1": 2772.6,
-        "tp2": 2791.09,
-        "tp2src": "1.5x",
-        "rr": 2.88,
-        "cap": 2745.91
-      },
-      "score": "5/7",
-      "gate": true,
-      "tfs": "1m✅ 3m✅ 5m⚠️ 15m✅ 1h✅ 4h✅ 1d⚠️",
-      "ev": {
-        "verdict": "STAY OUT",
-        "vol": "Volume WEAK · 0.6x avg → STAY OUT",
-        "mom": "RSI 80 · Stoch 100/100 overbought · no divergence"
-      }
     }
   ],
   "pulse": {
     "found": 326,
-    "opps": 125,
+    "opps": 126,
     "locked": 1,
-    "since": "2026-10-03T23:17:17.485Z",
+    "since": "2026-10-03T23:27:17.203Z",
     "partial": false
   },
   "flowRules": {
