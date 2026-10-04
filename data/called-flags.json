@@ -1,87 +1,228 @@
 {
   "rule": "A flag is right if price moves 1 ATR (14) of its own timeframe in the called direction before moving 1 ATR against it, within 12 candles of that timeframe, measured from the price when the alert was sent; flat if neither happens (excluded from the rate).",
-  "since": null,
+  "since": "2026-10-03T02:45:46.560Z",
   "windows": {
     "24h": {
       "long": {
-        "called": 0,
-        "right": 0,
-        "wrong": 0,
-        "flat": 0,
-        "open": 0
+        "called": 79,
+        "right": 35,
+        "wrong": 40,
+        "flat": 1,
+        "open": 3
       },
       "short": {
-        "called": 0,
-        "right": 0,
-        "wrong": 0,
-        "flat": 0,
+        "called": 9,
+        "right": 3,
+        "wrong": 5,
+        "flat": 1,
         "open": 0
       },
       "total": {
-        "called": 0,
-        "right": 0,
-        "wrong": 0,
-        "flat": 0,
-        "open": 0
+        "called": 88,
+        "right": 38,
+        "wrong": 45,
+        "flat": 2,
+        "open": 3
       },
-      "rate": null
+      "rate": 46
     },
     "7d": {
       "long": {
-        "called": 0,
-        "right": 0,
-        "wrong": 0,
-        "flat": 0,
-        "open": 0
+        "called": 83,
+        "right": 36,
+        "wrong": 43,
+        "flat": 1,
+        "open": 3
       },
       "short": {
-        "called": 0,
-        "right": 0,
-        "wrong": 0,
-        "flat": 0,
+        "called": 12,
+        "right": 5,
+        "wrong": 6,
+        "flat": 1,
         "open": 0
       },
       "total": {
-        "called": 0,
-        "right": 0,
-        "wrong": 0,
-        "flat": 0,
-        "open": 0
+        "called": 95,
+        "right": 41,
+        "wrong": 49,
+        "flat": 2,
+        "open": 3
       },
-      "rate": null
+      "rate": 46
     },
     "30d": {
       "long": {
-        "called": 0,
-        "right": 0,
-        "wrong": 0,
-        "flat": 0,
-        "open": 0
+        "called": 83,
+        "right": 36,
+        "wrong": 43,
+        "flat": 1,
+        "open": 3
       },
       "short": {
-        "called": 0,
-        "right": 0,
-        "wrong": 0,
-        "flat": 0,
+        "called": 12,
+        "right": 5,
+        "wrong": 6,
+        "flat": 1,
         "open": 0
       },
       "total": {
-        "called": 0,
-        "right": 0,
-        "wrong": 0,
-        "flat": 0,
-        "open": 0
+        "called": 95,
+        "right": 41,
+        "wrong": 49,
+        "flat": 2,
+        "open": 3
       },
-      "rate": null
+      "rate": 46
     }
   },
-  "recent": [],
+  "recent": [
+    {
+      "calledAt": "2026-10-04T02:01:47.167Z",
+      "symbol": "SOL",
+      "timeframe": "1m",
+      "direction": "long",
+      "outcome": "right"
+    },
+    {
+      "calledAt": "2026-10-04T02:15:47.129Z",
+      "symbol": "ETH",
+      "timeframe": "5m",
+      "direction": "long",
+      "outcome": "right"
+    },
+    {
+      "calledAt": "2026-10-04T02:34:46.897Z",
+      "symbol": "SOL",
+      "timeframe": "1m",
+      "direction": "long",
+      "outcome": "wrong"
+    },
+    {
+      "calledAt": "2026-10-04T02:36:46.204Z",
+      "symbol": "SOL",
+      "timeframe": "3m",
+      "direction": "long",
+      "outcome": "wrong"
+    },
+    {
+      "calledAt": "2026-10-04T02:36:47.292Z",
+      "symbol": "ETH",
+      "timeframe": "1m",
+      "direction": "long",
+      "outcome": "wrong"
+    },
+    {
+      "calledAt": "2026-10-04T02:53:46.244Z",
+      "symbol": "SOL",
+      "timeframe": "1m",
+      "direction": "long",
+      "outcome": "right"
+    },
+    {
+      "calledAt": "2026-10-04T03:01:47.107Z",
+      "symbol": "SOL",
+      "timeframe": "15m",
+      "direction": "long",
+      "outcome": "right"
+    },
+    {
+      "calledAt": "2026-10-04T03:01:48.225Z",
+      "symbol": "SOL",
+      "timeframe": "5m",
+      "direction": "long",
+      "outcome": "wrong"
+    },
+    {
+      "calledAt": "2026-10-04T03:28:46.967Z",
+      "symbol": "SOL",
+      "timeframe": "1m",
+      "direction": "long",
+      "outcome": "right"
+    },
+    {
+      "calledAt": "2026-10-04T03:33:46.536Z",
+      "symbol": "SOL",
+      "timeframe": "3m",
+      "direction": "long",
+      "outcome": "right"
+    },
+    {
+      "calledAt": "2026-10-04T03:33:47.608Z",
+      "symbol": "ETH",
+      "timeframe": "1m",
+      "direction": "long",
+      "outcome": "right"
+    },
+    {
+      "calledAt": "2026-10-04T03:45:46.810Z",
+      "symbol": "ETH",
+      "timeframe": "5m",
+      "direction": "long",
+      "outcome": "wrong"
+    },
+    {
+      "calledAt": "2026-10-04T03:45:47.917Z",
+      "symbol": "ETH",
+      "timeframe": "15m",
+      "direction": "long",
+      "outcome": "wrong"
+    },
+    {
+      "calledAt": "2026-10-04T04:00:47.607Z",
+      "symbol": "ETH",
+      "timeframe": "1h",
+      "direction": "long",
+      "outcome": "open"
+    },
+    {
+      "calledAt": "2026-10-04T04:00:48.767Z",
+      "symbol": "BTC",
+      "timeframe": "15m",
+      "direction": "long",
+      "outcome": "open"
+    },
+    {
+      "calledAt": "2026-10-04T05:11:47.021Z",
+      "symbol": "BTC",
+      "timeframe": "1m",
+      "direction": "long",
+      "outcome": "right"
+    },
+    {
+      "calledAt": "2026-10-04T05:12:48.540Z",
+      "symbol": "ETH",
+      "timeframe": "1m",
+      "direction": "long",
+      "outcome": "right"
+    },
+    {
+      "calledAt": "2026-10-04T05:20:47.157Z",
+      "symbol": "ETH",
+      "timeframe": "5m",
+      "direction": "long",
+      "outcome": "open"
+    },
+    {
+      "calledAt": "2026-10-04T05:22:45.813Z",
+      "symbol": "SOL",
+      "timeframe": "1m",
+      "direction": "long",
+      "outcome": "right"
+    },
+    {
+      "calledAt": "2026-10-04T05:28:47.172Z",
+      "symbol": "BTC",
+      "timeframe": "1m",
+      "direction": "long",
+      "outcome": "wrong"
+    }
+  ],
   "legacy": {
-    "called": 95,
-    "right": 41,
-    "wrong": 48,
-    "flat": 2,
-    "open": 4,
-    "rate": 46
+    "called": 1,
+    "right": 1,
+    "wrong": 0,
+    "flat": 0,
+    "open": 0,
+    "rate": 100
   }
 }
