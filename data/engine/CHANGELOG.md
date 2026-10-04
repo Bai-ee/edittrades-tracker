@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-10-03 — Volume, RSI / Stoch RSI and divergence on trade alerts
+
+Owner: "stronger relevance around volume, bearish or bullish div and RSI stochs… add the quality of volume and if that quality is an indicator to go in or stay out". New pure `lib/flowEvidence.js` reads the flag's own timeframe from the full closed history (last 120 candles; the published 20 are too short): volume quality STRONG / OK / WEAK (breakout candle vs 20-bar average, body with the trade, quiet flag) with GO / STAY OUT, RSI 14, Stoch RSI state, regular bull/bear divergence, overall GO / CAUTION / STAY OUT. LOCK NOW and BREAKING cards gain two lines (`📊 Volume … → GO|STAY OUT`, `📈 RSI · Stoch · div`, `→ CAUTION` when momentum argues against). Display only, never a gate (alert rules unchanged). flagBoard entries carry `ev`; REST `board[].ev {verdict, vol, mom}`; alert log `flow` adds vol/volx/rsi/div/ev; GPT SNAPSHOT prints `ev.vol` / `ev.mom`. Tracker: the collector kept only scalar alert fields and dropped `flow`, so every flow call landed as legacy (site headline 0 called); `flow` is now stored, and stored lines without it rebuild score/nextTf from the alert text. test:flowevidence 21.
+
 ## 2026-10-03 — Flag flow alignment: next timeframe up instead of 5/7
 
 Owner: "5/7 is too restrictive, do 2/7 or just the 1 tf ahead". LOCK NOW / BREAKING now need the flag's own timeframe gate AND the next timeframe up with the trade (✅) — at least 2/7 (`FLOW_DEFAULTS.minScore` 2/7, `requireNextTf`). `flowRules` gains `align`; site and GPT wording updated. Backtest context: next-timeframe-agrees scored 49.6% from the alert price (docs/FLAG_FLOW_BACKTEST_2026-10-03.md), so expect more alerts at a similar hit rate.
