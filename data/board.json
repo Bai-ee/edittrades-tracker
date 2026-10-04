@@ -1,30 +1,56 @@
 {
-  "closedThrough": "2026-10-04T23:27:00.000Z",
+  "closedThrough": "2026-10-04T23:37:00.000Z",
   "board": [
     {
-      "ref": "3c982298",
+      "ref": "85eb1426",
       "sym": "BTC",
-      "tf": "1m",
+      "tf": "15m",
+      "dir": "long",
+      "stage": "lockable",
+      "st": "triggering",
+      "lv": {
+        "ent": 86626.6,
+        "stop": 86216.3,
+        "inv": 86216.3,
+        "tp1": 88002.3,
+        "tp2": 88690.15,
+        "tp2src": "1.5x",
+        "rr": 3.35,
+        "cap": 86991.46
+      },
+      "score": "4/7",
+      "gate": true,
+      "tfs": "1m⚠️ 3m⚠️ 5m✅ 15m✅ 1h✅ 4h✅ 1d⚠️",
+      "ev": {
+        "verdict": "CAUTION",
+        "vol": "Volume OK · 1.9x avg → GO",
+        "mom": "RSI 78 · Stoch 73/66 rising · no divergence"
+      }
+    },
+    {
+      "ref": "f6bd572a",
+      "sym": "BTC",
+      "tf": "5m",
       "dir": "long",
       "stage": "lockable",
       "st": "triggering",
       "lv": {
         "ent": 86667.1,
-        "stop": 86569.2,
-        "inv": 86569.2,
-        "tp1": 86943,
-        "tp2": 87143.4,
-        "tp2src": "level",
-        "rr": 2.82,
-        "cap": 86754.01
+        "stop": 86216.3,
+        "inv": 86216.3,
+        "tp1": 87639.9,
+        "tp2": 88126.3,
+        "tp2src": "1.5x",
+        "rr": 2.16,
+        "cap": 86874.57
       },
-      "score": "6/7",
+      "score": "4/7",
       "gate": true,
-      "tfs": "1m✅ 3m✅ 5m✅ 15m✅ 1h✅ 4h✅ 1d⚠️",
+      "tfs": "1m⚠️ 3m⚠️ 5m✅ 15m✅ 1h✅ 4h✅ 1d⚠️",
       "ev": {
-        "verdict": "GO",
-        "vol": "Volume STRONG · 3.2x avg · quiet flag → GO",
-        "mom": "RSI 63 · Stoch 48/39 rising · no divergence"
+        "verdict": "STAY OUT",
+        "vol": "Volume WEAK · 0.5x avg → STAY OUT",
+        "mom": "RSI 63 · Stoch 47/47 rising · bearish div ⚠️"
       }
     },
     {
@@ -44,47 +70,21 @@
         "rr": 1.77,
         "cap": 122.69
       },
-      "score": "5/7",
+      "score": "3/7",
       "gate": true,
-      "tfs": "1m✅ 3m⚠️ 5m✅ 15m✅ 1h✅ 4h✅ 1d⚠️",
+      "tfs": "1m⚠️ 3m⚠️ 5m⚠️ 15m✅ 1h✅ 4h✅ 1d⚠️",
       "ev": {
         "verdict": "GO",
         "vol": "Volume OK · 2x avg → GO",
         "mom": "RSI 63 · Stoch 23/12 rising · no divergence"
       }
-    },
-    {
-      "ref": "85eb1426",
-      "sym": "BTC",
-      "tf": "15m",
-      "dir": "long",
-      "stage": "found",
-      "st": "forming",
-      "lv": {
-        "ent": 86626.6,
-        "stop": 86216.3,
-        "inv": 86216.3,
-        "tp1": 88002.3,
-        "tp2": 88690.15,
-        "tp2src": "1.5x",
-        "rr": 3.35,
-        "cap": 86966.08
-      },
-      "score": "6/7",
-      "gate": true,
-      "tfs": "1m✅ 3m✅ 5m✅ 15m✅ 1h✅ 4h✅ 1d⚠️",
-      "ev": {
-        "verdict": "CAUTION",
-        "vol": "Volume OK · 0.9x avg → GO",
-        "mom": "RSI 76 · Stoch 66/62 rising · no divergence"
-      }
     }
   ],
   "pulse": {
-    "found": 326,
-    "opps": 126,
+    "found": 327,
+    "opps": 129,
     "locked": 1,
-    "since": "2026-10-03T23:27:17.203Z",
+    "since": "2026-10-03T23:37:15.568Z",
     "partial": false
   },
   "flowRules": {
