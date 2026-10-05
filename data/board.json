@@ -1,6 +1,32 @@
 {
-  "closedThrough": "2026-10-05T10:57:00.000Z",
+  "closedThrough": "2026-10-05T11:07:00.000Z",
   "board": [
+    {
+      "ref": "b52db775",
+      "sym": "SOL",
+      "tf": "3m",
+      "dir": "short",
+      "stage": "lockable",
+      "st": "confirmed",
+      "lv": {
+        "ent": 120.64,
+        "stop": 120.85,
+        "inv": 120.85,
+        "tp1": 120.19,
+        "tp2": 120.09,
+        "tp2src": "level",
+        "rr": 2.14,
+        "cap": 120.42
+      },
+      "score": "2/7",
+      "gate": true,
+      "tfs": "1m⚠️ 3m✅ 5m✅ 15m⚠️ 1h⚠️ 4h❌ 1d❌",
+      "ev": {
+        "verdict": "STAY OUT",
+        "vol": "Volume WEAK · 2x avg → STAY OUT",
+        "mom": "RSI 43 · Stoch 34/50 falling · no divergence"
+      }
+    },
     {
       "ref": "d2092d25",
       "sym": "BTC",
@@ -18,9 +44,9 @@
         "rr": 1.77,
         "cap": 87940.02
       },
-      "score": "3/7",
+      "score": "2/7",
       "gate": true,
-      "tfs": "1m✅ 3m⚠️ 5m✅ 15m⚠️ 1h⚠️ 4h⚠️ 1d✅",
+      "tfs": "1m❌ 3m❌ 5m⚠️ 15m✅ 1h⚠️ 4h⚠️ 1d✅",
       "ev": {
         "verdict": "CAUTION",
         "vol": "Volume OK · 1.3x avg → GO",
@@ -46,45 +72,19 @@
       },
       "score": "2/7",
       "gate": true,
-      "tfs": "1m⚠️ 3m⚠️ 5m⚠️ 15m⚠️ 1h⚠️ 4h✅ 1d✅",
+      "tfs": "1m❌ 3m❌ 5m⚠️ 15m⚠️ 1h⚠️ 4h✅ 1d✅",
       "ev": {
         "verdict": "CAUTION",
         "vol": "Volume OK · 1.1x avg → GO",
         "mom": "RSI 59 · Stoch 87/84 overbought · no divergence"
       }
-    },
-    {
-      "ref": "cb60b00e",
-      "sym": "BTC",
-      "tf": "1m",
-      "dir": "long",
-      "stage": "watch",
-      "st": "confirmed",
-      "lv": {
-        "ent": 86104,
-        "stop": 86051.2,
-        "inv": 86051.2,
-        "tp1": 86221.9,
-        "tp2": 86331,
-        "tp2src": "level",
-        "rr": 2.23,
-        "cap": 86148.2
-      },
-      "score": "3/7",
-      "gate": true,
-      "tfs": "1m✅ 3m⚠️ 5m✅ 15m⚠️ 1h⚠️ 4h⚠️ 1d✅",
-      "ev": {
-        "verdict": "STAY OUT",
-        "vol": "Volume WEAK · 0.4x avg → STAY OUT",
-        "mom": "RSI 59 · Stoch 85/74 rising · no divergence"
-      }
     }
   ],
   "pulse": {
-    "found": 272,
-    "opps": 110,
+    "found": 275,
+    "opps": 111,
     "locked": 0,
-    "since": "2026-10-04T10:57:16.967Z",
+    "since": "2026-10-04T11:07:16.800Z",
     "partial": false
   },
   "flowRules": {
