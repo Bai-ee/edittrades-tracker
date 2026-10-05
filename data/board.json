@@ -1,32 +1,6 @@
 {
-  "closedThrough": "2026-10-05T03:27:00.000Z",
+  "closedThrough": "2026-10-05T03:37:00.000Z",
   "board": [
-    {
-      "ref": "d2092d25",
-      "sym": "BTC",
-      "tf": "4h",
-      "dir": "long",
-      "stage": "found",
-      "st": "forming",
-      "lv": {
-        "ent": 87229,
-        "stop": 84538.5,
-        "inv": 84538.5,
-        "tp1": 91333.2,
-        "tp2": 93385.3,
-        "tp2src": "1.5x",
-        "rr": 1.53,
-        "cap": 87934.1
-      },
-      "score": "4/7",
-      "gate": true,
-      "tfs": "1m⚠️ 3m⚠️ 5m⚠️ 15m✅ 1h✅ 4h✅ 1d✅",
-      "ev": {
-        "verdict": "GO",
-        "vol": "Volume OK · 1x avg → GO",
-        "mom": "RSI 69 · Stoch 80/59 rising · no divergence"
-      }
-    },
     {
       "ref": "9393332e",
       "sym": "SOL",
@@ -44,13 +18,39 @@
         "rr": 1.58,
         "cap": 124.45
       },
-      "score": "3/6",
+      "score": "3/7",
       "gate": true,
-      "tfs": "1m· 3m❌ 5m❌ 15m⚠️ 1h✅ 4h✅ 1d✅",
+      "tfs": "1m❌ 3m❌ 5m❌ 15m⚠️ 1h✅ 4h✅ 1d✅",
       "ev": {
         "verdict": "CAUTION",
         "vol": "Volume OK · 1.1x avg → GO",
         "mom": "RSI 60 · Stoch 90/88 overbought · no divergence"
+      }
+    },
+    {
+      "ref": "d2092d25",
+      "sym": "BTC",
+      "tf": "4h",
+      "dir": "long",
+      "stage": "found",
+      "st": "forming",
+      "lv": {
+        "ent": 87229,
+        "stop": 84538.5,
+        "inv": 84538.5,
+        "tp1": 91333.2,
+        "tp2": 93385.3,
+        "tp2src": "1.5x",
+        "rr": 1.53,
+        "cap": 87934.1
+      },
+      "score": "3/6",
+      "gate": true,
+      "tfs": "1m❌ 3m⚠️ 5m⚠️ 15m· 1h✅ 4h✅ 1d✅",
+      "ev": {
+        "verdict": "GO",
+        "vol": "Volume OK · 1x avg → GO",
+        "mom": "RSI 69 · Stoch 80/59 rising · no divergence"
       }
     },
     {
@@ -72,7 +72,7 @@
       },
       "score": "2/7",
       "gate": true,
-      "tfs": "1m⚠️ 3m⚠️ 5m⚠️ 15m⚠️ 1h⚠️ 4h✅ 1d✅",
+      "tfs": "1m❌ 3m⚠️ 5m⚠️ 15m⚠️ 1h⚠️ 4h✅ 1d✅",
       "ev": {
         "verdict": "GO",
         "vol": "Volume STRONG · 2.6x avg · quiet flag → GO",
@@ -81,10 +81,10 @@
     }
   ],
   "pulse": {
-    "found": 309,
-    "opps": 119,
+    "found": 308,
+    "opps": 118,
     "locked": 1,
-    "since": "2026-10-04T03:27:15.151Z",
+    "since": "2026-10-04T03:37:15.336Z",
     "partial": false
   },
   "flowRules": {
