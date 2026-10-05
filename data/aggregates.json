@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-10-05T06:27:23.477Z",
+  "generatedAt": "2026-10-05T06:38:00.786Z",
   "label": "provisional; not evidence of an edge",
   "rUnits": "gross_R_before_fees_slippage",
   "tiles": {
-    "lastCapture": "2026-10-05T06:27:15.517Z",
-    "lastClosedThrough": "2026-10-05T06:27:00.000Z",
-    "callsToday": 58,
+    "lastCapture": "2026-10-05T06:37:53.128Z",
+    "lastClosedThrough": "2026-10-05T06:37:00.000Z",
+    "callsToday": 59,
     "goodToday": 0,
     "fills7d": 0,
     "winRate7d": null,
@@ -16,8 +16,8 @@
     "setupsPerDay7d": 0
   },
   "totals": {
-    "outcomes": 3527,
-    "recCalls": 2182,
+    "outcomes": 3528,
+    "recCalls": 2183,
     "tradable": {
       "calls": 6,
       "fills": 6,
@@ -85,12 +85,12 @@
         },
         {
           "key": "WATCH",
-          "calls": 525,
+          "calls": 526,
           "fills": 222,
           "wins": 59,
           "losses": 161,
           "open": 2,
-          "pending": 2,
+          "pending": 3,
           "expired": 0,
           "notFilled": 236,
           "rejected": 0,
@@ -129,12 +129,12 @@
       "byReason": [
         {
           "key": "need_confirmed_flag_plan",
-          "calls": 525,
+          "calls": 526,
           "fills": 222,
           "wins": 59,
           "losses": 161,
           "open": 2,
-          "pending": 2,
+          "pending": 3,
           "expired": 0,
           "notFilled": 236,
           "rejected": 0,
@@ -309,12 +309,12 @@
         },
         {
           "key": "WATCH",
-          "calls": 860,
+          "calls": 861,
           "fills": 366,
           "wins": 95,
           "losses": 268,
           "open": 2,
-          "pending": 2,
+          "pending": 3,
           "expired": 1,
           "notFilled": 402,
           "rejected": 0,
@@ -374,12 +374,12 @@
       "byReason": [
         {
           "key": "need_confirmed_flag_plan",
-          "calls": 851,
+          "calls": 852,
           "fills": 360,
           "wins": 95,
           "losses": 262,
           "open": 2,
-          "pending": 2,
+          "pending": 3,
           "expired": 1,
           "notFilled": 399,
           "rejected": 0,
@@ -686,9 +686,9 @@
   "byDay": [
     {
       "day": "2026-10-05",
-      "recCalls": 58,
+      "recCalls": 59,
       "good": 0,
-      "watch": 25,
+      "watch": 26,
       "bad": 33,
       "dataUnavailable": 0,
       "ready": 0,
@@ -855,6 +855,73 @@
     }
   ],
   "openCalls": [
+    {
+      "callId": "rec|SOL|WATCH|-|need_confirmed_flag_plan|2026-10-05T06:37:00.000Z",
+      "kind": "rec",
+      "symbol": "SOL",
+      "calledAt": "2026-10-05T06:37:00.000Z",
+      "capturedAt": "2026-10-05T06:37:53.128Z",
+      "configVersion": "2026.09.27-3",
+      "schemaVersion": "1.29.0",
+      "price": 120.87,
+      "markDriftBps": 3.9,
+      "dims": {
+        "closedThrough": "2026-10-05T06:37:00.000Z",
+        "recClass": "WATCH",
+        "recReason": "need_confirmed_flag_plan",
+        "planStatusAtCall": null,
+        "candidateTimeframe": "3m",
+        "candidateDirection": "long",
+        "candidateState": "forming",
+        "topDown": "supports",
+        "topDownToken": "td:bull:4/4",
+        "ema200Side": "below",
+        "ema200Token": "ema200:3m:below",
+        "divergence": "mixed",
+        "source": "cron",
+        "supports": [
+          "candidate:3m-long-forming",
+          "td:bull:4/4",
+          "a200:5/7",
+          "4h:with",
+          "divergence_agrees",
+          "data_fresh"
+        ],
+        "opposes": [
+          "ema200:3m:below",
+          "level:15m:121.38",
+          "divergence_conflicts"
+        ],
+        "unknowns": [
+          "ema200:1w:missing"
+        ]
+      },
+      "class": "WATCH",
+      "reasonCode": "need_confirmed_flag_plan",
+      "timeframe": "3m",
+      "direction": "long",
+      "candidateId": null,
+      "planStatus": null,
+      "planReasonCode": null,
+      "entry": 121,
+      "stop": 120.79,
+      "tp1": 122.11089999999997,
+      "grossRR": null,
+      "netRR": null,
+      "entryCondition": null,
+      "readiness": "no_plan",
+      "levelSource": "candidate",
+      "outcome": "pending",
+      "r": null,
+      "filledAt": null,
+      "resolvedAt": null,
+      "minutesToResolution": null,
+      "mode": "counterfactual_candidate",
+      "rUnits": "gross_R_before_fees_slippage",
+      "becameReady": null,
+      "readyCallId": null,
+      "scoredAt": "2026-10-05T06:37:56.019Z"
+    },
     {
       "callId": "rec|BTC|WATCH|-|need_confirmed_flag_plan|2026-10-05T06:27:00.000Z",
       "kind": "rec",
@@ -1197,6 +1264,73 @@
     }
   ],
   "dailyLog": [
+    {
+      "callId": "rec|SOL|WATCH|-|need_confirmed_flag_plan|2026-10-05T06:37:00.000Z",
+      "kind": "rec",
+      "symbol": "SOL",
+      "calledAt": "2026-10-05T06:37:00.000Z",
+      "capturedAt": "2026-10-05T06:37:53.128Z",
+      "configVersion": "2026.09.27-3",
+      "schemaVersion": "1.29.0",
+      "price": 120.87,
+      "markDriftBps": 3.9,
+      "dims": {
+        "closedThrough": "2026-10-05T06:37:00.000Z",
+        "recClass": "WATCH",
+        "recReason": "need_confirmed_flag_plan",
+        "planStatusAtCall": null,
+        "candidateTimeframe": "3m",
+        "candidateDirection": "long",
+        "candidateState": "forming",
+        "topDown": "supports",
+        "topDownToken": "td:bull:4/4",
+        "ema200Side": "below",
+        "ema200Token": "ema200:3m:below",
+        "divergence": "mixed",
+        "source": "cron",
+        "supports": [
+          "candidate:3m-long-forming",
+          "td:bull:4/4",
+          "a200:5/7",
+          "4h:with",
+          "divergence_agrees",
+          "data_fresh"
+        ],
+        "opposes": [
+          "ema200:3m:below",
+          "level:15m:121.38",
+          "divergence_conflicts"
+        ],
+        "unknowns": [
+          "ema200:1w:missing"
+        ]
+      },
+      "class": "WATCH",
+      "reasonCode": "need_confirmed_flag_plan",
+      "timeframe": "3m",
+      "direction": "long",
+      "candidateId": null,
+      "planStatus": null,
+      "planReasonCode": null,
+      "entry": 121,
+      "stop": 120.79,
+      "tp1": 122.11089999999997,
+      "grossRR": null,
+      "netRR": null,
+      "entryCondition": null,
+      "readiness": "no_plan",
+      "levelSource": "candidate",
+      "outcome": "pending",
+      "r": null,
+      "filledAt": null,
+      "resolvedAt": null,
+      "minutesToResolution": null,
+      "mode": "counterfactual_candidate",
+      "rUnits": "gross_R_before_fees_slippage",
+      "becameReady": null,
+      "readyCallId": null,
+      "scoredAt": "2026-10-05T06:37:56.019Z"
+    },
     {
       "callId": "rec|BTC|WATCH|-|need_confirmed_flag_plan|2026-10-05T06:27:00.000Z",
       "kind": "rec",
@@ -28196,80 +28330,10 @@
       "becameReady": null,
       "readyCallId": null,
       "scoredAt": "2026-10-03T09:07:16.559Z"
-    },
-    {
-      "callId": "rec|SOL|WATCH|-|need_confirmed_flag_plan|2026-10-03T08:47:00.000Z",
-      "kind": "rec",
-      "symbol": "SOL",
-      "calledAt": "2026-10-03T08:47:00.000Z",
-      "capturedAt": "2026-10-03T08:47:14.597Z",
-      "configVersion": "2026.09.27-3",
-      "schemaVersion": "1.29.0",
-      "price": 119.25,
-      "markDriftBps": -0.1,
-      "dims": {
-        "closedThrough": "2026-10-03T08:47:00.000Z",
-        "recClass": "WATCH",
-        "recReason": "need_confirmed_flag_plan",
-        "planStatusAtCall": null,
-        "candidateTimeframe": "1m",
-        "candidateDirection": "long",
-        "candidateState": "triggering",
-        "topDown": "supports",
-        "topDownToken": "td:bull:3/4",
-        "ema200Side": "below",
-        "ema200Token": "ema200:1m:below",
-        "divergence": "mixed",
-        "source": "cron",
-        "supports": [
-          "candidate:1m-long-triggering",
-          "td:bull:3/4",
-          "a200:4/7",
-          "4h:with",
-          "level:15m:119.37",
-          "chan:15m:top:high",
-          "divergence_agrees",
-          "data_fresh"
-        ],
-        "opposes": [
-          "ema200:1m:below",
-          "conflict:3m-short",
-          "rr:1.86",
-          "divergence_conflicts"
-        ],
-        "unknowns": [
-          "ema200:1w:missing"
-        ]
-      },
-      "class": "WATCH",
-      "reasonCode": "need_confirmed_flag_plan",
-      "timeframe": "1m",
-      "direction": "long",
-      "candidateId": null,
-      "planStatus": null,
-      "planReasonCode": null,
-      "entry": 119.24,
-      "stop": 119.17,
-      "tp1": 119.37019999999998,
-      "grossRR": null,
-      "netRR": null,
-      "entryCondition": null,
-      "readiness": "no_plan",
-      "levelSource": "candidate",
-      "outcome": "tp1",
-      "r": 1.86,
-      "filledAt": "2026-10-03T08:47:00.000Z",
-      "resolvedAt": "2026-10-03T09:11:00.000Z",
-      "minutesToResolution": 24,
-      "mode": "counterfactual_candidate",
-      "rUnits": "gross_R_before_fees_slippage",
-      "becameReady": null,
-      "readyCallId": null,
-      "scoredAt": "2026-10-03T09:17:19.526Z"
     }
   ],
   "captures": {
-    "captures": 4947,
+    "captures": 4950,
     "symbols": [
       "BTC",
       "ETH",
@@ -28279,24 +28343,23 @@
     "longestGapMinutes": 121,
     "dataUnavailable": 3,
     "markDriftBps": {
-      "samples": 4926,
+      "samples": 4929,
       "medianAbs": 1.4,
       "p95Abs": 7.3,
       "maxAbs": 26.2,
       "notOk": 21
     },
     "candles1m": {
-      "BTC": 16952,
-      "ETH": 16952,
-      "SOL": 16952
+      "BTC": 16962,
+      "ETH": 16962,
+      "SOL": 16962
     },
     "missing1mCandles": 0
   },
   "activity": {
     "firstRun": "2026-09-23T23:28:00.000Z",
-    "runs": 1649,
+    "runs": 1650,
     "runTimes48h": [
-      "2026-10-03T06:37:00.000Z",
       "2026-10-03T06:47:00.000Z",
       "2026-10-03T06:49:00.000Z",
       "2026-10-03T06:57:00.000Z",
@@ -28591,7 +28654,8 @@
       "2026-10-05T05:57:00.000Z",
       "2026-10-05T06:07:00.000Z",
       "2026-10-05T06:17:00.000Z",
-      "2026-10-05T06:27:00.000Z"
+      "2026-10-05T06:27:00.000Z",
+      "2026-10-05T06:37:00.000Z"
     ],
     "recCalls24h": 205,
     "good24h": 0,
@@ -28622,11 +28686,11 @@
       },
       {
         "key": "WATCH",
-        "calls": 598,
+        "calls": 599,
         "scored": 255,
         "wins": 67,
         "losses": 188,
-        "open": 4,
+        "open": 5,
         "notFilled": 268,
         "noLevels": 71,
         "winRate": 0.2627,
@@ -28667,23 +28731,23 @@
   "alerts": {
     "label": "provisional; not evidence of an edge",
     "tiles": {
-      "alerts7d": 526,
+      "alerts7d": 524,
       "alertsToday": 24,
       "medianLatencyMin": 0.8,
-      "latencyN": 514,
+      "latencyN": 512,
       "laterGoodRate": 0.0092,
-      "laterGoodN": 435,
+      "laterGoodN": 433,
       "beReadyToGoRate": 0,
       "beReadyN": 1,
-      "transitions24h": 2490,
+      "transitions24h": 2489,
       "transitionsPerHour": {
-        "1m": 64.08,
-        "3m": 25.08,
+        "1m": 63.96,
+        "3m": 25.17,
         "5m": 14.58
       }
     },
     "byKind7d": {
-      "WATCH": 43,
+      "WATCH": 41,
       "BREAKOUT": 149,
       "TRIGGERING": 22,
       "TRACK": 13,
@@ -28697,13 +28761,13 @@
       "FOCUS": 1
     },
     "byVerdict7d": {
-      "WAIT": 63,
+      "WAIT": 61,
       "STAND DOWN": 150,
       "BE READY": 1
     },
     "byOutcome7d": {
-      "confirmed": 167,
       "void": 183,
+      "confirmed": 165,
       "none": 51,
       "stop": 12,
       "expired": 11,
@@ -28722,7 +28786,7 @@
         "medianLatencyMin": 0.8,
         "laterGood": 0,
         "laterGoodOf": 24,
-        "transitions": 609
+        "transitions": 626
       },
       {
         "day": "2026-10-04",
@@ -29077,13 +29141,13 @@
       "label": "Live wallet · Steady profile",
       "epochIso": "2026-09-26T22:08:00.000Z",
       "source": "constant",
-      "calls": 1236,
-      "equityNowUsd": 522.96,
+      "calls": 1237,
+      "equityNowUsd": 522.95,
       "equityStartUsd": 523.01,
       "trades": 0,
       "realizedNetUsd": null,
       "killArmState": null,
-      "daysLive": 8.3
+      "daysLive": 8.4
     }
   },
   "archive": {
@@ -29133,12 +29197,12 @@
           },
           {
             "key": "WATCH",
-            "calls": 525,
+            "calls": 526,
             "fills": 222,
             "wins": 59,
             "losses": 161,
             "open": 2,
-            "pending": 2,
+            "pending": 3,
             "expired": 0,
             "notFilled": 236,
             "rejected": 0,
@@ -29177,12 +29241,12 @@
         "byReason": [
           {
             "key": "need_confirmed_flag_plan",
-            "calls": 525,
+            "calls": 526,
             "fills": 222,
             "wins": 59,
             "losses": 161,
             "open": 2,
-            "pending": 2,
+            "pending": 3,
             "expired": 0,
             "notFilled": 236,
             "rejected": 0,
@@ -29357,12 +29421,12 @@
           },
           {
             "key": "WATCH",
-            "calls": 860,
+            "calls": 861,
             "fills": 366,
             "wins": 95,
             "losses": 268,
             "open": 2,
-            "pending": 2,
+            "pending": 3,
             "expired": 1,
             "notFilled": 402,
             "rejected": 0,
@@ -29422,12 +29486,12 @@
         "byReason": [
           {
             "key": "need_confirmed_flag_plan",
-            "calls": 851,
+            "calls": 852,
             "fills": 360,
             "wins": 95,
             "losses": 262,
             "open": 2,
-            "pending": 2,
+            "pending": 3,
             "expired": 1,
             "notFilled": 399,
             "rejected": 0,
@@ -30224,13 +30288,13 @@
     "since": "2026-09-29T04:25:00.000Z",
     "cells": {
       "BTC:5m": {
-        "n": 911,
-        "hits": 429,
+        "n": 912,
+        "hits": 430,
         "misses": 482,
-        "noCalls": 481,
-        "hitRate": 0.4709,
+        "noCalls": 483,
+        "hitRate": 0.4715,
         "coinFlip": 0.5,
-        "sameAsLastRate": 0.4281,
+        "sameAsLastRate": 0.4287,
         "meanMoveBpsHit": 7,
         "meanMoveBpsMiss": 6.3
       },
@@ -30238,7 +30302,7 @@
         "n": 332,
         "hits": 154,
         "misses": 178,
-        "noCalls": 153,
+        "noCalls": 154,
         "hitRate": 0.4639,
         "coinFlip": 0.5,
         "sameAsLastRate": 0.4699,
@@ -30268,13 +30332,13 @@
         "meanMoveBpsMiss": 60.1
       },
       "ETH:5m": {
-        "n": 880,
-        "hits": 411,
-        "misses": 469,
-        "noCalls": 516,
-        "hitRate": 0.467,
+        "n": 882,
+        "hits": 412,
+        "misses": 470,
+        "noCalls": 517,
+        "hitRate": 0.4671,
         "coinFlip": 0.5,
-        "sameAsLastRate": 0.4625,
+        "sameAsLastRate": 0.4626,
         "meanMoveBpsHit": 7.7,
         "meanMoveBpsMiss": 7.8
       },
@@ -30282,7 +30346,7 @@
         "n": 321,
         "hits": 142,
         "misses": 179,
-        "noCalls": 163,
+        "noCalls": 164,
         "hitRate": 0.4424,
         "coinFlip": 0.5,
         "sameAsLastRate": 0.4953,
@@ -30315,7 +30379,7 @@
         "n": 914,
         "hits": 400,
         "misses": 514,
-        "noCalls": 463,
+        "noCalls": 466,
         "hitRate": 0.4376,
         "coinFlip": 0.5,
         "sameAsLastRate": 0.4234,
@@ -30326,7 +30390,7 @@
         "n": 287,
         "hits": 119,
         "misses": 168,
-        "noCalls": 194,
+        "noCalls": 195,
         "hitRate": 0.4146,
         "coinFlip": 0.5,
         "sameAsLastRate": 0.4704,
@@ -30360,14 +30424,14 @@
       "BTC:5m": {
         "direction": "no_call",
         "confidence": 0.2,
-        "closedAt": "2026-10-05T06:20:00.000Z",
-        "refClose": 85977.2
+        "closedAt": "2026-10-05T06:35:00.000Z",
+        "refClose": 85833.7
       },
       "BTC:15m": {
         "direction": "no_call",
         "confidence": 0.2,
-        "closedAt": "2026-10-05T06:15:00.000Z",
-        "refClose": 85893
+        "closedAt": "2026-10-05T06:30:00.000Z",
+        "refClose": 85858.4
       },
       "BTC:1h": {
         "direction": "over",
@@ -30384,14 +30448,14 @@
       "ETH:5m": {
         "direction": "no_call",
         "confidence": 0.2,
-        "closedAt": "2026-10-05T06:20:00.000Z",
-        "refClose": 2715.21
+        "closedAt": "2026-10-05T06:35:00.000Z",
+        "refClose": 2712.06
       },
       "ETH:15m": {
         "direction": "no_call",
-        "confidence": 0,
-        "closedAt": "2026-10-05T06:15:00.000Z",
-        "refClose": 2711.68
+        "confidence": 0.2,
+        "closedAt": "2026-10-05T06:30:00.000Z",
+        "refClose": 2711.35
       },
       "ETH:1h": {
         "direction": "over",
@@ -30408,14 +30472,14 @@
       "SOL:5m": {
         "direction": "no_call",
         "confidence": 0.2,
-        "closedAt": "2026-10-05T06:20:00.000Z",
-        "refClose": 121.02
+        "closedAt": "2026-10-05T06:35:00.000Z",
+        "refClose": 120.86
       },
       "SOL:15m": {
         "direction": "no_call",
-        "confidence": 0.2,
-        "closedAt": "2026-10-05T06:15:00.000Z",
-        "refClose": 120.84
+        "confidence": 0,
+        "closedAt": "2026-10-05T06:30:00.000Z",
+        "refClose": 120.82
       },
       "SOL:1h": {
         "direction": "over",
@@ -30432,13 +30496,13 @@
     },
     "byTimeframe": {
       "5m": {
-        "n": 2705,
-        "hits": 1240,
-        "misses": 1465,
-        "noCalls": 1460,
-        "hitRate": 0.4584,
+        "n": 2708,
+        "hits": 1242,
+        "misses": 1466,
+        "noCalls": 1466,
+        "hitRate": 0.4586,
         "coinFlip": 0.5,
-        "sameAsLastRate": 0.4377,
+        "sameAsLastRate": 0.438,
         "meanMoveBpsHit": 8.7,
         "meanMoveBpsMiss": 8.3
       },
@@ -30446,7 +30510,7 @@
         "n": 940,
         "hits": 415,
         "misses": 525,
-        "noCalls": 510,
+        "noCalls": 513,
         "hitRate": 0.4415,
         "coinFlip": 0.5,
         "sameAsLastRate": 0.4787,
@@ -30478,24 +30542,24 @@
     },
     "bySymbol": {
       "BTC": {
-        "n": 1343,
-        "hits": 637,
+        "n": 1344,
+        "hits": 638,
         "misses": 706,
-        "noCalls": 670,
-        "hitRate": 0.4743,
+        "noCalls": 673,
+        "hitRate": 0.4747,
         "coinFlip": 0.5,
-        "sameAsLastRate": 0.4475,
+        "sameAsLastRate": 0.4479,
         "meanMoveBpsHit": 10.1,
         "meanMoveBpsMiss": 9.1
       },
       "ETH": {
-        "n": 1279,
-        "hits": 590,
-        "misses": 689,
-        "noCalls": 737,
-        "hitRate": 0.4613,
+        "n": 1281,
+        "hits": 591,
+        "misses": 690,
+        "noCalls": 739,
+        "hitRate": 0.4614,
         "coinFlip": 0.5,
-        "sameAsLastRate": 0.4691,
+        "sameAsLastRate": 0.4692,
         "meanMoveBpsHit": 10.6,
         "meanMoveBpsMiss": 10.4
       },
@@ -30503,7 +30567,7 @@
         "n": 1282,
         "hits": 557,
         "misses": 725,
-        "noCalls": 711,
+        "noCalls": 715,
         "hitRate": 0.4345,
         "coinFlip": 0.5,
         "sameAsLastRate": 0.4337,
@@ -30512,13 +30576,13 @@
       }
     },
     "overall": {
-      "n": 3904,
-      "hits": 1784,
-      "misses": 2120,
-      "noCalls": 2118,
-      "hitRate": 0.457,
+      "n": 3907,
+      "hits": 1786,
+      "misses": 2121,
+      "noCalls": 2127,
+      "hitRate": 0.4571,
       "coinFlip": 0.5,
-      "sameAsLastRate": 0.4501,
+      "sameAsLastRate": 0.4502,
       "meanMoveBpsHit": 11.8,
       "meanMoveBpsMiss": 11
     },
@@ -30534,6 +30598,162 @@
       "meanMoveBpsMiss": null
     },
     "last": [
+      {
+        "id": "BTC:5m:2026-10-05T06:30:00.000Z",
+        "symbol": "BTC",
+        "timeframe": "5m",
+        "closedAt": "2026-10-05T06:35:00.000Z",
+        "refClose": 85858.4,
+        "nextClose": 85833.7,
+        "moveBps": -2.9,
+        "hit": true,
+        "direction": "under",
+        "confidence": 0.4,
+        "lastCandleDir": "under"
+      },
+      {
+        "id": "ETH:5m:2026-10-05T06:30:00.000Z",
+        "symbol": "ETH",
+        "timeframe": "5m",
+        "closedAt": "2026-10-05T06:35:00.000Z",
+        "refClose": 2711.35,
+        "nextClose": 2712.06,
+        "moveBps": 2.6,
+        "hit": false,
+        "direction": "under",
+        "confidence": 0.4,
+        "lastCandleDir": "under"
+      },
+      {
+        "id": "SOL:5m:2026-10-05T06:30:00.000Z",
+        "symbol": "SOL",
+        "timeframe": "5m",
+        "closedAt": "2026-10-05T06:35:00.000Z",
+        "refClose": 120.82,
+        "nextClose": 120.86,
+        "moveBps": 3.3,
+        "hit": null,
+        "direction": "no_call",
+        "confidence": 0,
+        "lastCandleDir": "under"
+      },
+      {
+        "id": "BTC:15m:2026-10-05T06:15:00.000Z",
+        "symbol": "BTC",
+        "timeframe": "15m",
+        "closedAt": "2026-10-05T06:30:00.000Z",
+        "refClose": 85893,
+        "nextClose": 85858.4,
+        "moveBps": -4,
+        "hit": null,
+        "direction": "no_call",
+        "confidence": 0.2,
+        "lastCandleDir": "over"
+      },
+      {
+        "id": "ETH:15m:2026-10-05T06:15:00.000Z",
+        "symbol": "ETH",
+        "timeframe": "15m",
+        "closedAt": "2026-10-05T06:30:00.000Z",
+        "refClose": 2711.68,
+        "nextClose": 2711.35,
+        "moveBps": -1.2,
+        "hit": null,
+        "direction": "no_call",
+        "confidence": 0,
+        "lastCandleDir": "over"
+      },
+      {
+        "id": "SOL:15m:2026-10-05T06:15:00.000Z",
+        "symbol": "SOL",
+        "timeframe": "15m",
+        "closedAt": "2026-10-05T06:30:00.000Z",
+        "refClose": 120.84,
+        "nextClose": 120.82,
+        "moveBps": -1.7,
+        "hit": null,
+        "direction": "no_call",
+        "confidence": 0.2,
+        "lastCandleDir": "over"
+      },
+      {
+        "id": "BTC:5m:2026-10-05T06:25:00.000Z",
+        "symbol": "BTC",
+        "timeframe": "5m",
+        "closedAt": "2026-10-05T06:30:00.000Z",
+        "refClose": 85959.7,
+        "nextClose": 85858.4,
+        "moveBps": -11.8,
+        "hit": null,
+        "direction": "no_call",
+        "confidence": 0.2,
+        "lastCandleDir": "under"
+      },
+      {
+        "id": "ETH:5m:2026-10-05T06:25:00.000Z",
+        "symbol": "ETH",
+        "timeframe": "5m",
+        "closedAt": "2026-10-05T06:30:00.000Z",
+        "refClose": 2713.24,
+        "nextClose": 2711.35,
+        "moveBps": -7,
+        "hit": true,
+        "direction": "under",
+        "confidence": 0.4,
+        "lastCandleDir": "under"
+      },
+      {
+        "id": "SOL:5m:2026-10-05T06:25:00.000Z",
+        "symbol": "SOL",
+        "timeframe": "5m",
+        "closedAt": "2026-10-05T06:30:00.000Z",
+        "refClose": 120.97,
+        "nextClose": 120.82,
+        "moveBps": -12.4,
+        "hit": null,
+        "direction": "no_call",
+        "confidence": 0.2,
+        "lastCandleDir": "under"
+      },
+      {
+        "id": "BTC:5m:2026-10-05T06:20:00.000Z",
+        "symbol": "BTC",
+        "timeframe": "5m",
+        "closedAt": "2026-10-05T06:25:00.000Z",
+        "refClose": 85977.2,
+        "nextClose": 85959.7,
+        "moveBps": -2,
+        "hit": null,
+        "direction": "no_call",
+        "confidence": 0.2,
+        "lastCandleDir": "over"
+      },
+      {
+        "id": "ETH:5m:2026-10-05T06:20:00.000Z",
+        "symbol": "ETH",
+        "timeframe": "5m",
+        "closedAt": "2026-10-05T06:25:00.000Z",
+        "refClose": 2715.21,
+        "nextClose": 2713.24,
+        "moveBps": -7.3,
+        "hit": null,
+        "direction": "no_call",
+        "confidence": 0.2,
+        "lastCandleDir": "over"
+      },
+      {
+        "id": "SOL:5m:2026-10-05T06:20:00.000Z",
+        "symbol": "SOL",
+        "timeframe": "5m",
+        "closedAt": "2026-10-05T06:25:00.000Z",
+        "refClose": 121.02,
+        "nextClose": 120.97,
+        "moveBps": -4.1,
+        "hit": null,
+        "direction": "no_call",
+        "confidence": 0.2,
+        "lastCandleDir": "over"
+      },
       {
         "id": "BTC:5m:2026-10-05T06:15:00.000Z",
         "symbol": "BTC",
@@ -31026,162 +31246,6 @@
         "hit": true,
         "direction": "under",
         "confidence": 0.6,
-        "lastCandleDir": "under"
-      },
-      {
-        "id": "SOL:5m:2026-10-05T05:20:00.000Z",
-        "symbol": "SOL",
-        "timeframe": "5m",
-        "closedAt": "2026-10-05T05:25:00.000Z",
-        "refClose": 120.14,
-        "nextClose": 120.12,
-        "moveBps": -1.7,
-        "hit": true,
-        "direction": "under",
-        "confidence": 0.8,
-        "lastCandleDir": "under"
-      },
-      {
-        "id": "BTC:5m:2026-10-05T05:15:00.000Z",
-        "symbol": "BTC",
-        "timeframe": "5m",
-        "closedAt": "2026-10-05T05:20:00.000Z",
-        "refClose": 85485.9,
-        "nextClose": 85487.2,
-        "moveBps": 0.2,
-        "hit": false,
-        "direction": "under",
-        "confidence": 0.6,
-        "lastCandleDir": "under"
-      },
-      {
-        "id": "ETH:5m:2026-10-05T05:15:00.000Z",
-        "symbol": "ETH",
-        "timeframe": "5m",
-        "closedAt": "2026-10-05T05:20:00.000Z",
-        "refClose": 2699.44,
-        "nextClose": 2698.68,
-        "moveBps": -2.8,
-        "hit": true,
-        "direction": "under",
-        "confidence": 0.6,
-        "lastCandleDir": "under"
-      },
-      {
-        "id": "SOL:5m:2026-10-05T05:15:00.000Z",
-        "symbol": "SOL",
-        "timeframe": "5m",
-        "closedAt": "2026-10-05T05:20:00.000Z",
-        "refClose": 120.32,
-        "nextClose": 120.14,
-        "moveBps": -15,
-        "hit": true,
-        "direction": "under",
-        "confidence": 0.8,
-        "lastCandleDir": "under"
-      },
-      {
-        "id": "BTC:15m:2026-10-05T05:00:00.000Z",
-        "symbol": "BTC",
-        "timeframe": "15m",
-        "closedAt": "2026-10-05T05:15:00.000Z",
-        "refClose": 85505.1,
-        "nextClose": 85485.9,
-        "moveBps": -2.2,
-        "hit": null,
-        "direction": "no_call",
-        "confidence": 0,
-        "lastCandleDir": "under"
-      },
-      {
-        "id": "ETH:15m:2026-10-05T05:00:00.000Z",
-        "symbol": "ETH",
-        "timeframe": "15m",
-        "closedAt": "2026-10-05T05:15:00.000Z",
-        "refClose": 2701.73,
-        "nextClose": 2699.44,
-        "moveBps": -8.5,
-        "hit": null,
-        "direction": "no_call",
-        "confidence": 0.2,
-        "lastCandleDir": "under"
-      },
-      {
-        "id": "SOL:15m:2026-10-05T05:00:00.000Z",
-        "symbol": "SOL",
-        "timeframe": "15m",
-        "closedAt": "2026-10-05T05:15:00.000Z",
-        "refClose": 120.47,
-        "nextClose": 120.32,
-        "moveBps": -12.5,
-        "hit": null,
-        "direction": "no_call",
-        "confidence": 0.2,
-        "lastCandleDir": "over"
-      },
-      {
-        "id": "BTC:5m:2026-10-05T05:10:00.000Z",
-        "symbol": "BTC",
-        "timeframe": "5m",
-        "closedAt": "2026-10-05T05:15:00.000Z",
-        "refClose": 85539.1,
-        "nextClose": 85485.9,
-        "moveBps": -6.2,
-        "hit": true,
-        "direction": "under",
-        "confidence": 0.6,
-        "lastCandleDir": "over"
-      },
-      {
-        "id": "ETH:5m:2026-10-05T05:10:00.000Z",
-        "symbol": "ETH",
-        "timeframe": "5m",
-        "closedAt": "2026-10-05T05:15:00.000Z",
-        "refClose": 2701.44,
-        "nextClose": 2699.44,
-        "moveBps": -7.4,
-        "hit": true,
-        "direction": "under",
-        "confidence": 0.6,
-        "lastCandleDir": "over"
-      },
-      {
-        "id": "SOL:5m:2026-10-05T05:10:00.000Z",
-        "symbol": "SOL",
-        "timeframe": "5m",
-        "closedAt": "2026-10-05T05:15:00.000Z",
-        "refClose": 120.45,
-        "nextClose": 120.32,
-        "moveBps": -10.8,
-        "hit": true,
-        "direction": "under",
-        "confidence": 0.4,
-        "lastCandleDir": "over"
-      },
-      {
-        "id": "BTC:5m:2026-10-05T05:05:00.000Z",
-        "symbol": "BTC",
-        "timeframe": "5m",
-        "closedAt": "2026-10-05T05:10:00.000Z",
-        "refClose": 85480.6,
-        "nextClose": 85539.1,
-        "moveBps": 6.8,
-        "hit": false,
-        "direction": "under",
-        "confidence": 0.8,
-        "lastCandleDir": "under"
-      },
-      {
-        "id": "ETH:5m:2026-10-05T05:05:00.000Z",
-        "symbol": "ETH",
-        "timeframe": "5m",
-        "closedAt": "2026-10-05T05:10:00.000Z",
-        "refClose": 2699.13,
-        "nextClose": 2701.44,
-        "moveBps": 8.6,
-        "hit": false,
-        "direction": "under",
-        "confidence": 1,
         "lastCandleDir": "under"
       }
     ]
