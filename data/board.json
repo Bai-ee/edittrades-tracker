@@ -1,32 +1,6 @@
 {
-  "closedThrough": "2026-10-05T00:07:00.000Z",
+  "closedThrough": "2026-10-05T00:17:00.000Z",
   "board": [
-    {
-      "ref": "4dfad10f",
-      "sym": "ETH",
-      "tf": "1h",
-      "dir": "long",
-      "stage": "lockable",
-      "st": "confirmed",
-      "lv": {
-        "ent": 2711.21,
-        "stop": 2694.21,
-        "inv": 2694.21,
-        "tp1": 2735.12,
-        "tp2": 2736.18,
-        "tp2src": "level",
-        "rr": 1.41,
-        "cap": 2725.01
-      },
-      "score": "4/7",
-      "gate": true,
-      "tfs": "1m✅ 3m⚠️ 5m⚠️ 15m⚠️ 1h✅ 4h✅ 1d✅",
-      "ev": {
-        "verdict": "STAY OUT",
-        "vol": "Volume WEAK · 1.5x avg → STAY OUT",
-        "mom": "RSI 71 · Stoch 74/64 rising · no divergence"
-      }
-    },
     {
       "ref": "61befdd1",
       "sym": "SOL",
@@ -46,7 +20,7 @@
       },
       "score": "3/7",
       "gate": true,
-      "tfs": "1m❌ 3m⚠️ 5m⚠️ 15m⚠️ 1h✅ 4h✅ 1d✅",
+      "tfs": "1m⚠️ 3m❌ 5m⚠️ 15m⚠️ 1h✅ 4h✅ 1d✅",
       "ev": {
         "verdict": "STAY OUT",
         "vol": "Volume WEAK · 1.3x avg → STAY OUT",
@@ -70,13 +44,39 @@
         "rr": 1.53,
         "cap": 87934.1
       },
-      "score": "5/7",
+      "score": "4/7",
       "gate": true,
-      "tfs": "1m✅ 3m⚠️ 5m✅ 15m⚠️ 1h✅ 4h✅ 1d✅",
+      "tfs": "1m✅ 3m⚠️ 5m⚠️ 15m⚠️ 1h✅ 4h✅ 1d✅",
       "ev": {
         "verdict": "GO",
         "vol": "Volume OK · 1x avg → GO",
         "mom": "RSI 69 · Stoch 80/59 rising · no divergence"
+      }
+    },
+    {
+      "ref": "f026507c",
+      "sym": "ETH",
+      "tf": "4h",
+      "dir": "long",
+      "stage": "found",
+      "st": "forming",
+      "lv": {
+        "ent": 2747.95,
+        "stop": 2665,
+        "inv": 2665,
+        "tp1": 2857.75,
+        "tp2": 2912.65,
+        "tp2src": "1.5x",
+        "rr": 1.32,
+        "cap": 2772.74
+      },
+      "score": "4/7",
+      "gate": true,
+      "tfs": "1m✅ 3m⚠️ 5m⚠️ 15m⚠️ 1h✅ 4h✅ 1d✅",
+      "ev": {
+        "verdict": "GO",
+        "vol": "Volume STRONG · 2.6x avg · quiet flag → GO",
+        "mom": "RSI 60 · Stoch 77/62 rising · no divergence"
       }
     }
   ],
@@ -84,7 +84,7 @@
     "found": 327,
     "opps": 130,
     "locked": 1,
-    "since": "2026-10-04T00:07:15.326Z",
+    "since": "2026-10-04T00:17:17.035Z",
     "partial": false
   },
   "flowRules": {
