@@ -1,6 +1,32 @@
 {
-  "closedThrough": "2026-10-05T14:37:00.000Z",
+  "closedThrough": "2026-10-05T14:47:00.000Z",
   "board": [
+    {
+      "ref": "aa285c33",
+      "sym": "SOL",
+      "tf": "3m",
+      "dir": "short",
+      "stage": "found",
+      "st": "proto",
+      "lv": {
+        "ent": 119.44,
+        "stop": 119.88,
+        "inv": 119.88,
+        "tp1": 117.57,
+        "tp2": 117.12,
+        "tp2src": "level",
+        "rr": 4.25,
+        "cap": 118.98
+      },
+      "score": "3/7",
+      "gate": true,
+      "tfs": "1m✅ 3m⚠️ 5m✅ 15m✅ 1h⚠️ 4h❌ 1d❌",
+      "ev": {
+        "verdict": "CAUTION",
+        "vol": "Volume OK · 0.8x avg → GO",
+        "mom": "RSI 35 · Stoch 22/13 rising · no divergence"
+      }
+    },
     {
       "ref": "d2092d25",
       "sym": "BTC",
@@ -18,39 +44,13 @@
         "rr": 1.77,
         "cap": 87986.53
       },
-      "score": "3/7",
+      "score": "2/7",
       "gate": true,
-      "tfs": "1m❌ 3m⚠️ 5m⚠️ 15m✅ 1h✅ 4h⚠️ 1d✅",
+      "tfs": "1m❌ 3m⚠️ 5m⚠️ 15m⚠️ 1h✅ 4h⚠️ 1d✅",
       "ev": {
         "verdict": "STAY OUT",
         "vol": "Volume WEAK · 0.7x avg → STAY OUT",
         "mom": "RSI 63 · Stoch 68/78 falling · no divergence"
-      }
-    },
-    {
-      "ref": "cb72868d",
-      "sym": "SOL",
-      "tf": "1m",
-      "dir": "short",
-      "stage": "found",
-      "st": "forming",
-      "lv": {
-        "ent": 119.34,
-        "stop": 119.5,
-        "inv": 119.5,
-        "tp1": 117.48,
-        "tp2": 117.12,
-        "tp2src": "level",
-        "rr": 11.63,
-        "cap": 119.07
-      },
-      "score": "3/6",
-      "gate": true,
-      "tfs": "1m✅ 3m✅ 5m✅ 15m· 1h⚠️ 4h❌ 1d❌",
-      "ev": {
-        "verdict": "STAY OUT",
-        "vol": "Volume WEAK · 0.4x avg → STAY OUT",
-        "mom": "RSI 22 · Stoch 8/3 oversold · no divergence"
       }
     },
     {
@@ -72,7 +72,7 @@
       },
       "score": "2/7",
       "gate": true,
-      "tfs": "1m❌ 3m⚠️ 5m⚠️ 15m⚠️ 1h✅ 4h⚠️ 1d✅",
+      "tfs": "1m❌ 3m❌ 5m❌ 15m⚠️ 1h✅ 4h⚠️ 1d✅",
       "ev": {
         "verdict": "STAY OUT",
         "vol": "Volume WEAK · 0.8x avg → STAY OUT",
@@ -81,10 +81,10 @@
     }
   ],
   "pulse": {
-    "found": 274,
-    "opps": 111,
+    "found": 277,
+    "opps": 110,
     "locked": 0,
-    "since": "2026-10-04T14:37:20.326Z",
+    "since": "2026-10-04T14:47:17.237Z",
     "partial": false
   },
   "flowRules": {
