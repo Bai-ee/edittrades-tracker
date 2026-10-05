@@ -1,30 +1,30 @@
 {
-  "closedThrough": "2026-10-05T14:47:00.000Z",
+  "closedThrough": "2026-10-05T14:57:00.000Z",
   "board": [
     {
-      "ref": "aa285c33",
+      "ref": "81eeb8dc",
       "sym": "SOL",
-      "tf": "3m",
+      "tf": "1m",
       "dir": "short",
-      "stage": "found",
-      "st": "proto",
+      "stage": "lockable",
+      "st": "triggering",
       "lv": {
-        "ent": 119.44,
-        "stop": 119.88,
-        "inv": 119.88,
-        "tp1": 117.57,
-        "tp2": 117.12,
+        "ent": 119.22,
+        "stop": 119.52,
+        "inv": 119.52,
+        "tp1": 118.65,
+        "tp2": 118.48,
         "tp2src": "level",
-        "rr": 4.25,
-        "cap": 118.98
+        "rr": 1.9,
+        "cap": 118.99
       },
       "score": "3/7",
       "gate": true,
-      "tfs": "1m✅ 3m⚠️ 5m✅ 15m✅ 1h⚠️ 4h❌ 1d❌",
+      "tfs": "1m✅ 3m✅ 5m⚠️ 15m✅ 1h⚠️ 4h❌ 1d❌",
       "ev": {
         "verdict": "CAUTION",
-        "vol": "Volume OK · 0.8x avg → GO",
-        "mom": "RSI 35 · Stoch 22/13 rising · no divergence"
+        "vol": "Volume OK · 4x avg → GO",
+        "mom": "RSI 34 · Stoch 43/60 falling · bullish div ⚠️"
       }
     },
     {
@@ -46,7 +46,7 @@
       },
       "score": "2/7",
       "gate": true,
-      "tfs": "1m❌ 3m⚠️ 5m⚠️ 15m⚠️ 1h✅ 4h⚠️ 1d✅",
+      "tfs": "1m❌ 3m❌ 5m⚠️ 15m⚠️ 1h✅ 4h⚠️ 1d✅",
       "ev": {
         "verdict": "STAY OUT",
         "vol": "Volume WEAK · 0.7x avg → STAY OUT",
@@ -81,10 +81,10 @@
     }
   ],
   "pulse": {
-    "found": 277,
+    "found": 280,
     "opps": 110,
     "locked": 0,
-    "since": "2026-10-04T14:47:17.237Z",
+    "since": "2026-10-04T14:57:15.901Z",
     "partial": false
   },
   "flowRules": {
