@@ -1,32 +1,6 @@
 {
-  "closedThrough": "2026-10-07T10:17:00.000Z",
+  "closedThrough": "2026-10-07T10:27:00.000Z",
   "board": [
-    {
-      "ref": "f8534bdb",
-      "sym": "ETH",
-      "tf": "3m",
-      "dir": "short",
-      "stage": "lockable",
-      "st": "confirmed",
-      "lv": {
-        "ent": 2593.11,
-        "stop": 2597.35,
-        "inv": 2597.35,
-        "tp1": 2574.59,
-        "tp2": 2567.01,
-        "tp2src": "level",
-        "rr": 4.37,
-        "cap": 2584.13
-      },
-      "score": "4/7",
-      "gate": true,
-      "tfs": "1m⚠️ 3m✅ 5m✅ 15m✅ 1h✅ 4h⚠️ 1d❌",
-      "ev": {
-        "verdict": "GO",
-        "vol": "Volume OK · 1.8x avg → GO",
-        "mom": "RSI 32 · Stoch 62/64 falling · no divergence"
-      }
-    },
     {
       "ref": "77506f75",
       "sym": "ETH",
@@ -46,7 +20,7 @@
       },
       "score": "4/7",
       "gate": true,
-      "tfs": "1m⚠️ 3m✅ 5m✅ 15m✅ 1h✅ 4h⚠️ 1d❌",
+      "tfs": "1m✅ 3m✅ 5m⚠️ 15m✅ 1h✅ 4h⚠️ 1d❌",
       "ev": {
         "verdict": "CAUTION",
         "vol": "Volume OK · 11.4x avg → GO",
@@ -70,13 +44,39 @@
         "rr": 3.38,
         "cap": 83636.16
       },
-      "score": "3/7",
+      "score": "2/7",
       "gate": true,
-      "tfs": "1m⚠️ 3m⚠️ 5m✅ 15m✅ 1h✅ 4h⚠️ 1d❌",
+      "tfs": "1m⚠️ 3m⚠️ 5m⚠️ 15m✅ 1h✅ 4h⚠️ 1d❌",
       "ev": {
         "verdict": "STAY OUT",
         "vol": "Volume WEAK · 6x avg → STAY OUT",
         "mom": "RSI 31 · Stoch 11/5 oversold · no divergence"
+      }
+    },
+    {
+      "ref": "7c2c4de8",
+      "sym": "SOL",
+      "tf": "15m",
+      "dir": "short",
+      "stage": "lockable",
+      "st": "confirmed",
+      "lv": {
+        "ent": 118,
+        "stop": 119.22,
+        "inv": 119.22,
+        "tp1": 114.92,
+        "tp2": 112.99,
+        "tp2src": "level",
+        "rr": 2.52,
+        "cap": 117.48
+      },
+      "score": "2/7",
+      "gate": true,
+      "tfs": "1m⚠️ 3m⚠️ 5m⚠️ 15m✅ 1h✅ 4h⚠️ 1d❌",
+      "ev": {
+        "verdict": "CAUTION",
+        "vol": "Volume OK · 13.6x avg → GO",
+        "mom": "RSI 29 · Stoch 0/0 oversold · no divergence"
       }
     }
   ],
@@ -84,7 +84,7 @@
     "found": 74,
     "opps": 20,
     "locked": 1,
-    "since": "2026-10-06T10:17:16.455Z",
+    "since": "2026-10-06T10:27:53.239Z",
     "partial": false
   },
   "flowRules": {
