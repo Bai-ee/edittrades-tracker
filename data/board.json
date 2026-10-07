@@ -1,56 +1,56 @@
 {
-  "closedThrough": "2026-10-07T21:38:00.000Z",
+  "closedThrough": "2026-10-07T21:47:00.000Z",
   "board": [
     {
-      "ref": "5297cd69",
+      "ref": "01576af7",
       "sym": "BTC",
-      "tf": "5m",
+      "tf": "15m",
       "dir": "short",
-      "stage": "lockable",
-      "st": "triggering",
+      "stage": "found",
+      "st": "forming",
       "lv": {
-        "ent": 83285.1,
-        "stop": 83353.2,
-        "inv": 83353.2,
-        "tp1": 83079.1,
-        "tp2": 82920.1,
+        "ent": 83159.4,
+        "stop": 83555,
+        "inv": 83555,
+        "tp1": 82517.5,
+        "tp2": 82074,
         "tp2src": "level",
-        "rr": 3.02,
-        "cap": 83202.8
+        "rr": 1.62,
+        "cap": 82965.33
       },
       "score": "5/7",
       "gate": true,
       "tfs": "1m✅ 3m✅ 5m✅ 15m✅ 1h✅ 4h⚠️ 1d❌",
       "ev": {
-        "verdict": "CAUTION",
-        "vol": "Volume OK · 0.8x avg → GO",
-        "mom": "RSI 41 · Stoch 8/12 oversold · no divergence"
+        "verdict": "STAY OUT",
+        "vol": "Volume WEAK · 0.6x avg → STAY OUT",
+        "mom": "RSI 41 · Stoch 13/33 falling · no divergence"
       }
     },
     {
-      "ref": "a05f0cbc",
+      "ref": "12ca49ab",
       "sym": "SOL",
       "tf": "1m",
       "dir": "short",
       "stage": "found",
       "st": "forming",
       "lv": {
-        "ent": 115.57,
-        "stop": 115.72,
-        "inv": 115.72,
-        "tp1": 115.05,
+        "ent": 115.32,
+        "stop": 115.44,
+        "inv": 115.44,
+        "tp1": 114.5,
         "tp2": 114.3,
         "tp2src": "level",
-        "rr": 3.47,
-        "cap": 115.46
+        "rr": 6.83,
+        "cap": 115.16
       },
       "score": "3/7",
       "gate": true,
       "tfs": "1m⚠️ 3m✅ 5m✅ 15m✅ 1h⚠️ 4h⚠️ 1d❌",
       "ev": {
-        "verdict": "CAUTION",
-        "vol": "Volume STRONG · 2x avg · quiet flag → GO",
-        "mom": "RSI 27 · Stoch 42/36 rising · no divergence"
+        "verdict": "STAY OUT",
+        "vol": "Volume WEAK · 0.2x avg → STAY OUT",
+        "mom": "RSI 36 · Stoch 85/64 rising · no divergence"
       }
     },
     {
@@ -81,10 +81,10 @@
     }
   ],
   "pulse": {
-    "found": 67,
-    "opps": 23,
+    "found": 68,
+    "opps": 22,
     "locked": 0,
-    "since": "2026-10-06T21:38:21.234Z",
+    "since": "2026-10-06T21:47:16.646Z",
     "partial": false
   },
   "flowRules": {
