@@ -1,6 +1,32 @@
 {
-  "closedThrough": "2026-10-07T02:47:00.000Z",
+  "closedThrough": "2026-10-07T02:57:00.000Z",
   "board": [
+    {
+      "ref": "9aca5715",
+      "sym": "ETH",
+      "tf": "1m",
+      "dir": "short",
+      "stage": "lockable",
+      "st": "confirmed",
+      "lv": {
+        "ent": 2612.95,
+        "stop": 2617.81,
+        "inv": 2617.81,
+        "tp1": 2601.3,
+        "tp2": 2565.3,
+        "tp2src": "level",
+        "rr": 2.4,
+        "cap": 2610.49
+      },
+      "score": "3/7",
+      "gate": true,
+      "tfs": "1m✅ 3m✅ 5m⚠️ 15m✅ 1h⚠️ 4h⚠️ 1d❌",
+      "ev": {
+        "verdict": "CAUTION",
+        "vol": "Volume OK · 3.2x avg → GO",
+        "mom": "RSI 40 · Stoch 4/6 oversold · no divergence"
+      }
+    },
     {
       "ref": "8d9a7f15",
       "sym": "SOL",
@@ -36,39 +62,13 @@
       "st": "forming",
       "lv": {
         "ent": 117.54,
-        "stop": 118.32,
-        "inv": 118.32,
+        "stop": 118.46,
+        "inv": 118.46,
         "tp1": 113.87,
         "tp2": 112.04,
         "tp2src": "1.5x",
-        "rr": 4.71,
-        "cap": 116.81
-      },
-      "score": "3/7",
-      "gate": false,
-      "tfs": "1m⚠️ 3m✅ 5m✅ 15m✅ 1h⚠️ 4h❌ 1d❌",
-      "ev": {
-        "verdict": "STAY OUT",
-        "vol": "Volume WEAK · 0.5x avg → STAY OUT",
-        "mom": "RSI 35 · Stoch 97/87 overbought · no divergence"
-      }
-    },
-    {
-      "ref": "67cd3081",
-      "sym": "SOL",
-      "tf": "3m",
-      "dir": "short",
-      "stage": "watch",
-      "st": "forming",
-      "lv": {
-        "ent": 117.54,
-        "stop": 118.32,
-        "inv": 118.32,
-        "tp1": 114.09,
-        "tp2": 112.37,
-        "tp2src": "1.5x",
-        "rr": 4.42,
-        "cap": 117
+        "rr": 3.99,
+        "cap": 116.79
       },
       "score": "3/7",
       "gate": false,
@@ -76,7 +76,7 @@
       "ev": {
         "verdict": "STAY OUT",
         "vol": "Volume WEAK · 0.1x avg → STAY OUT",
-        "mom": "RSI 41 · Stoch 100/100 overbought · no divergence"
+        "mom": "RSI 37 · Stoch 100/99 overbought · no divergence"
       }
     }
   ],
@@ -84,7 +84,7 @@
     "found": 51,
     "opps": 17,
     "locked": 1,
-    "since": "2026-10-06T02:47:17.344Z",
+    "since": "2026-10-06T02:57:17.955Z",
     "partial": false
   },
   "flowRules": {
