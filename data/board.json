@@ -1,6 +1,32 @@
 {
-  "closedThrough": "2026-10-07T15:19:00.000Z",
+  "closedThrough": "2026-10-07T15:27:00.000Z",
   "board": [
+    {
+      "ref": "ca30407e",
+      "sym": "ETH",
+      "tf": "1m",
+      "dir": "short",
+      "stage": "found",
+      "st": "proto",
+      "lv": {
+        "ent": 2559.38,
+        "stop": 2561.44,
+        "inv": 2561.44,
+        "tp1": 2554.97,
+        "tp2": 2552,
+        "tp2src": "level",
+        "rr": 2.14,
+        "cap": 2556.07
+      },
+      "score": "2/7",
+      "gate": true,
+      "tfs": "1m⚠️ 3m✅ 5m⚠️ 15m⚠️ 1h✅ 4h⚠️ 1d❌",
+      "ev": {
+        "verdict": "CAUTION",
+        "vol": "Volume OK · 1.4x avg → GO",
+        "mom": "RSI 47 · Stoch 26/20 rising · no divergence"
+      }
+    },
     {
       "ref": "103a586f",
       "sym": "ETH",
@@ -20,7 +46,7 @@
       },
       "score": "2/7",
       "gate": false,
-      "tfs": "1m✅ 3m⚠️ 5m⚠️ 15m⚠️ 1h✅ 4h⚠️ 1d❌",
+      "tfs": "1m⚠️ 3m✅ 5m⚠️ 15m⚠️ 1h✅ 4h⚠️ 1d❌",
       "ev": {
         "verdict": "STAY OUT",
         "vol": "Volume WEAK · 0.5x avg → STAY OUT",
@@ -46,37 +72,11 @@
       },
       "score": "2/7",
       "gate": false,
-      "tfs": "1m✅ 3m⚠️ 5m⚠️ 15m⚠️ 1h✅ 4h⚠️ 1d❌",
+      "tfs": "1m⚠️ 3m✅ 5m⚠️ 15m⚠️ 1h✅ 4h⚠️ 1d❌",
       "ev": {
         "verdict": "STAY OUT",
         "vol": "Volume WEAK · 0.8x avg → STAY OUT",
         "mom": "RSI 37 · Stoch 87/78 rising · bullish div ⚠️"
-      }
-    },
-    {
-      "ref": "e557f59d",
-      "sym": "ETH",
-      "tf": "5m",
-      "dir": "short",
-      "stage": "watch",
-      "st": "forming",
-      "lv": {
-        "ent": 2556.99,
-        "stop": 2570,
-        "inv": 2570,
-        "tp1": 2529.62,
-        "tp2": 2465.84,
-        "tp2src": "level",
-        "rr": 2.1,
-        "cap": 2549.81
-      },
-      "score": "2/7",
-      "gate": false,
-      "tfs": "1m✅ 3m⚠️ 5m⚠️ 15m⚠️ 1h✅ 4h⚠️ 1d❌",
-      "ev": {
-        "verdict": "STAY OUT",
-        "vol": "Volume WEAK · 0.9x avg → STAY OUT",
-        "mom": "RSI 50 · Stoch 60/47 rising · no divergence"
       }
     }
   ],
@@ -84,7 +84,7 @@
     "found": 72,
     "opps": 23,
     "locked": 0,
-    "since": "2026-10-06T15:19:14.028Z",
+    "since": "2026-10-06T15:27:21.915Z",
     "partial": false
   },
   "flowRules": {
