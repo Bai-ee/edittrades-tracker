@@ -1,13 +1,39 @@
 {
-  "closedThrough": "2026-10-08T20:47:00.000Z",
+  "closedThrough": "2026-10-08T20:57:00.000Z",
   "board": [
+    {
+      "ref": "e785d30d",
+      "sym": "ETH",
+      "tf": "5m",
+      "dir": "long",
+      "stage": "watch",
+      "st": "confirmed",
+      "lv": {
+        "ent": 2469.33,
+        "stop": 2464.58,
+        "inv": 2464.58,
+        "tp1": 2498.82,
+        "tp2": 2522.8,
+        "tp2src": "level",
+        "rr": 6.21,
+        "cap": 2474.97
+      },
+      "score": "1/7",
+      "gate": false,
+      "tfs": "1m✅ 3m⚠️ 5m⚠️ 15m⚠️ 1h❌ 4h⚠️ 1d⚠️",
+      "ev": {
+        "verdict": "STAY OUT",
+        "vol": "Volume WEAK · 0.2x avg → STAY OUT",
+        "mom": "RSI 67 · Stoch 39/40 falling · no divergence"
+      }
+    },
     {
       "ref": "b89b0c20",
       "sym": "SOL",
       "tf": "5m",
       "dir": "long",
       "stage": "watch",
-      "st": "triggering",
+      "st": "confirmed",
       "lv": {
         "ent": 109.51,
         "stop": 109.12,
@@ -16,41 +42,15 @@
         "tp2": 112.18,
         "tp2src": "level",
         "rr": 4.72,
-        "cap": 109.9
-      },
-      "score": "1/7",
-      "gate": false,
-      "tfs": "1m✅ 3m⚠️ 5m⚠️ 15m⚠️ 1h❌ 4h⚠️ 1d⚠️",
-      "ev": {
-        "verdict": "CAUTION",
-        "vol": "Volume OK · 1.1x avg → GO",
-        "mom": "RSI 65 · Stoch 57/40 rising · bearish div ⚠️"
-      }
-    },
-    {
-      "ref": "bf970013",
-      "sym": "SOL",
-      "tf": "3m",
-      "dir": "long",
-      "stage": "watch",
-      "st": "triggering",
-      "lv": {
-        "ent": 109.57,
-        "stop": 109.12,
-        "inv": 109.12,
-        "tp1": 110.49,
-        "tp2": 112.18,
-        "tp2src": "level",
-        "rr": 2.04,
-        "cap": 109.84
+        "cap": 109.89
       },
       "score": "1/7",
       "gate": false,
       "tfs": "1m✅ 3m⚠️ 5m⚠️ 15m⚠️ 1h❌ 4h⚠️ 1d⚠️",
       "ev": {
         "verdict": "STAY OUT",
-        "vol": "Volume WEAK · 0.5x avg → STAY OUT",
-        "mom": "RSI 65 · Stoch 58/39 rising · no divergence"
+        "vol": "Volume WEAK · 0.7x avg → STAY OUT",
+        "mom": "RSI 65 · Stoch 79/67 rising · bearish div ⚠️"
       }
     },
     {
@@ -84,7 +84,7 @@
     "found": 46,
     "opps": 25,
     "locked": 0,
-    "since": "2026-10-07T20:47:17.877Z",
+    "since": "2026-10-07T20:57:19.443Z",
     "partial": false
   },
   "flowRules": {
