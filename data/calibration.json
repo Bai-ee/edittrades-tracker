@@ -1,29 +1,29 @@
 {
-  "generatedAt": "2026-10-11T13:07:24.814Z",
-  "n": 4215,
+  "generatedAt": "2026-10-11T13:17:26.932Z",
+  "n": 4217,
   "phases": {
     "tightening": {
-      "n": 3204,
-      "brier": 0.6722,
-      "baselineBrier": 0.6678,
+      "n": 3205,
+      "brier": 0.6721,
+      "baselineBrier": 0.6677,
       "baseline": {
-        "retest_go": 13.33,
+        "retest_go": 13.32,
         "runner": 11.86,
         "false_break": 11.92,
-        "fail_first": 52.47,
+        "fail_first": 52.48,
         "chop": 10.42
       }
     },
     "broken": {
-      "n": 1011,
-      "brier": 0.8368,
-      "baselineBrier": 0.7273,
+      "n": 1012,
+      "brier": 0.8369,
+      "baselineBrier": 0.7272,
       "baseline": {
-        "retest_go": 34.52,
-        "runner": 29.67,
-        "false_break": 20.57,
+        "retest_go": 34.49,
+        "runner": 29.74,
+        "false_break": 20.55,
         "fail_first": 0,
-        "chop": 15.23
+        "chop": 15.22
       }
     }
   },
@@ -31,14 +31,14 @@
     "runner": [
       {
         "bucket": "0-10",
-        "n": 1861,
+        "n": 1862,
         "meanPredicted": 5.5,
         "realisedRate": 12.8
       },
       {
         "bucket": "10-20",
-        "n": 2019,
-        "meanPredicted": 14.5,
+        "n": 2020,
+        "meanPredicted": 14.6,
         "realisedRate": 17.3
       },
       {
@@ -93,7 +93,7 @@
     "fail_first": [
       {
         "bucket": "0-10",
-        "n": 1011,
+        "n": 1012,
         "meanPredicted": 0,
         "realisedRate": 0
       },
@@ -129,9 +129,9 @@
       },
       {
         "bucket": "60-70",
-        "n": 557,
+        "n": 558,
         "meanPredicted": 61.1,
-        "realisedRate": 61
+        "realisedRate": 61.1
       },
       {
         "bucket": "70-80",
@@ -154,7 +154,7 @@
     ]
   },
   "likely": {
-    "n": 4215,
+    "n": 4217,
     "hitRate": 43.6
   },
   "chase": {
@@ -163,7 +163,7 @@
       "runnerRate": 30
     },
     "low": {
-      "n": 3505,
+      "n": 3507,
       "runnerRate": 13.3
     }
   }
