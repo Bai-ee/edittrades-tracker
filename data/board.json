@@ -1,6 +1,32 @@
 {
-  "closedThrough": "2026-10-11T04:47:00.000Z",
+  "closedThrough": "2026-10-11T04:57:00.000Z",
   "board": [
+    {
+      "ref": "7c27a20c",
+      "sym": "ETH",
+      "tf": "1m",
+      "dir": "long",
+      "stage": "watch",
+      "st": "triggering",
+      "lv": {
+        "ent": 2505.56,
+        "stop": 2504.38,
+        "inv": 2504.38,
+        "tp1": 2510.01,
+        "tp2": 2510.82,
+        "tp2src": "level",
+        "rr": 3.77,
+        "cap": 2506.12
+      },
+      "score": "2/7",
+      "gate": false,
+      "tfs": "1m✅ 3m⚠️ 5m✅ 15m⚠️ 1h❌ 4h❌ 1d⚠️",
+      "ev": {
+        "verdict": "STAY OUT",
+        "vol": "Volume WEAK · 0.2x avg → STAY OUT",
+        "mom": "RSI 56 · Stoch 2/19 oversold · bearish div ⚠️"
+      }
+    },
     {
       "ref": "53b66b0d",
       "sym": "SOL",
@@ -28,32 +54,6 @@
       }
     },
     {
-      "ref": "62531e8c",
-      "sym": "ETH",
-      "tf": "4h",
-      "dir": "short",
-      "stage": "watch",
-      "st": "forming",
-      "lv": {
-        "ent": 2471.35,
-        "stop": 2522.8,
-        "inv": 2522.8,
-        "tp1": 2152.68,
-        "tp2": 1993.34,
-        "tp2src": "1.5x",
-        "rr": 6.19,
-        "cap": 2443.37
-      },
-      "score": "1/7",
-      "gate": false,
-      "tfs": "1m⚠️ 3m⚠️ 5m⚠️ 15m⚠️ 1h⚠️ 4h✅ 1d⚠️",
-      "ev": {
-        "verdict": "STAY OUT",
-        "vol": "Volume WEAK · 0.8x avg → STAY OUT",
-        "mom": "RSI 38 · Stoch 90/96 overbought · no divergence"
-      }
-    },
-    {
       "ref": "d1ecfe8e",
       "sym": "BTC",
       "tf": "4h",
@@ -70,9 +70,9 @@
         "rr": 2.43,
         "cap": 83813.28
       },
-      "score": "1/7",
+      "score": "2/7",
       "gate": false,
-      "tfs": "1m⚠️ 3m⚠️ 5m⚠️ 15m✅ 1h❌ 4h⚠️ 1d⚠️",
+      "tfs": "1m✅ 3m⚠️ 5m⚠️ 15m✅ 1h❌ 4h⚠️ 1d⚠️",
       "ev": {
         "verdict": "STAY OUT",
         "vol": "Volume WEAK · 0.3x avg → STAY OUT",
@@ -84,7 +84,7 @@
     "found": 27,
     "opps": 10,
     "locked": 0,
-    "since": "2026-10-10T04:47:18.370Z",
+    "since": "2026-10-10T04:57:16.442Z",
     "partial": false
   },
   "flowRules": {
