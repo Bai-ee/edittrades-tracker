@@ -1,5 +1,5 @@
 {
-  "closedThrough": "2026-10-12T09:07:00.000Z",
+  "closedThrough": "2026-10-12T09:17:00.000Z",
   "board": [
     {
       "ref": "d1ecfe8e",
@@ -20,11 +20,37 @@
       },
       "score": "2/7",
       "gate": true,
-      "tfs": "1m❌ 3m❌ 5m⚠️ 15m⚠️ 1h⚠️ 4h✅ 1d✅",
+      "tfs": "1m❌ 3m❌ 5m❌ 15m⚠️ 1h⚠️ 4h✅ 1d✅",
       "ev": {
         "verdict": "CAUTION",
         "vol": "Volume OK · 2.4x avg → GO",
         "mom": "RSI 58 · Stoch 87/87 overbought · no divergence"
+      }
+    },
+    {
+      "ref": "d5e822db",
+      "sym": "BTC",
+      "tf": "1m",
+      "dir": "short",
+      "stage": "found",
+      "st": "forming",
+      "lv": {
+        "ent": 83445.7,
+        "stop": 83509.9,
+        "inv": 83509.9,
+        "tp1": 83297.8,
+        "tp2": 83234.8,
+        "tp2src": "level",
+        "rr": 2.3,
+        "cap": 83412.74
+      },
+      "score": "2/7",
+      "gate": true,
+      "tfs": "1m✅ 3m✅ 5m⚠️ 15m⚠️ 1h⚠️ 4h❌ 1d❌",
+      "ev": {
+        "verdict": "CAUTION",
+        "vol": "Volume OK · 0.8x avg → GO",
+        "mom": "RSI 41 · Stoch 32/48 falling · bullish div ⚠️"
       }
     },
     {
@@ -46,37 +72,11 @@
       },
       "score": "2/7",
       "gate": false,
-      "tfs": "1m❌ 3m❌ 5m⚠️ 15m⚠️ 1h⚠️ 4h✅ 1d✅",
+      "tfs": "1m❌ 3m❌ 5m❌ 15m⚠️ 1h⚠️ 4h✅ 1d✅",
       "ev": {
         "verdict": "STAY OUT",
         "vol": "Volume WEAK · 1.7x avg → STAY OUT",
         "mom": "RSI 48 · Stoch 30/40 falling · bearish div ⚠️"
-      }
-    },
-    {
-      "ref": "b07ce2fb",
-      "sym": "BTC",
-      "tf": "5m",
-      "dir": "short",
-      "stage": "watch",
-      "st": "confirmed",
-      "lv": {
-        "ent": 83493.7,
-        "stop": 83681.2,
-        "inv": 83681.2,
-        "tp1": 82702.8,
-        "tp2": 82330.6,
-        "tp2src": "level",
-        "rr": 4.22,
-        "cap": 83337.02
-      },
-      "score": "1/7",
-      "gate": false,
-      "tfs": "1m✅ 3m⚠️ 5m⚠️ 15m⚠️ 1h⚠️ 4h❌ 1d❌",
-      "ev": {
-        "verdict": "STAY OUT",
-        "vol": "Volume WEAK · 0.5x avg → STAY OUT",
-        "mom": "RSI 36 · Stoch 29/34 falling · no divergence"
       }
     }
   ],
@@ -84,7 +84,7 @@
     "found": 44,
     "opps": 19,
     "locked": 0,
-    "since": "2026-10-11T09:07:20.192Z",
+    "since": "2026-10-11T09:17:21.273Z",
     "partial": false
   },
   "flowRules": {
