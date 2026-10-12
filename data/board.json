@@ -1,30 +1,30 @@
 {
-  "closedThrough": "2026-10-12T17:37:00.000Z",
+  "closedThrough": "2026-10-12T17:47:00.000Z",
   "board": [
     {
-      "ref": "d8b647d5",
-      "sym": "ETH",
+      "ref": "e60317e9",
+      "sym": "BTC",
       "tf": "15m",
       "dir": "short",
       "stage": "lockable",
-      "st": "confirmed",
+      "st": "triggering",
       "lv": {
-        "ent": 2518.73,
-        "stop": 2532.25,
-        "inv": 2532.25,
-        "tp1": 2472.16,
-        "tp2": 2471.35,
+        "ent": 82330.6,
+        "stop": 82884.1,
+        "inv": 82884.1,
+        "tp1": 81124.8,
+        "tp2": 80541.2,
         "tp2src": "level",
-        "rr": 3.44,
-        "cap": 2505.27
+        "rr": 2.18,
+        "cap": 82041.51
       },
-      "score": "5/7",
+      "score": "4/7",
       "gate": true,
-      "tfs": "1m⚠️ 3m✅ 5m✅ 15m✅ 1h✅ 4h✅ 1d⚠️",
+      "tfs": "1m✅ 3m⚠️ 5m✅ 15m✅ 1h✅ 4h⚠️ 1d❌",
       "ev": {
-        "verdict": "CAUTION",
-        "vol": "Volume OK · 1.3x avg → GO",
-        "mom": "RSI 30 · Stoch 13/33 falling · no divergence"
+        "verdict": "STAY OUT",
+        "vol": "Volume WEAK · 0.9x avg → STAY OUT",
+        "mom": "RSI 36 · Stoch 36/44 falling · bullish div ⚠️"
       }
     },
     {
@@ -32,51 +32,51 @@
       "sym": "ETH",
       "tf": "5m",
       "dir": "short",
-      "stage": "lockable",
+      "stage": "watch",
       "st": "confirmed",
       "lv": {
-        "ent": 2507.71,
+        "ent": 2507.33,
         "stop": 2518.73,
         "inv": 2518.73,
-        "tp1": 2484.46,
+        "tp1": 2484.08,
         "tp2": 2483.64,
         "tp2src": "level",
-        "rr": 2.11,
-        "cap": 2500.67
+        "rr": 2.04,
+        "cap": 2500.19
       },
-      "score": "5/7",
-      "gate": true,
-      "tfs": "1m⚠️ 3m✅ 5m✅ 15m✅ 1h✅ 4h✅ 1d⚠️",
-      "ev": {
-        "verdict": "CAUTION",
-        "vol": "Volume OK · 1.9x avg → GO",
-        "mom": "RSI 31 · Stoch 7/16 oversold · no divergence"
-      }
-    },
-    {
-      "ref": "12436fc2",
-      "sym": "ETH",
-      "tf": "3m",
-      "dir": "short",
-      "stage": "lockable",
-      "st": "confirmed",
-      "lv": {
-        "ent": 2507.71,
-        "stop": 2518.73,
-        "inv": 2518.73,
-        "tp1": 2484.46,
-        "tp2": 2483.64,
-        "tp2src": "level",
-        "rr": 2.11,
-        "cap": 2503.15
-      },
-      "score": "5/7",
-      "gate": true,
-      "tfs": "1m⚠️ 3m✅ 5m✅ 15m✅ 1h✅ 4h✅ 1d⚠️",
+      "score": "6/7",
+      "gate": false,
+      "tfs": "1m✅ 3m✅ 5m✅ 15m✅ 1h✅ 4h✅ 1d⚠️",
       "ev": {
         "verdict": "STAY OUT",
         "vol": "Volume WEAK · 0.7x avg → STAY OUT",
-        "mom": "RSI 24 · Stoch 4/22 falling · no divergence"
+        "mom": "RSI 29 · Stoch 0/2 oversold · no divergence"
+      }
+    },
+    {
+      "ref": "076e7d7b",
+      "sym": "ETH",
+      "tf": "1m",
+      "dir": "short",
+      "stage": "watch",
+      "st": "forming",
+      "lv": {
+        "ent": 2502.01,
+        "stop": 2504.8,
+        "inv": 2504.8,
+        "tp1": 2490.4,
+        "tp2": 2483.64,
+        "tp2src": "level",
+        "rr": 4.16,
+        "cap": 2499.24
+      },
+      "score": "6/7",
+      "gate": false,
+      "tfs": "1m✅ 3m✅ 5m✅ 15m✅ 1h✅ 4h✅ 1d⚠️",
+      "ev": {
+        "verdict": "STAY OUT",
+        "vol": "Volume WEAK · 0.2x avg → STAY OUT",
+        "mom": "RSI 44 · Stoch 96/82 overbought · no divergence"
       }
     }
   ],
@@ -84,7 +84,7 @@
     "found": 39,
     "opps": 18,
     "locked": 0,
-    "since": "2026-10-11T17:37:17.764Z",
+    "since": "2026-10-11T17:47:17.719Z",
     "partial": false
   },
   "flowRules": {
