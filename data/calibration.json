@@ -1,29 +1,29 @@
 {
-  "generatedAt": "2026-10-13T07:27:27.119Z",
-  "n": 4639,
+  "generatedAt": "2026-10-13T07:37:26.273Z",
+  "n": 4644,
   "phases": {
     "tightening": {
-      "n": 3517,
-      "brier": 0.6824,
+      "n": 3521,
+      "brier": 0.6826,
       "baselineBrier": 0.6786,
       "baseline": {
-        "retest_go": 14.07,
-        "runner": 12.11,
-        "false_break": 11.86,
+        "retest_go": 14.09,
+        "runner": 12.1,
+        "false_break": 11.87,
         "fail_first": 51.09,
-        "chop": 10.86
+        "chop": 10.85
       }
     },
     "broken": {
-      "n": 1122,
-      "brier": 0.839,
-      "baselineBrier": 0.723,
+      "n": 1123,
+      "brier": 0.8389,
+      "baselineBrier": 0.7228,
       "baseline": {
-        "retest_go": 35.65,
-        "runner": 29.77,
-        "false_break": 20.05,
+        "retest_go": 35.71,
+        "runner": 29.74,
+        "false_break": 20.04,
         "fail_first": 0,
-        "chop": 14.53
+        "chop": 14.51
       }
     }
   },
@@ -31,13 +31,13 @@
     "runner": [
       {
         "bucket": "0-10",
-        "n": 2057,
+        "n": 2060,
         "meanPredicted": 5.5,
         "realisedRate": 13.3
       },
       {
         "bucket": "10-20",
-        "n": 2215,
+        "n": 2217,
         "meanPredicted": 14.6,
         "realisedRate": 17.4
       },
@@ -93,7 +93,7 @@
     "fail_first": [
       {
         "bucket": "0-10",
-        "n": 1122,
+        "n": 1123,
         "meanPredicted": 0,
         "realisedRate": 0
       },
@@ -111,8 +111,8 @@
       },
       {
         "bucket": "30-40",
-        "n": 979,
-        "meanPredicted": 36.5,
+        "n": 982,
+        "meanPredicted": 36.4,
         "realisedRate": 46
       },
       {
@@ -123,7 +123,7 @@
       },
       {
         "bucket": "50-60",
-        "n": 884,
+        "n": 885,
         "meanPredicted": 55.2,
         "realisedRate": 55.5
       },
@@ -154,7 +154,7 @@
     ]
   },
   "likely": {
-    "n": 4639,
+    "n": 4644,
     "hitRate": 42.5
   },
   "chase": {
@@ -163,7 +163,7 @@
       "runnerRate": 30.5
     },
     "low": {
-      "n": 3850,
+      "n": 3855,
       "runnerRate": 13.5
     }
   }
