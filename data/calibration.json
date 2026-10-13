@@ -1,29 +1,29 @@
 {
-  "generatedAt": "2026-10-13T10:27:25.796Z",
-  "n": 4670,
+  "generatedAt": "2026-10-13T10:37:25.576Z",
+  "n": 4675,
   "phases": {
     "tightening": {
-      "n": 3543,
+      "n": 3546,
       "brier": 0.6828,
-      "baselineBrier": 0.6787,
+      "baselineBrier": 0.6786,
       "baseline": {
-        "retest_go": 14.03,
-        "runner": 12.16,
-        "false_break": 11.85,
-        "fail_first": 51.09,
-        "chop": 10.87
+        "retest_go": 14.04,
+        "runner": 12.15,
+        "false_break": 11.84,
+        "fail_first": 51.1,
+        "chop": 10.86
       }
     },
     "broken": {
-      "n": 1127,
-      "brier": 0.8398,
-      "baselineBrier": 0.7229,
+      "n": 1129,
+      "brier": 0.8396,
+      "baselineBrier": 0.7226,
       "baseline": {
-        "retest_go": 35.58,
-        "runner": 29.9,
-        "false_break": 20.05,
+        "retest_go": 35.7,
+        "runner": 29.85,
+        "false_break": 20.02,
         "fail_first": 0,
-        "chop": 14.46
+        "chop": 14.44
       }
     }
   },
@@ -31,13 +31,13 @@
     "runner": [
       {
         "bucket": "0-10",
-        "n": 2074,
+        "n": 2075,
         "meanPredicted": 5.5,
-        "realisedRate": 13.4
+        "realisedRate": 13.3
       },
       {
         "bucket": "10-20",
-        "n": 2228,
+        "n": 2232,
         "meanPredicted": 14.6,
         "realisedRate": 17.5
       },
@@ -93,7 +93,7 @@
     "fail_first": [
       {
         "bucket": "0-10",
-        "n": 1127,
+        "n": 1129,
         "meanPredicted": 0,
         "realisedRate": 0
       },
@@ -111,15 +111,15 @@
       },
       {
         "bucket": "30-40",
-        "n": 989,
+        "n": 991,
         "meanPredicted": 36.4,
-        "realisedRate": 46.1
+        "realisedRate": 46.2
       },
       {
         "bucket": "40-50",
-        "n": 974,
-        "meanPredicted": 44.6,
-        "realisedRate": 48.3
+        "n": 975,
+        "meanPredicted": 44.5,
+        "realisedRate": 48.2
       },
       {
         "bucket": "50-60",
@@ -154,7 +154,7 @@
     ]
   },
   "likely": {
-    "n": 4670,
+    "n": 4675,
     "hitRate": 42.4
   },
   "chase": {
@@ -163,7 +163,7 @@
       "runnerRate": 30.7
     },
     "low": {
-      "n": 3878,
+      "n": 3883,
       "runnerRate": 13.5
     }
   }
