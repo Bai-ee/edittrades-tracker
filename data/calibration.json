@@ -1,29 +1,29 @@
 {
-  "generatedAt": "2026-10-15T14:47:27.283Z",
-  "n": 5202,
+  "generatedAt": "2026-10-15T14:57:29.556Z",
+  "n": 5204,
   "phases": {
     "tightening": {
-      "n": 3960,
-      "brier": 0.6813,
-      "baselineBrier": 0.676,
+      "n": 3961,
+      "brier": 0.6814,
+      "baselineBrier": 0.6761,
       "baseline": {
-        "retest_go": 14.07,
-        "runner": 11.94,
+        "retest_go": 14.06,
+        "runner": 11.97,
         "false_break": 11.97,
-        "fail_first": 51.41,
-        "chop": 10.61
+        "fail_first": 51.4,
+        "chop": 10.6
       }
     },
     "broken": {
-      "n": 1242,
-      "brier": 0.8448,
-      "baselineBrier": 0.723,
+      "n": 1243,
+      "brier": 0.8447,
+      "baselineBrier": 0.7229,
       "baseline": {
-        "retest_go": 35.35,
-        "runner": 29.95,
-        "false_break": 20.61,
+        "retest_go": 35.4,
+        "runner": 29.93,
+        "false_break": 20.6,
         "fail_first": 0,
-        "chop": 14.09
+        "chop": 14.08
       }
     }
   },
@@ -31,13 +31,13 @@
     "runner": [
       {
         "bucket": "0-10",
-        "n": 2294,
+        "n": 2295,
         "meanPredicted": 5.5,
         "realisedRate": 13.2
       },
       {
         "bucket": "10-20",
-        "n": 2502,
+        "n": 2503,
         "meanPredicted": 14.6,
         "realisedRate": 17.5
       },
@@ -93,7 +93,7 @@
     "fail_first": [
       {
         "bucket": "0-10",
-        "n": 1242,
+        "n": 1243,
         "meanPredicted": 0,
         "realisedRate": 0
       },
@@ -105,9 +105,9 @@
       },
       {
         "bucket": "20-30",
-        "n": 99,
+        "n": 100,
         "meanPredicted": 26,
-        "realisedRate": 33.3
+        "realisedRate": 33
       },
       {
         "bucket": "30-40",
@@ -154,7 +154,7 @@
     ]
   },
   "likely": {
-    "n": 5202,
+    "n": 5204,
     "hitRate": 42.5
   },
   "chase": {
@@ -163,7 +163,7 @@
       "runnerRate": 29.8
     },
     "low": {
-      "n": 4319,
+      "n": 4321,
       "runnerRate": 13.5
     }
   }
