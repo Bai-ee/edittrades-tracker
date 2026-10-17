@@ -1,29 +1,29 @@
 {
-  "generatedAt": "2026-10-17T05:27:27.680Z",
-  "n": 5593,
+  "generatedAt": "2026-10-17T05:37:26.855Z",
+  "n": 5595,
   "phases": {
     "tightening": {
-      "n": 4263,
-      "brier": 0.6786,
-      "baselineBrier": 0.675,
+      "n": 4264,
+      "brier": 0.6785,
+      "baselineBrier": 0.6749,
       "baseline": {
         "retest_go": 13.86,
         "runner": 11.87,
         "false_break": 11.82,
-        "fail_first": 51.56,
+        "fail_first": 51.57,
         "chop": 10.88
       }
     },
     "broken": {
-      "n": 1330,
-      "brier": 0.8423,
-      "baselineBrier": 0.7245,
+      "n": 1331,
+      "brier": 0.8426,
+      "baselineBrier": 0.7247,
       "baseline": {
-        "retest_go": 35.26,
-        "runner": 29.62,
-        "false_break": 20.53,
+        "retest_go": 35.24,
+        "runner": 29.6,
+        "false_break": 20.51,
         "fail_first": 0,
-        "chop": 14.59
+        "chop": 14.65
       }
     }
   },
@@ -31,7 +31,7 @@
     "runner": [
       {
         "bucket": "0-10",
-        "n": 2484,
+        "n": 2485,
         "meanPredicted": 5.5,
         "realisedRate": 13.1
       },
@@ -43,8 +43,8 @@
       },
       {
         "bucket": "20-30",
-        "n": 359,
-        "meanPredicted": 21.7,
+        "n": 360,
+        "meanPredicted": 21.8,
         "realisedRate": 24.2
       },
       {
@@ -93,7 +93,7 @@
     "fail_first": [
       {
         "bucket": "0-10",
-        "n": 1330,
+        "n": 1331,
         "meanPredicted": 0,
         "realisedRate": 0
       },
@@ -123,9 +123,9 @@
       },
       {
         "bucket": "50-60",
-        "n": 1074,
+        "n": 1075,
         "meanPredicted": 55.1,
-        "realisedRate": 56.1
+        "realisedRate": 56.2
       },
       {
         "bucket": "60-70",
@@ -154,7 +154,7 @@
     ]
   },
   "likely": {
-    "n": 5593,
+    "n": 5595,
     "hitRate": 42.9
   },
   "chase": {
@@ -163,7 +163,7 @@
       "runnerRate": 29.7
     },
     "low": {
-      "n": 4651,
+      "n": 4653,
       "runnerRate": 13.3
     }
   }
