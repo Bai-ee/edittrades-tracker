@@ -1,29 +1,29 @@
 {
-  "generatedAt": "2026-10-18T01:47:30.406Z",
-  "n": 5789,
+  "generatedAt": "2026-10-18T01:57:29.038Z",
+  "n": 5792,
   "phases": {
     "tightening": {
-      "n": 4417,
-      "brier": 0.6798,
-      "baselineBrier": 0.6766,
+      "n": 4418,
+      "brier": 0.6799,
+      "baselineBrier": 0.6767,
       "baseline": {
-        "retest_go": 14.2,
+        "retest_go": 14.21,
         "runner": 11.77,
         "false_break": 11.68,
-        "fail_first": 51.35,
+        "fail_first": 51.34,
         "chop": 11
       }
     },
     "broken": {
-      "n": 1372,
-      "brier": 0.841,
-      "baselineBrier": 0.7242,
+      "n": 1374,
+      "brier": 0.8409,
+      "baselineBrier": 0.7241,
       "baseline": {
-        "retest_go": 35.64,
-        "runner": 29.3,
-        "false_break": 20.19,
+        "retest_go": 35.66,
+        "runner": 29.33,
+        "false_break": 20.16,
         "fail_first": 0,
-        "chop": 14.87
+        "chop": 14.85
       }
     }
   },
@@ -31,15 +31,15 @@
     "runner": [
       {
         "bucket": "0-10",
-        "n": 2586,
+        "n": 2588,
         "meanPredicted": 5.5,
         "realisedRate": 13.1
       },
       {
         "bucket": "10-20",
-        "n": 2766,
+        "n": 2767,
         "meanPredicted": 14.5,
-        "realisedRate": 17
+        "realisedRate": 16.9
       },
       {
         "bucket": "20-30",
@@ -93,7 +93,7 @@
     "fail_first": [
       {
         "bucket": "0-10",
-        "n": 1372,
+        "n": 1374,
         "meanPredicted": 0,
         "realisedRate": 0
       },
@@ -123,7 +123,7 @@
       },
       {
         "bucket": "50-60",
-        "n": 1109,
+        "n": 1110,
         "meanPredicted": 55.1,
         "realisedRate": 55.7
       },
@@ -154,7 +154,7 @@
     ]
   },
   "likely": {
-    "n": 5789,
+    "n": 5792,
     "hitRate": 42.8
   },
   "chase": {
@@ -163,8 +163,8 @@
       "runnerRate": 29.8
     },
     "low": {
-      "n": 4824,
-      "runnerRate": 13.1
+      "n": 4827,
+      "runnerRate": 13.2
     }
   }
 }
