@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-10-21T19:37:40.543Z",
+  "generatedAt": "2026-10-21T19:41:08.434Z",
   "label": "provisional; not evidence of an edge",
   "rUnits": "gross_R_before_fees_slippage",
   "tiles": {
-    "lastCapture": "2026-10-21T19:37:22.851Z",
-    "lastClosedThrough": "2026-10-21T19:37:00.000Z",
+    "lastCapture": "2026-10-21T19:40:52.418Z",
+    "lastClosedThrough": "2026-10-21T19:40:00.000Z",
     "callsToday": 144,
     "goodToday": 0,
     "fills7d": 1,
@@ -86,11 +86,11 @@
         {
           "key": "WATCH",
           "calls": 498,
-          "fills": 231,
+          "fills": 232,
           "wins": 58,
           "losses": 173,
-          "open": 0,
-          "pending": 1,
+          "open": 1,
+          "pending": 0,
           "expired": 0,
           "notFilled": 220,
           "rejected": 0,
@@ -130,11 +130,11 @@
         {
           "key": "need_confirmed_flag_plan",
           "calls": 498,
-          "fills": 231,
+          "fills": 232,
           "wins": 58,
           "losses": 173,
-          "open": 0,
-          "pending": 1,
+          "open": 1,
+          "pending": 0,
           "expired": 0,
           "notFilled": 220,
           "rejected": 0,
@@ -375,11 +375,11 @@
         {
           "key": "WATCH",
           "calls": 2079,
-          "fills": 951,
+          "fills": 952,
           "wins": 251,
           "losses": 696,
-          "open": 0,
-          "pending": 1,
+          "open": 1,
+          "pending": 0,
           "expired": 4,
           "notFilled": 924,
           "rejected": 0,
@@ -440,11 +440,11 @@
         {
           "key": "need_confirmed_flag_plan",
           "calls": 2065,
-          "fills": 941,
+          "fills": 942,
           "wins": 249,
           "losses": 689,
-          "open": 0,
-          "pending": 1,
+          "open": 1,
+          "pending": 0,
           "expired": 3,
           "notFilled": 920,
           "rejected": 0,
@@ -1226,16 +1226,16 @@
       "entryCondition": null,
       "readiness": "no_plan",
       "levelSource": "candidate",
-      "outcome": "pending",
+      "outcome": "open",
       "r": null,
-      "filledAt": null,
+      "filledAt": "2026-10-21T19:39:00.000Z",
       "resolvedAt": null,
       "minutesToResolution": null,
       "mode": "counterfactual_candidate",
       "rUnits": "gross_R_before_fees_slippage",
       "becameReady": null,
       "readyCallId": null,
-      "scoredAt": "2026-10-21T19:37:28.587Z"
+      "scoredAt": "2026-10-21T19:40:56.370Z"
     },
     {
       "callId": "rec|BTC|BAD|BTC:3m:long:2026-10-21T14:45:00.000Z|rr_below_min|2026-10-21T16:27:00.000Z",
@@ -1364,16 +1364,16 @@
       "entryCondition": null,
       "readiness": "no_plan",
       "levelSource": "candidate",
-      "outcome": "pending",
+      "outcome": "open",
       "r": null,
-      "filledAt": null,
+      "filledAt": "2026-10-21T19:39:00.000Z",
       "resolvedAt": null,
       "minutesToResolution": null,
       "mode": "counterfactual_candidate",
       "rUnits": "gross_R_before_fees_slippage",
       "becameReady": null,
       "readyCallId": null,
-      "scoredAt": "2026-10-21T19:37:28.587Z"
+      "scoredAt": "2026-10-21T19:40:56.370Z"
     },
     {
       "callId": "rec|SOL|BAD|SOL:1m:long:2026-10-21T19:12:00.000Z|room_at_entry|2026-10-21T19:27:00.000Z",
@@ -28455,7 +28455,7 @@
     }
   ],
   "captures": {
-    "captures": 12291,
+    "captures": 12294,
     "symbols": [
       "BTC",
       "ETH",
@@ -28469,18 +28469,18 @@
       "medianAbs": 1.4,
       "p95Abs": 7.2,
       "maxAbs": 52.3,
-      "notOk": 6228
+      "notOk": 6231
     },
     "candles1m": {
-      "BTC": 40782,
-      "ETH": 40782,
-      "SOL": 40782
+      "BTC": 40785,
+      "ETH": 40785,
+      "SOL": 40785
     },
     "missing1mCandles": 0
   },
   "activity": {
     "firstRun": "2026-09-23T23:28:00.000Z",
-    "runs": 4097,
+    "runs": 4098,
     "runTimes48h": [
       "2026-10-19T19:47:00.000Z",
       "2026-10-19T19:57:00.000Z",
@@ -28778,7 +28778,8 @@
       "2026-10-21T19:07:00.000Z",
       "2026-10-21T19:17:00.000Z",
       "2026-10-21T19:27:00.000Z",
-      "2026-10-21T19:37:00.000Z"
+      "2026-10-21T19:37:00.000Z",
+      "2026-10-21T19:40:00.000Z"
     ],
     "recCalls24h": 180,
     "good24h": 0,
@@ -28862,9 +28863,9 @@
       "laterGoodN": 71,
       "beReadyToGoRate": null,
       "beReadyN": 0,
-      "transitions24h": 2940,
+      "transitions24h": 2941,
       "transitionsPerHour": {
-        "1m": 79,
+        "1m": 79.04,
         "3m": 26.88,
         "5m": 16.63
       }
@@ -28895,7 +28896,7 @@
         "medianLatencyMin": 0.8,
         "laterGood": 0,
         "laterGoodOf": 3,
-        "transitions": 2460
+        "transitions": 2462
       },
       {
         "day": "2026-10-20",
@@ -29241,7 +29242,7 @@
       "label": "Live wallet · Steady profile",
       "epochIso": "2026-09-26T22:08:00.000Z",
       "source": "constant",
-      "calls": 3684,
+      "calls": 3685,
       "equityNowUsd": 0,
       "equityStartUsd": 523.01,
       "trades": 0,
@@ -29298,11 +29299,11 @@
           {
             "key": "WATCH",
             "calls": 498,
-            "fills": 231,
+            "fills": 232,
             "wins": 58,
             "losses": 173,
-            "open": 0,
-            "pending": 1,
+            "open": 1,
+            "pending": 0,
             "expired": 0,
             "notFilled": 220,
             "rejected": 0,
@@ -29342,11 +29343,11 @@
           {
             "key": "need_confirmed_flag_plan",
             "calls": 498,
-            "fills": 231,
+            "fills": 232,
             "wins": 58,
             "losses": 173,
-            "open": 0,
-            "pending": 1,
+            "open": 1,
+            "pending": 0,
             "expired": 0,
             "notFilled": 220,
             "rejected": 0,
@@ -29587,11 +29588,11 @@
           {
             "key": "WATCH",
             "calls": 2079,
-            "fills": 951,
+            "fills": 952,
             "wins": 251,
             "losses": 696,
-            "open": 0,
-            "pending": 1,
+            "open": 1,
+            "pending": 0,
             "expired": 4,
             "notFilled": 924,
             "rejected": 0,
@@ -29652,11 +29653,11 @@
           {
             "key": "need_confirmed_flag_plan",
             "calls": 2065,
-            "fills": 941,
+            "fills": 942,
             "wins": 249,
             "losses": 689,
-            "open": 0,
-            "pending": 1,
+            "open": 1,
+            "pending": 0,
             "expired": 3,
             "notFilled": 920,
             "rejected": 0,
