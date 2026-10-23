@@ -1,6 +1,32 @@
 {
-  "closedThrough": "2026-10-23T03:17:00.000Z",
+  "closedThrough": "2026-10-23T03:27:00.000Z",
   "board": [
+    {
+      "ref": "d5ef8d85",
+      "sym": "SOL",
+      "tf": "1m",
+      "dir": "short",
+      "stage": "watch",
+      "st": "triggering",
+      "lv": {
+        "ent": 103.96,
+        "stop": 104.06,
+        "inv": 104.06,
+        "tp1": 103.41,
+        "tp2": 102.92,
+        "tp2src": "level",
+        "rr": 5.5,
+        "cap": 103.86
+      },
+      "score": "1/7",
+      "gate": false,
+      "tfs": "1m⚠️ 3m⚠️ 5m⚠️ 15m⚠️ 1h⚠️ 4h✅ 1d⚠️",
+      "ev": {
+        "verdict": "STAY OUT",
+        "vol": "Volume WEAK · 0.3x avg → STAY OUT",
+        "mom": "RSI 32 · Stoch 29/24 rising · no divergence"
+      }
+    },
     {
       "ref": "6640e479",
       "sym": "ETH",
@@ -20,7 +46,7 @@
       },
       "score": "1/7",
       "gate": false,
-      "tfs": "1m⚠️ 3m❌ 5m❌ 15m⚠️ 1h⚠️ 4h✅ 1d⚠️",
+      "tfs": "1m⚠️ 3m⚠️ 5m❌ 15m⚠️ 1h⚠️ 4h✅ 1d⚠️",
       "ev": {
         "verdict": "STAY OUT",
         "vol": "Volume WEAK · 0.5x avg → STAY OUT",
@@ -46,37 +72,11 @@
       },
       "score": "1/7",
       "gate": false,
-      "tfs": "1m⚠️ 3m⚠️ 5m❌ 15m⚠️ 1h⚠️ 4h✅ 1d⚠️",
+      "tfs": "1m⚠️ 3m⚠️ 5m⚠️ 15m⚠️ 1h⚠️ 4h✅ 1d⚠️",
       "ev": {
         "verdict": "STAY OUT",
         "vol": "Volume WEAK · 0.4x avg → STAY OUT",
         "mom": "RSI 50 · Stoch 96/77 rising · no divergence"
-      }
-    },
-    {
-      "ref": "5db58eb9",
-      "sym": "ETH",
-      "tf": "3m",
-      "dir": "long",
-      "stage": "watch",
-      "st": "forming",
-      "lv": {
-        "ent": 2412.06,
-        "stop": 2408.74,
-        "inv": 2408.74,
-        "tp1": 2439.95,
-        "tp2": 2461.69,
-        "tp2src": "level",
-        "rr": 8.4,
-        "cap": 2416.25
-      },
-      "score": "1/7",
-      "gate": false,
-      "tfs": "1m⚠️ 3m✅ 5m⚠️ 15m⚠️ 1h⚠️ 4h❌ 1d⚠️",
-      "ev": {
-        "verdict": "STAY OUT",
-        "vol": "Volume WEAK · 0.2x avg → STAY OUT",
-        "mom": "RSI 62 · Stoch 2/12 oversold · no divergence"
       }
     }
   ],
@@ -84,7 +84,7 @@
     "found": 5,
     "opps": 1,
     "locked": 0,
-    "since": "2026-10-22T03:17:21.418Z",
+    "since": "2026-10-22T03:27:24.578Z",
     "partial": false
   },
   "flowRules": {
