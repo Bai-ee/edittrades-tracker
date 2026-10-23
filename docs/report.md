@@ -1,6 +1,6 @@
 # EditTrades call tracker report
 
-Generated 2026-10-23 11:37Z. R is gross, before fees and slippage. Not evidence of an edge. Scores the engine's calls against later closed candles.
+Generated 2026-10-23 11:47Z. R is gross, before fees and slippage. Not evidence of an edge. Scores the engine's calls against later closed candles.
 
 
 ## Strategy scoreboard · each from its own start
@@ -77,7 +77,7 @@ _provisional; not evidence of an edge_
 
 | Expectancy 7d | Scored 7d | Win rate 7d | Fills 7d | Losing streak 7d | Avg win R 7d | Last capture |
 | --- | --- | --- | --- | --- | --- | --- |
-| [NO SCORED CALLS YET] | 0 | – | 0 / 0 | 0 | – | 2026-10-23 11:37Z |
+| [NO SCORED CALLS YET] | 0 | – | 0 / 0 | 0 | – | 2026-10-23 11:47Z |
 
 
 ## Class check
@@ -87,8 +87,8 @@ _provisional; not evidence of an edge_
 | Class | Calls | Scored | Win rate | Exp. (gross R) | TP1 / Stop | Open | Not filled | No levels | Levels from (plan / candidate) | Calls (1-min log) | Of which captured | Median GOOD window (min) | Verdict |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | GOOD | 4 | 4 | 50% | +0.84R | 2 / 2 | 0 | 0 | 0 | 4 / 0 | 1 | 3 | – | [4 SCORED · TOO FEW TO JUDGE] |
-| WATCH | 1930 | 883 | 27% | +0.05R | 238 / 645 | 1 | 853 | 193 | 3 / 880 | – | – | – | FILTER MAY BE BLOCKING WINNERS |
-| BAD | 2970 | 852 | 76.5% | −0.03R | 652 / 200 | 3 | 409 | 1706 | 852 / 0 | – | – | – | FILTER CONFIRMED |
+| WATCH | 1932 | 883 | 27% | +0.05R | 238 / 645 | 2 | 854 | 193 | 3 / 880 | – | – | – | FILTER MAY BE BLOCKING WINNERS |
+| BAD | 2970 | 853 | 76.6% | −0.03R | 653 / 200 | 2 | 409 | 1706 | 853 / 0 | – | – | – | FILTER CONFIRMED |
 | DATA_UNAVAILABLE | 1 | 0 | – | – | 0 / 0 | 0 | 0 | 1 | 0 / 0 | – | – | – | [0 SCORED · TOO FEW TO JUDGE] |
 
 
@@ -104,8 +104,8 @@ _provisional; not evidence of an edge_
 
 | Called | Symbol | Call | TF | Dir | Entry / stop / TP1 | Status |
 | --- | --- | --- | --- | --- | --- | --- |
-| 2026-10-23 11:37Z | SOL | BAD | 1m | long | 104.2 / 103.14 / 104.26 | pending |
-| 2026-10-23 11:27Z | BTC | WATCH | 5m | short | 81420.2 / 81648.4 / 81141.796 | pending |
+| 2026-10-23 11:47Z | ETH | WATCH | 5m | long | 2398.04 / 2392.98 / 2409.0202 | pending |
+| 2026-10-23 11:47Z | SOL | WATCH | 1m | long | 104.38 / 104.22 / 104.86 | pending |
 | 2026-10-23 10:17Z | SOL | BAD | 1m | long | 104.25 / 103.19 / 104.56 | open |
 | 2026-10-23 02:57Z | BTC | BAD | 1m | long | 81841.3 / 81006.52 / 81903.7 | open |
 
@@ -118,15 +118,15 @@ By class:
 
 | Class | Calls | Fills | TP1 | Stop | Open | Win rate | Exp. (gross R) | Net exp. (net of fees) | Avg net R:R (plan) | Max loss streak | Median min to TP1 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| BAD | 805 | 216 | 167 | 46 | 3 | 78.4% | −0.02R | −0.35R | 0.19 | 4 | 16 |
-| WATCH | 496 | 223 | 62 | 161 | 1 | 27.8% | +0.09R | −1.91R | – | 23 | 64 |
+| BAD | 805 | 217 | 168 | 46 | 2 | 78.5% | −0.02R | −0.35R | 0.19 | 4 | 16 |
+| WATCH | 498 | 223 | 62 | 161 | 2 | 27.8% | +0.09R | −1.91R | – | 23 | 64 |
 
 By reason:
 
 | Reason | Calls | Fills | TP1 | Stop | Open | Win rate | Exp. (gross R) | Net exp. (net of fees) | Avg net R:R (plan) | Max loss streak | Median min to TP1 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| need_confirmed_flag_plan | 496 | 223 | 62 | 161 | 1 | 27.8% | +0.09R | −1.91R | – | 23 | 64 |
-| rr_below_min | 326 | 216 | 167 | 46 | 3 | 78.4% | −0.02R | −0.35R | 0.19 | 4 | 16 |
+| need_confirmed_flag_plan | 498 | 223 | 62 | 161 | 2 | 27.8% | +0.09R | −1.91R | – | 23 | 64 |
+| rr_below_min | 326 | 217 | 168 | 46 | 2 | 78.5% | −0.02R | −0.35R | 0.19 | 4 | 16 |
 | chase | 246 | 0 | 0 | 0 | 0 | – | – | – | – | 0 | – |
 | room_at_entry | 233 | 0 | 0 | 0 | 0 | – | – | – | – | 0 | – |
 
@@ -143,8 +143,8 @@ By class:
 
 | Class | Calls | Fills | TP1 | Stop | Open | Win rate | Exp. (gross R) | Net exp. (net of fees) | Avg net R:R (plan) | Max loss streak | Median min to TP1 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| BAD | 3334 | 938 | 687 | 248 | 3 | 73.5% | −0.05R | −0.54R | 0.3 | 8 | 18 |
-| WATCH | 2192 | 995 | 266 | 725 | 1 | 26.8% | +0.06R | −3.28R | 1.57 | 30 | 41 |
+| BAD | 3334 | 939 | 688 | 248 | 2 | 73.5% | −0.05R | −0.54R | 0.3 | 8 | 18 |
+| WATCH | 2194 | 995 | 266 | 725 | 2 | 26.8% | +0.06R | −3.28R | 1.57 | 30 | 41 |
 | GOOD | 9 | 9 | 3 | 6 | 0 | 33.3% | +0.24R | −1.58R | 1.54 | 3 | 4 |
 | DATA_UNAVAILABLE | 1 | 0 | 0 | 0 | 0 | – | – | – | – | 0 | – |
 
@@ -152,8 +152,8 @@ By reason:
 
 | Reason | Calls | Fills | TP1 | Stop | Open | Win rate | Exp. (gross R) | Net exp. (net of fees) | Avg net R:R (plan) | Max loss streak | Median min to TP1 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| need_confirmed_flag_plan | 2178 | 985 | 264 | 718 | 1 | 26.9% | +0.06R | −3.28R | – | 30 | 41 |
-| rr_below_min | 1392 | 938 | 687 | 248 | 3 | 73.5% | −0.05R | −0.54R | 0.3 | 8 | 18 |
+| need_confirmed_flag_plan | 2180 | 985 | 264 | 718 | 2 | 26.9% | +0.06R | −3.28R | – | 30 | 41 |
+| rr_below_min | 1392 | 939 | 688 | 248 | 2 | 73.5% | −0.05R | −0.54R | 0.3 | 8 | 18 |
 | chase | 1001 | 0 | 0 | 0 | 0 | – | – | – | – | 0 | – |
 | room_at_entry | 941 | 0 | 0 | 0 | 0 | – | – | – | – | 0 | – |
 | entry_condition | 14 | 10 | 2 | 7 | 0 | 22.2% | −0.12R | −3.88R | 1.57 | 7 | 57 |
@@ -174,7 +174,7 @@ _provisional; not evidence of an edge_
 
 | Day | Calls | GOOD | WATCH | BAD | Ready | Fills | TP1 | Stop | Exp. |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 2026-10-23 | 88 | 0 | 33 | 55 | 0 | 0 | 0 | 0 | – |
+| 2026-10-23 | 90 | 0 | 35 | 55 | 0 | 0 | 0 | 0 | – |
 | 2026-10-22 | 180 | 0 | 70 | 110 | 0 | 0 | 0 | 0 | – |
 | 2026-10-21 | 177 | 0 | 65 | 112 | 0 | 0 | 0 | 0 | – |
 | 2026-10-20 | 181 | 0 | 69 | 112 | 0 | 0 | 0 | 0 | – |
@@ -241,4 +241,4 @@ _provisional; not evidence of an edge_
 
 _provisional; not evidence of an edge_
 
-Captures 13041, gaps 33, DATA_UNAVAILABLE 6, mark drift |bps| median 1.4 / max 52.3, missing 1m candles 0.
+Captures 13044, gaps 33, DATA_UNAVAILABLE 6, mark drift |bps| median 1.4 / max 52.3, missing 1m candles 0.
