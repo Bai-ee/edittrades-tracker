@@ -1,6 +1,6 @@
 # EditTrades call tracker report
 
-Generated 2026-10-23 14:17Z. R is gross, before fees and slippage. Not evidence of an edge. Scores the engine's calls against later closed candles.
+Generated 2026-10-23 14:27Z. R is gross, before fees and slippage. Not evidence of an edge. Scores the engine's calls against later closed candles.
 
 
 ## Strategy scoreboard · each from its own start
@@ -77,7 +77,7 @@ _provisional; not evidence of an edge_
 
 | Expectancy 7d | Scored 7d | Win rate 7d | Fills 7d | Losing streak 7d | Avg win R 7d | Last capture |
 | --- | --- | --- | --- | --- | --- | --- |
-| [NO SCORED CALLS YET] | 0 | – | 0 / 0 | 0 | – | 2026-10-23 14:17Z |
+| [NO SCORED CALLS YET] | 0 | – | 0 / 0 | 0 | – | 2026-10-23 14:27Z |
 
 
 ## Class check
@@ -113,16 +113,16 @@ By class:
 
 | Class | Calls | Fills | TP1 | Stop | Open | Win rate | Exp. (gross R) | Net exp. (net of fees) | Avg net R:R (plan) | Max loss streak | Median min to TP1 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| BAD | 792 | 218 | 170 | 47 | 0 | 78.3% | −0.02R | −0.35R | 0.19 | 4 | 16 |
-| WATCH | 493 | 218 | 60 | 158 | 0 | 27.5% | +0.08R | −1.97R | – | 23 | 66 |
+| BAD | 790 | 218 | 170 | 47 | 0 | 78.3% | −0.02R | −0.35R | 0.19 | 4 | 16 |
+| WATCH | 492 | 218 | 60 | 158 | 0 | 27.5% | +0.08R | −1.97R | – | 23 | 66 |
 
 By reason:
 
 | Reason | Calls | Fills | TP1 | Stop | Open | Win rate | Exp. (gross R) | Net exp. (net of fees) | Avg net R:R (plan) | Max loss streak | Median min to TP1 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| need_confirmed_flag_plan | 493 | 218 | 60 | 158 | 0 | 27.5% | +0.08R | −1.97R | – | 23 | 66 |
+| need_confirmed_flag_plan | 492 | 218 | 60 | 158 | 0 | 27.5% | +0.08R | −1.97R | – | 23 | 66 |
 | rr_below_min | 327 | 218 | 170 | 47 | 0 | 78.3% | −0.02R | −0.35R | 0.19 | 4 | 16 |
-| chase | 236 | 0 | 0 | 0 | 0 | – | – | – | – | 0 | – |
+| chase | 234 | 0 | 0 | 0 | 0 | – | – | – | – | 0 | – |
 | room_at_entry | 229 | 0 | 0 | 0 | 0 | – | – | – | – | 0 | – |
 
 Ready plans by symbol:
@@ -236,4 +236,4 @@ _provisional; not evidence of an edge_
 
 _provisional; not evidence of an edge_
 
-Captures 13092, gaps 33, DATA_UNAVAILABLE 6, mark drift |bps| median 1.4 / max 52.3, missing 1m candles 0.
+Captures 13095, gaps 33, DATA_UNAVAILABLE 6, mark drift |bps| median 1.4 / max 52.3, missing 1m candles 0.
