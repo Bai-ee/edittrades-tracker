@@ -1,6 +1,6 @@
 # EditTrades call tracker report
 
-Generated 2026-10-24 01:17Z. R is gross, before fees and slippage. Not evidence of an edge. Scores the engine's calls against later closed candles.
+Generated 2026-10-24 01:27Z. R is gross, before fees and slippage. Not evidence of an edge. Scores the engine's calls against later closed candles.
 
 
 ## Strategy scoreboard · each from its own start
@@ -77,7 +77,7 @@ _provisional; not evidence of an edge_
 
 | Expectancy 7d | Scored 7d | Win rate 7d | Fills 7d | Losing streak 7d | Avg win R 7d | Last capture |
 | --- | --- | --- | --- | --- | --- | --- |
-| [NO SCORED CALLS YET] | 0 | – | 0 / 0 | 0 | – | 2026-10-24 01:17Z |
+| [NO SCORED CALLS YET] | 0 | – | 0 / 0 | 0 | – | 2026-10-24 01:27Z |
 
 
 ## Class check
@@ -116,7 +116,7 @@ By class:
 
 | Class | Calls | Fills | TP1 | Stop | Open | Win rate | Exp. (gross R) | Net exp. (net of fees) | Avg net R:R (plan) | Max loss streak | Median min to TP1 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| BAD | 784 | 218 | 169 | 47 | 2 | 78.2% | −0.03R | −0.36R | 0.2 | 4 | 16 |
+| BAD | 783 | 218 | 169 | 47 | 2 | 78.2% | −0.03R | −0.36R | 0.2 | 4 | 16 |
 | WATCH | 485 | 222 | 63 | 159 | 0 | 28.4% | +0.14R | −1.85R | – | 23 | 65 |
 
 By reason:
@@ -125,7 +125,7 @@ By reason:
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | need_confirmed_flag_plan | 485 | 222 | 63 | 159 | 0 | 28.4% | +0.14R | −1.85R | – | 23 | 65 |
 | rr_below_min | 324 | 218 | 169 | 47 | 2 | 78.2% | −0.03R | −0.36R | 0.2 | 4 | 16 |
-| chase | 231 | 0 | 0 | 0 | 0 | – | – | – | – | 0 | – |
+| chase | 230 | 0 | 0 | 0 | 0 | – | – | – | – | 0 | – |
 | room_at_entry | 229 | 0 | 0 | 0 | 0 | – | – | – | – | 0 | – |
 
 Ready plans by symbol:
@@ -240,4 +240,4 @@ _provisional; not evidence of an edge_
 
 _provisional; not evidence of an edge_
 
-Captures 13296, gaps 33, DATA_UNAVAILABLE 6, mark drift |bps| median 1.4 / max 75.9, missing 1m candles 0.
+Captures 13299, gaps 33, DATA_UNAVAILABLE 6, mark drift |bps| median 1.4 / max 75.9, missing 1m candles 0.
