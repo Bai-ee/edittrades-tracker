@@ -1,29 +1,29 @@
 {
-  "generatedAt": "2026-10-25T21:17:34.634Z",
-  "n": 7726,
+  "generatedAt": "2026-10-25T21:27:32.175Z",
+  "n": 7733,
   "phases": {
     "tightening": {
-      "n": 5883,
-      "brier": 0.6771,
-      "baselineBrier": 0.6714,
+      "n": 5887,
+      "brier": 0.6773,
+      "baselineBrier": 0.6717,
       "baseline": {
-        "retest_go": 14.23,
+        "retest_go": 14.29,
         "runner": 11.52,
-        "false_break": 11.59,
-        "fail_first": 51.98,
+        "false_break": 11.58,
+        "fail_first": 51.94,
         "chop": 10.67
       }
     },
     "broken": {
-      "n": 1843,
-      "brier": 0.8367,
-      "baselineBrier": 0.7217,
+      "n": 1846,
+      "brier": 0.8366,
+      "baselineBrier": 0.7215,
       "baseline": {
-        "retest_go": 36.73,
-        "runner": 28.81,
-        "false_break": 19.42,
+        "retest_go": 36.78,
+        "runner": 28.82,
+        "false_break": 19.39,
         "fail_first": 0,
-        "chop": 15.03
+        "chop": 15.01
       }
     }
   },
@@ -31,13 +31,13 @@
     "runner": [
       {
         "bucket": "0-10",
-        "n": 3437,
+        "n": 3440,
         "meanPredicted": 5.4,
-        "realisedRate": 13.2
+        "realisedRate": 13.1
       },
       {
         "bucket": "10-20",
-        "n": 3707,
+        "n": 3711,
         "meanPredicted": 14.5,
         "realisedRate": 16.5
       },
@@ -93,7 +93,7 @@
     "fail_first": [
       {
         "bucket": "0-10",
-        "n": 1843,
+        "n": 1846,
         "meanPredicted": 0,
         "realisedRate": 0
       },
@@ -105,15 +105,15 @@
       },
       {
         "bucket": "20-30",
-        "n": 141,
+        "n": 142,
         "meanPredicted": 26,
-        "realisedRate": 34
+        "realisedRate": 33.8
       },
       {
         "bucket": "30-40",
-        "n": 1621,
+        "n": 1623,
         "meanPredicted": 36.4,
-        "realisedRate": 47.5
+        "realisedRate": 47.4
       },
       {
         "bucket": "40-50",
@@ -123,7 +123,7 @@
       },
       {
         "bucket": "50-60",
-        "n": 1450,
+        "n": 1451,
         "meanPredicted": 55.1,
         "realisedRate": 55.9
       },
@@ -154,8 +154,8 @@
     ]
   },
   "likely": {
-    "n": 7726,
-    "hitRate": 43.1
+    "n": 7733,
+    "hitRate": 43
   },
   "chase": {
     "highElevated": {
@@ -163,7 +163,7 @@
       "runnerRate": 29.5
     },
     "low": {
-      "n": 6445,
+      "n": 6452,
       "runnerRate": 12.9
     }
   }

@@ -1,13 +1,13 @@
 {
-  "closedThrough": "2026-10-25T21:17:00.000Z",
+  "closedThrough": "2026-10-25T21:27:00.000Z",
   "board": [
     {
       "ref": "87a54bfb",
       "sym": "BTC",
       "tf": "5m",
       "dir": "short",
-      "stage": "found",
-      "st": "forming",
+      "stage": "lockable",
+      "st": "triggering",
       "lv": {
         "ent": 80320,
         "stop": 80452.4,
@@ -16,15 +16,15 @@
         "tp2": 80000,
         "tp2src": "level",
         "rr": 1.42,
-        "cap": 80238.09
+        "cap": 80247.65
       },
       "score": "5/7",
       "gate": true,
-      "tfs": "1m✅ 3m✅ 5m⚠️ 15m✅ 1h✅ 4h✅ 1d⚠️",
+      "tfs": "1m⚠️ 3m✅ 5m✅ 15m✅ 1h✅ 4h✅ 1d⚠️",
       "ev": {
-        "verdict": "STAY OUT",
-        "vol": "Volume WEAK · 0.1x avg → STAY OUT",
-        "mom": "RSI 42 · Stoch 48/35 rising · no divergence"
+        "verdict": "GO",
+        "vol": "Volume OK · 1.5x avg → GO",
+        "mom": "RSI 34 · Stoch 45/53 falling · no divergence"
       }
     },
     {
@@ -46,7 +46,7 @@
       },
       "score": "5/7",
       "gate": true,
-      "tfs": "1m✅ 3m✅ 5m⚠️ 15m✅ 1h✅ 4h✅ 1d⚠️",
+      "tfs": "1m⚠️ 3m✅ 5m✅ 15m✅ 1h✅ 4h✅ 1d⚠️",
       "ev": {
         "verdict": "STAY OUT",
         "vol": "Volume WEAK · 0.3x avg → STAY OUT",
@@ -72,7 +72,7 @@
       },
       "score": "5/7",
       "gate": false,
-      "tfs": "1m✅ 3m✅ 5m⚠️ 15m✅ 1h✅ 4h✅ 1d⚠️",
+      "tfs": "1m⚠️ 3m✅ 5m✅ 15m✅ 1h✅ 4h✅ 1d⚠️",
       "ev": {
         "verdict": "STAY OUT",
         "vol": "Volume WEAK · 0.4x avg → STAY OUT",
@@ -81,10 +81,10 @@
     }
   ],
   "pulse": {
-    "found": 270,
-    "opps": 92,
+    "found": 267,
+    "opps": 93,
     "locked": 0,
-    "since": "2026-10-24T21:17:23.611Z",
+    "since": "2026-10-24T21:27:23.106Z",
     "partial": false
   },
   "flowRules": {
