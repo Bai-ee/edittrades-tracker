@@ -1,6 +1,6 @@
 # EditTrades call tracker report
 
-Generated 2026-10-25 15:27Z. R is gross, before fees and slippage. Not evidence of an edge. Scores the engine's calls against later closed candles.
+Generated 2026-10-25 15:37Z. R is gross, before fees and slippage. Not evidence of an edge. Scores the engine's calls against later closed candles.
 
 
 ## Strategy scoreboard · each from its own start
@@ -41,7 +41,7 @@ A RETEST_1H_EXIT alert closes it on a structure break, else a 7-day hold cap.
 
 ### Spot EMA20 trend · PAPER
 
-Since 2026-09-26 (days live 29.6).
+Since 2026-09-26 (days live 29.7).
 
 | Paper equity | Buy & hold | Live flips | Days tracked |
 | --- | --- | --- | --- |
@@ -77,7 +77,7 @@ _provisional; not evidence of an edge_
 
 | Expectancy 7d | Scored 7d | Win rate 7d | Fills 7d | Losing streak 7d | Avg win R 7d | Last capture |
 | --- | --- | --- | --- | --- | --- | --- |
-| −1.00R | 1 | 0% | 1 / 1 | 1 | – | 2026-10-25 15:27Z |
+| −1.00R | 1 | 0% | 1 / 1 | 1 | – | 2026-10-25 15:37Z |
 
 
 ## Class check
@@ -117,7 +117,7 @@ By class:
 
 | Class | Calls | Fills | TP1 | Stop | Open | Win rate | Exp. (gross R) | Net exp. (net of fees) | Avg net R:R (plan) | Max loss streak | Median min to TP1 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| BAD | 756 | 226 | 178 | 47 | 1 | 79.1% | +0.01R | −0.32R | 0.23 | 4 | 17 |
+| BAD | 755 | 226 | 178 | 47 | 1 | 79.1% | +0.01R | −0.32R | 0.23 | 4 | 17 |
 | WATCH | 476 | 215 | 58 | 157 | 1 | 27% | +0.09R | −1.76R | – | 23 | 59 |
 | GOOD | 1 | 1 | 0 | 1 | 0 | 0% | −1.00R | −1.34R | 1.86 | 1 | – |
 
@@ -128,7 +128,7 @@ By reason:
 | need_confirmed_flag_plan | 475 | 215 | 58 | 157 | 1 | 27% | +0.09R | −1.76R | – | 23 | 59 |
 | rr_below_min | 345 | 226 | 178 | 47 | 1 | 79.1% | +0.01R | −0.32R | 0.23 | 4 | 17 |
 | chase | 212 | 0 | 0 | 0 | 0 | – | – | – | – | 0 | – |
-| room_at_entry | 199 | 0 | 0 | 0 | 0 | – | – | – | – | 0 | – |
+| room_at_entry | 198 | 0 | 0 | 0 | 0 | – | – | – | – | 0 | – |
 | entry_condition | 1 | 0 | 0 | 0 | 0 | – | – | – | – | 0 | – |
 | ready_flag_plan | 1 | 1 | 0 | 1 | 0 | 0% | −1.00R | −1.34R | 1.86 | 1 | – |
 
@@ -247,4 +247,4 @@ _provisional; not evidence of an edge_
 
 _provisional; not evidence of an edge_
 
-Captures 14010, gaps 33, DATA_UNAVAILABLE 6, mark drift |bps| median 1.6 / max 82.8, missing 1m candles 0.
+Captures 14013, gaps 33, DATA_UNAVAILABLE 6, mark drift |bps| median 1.6 / max 82.8, missing 1m candles 0.
