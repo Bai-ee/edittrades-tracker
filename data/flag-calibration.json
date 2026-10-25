@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-10-25T06:57:27.942Z",
+  "generatedAt": "2026-10-25T07:07:24.396Z",
   "target": 70,
   "minN": 30,
-  "scored": 572,
+  "scored": 574,
   "legacyCount": 1,
   "buckets": {
     "score": [
       {
         "key": "5/7",
-        "n": 162,
+        "n": 163,
         "right": 87,
-        "wrong": 75,
+        "wrong": 76,
         "flat": 4,
-        "rate": 54,
+        "rate": 53,
         "status": "below"
       },
       {
@@ -46,18 +46,18 @@
       },
       {
         "key": "3m",
-        "n": 101,
+        "n": 102,
         "right": 40,
-        "wrong": 61,
+        "wrong": 62,
         "flat": 0,
-        "rate": 40,
+        "rate": 39,
         "status": "below"
       },
       {
         "key": "5m",
-        "n": 180,
+        "n": 181,
         "right": 89,
-        "wrong": 91,
+        "wrong": 92,
         "flat": 2,
         "rate": 49,
         "status": "below"
@@ -111,11 +111,11 @@
     "symbol": [
       {
         "key": "BTC",
-        "n": 187,
+        "n": 189,
         "right": 84,
-        "wrong": 103,
+        "wrong": 105,
         "flat": 4,
-        "rate": 45,
+        "rate": 44,
         "status": "below"
       },
       {
@@ -149,11 +149,11 @@
       },
       {
         "key": "short",
-        "n": 302,
+        "n": 304,
         "right": 165,
-        "wrong": 137,
+        "wrong": 139,
         "flat": 5,
-        "rate": 55,
+        "rate": 54,
         "status": "below"
       }
     ],
@@ -178,9 +178,9 @@
       },
       {
         "key": "2R+",
-        "n": 410,
+        "n": 412,
         "right": 201,
-        "wrong": 209,
+        "wrong": 211,
         "flat": 4,
         "rate": 49,
         "status": "below"
@@ -189,9 +189,9 @@
     "nextTf": [
       {
         "key": "agrees",
-        "n": 569,
+        "n": 571,
         "right": 283,
-        "wrong": 286,
+        "wrong": 288,
         "flat": 6,
         "rate": 50,
         "status": "below"
@@ -288,52 +288,6 @@
       "rule": {
         "minScore": "5/7",
         "timeframes": [
-          "3m",
-          "5m",
-          "15m",
-          "30m",
-          "1h",
-          "2h",
-          "4h"
-        ],
-        "minRR": 2,
-        "nextTf": null
-      },
-      "projected": {
-        "n": 121,
-        "right": 64,
-        "wrong": 57,
-        "rate": 53
-      },
-      "reason": "Best rule (5/7+ on 3m–4h with R:R ≥ 2) hit 53% over 121 calls, below the 70% target."
-    },
-    {
-      "rule": {
-        "minScore": "5/7",
-        "timeframes": [
-          "3m",
-          "5m",
-          "15m",
-          "30m",
-          "1h",
-          "2h",
-          "4h"
-        ],
-        "minRR": 2,
-        "nextTf": "agrees"
-      },
-      "projected": {
-        "n": 121,
-        "right": 64,
-        "wrong": 57,
-        "rate": 53
-      },
-      "reason": "Best rule (5/7+ on 3m–4h with R:R ≥ 2 and the next timeframe agreeing) hit 53% over 121 calls, below the 70% target."
-    },
-    {
-      "rule": {
-        "minScore": "5/7",
-        "timeframes": [
           "5m",
           "15m",
           "30m",
@@ -351,6 +305,51 @@
         "rate": 53
       },
       "reason": "Best rule (5/7+ on 5m–4h with R:R ≥ 1.5) hit 53% over 114 calls, below the 70% target."
+    },
+    {
+      "rule": {
+        "minScore": "5/7",
+        "timeframes": [
+          "5m",
+          "15m",
+          "30m",
+          "1h",
+          "2h",
+          "4h"
+        ],
+        "minRR": 1.5,
+        "nextTf": "agrees"
+      },
+      "projected": {
+        "n": 114,
+        "right": 60,
+        "wrong": 54,
+        "rate": 53
+      },
+      "reason": "Best rule (5/7+ on 5m–4h with R:R ≥ 1.5 and the next timeframe agreeing) hit 53% over 114 calls, below the 70% target."
+    },
+    {
+      "rule": {
+        "minScore": "5/7",
+        "timeframes": [
+          "3m",
+          "5m",
+          "15m",
+          "30m",
+          "1h",
+          "2h",
+          "4h"
+        ],
+        "minRR": 2,
+        "nextTf": null
+      },
+      "projected": {
+        "n": 122,
+        "right": 64,
+        "wrong": 58,
+        "rate": 52
+      },
+      "reason": "Best rule (5/7+ on 3m–4h with R:R ≥ 2) hit 52% over 122 calls, below the 70% target."
     }
   ]
 }
