@@ -1,5 +1,5 @@
 {
-  "closedThrough": "2026-10-27T14:07:00.000Z",
+  "closedThrough": "2026-10-27T14:17:00.000Z",
   "board": [
     {
       "ref": "50d68164",
@@ -20,11 +20,37 @@
       },
       "score": "2/7",
       "gate": true,
-      "tfs": "1m⚠️ 3m⚠️ 5m⚠️ 15m✅ 1h⚠️ 4h✅ 1d⚠️",
+      "tfs": "1m✅ 3m⚠️ 5m⚠️ 15m⚠️ 1h⚠️ 4h✅ 1d⚠️",
       "ev": {
         "verdict": "CAUTION",
         "vol": "Volume OK · 0.9x avg → GO",
         "mom": "RSI 46 · Stoch 74/70 rising · bullish div ⚠️"
+      }
+    },
+    {
+      "ref": "24829121",
+      "sym": "ETH",
+      "tf": "3m",
+      "dir": "long",
+      "stage": "found",
+      "st": "forming",
+      "lv": {
+        "ent": 2326.41,
+        "stop": 2315.19,
+        "inv": 2315.19,
+        "tp1": 2344.53,
+        "tp2": 2346.79,
+        "tp2src": "level",
+        "rr": 1.61,
+        "cap": 2334.55
+      },
+      "score": "2/7",
+      "gate": true,
+      "tfs": "1m⚠️ 3m✅ 5m✅ 15m⚠️ 1h⚠️ 4h❌ 1d⚠️",
+      "ev": {
+        "verdict": "GO",
+        "vol": "Volume OK · 2.3x avg → GO",
+        "mom": "RSI 50 · Stoch 60/47 rising · no divergence"
       }
     },
     {
@@ -46,45 +72,19 @@
       },
       "score": "2/7",
       "gate": false,
-      "tfs": "1m⚠️ 3m⚠️ 5m⚠️ 15m✅ 1h⚠️ 4h✅ 1d⚠️",
+      "tfs": "1m✅ 3m⚠️ 5m⚠️ 15m⚠️ 1h⚠️ 4h✅ 1d⚠️",
       "ev": {
         "verdict": "STAY OUT",
         "vol": "Volume WEAK · 0.5x avg → STAY OUT",
         "mom": "RSI 39 · Stoch 33/44 falling · no divergence"
       }
-    },
-    {
-      "ref": "4069324d",
-      "sym": "BTC",
-      "tf": "3m",
-      "dir": "short",
-      "stage": "watch",
-      "st": "triggering",
-      "lv": {
-        "ent": 79840.3,
-        "stop": 80100,
-        "inv": 80100,
-        "tp1": 79311.8,
-        "tp2": 79120.8,
-        "tp2src": "level",
-        "rr": 2.04,
-        "cap": 79649.65
-      },
-      "score": "1/7",
-      "gate": false,
-      "tfs": "1m⚠️ 3m⚠️ 5m⚠️ 15m⚠️ 1h⚠️ 4h✅ 1d⚠️",
-      "ev": {
-        "verdict": "STAY OUT",
-        "vol": "Volume WEAK · 22.3x avg → STAY OUT",
-        "mom": "RSI 45 · Stoch 30/27 rising · bearish div"
-      }
     }
   ],
   "pulse": {
-    "found": 330,
-    "opps": 113,
+    "found": 332,
+    "opps": 114,
     "locked": 0,
-    "since": "2026-10-26T14:07:28.064Z",
+    "since": "2026-10-26T14:17:27.044Z",
     "partial": false
   },
   "flowRules": {
