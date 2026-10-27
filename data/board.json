@@ -1,6 +1,32 @@
 {
-  "closedThrough": "2026-10-27T06:37:00.000Z",
+  "closedThrough": "2026-10-27T06:47:00.000Z",
   "board": [
+    {
+      "ref": "750bdf77",
+      "sym": "BTC",
+      "tf": "3m",
+      "dir": "short",
+      "stage": "lockable",
+      "st": "triggering",
+      "lv": {
+        "ent": 79599.7,
+        "stop": 79685.5,
+        "inv": 79685.5,
+        "tp1": 79290.2,
+        "tp2": 79120.8,
+        "tp2src": "level",
+        "rr": 3.61,
+        "cap": 79524.14
+      },
+      "score": "6/7",
+      "gate": true,
+      "tfs": "1m✅ 3m✅ 5m✅ 15m✅ 1h✅ 4h✅ 1d⚠️",
+      "ev": {
+        "verdict": "CAUTION",
+        "vol": "Volume OK · 0.9x avg → GO",
+        "mom": "RSI 39 · Stoch 16/19 oversold · no divergence"
+      }
+    },
     {
       "ref": "50d68164",
       "sym": "SOL",
@@ -20,37 +46,11 @@
       },
       "score": "4/7",
       "gate": true,
-      "tfs": "1m⚠️ 3m⚠️ 5m✅ 15m✅ 1h✅ 4h✅ 1d⚠️",
+      "tfs": "1m✅ 3m⚠️ 5m⚠️ 15m✅ 1h✅ 4h✅ 1d⚠️",
       "ev": {
         "verdict": "STAY OUT",
         "vol": "Volume WEAK · 1.2x avg → STAY OUT",
         "mom": "RSI 42 · Stoch 3/5 oversold · bullish div ⚠️"
-      }
-    },
-    {
-      "ref": "de1023e2",
-      "sym": "ETH",
-      "tf": "5m",
-      "dir": "short",
-      "stage": "lockable",
-      "st": "confirmed",
-      "lv": {
-        "ent": 2308.63,
-        "stop": 2313.93,
-        "inv": 2313.93,
-        "tp1": 2297.56,
-        "tp2": 2294.05,
-        "tp2src": "level",
-        "rr": 2.09,
-        "cap": 2303.5
-      },
-      "score": "4/6",
-      "gate": true,
-      "tfs": "1m· 3m⚠️ 5m✅ 15m✅ 1h✅ 4h✅ 1d⚠️",
-      "ev": {
-        "verdict": "STAY OUT",
-        "vol": "Volume WEAK · 0.8x avg → STAY OUT",
-        "mom": "RSI 44 · Stoch 19/14 oversold · no divergence"
       }
     },
     {
@@ -81,10 +81,10 @@
     }
   ],
   "pulse": {
-    "found": 343,
-    "opps": 125,
+    "found": 344,
+    "opps": 127,
     "locked": 0,
-    "since": "2026-10-26T06:37:24.221Z",
+    "since": "2026-10-26T06:47:23.339Z",
     "partial": false
   },
   "flowRules": {
