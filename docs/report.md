@@ -1,6 +1,6 @@
 # EditTrades call tracker report
 
-Generated 2026-10-28 19:17Z. R is gross, before fees and slippage. Not evidence of an edge. Scores the engine's calls against later closed candles.
+Generated 2026-10-28 19:27Z. R is gross, before fees and slippage. Not evidence of an edge. Scores the engine's calls against later closed candles.
 
 
 ## Strategy scoreboard · each from its own start
@@ -77,7 +77,7 @@ _provisional; not evidence of an edge_
 
 | Expectancy 7d | Scored 7d | Win rate 7d | Fills 7d | Losing streak 7d | Avg win R 7d | Last capture |
 | --- | --- | --- | --- | --- | --- | --- |
-| −1.00R | 1 | 0% | 1 / 1 | 1 | – | 2026-10-28 19:17Z |
+| −1.00R | 1 | 0% | 1 / 1 | 1 | – | 2026-10-28 19:27Z |
 
 
 ## Class check
@@ -113,7 +113,7 @@ By class:
 
 | Class | Calls | Fills | TP1 | Stop | Open | Win rate | Exp. (gross R) | Net exp. (net of fees) | Avg net R:R (plan) | Max loss streak | Median min to TP1 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| BAD | 775 | 213 | 161 | 52 | 0 | 75.6% | −0.01R | −0.34R | 0.34 | 3 | 22 |
+| BAD | 774 | 213 | 161 | 52 | 0 | 75.6% | −0.01R | −0.34R | 0.34 | 3 | 22 |
 | WATCH | 483 | 204 | 63 | 141 | 0 | 30.9% | +0.25R | −1.72R | – | 12 | 59 |
 | GOOD | 1 | 1 | 0 | 1 | 0 | 0% | −1.00R | −1.34R | 1.86 | 1 | – |
 
@@ -124,7 +124,7 @@ By reason:
 | need_confirmed_flag_plan | 482 | 204 | 63 | 141 | 0 | 30.9% | +0.25R | −1.72R | – | 12 | 59 |
 | rr_below_min | 330 | 213 | 161 | 52 | 0 | 75.6% | −0.01R | −0.34R | 0.34 | 3 | 22 |
 | chase | 227 | 0 | 0 | 0 | 0 | – | – | – | – | 0 | – |
-| room_at_entry | 218 | 0 | 0 | 0 | 0 | – | – | – | – | 0 | – |
+| room_at_entry | 217 | 0 | 0 | 0 | 0 | – | – | – | – | 0 | – |
 | entry_condition | 1 | 0 | 0 | 0 | 0 | – | – | – | – | 0 | – |
 | ready_flag_plan | 1 | 1 | 0 | 1 | 0 | 0% | −1.00R | −1.34R | 1.86 | 1 | – |
 
@@ -143,7 +143,7 @@ By class:
 
 | Class | Calls | Fills | TP1 | Stop | Open | Win rate | Exp. (gross R) | Net exp. (net of fees) | Avg net R:R (plan) | Max loss streak | Median min to TP1 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| BAD | 3376 | 956 | 726 | 229 | 0 | 76% | −0.03R | −0.36R | 0.3 | 6 | 20 |
+| BAD | 3373 | 956 | 726 | 229 | 0 | 76% | −0.03R | −0.36R | 0.3 | 6 | 20 |
 | WATCH | 2181 | 980 | 268 | 709 | 0 | 27.4% | +0.08R | −3.27R | 1.96 | 30 | 41 |
 | GOOD | 4 | 4 | 1 | 3 | 0 | 25% | −0.03R | −0.37R | 2.07 | 3 | 89 |
 
@@ -154,7 +154,7 @@ By reason:
 | need_confirmed_flag_plan | 2175 | 976 | 266 | 708 | 0 | 27.3% | +0.08R | −3.28R | – | 30 | 41 |
 | rr_below_min | 1432 | 956 | 726 | 229 | 0 | 76% | −0.03R | −0.36R | 0.3 | 6 | 20 |
 | chase | 1016 | 0 | 0 | 0 | 0 | – | – | – | – | 0 | – |
-| room_at_entry | 928 | 0 | 0 | 0 | 0 | – | – | – | – | 0 | – |
+| room_at_entry | 925 | 0 | 0 | 0 | 0 | – | – | – | – | 0 | – |
 | entry_condition | 6 | 4 | 2 | 1 | 0 | 66.7% | +1.63R | +1.34R | 1.96 | 1 | 57 |
 | ready_flag_plan | 4 | 4 | 1 | 3 | 0 | 25% | −0.03R | −0.37R | 2.07 | 3 | 89 |
 
@@ -244,4 +244,4 @@ _provisional; not evidence of an edge_
 
 _provisional; not evidence of an edge_
 
-Captures 15414, gaps 33, DATA_UNAVAILABLE 6, mark drift |bps| median 1.8 / max 85.8, missing 1m candles 0.
+Captures 15417, gaps 33, DATA_UNAVAILABLE 6, mark drift |bps| median 1.8 / max 85.8, missing 1m candles 0.
