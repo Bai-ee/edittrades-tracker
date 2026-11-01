@@ -1,6 +1,6 @@
 # EditTrades call tracker report
 
-Generated 2026-11-01 20:17Z. R is gross, before fees and slippage. Not evidence of an edge. Scores the engine's calls against later closed candles.
+Generated 2026-11-01 20:27Z. R is gross, before fees and slippage. Not evidence of an edge. Scores the engine's calls against later closed candles.
 
 
 ## Strategy scoreboard · each from its own start
@@ -41,7 +41,7 @@ A RETEST_1H_EXIT alert closes it on a structure break, else a 7-day hold cap.
 
 ### Spot EMA20 trend · PAPER
 
-Since 2026-09-26 (days live 36.8).
+Since 2026-09-26 (days live 36.9).
 
 | Paper equity | Buy & hold | Live flips | Days tracked |
 | --- | --- | --- | --- |
@@ -77,7 +77,7 @@ _provisional; not evidence of an edge_
 
 | Expectancy 7d | Scored 7d | Win rate 7d | Fills 7d | Losing streak 7d | Avg win R 7d | Last capture |
 | --- | --- | --- | --- | --- | --- | --- |
-| −1.00R | 4 | 0% | 4 / 4 | 4 | – | 2026-11-01 20:17Z |
+| −1.00R | 4 | 0% | 4 / 4 | 4 | – | 2026-11-01 20:27Z |
 
 
 ## Class check
@@ -88,7 +88,7 @@ _provisional; not evidence of an edge_
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | GOOD | 9 | 9 | 22.2% | −0.18R | 2 / 7 | 0 | 0 | 0 | 9 / 0 | 1 | 8 | – | NOT WORKING YET |
 | WATCH | 2606 | 1178 | 27.8% | +0.10R | 327 / 851 | 0 | 1186 | 242 | 8 / 1170 | – | – | – | FILTER MAY BE BLOCKING WINNERS |
-| BAD | 3998 | 1166 | 76.2% | −0.02R | 888 / 278 | 5 | 559 | 2268 | 1166 / 0 | – | – | – | FILTER CONFIRMED |
+| BAD | 3999 | 1166 | 76.2% | −0.02R | 888 / 278 | 5 | 559 | 2269 | 1166 / 0 | – | – | – | FILTER CONFIRMED |
 | DATA_UNAVAILABLE | 1 | 0 | – | – | 0 / 0 | 0 | 0 | 1 | 0 / 0 | – | – | – | [0 SCORED · TOO FEW TO JUDGE] |
 
 
@@ -119,18 +119,18 @@ By class:
 
 | Class | Calls | Fills | TP1 | Stop | Open | Win rate | Exp. (gross R) | Net exp. (net of fees) | Avg net R:R (plan) | Max loss streak | Median min to TP1 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| BAD | 792 | 235 | 172 | 58 | 5 | 74.8% | +0.01R | −0.32R | 0.46 | 4 | 22 |
-| WATCH | 519 | 223 | 67 | 155 | 0 | 30.2% | +0.24R | −2.25R | 2.46 | 12 | 41 |
+| BAD | 793 | 235 | 172 | 58 | 5 | 74.8% | +0.01R | −0.32R | 0.46 | 4 | 22 |
+| WATCH | 518 | 222 | 66 | 155 | 0 | 29.9% | +0.23R | −2.26R | 2.46 | 12 | 39 |
 | GOOD | 4 | 4 | 0 | 4 | 0 | 0% | −1.00R | −1.26R | 2.49 | 4 | – |
 
 By reason:
 
 | Reason | Calls | Fills | TP1 | Stop | Open | Win rate | Exp. (gross R) | Net exp. (net of fees) | Avg net R:R (plan) | Max loss streak | Median min to TP1 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| need_confirmed_flag_plan | 514 | 218 | 67 | 150 | 0 | 30.9% | +0.27R | −2.27R | – | 12 | 41 |
+| need_confirmed_flag_plan | 513 | 217 | 66 | 150 | 0 | 30.6% | +0.25R | −2.28R | – | 12 | 39 |
 | rr_below_min | 342 | 235 | 172 | 58 | 5 | 74.8% | +0.01R | −0.32R | 0.46 | 4 | 22 |
 | chase | 256 | 0 | 0 | 0 | 0 | – | – | – | – | 0 | – |
-| room_at_entry | 192 | 0 | 0 | 0 | 0 | – | – | – | – | 0 | – |
+| room_at_entry | 193 | 0 | 0 | 0 | 0 | – | – | – | – | 0 | – |
 | entry_condition | 5 | 5 | 0 | 5 | 0 | 0% | −1.00R | −1.30R | 2.46 | 5 | – |
 | ready_flag_plan | 4 | 4 | 0 | 4 | 0 | 0% | −1.00R | −1.26R | 2.49 | 4 | – |
 | invalid_levels | 2 | 0 | 0 | 0 | 0 | – | – | – | – | 0 | – |
@@ -181,7 +181,7 @@ _provisional; not evidence of an edge_
 
 | Day | Calls | GOOD | WATCH | BAD | Ready | Fills | TP1 | Stop | Exp. |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 2026-11-01 | 147 | 0 | 62 | 85 | 0 | 0 | 0 | 0 | – |
+| 2026-11-01 | 148 | 0 | 62 | 86 | 0 | 0 | 0 | 0 | – |
 | 2026-10-31 | 178 | 0 | 75 | 103 | 0 | 0 | 0 | 0 | – |
 | 2026-10-30 | 170 | 4 | 73 | 93 | 4 | 4 | 0 | 4 | −1.00R |
 | 2026-10-29 | 222 | 0 | 81 | 141 | 0 | 0 | 0 | 0 | – |
@@ -257,4 +257,4 @@ _provisional; not evidence of an edge_
 
 _provisional; not evidence of an edge_
 
-Captures 17205, gaps 33, DATA_UNAVAILABLE 6, mark drift |bps| median 2.2 / max 153.3, missing 1m candles 0.
+Captures 17208, gaps 33, DATA_UNAVAILABLE 6, mark drift |bps| median 2.2 / max 153.3, missing 1m candles 0.
