@@ -1,6 +1,32 @@
 {
-  "closedThrough": "2026-11-02T15:07:00.000Z",
+  "closedThrough": "2026-11-02T15:17:00.000Z",
   "board": [
+    {
+      "ref": "a1f67ca2",
+      "sym": "ETH",
+      "tf": "5m",
+      "dir": "long",
+      "stage": "lockable",
+      "st": "triggering",
+      "lv": {
+        "ent": 2293.42,
+        "stop": 2280.6,
+        "inv": 2280.6,
+        "tp1": 2319.74,
+        "tp2": 2334,
+        "tp2src": "level",
+        "rr": 2.05,
+        "cap": 2303.06
+      },
+      "score": "2/6",
+      "gate": true,
+      "tfs": "1m· 3m⚠️ 5m✅ 15m✅ 1h⚠️ 4h⚠️ 1d⚠️",
+      "ev": {
+        "verdict": "STAY OUT",
+        "vol": "Volume WEAK · 1x avg → STAY OUT",
+        "mom": "RSI 56 · Stoch 63/48 rising · no divergence"
+      }
+    },
     {
       "ref": "a7e9052b",
       "sym": "BTC",
@@ -18,39 +44,13 @@
         "rr": 1.93,
         "cap": 76998.43
       },
-      "score": "3/6",
+      "score": "2/7",
       "gate": true,
-      "tfs": "1m· 3m⚠️ 5m⚠️ 15m✅ 1h✅ 4h✅ 1d⚠️",
+      "tfs": "1m⚠️ 3m⚠️ 5m⚠️ 15m⚠️ 1h✅ 4h✅ 1d⚠️",
       "ev": {
         "verdict": "CAUTION",
         "vol": "Volume OK · 2.3x avg → GO",
         "mom": "RSI 44 · Stoch 8/4 oversold · no divergence"
-      }
-    },
-    {
-      "ref": "594ec7f0",
-      "sym": "BTC",
-      "tf": "15m",
-      "dir": "short",
-      "stage": "found",
-      "st": "proto",
-      "lv": {
-        "ent": 77494,
-        "stop": 77990,
-        "inv": 77990,
-        "tp1": 76919.4,
-        "tp2": 76466,
-        "tp2src": "level",
-        "rr": 1.16,
-        "cap": 77148.83
-      },
-      "score": "3/6",
-      "gate": true,
-      "tfs": "1m· 3m⚠️ 5m⚠️ 15m✅ 1h✅ 4h✅ 1d⚠️",
-      "ev": {
-        "verdict": "GO",
-        "vol": "Volume OK · 0.9x avg → GO",
-        "mom": "RSI 45 · Stoch 54/55 falling · no divergence"
       }
     },
     {
@@ -70,9 +70,9 @@
         "rr": 2.7,
         "cap": 76282.77
       },
-      "score": "3/6",
+      "score": "2/7",
       "gate": true,
-      "tfs": "1m· 3m⚠️ 5m⚠️ 15m✅ 1h✅ 4h✅ 1d⚠️",
+      "tfs": "1m⚠️ 3m⚠️ 5m⚠️ 15m⚠️ 1h✅ 4h✅ 1d⚠️",
       "ev": {
         "verdict": "STAY OUT",
         "vol": "Volume WEAK · 0.6x avg → STAY OUT",
@@ -81,10 +81,10 @@
     }
   ],
   "pulse": {
-    "found": 293,
-    "opps": 102,
+    "found": 291,
+    "opps": 103,
     "locked": 0,
-    "since": "2026-11-01T15:07:29.921Z",
+    "since": "2026-11-01T15:17:26.528Z",
     "partial": false
   },
   "flowRules": {
