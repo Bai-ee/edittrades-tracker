@@ -1,5 +1,5 @@
 {
-  "closedThrough": "2026-11-02T18:17:00.000Z",
+  "closedThrough": "2026-11-02T18:27:00.000Z",
   "board": [
     {
       "ref": "53b062e4",
@@ -28,32 +28,6 @@
       }
     },
     {
-      "ref": "e366bfb7",
-      "sym": "SOL",
-      "tf": "1m",
-      "dir": "short",
-      "stage": "lockable",
-      "st": "confirmed",
-      "lv": {
-        "ent": 92.17,
-        "stop": 92.33,
-        "inv": 92.33,
-        "tp1": 91.84,
-        "tp2": 88.01,
-        "tp2src": "level",
-        "rr": 2.06,
-        "cap": 91.96
-      },
-      "score": "5/7",
-      "gate": true,
-      "tfs": "1m✅ 3m✅ 5m⚠️ 15m✅ 1h✅ 4h✅ 1d⚠️",
-      "ev": {
-        "verdict": "STAY OUT",
-        "vol": "Volume WEAK · 2.9x avg → STAY OUT",
-        "mom": "RSI 48 · Stoch 9/20 oversold · no divergence"
-      }
-    },
-    {
       "ref": "fa8fc5ac",
       "sym": "BTC",
       "tf": "15m",
@@ -70,21 +44,47 @@
         "rr": 1.7,
         "cap": 76705.29
       },
-      "score": "4/7",
+      "score": "5/7",
       "gate": true,
-      "tfs": "1m✅ 3m⚠️ 5m✅ 15m⚠️ 1h✅ 4h✅ 1d⚠️",
+      "tfs": "1m✅ 3m✅ 5m✅ 15m⚠️ 1h✅ 4h✅ 1d⚠️",
       "ev": {
         "verdict": "STAY OUT",
         "vol": "Volume WEAK · 1.8x avg → STAY OUT",
         "mom": "RSI 38 · Stoch 23/14 rising · no divergence"
       }
+    },
+    {
+      "ref": "d81a9a4e",
+      "sym": "SOL",
+      "tf": "5m",
+      "dir": "short",
+      "stage": "found",
+      "st": "forming",
+      "lv": {
+        "ent": 91.63,
+        "stop": 92.54,
+        "inv": 92.54,
+        "tp1": 89.3,
+        "tp2": 88.01,
+        "tp2src": "level",
+        "rr": 2.56,
+        "cap": 91.07
+      },
+      "score": "6/7",
+      "gate": true,
+      "tfs": "1m✅ 3m✅ 5m✅ 15m✅ 1h✅ 4h✅ 1d⚠️",
+      "ev": {
+        "verdict": "STAY OUT",
+        "vol": "Volume WEAK · 0.3x avg → STAY OUT",
+        "mom": "RSI 38 · Stoch 78/82 falling · no divergence"
+      }
     }
   ],
   "pulse": {
-    "found": 303,
-    "opps": 107,
+    "found": 304,
+    "opps": 104,
     "locked": 0,
-    "since": "2026-11-01T18:17:25.468Z",
+    "since": "2026-11-01T18:27:27.187Z",
     "partial": false
   },
   "flowRules": {
