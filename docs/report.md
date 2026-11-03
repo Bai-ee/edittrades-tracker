@@ -1,6 +1,6 @@
 # EditTrades call tracker report
 
-Generated 2026-11-03 02:17Z. R is gross, before fees and slippage. Not evidence of an edge. Scores the engine's calls against later closed candles.
+Generated 2026-11-03 02:27Z. R is gross, before fees and slippage. Not evidence of an edge. Scores the engine's calls against later closed candles.
 
 
 ## Strategy scoreboard · each from its own start
@@ -77,7 +77,7 @@ _provisional; not evidence of an edge_
 
 | Expectancy 7d | Scored 7d | Win rate 7d | Fills 7d | Losing streak 7d | Avg win R 7d | Last capture |
 | --- | --- | --- | --- | --- | --- | --- |
-| −1.00R | 4 | 0% | 4 / 4 | 4 | – | 2026-11-03 02:17Z |
+| −1.00R | 4 | 0% | 4 / 4 | 4 | – | 2026-11-03 02:27Z |
 
 
 ## Class check
@@ -146,14 +146,14 @@ By class:
 | Class | Calls | Fills | TP1 | Stop | Open | Win rate | Exp. (gross R) | Net exp. (net of fees) | Avg net R:R (plan) | Max loss streak | Median min to TP1 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | BAD | 3313 | 992 | 751 | 240 | 0 | 75.8% | −0.01R | −0.34R | 0.33 | 6 | 21 |
-| WATCH | 2186 | 999 | 280 | 715 | 0 | 28.1% | +0.13R | −3.03R | 2.24 | 30 | 39 |
+| WATCH | 2184 | 999 | 280 | 715 | 0 | 28.1% | +0.13R | −3.03R | 2.24 | 30 | 39 |
 | GOOD | 8 | 8 | 1 | 7 | 0 | 12.5% | −0.52R | −0.81R | 2.28 | 7 | 89 |
 
 By reason:
 
 | Reason | Calls | Fills | TP1 | Stop | Open | Win rate | Exp. (gross R) | Net exp. (net of fees) | Avg net R:R (plan) | Max loss streak | Median min to TP1 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| need_confirmed_flag_plan | 2175 | 990 | 278 | 709 | 0 | 28.2% | +0.13R | −3.05R | – | 30 | 39 |
+| need_confirmed_flag_plan | 2173 | 990 | 278 | 709 | 0 | 28.2% | +0.13R | −3.05R | – | 30 | 39 |
 | rr_below_min | 1475 | 992 | 751 | 240 | 0 | 75.8% | −0.01R | −0.34R | 0.33 | 6 | 21 |
 | chase | 1020 | 0 | 0 | 0 | 0 | – | – | – | – | 0 | – |
 | room_at_entry | 816 | 0 | 0 | 0 | 0 | – | – | – | – | 0 | – |
@@ -253,4 +253,4 @@ _provisional; not evidence of an edge_
 
 _provisional; not evidence of an edge_
 
-Captures 17760, gaps 33, DATA_UNAVAILABLE 6, mark drift |bps| median 2.2 / max 153.3, missing 1m candles 0.
+Captures 17763, gaps 33, DATA_UNAVAILABLE 6, mark drift |bps| median 2.2 / max 153.3, missing 1m candles 0.
