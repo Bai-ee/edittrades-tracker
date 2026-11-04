@@ -1,32 +1,6 @@
 {
-  "closedThrough": "2026-11-04T13:47:00.000Z",
+  "closedThrough": "2026-11-04T13:57:00.000Z",
   "board": [
-    {
-      "ref": "d0c6906b",
-      "sym": "BTC",
-      "tf": "5m",
-      "dir": "long",
-      "stage": "found",
-      "st": "proto",
-      "lv": {
-        "ent": 78340.3,
-        "stop": 78228.81,
-        "inv": 78228.81,
-        "tp1": 78865.1,
-        "tp2": 79120.8,
-        "tp2src": "level",
-        "rr": 4.71,
-        "cap": 78517.03
-      },
-      "score": "2/7",
-      "gate": true,
-      "tfs": "1m✅ 3m⚠️ 5m⚠️ 15m✅ 1h⚠️ 4h⚠️ 1d⚠️",
-      "ev": {
-        "verdict": "STAY OUT",
-        "vol": "Volume WEAK · 0.1x avg → STAY OUT",
-        "mom": "RSI 51 · Stoch 70/78 falling · no divergence"
-      }
-    },
     {
       "ref": "b59db54b",
       "sym": "SOL",
@@ -44,13 +18,39 @@
         "rr": 2.07,
         "cap": 91.57
       },
-      "score": "2/6",
+      "score": "2/7",
       "gate": true,
-      "tfs": "1m⚠️ 3m· 5m⚠️ 15m✅ 1h✅ 4h⚠️ 1d⚠️",
+      "tfs": "1m⚠️ 3m❌ 5m❌ 15m✅ 1h✅ 4h⚠️ 1d⚠️",
       "ev": {
         "verdict": "STAY OUT",
         "vol": "Volume WEAK · 0.6x avg → STAY OUT",
         "mom": "RSI 47 · Stoch 17/12 oversold · bearish div"
+      }
+    },
+    {
+      "ref": "2f0bac04",
+      "sym": "SOL",
+      "tf": "3m",
+      "dir": "long",
+      "stage": "found",
+      "st": "forming",
+      "lv": {
+        "ent": 93.02,
+        "stop": 92.61,
+        "inv": 92.61,
+        "tp1": 93.61,
+        "tp2": 93.97,
+        "tp2src": "level",
+        "rr": 1.44,
+        "cap": 93.27
+      },
+      "score": "2/7",
+      "gate": true,
+      "tfs": "1m⚠️ 3m✅ 5m✅ 15m❌ 1h❌ 4h❌ 1d⚠️",
+      "ev": {
+        "verdict": "CAUTION",
+        "vol": "Volume OK · 1.7x avg → GO",
+        "mom": "RSI 56 · Stoch 92/90 overbought · no divergence"
       }
     },
     {
@@ -81,10 +81,10 @@
     }
   ],
   "pulse": {
-    "found": 278,
-    "opps": 111,
+    "found": 279,
+    "opps": 112,
     "locked": 0,
-    "since": "2026-11-03T13:47:27.282Z",
+    "since": "2026-11-03T13:57:26.025Z",
     "partial": false
   },
   "flowRules": {
