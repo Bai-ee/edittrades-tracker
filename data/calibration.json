@@ -1,29 +1,29 @@
 {
-  "generatedAt": "2026-11-06T09:07:45.152Z",
-  "n": 10560,
+  "generatedAt": "2026-11-06T09:17:41.867Z",
+  "n": 10562,
   "phases": {
     "tightening": {
-      "n": 8042,
+      "n": 8043,
       "brier": 0.6732,
-      "baselineBrier": 0.669,
+      "baselineBrier": 0.6691,
       "baseline": {
         "retest_go": 14.25,
-        "runner": 11.54,
-        "false_break": 11.32,
-        "fail_first": 52.28,
+        "runner": 11.55,
+        "false_break": 11.31,
+        "fail_first": 52.27,
         "chop": 10.62
       }
     },
     "broken": {
-      "n": 2518,
-      "brier": 0.8375,
+      "n": 2519,
+      "brier": 0.8374,
       "baselineBrier": 0.7181,
       "baseline": {
-        "retest_go": 37.21,
-        "runner": 29.47,
+        "retest_go": 37.2,
+        "runner": 29.5,
         "false_break": 18.98,
         "fail_first": 0,
-        "chop": 14.34
+        "chop": 14.33
       }
     }
   },
@@ -43,9 +43,9 @@
       },
       {
         "bucket": "20-30",
-        "n": 685,
+        "n": 687,
         "meanPredicted": 21.8,
-        "realisedRate": 25
+        "realisedRate": 25.2
       },
       {
         "bucket": "30-40",
@@ -93,7 +93,7 @@
     "fail_first": [
       {
         "bucket": "0-10",
-        "n": 2518,
+        "n": 2519,
         "meanPredicted": 0,
         "realisedRate": 0
       },
@@ -123,7 +123,7 @@
       },
       {
         "bucket": "50-60",
-        "n": 2023,
+        "n": 2024,
         "meanPredicted": 55.1,
         "realisedRate": 57.3
       },
@@ -154,16 +154,16 @@
     ]
   },
   "likely": {
-    "n": 10560,
-    "hitRate": 43.4
+    "n": 10562,
+    "hitRate": 43.3
   },
   "chase": {
     "highElevated": {
-      "n": 1768,
+      "n": 1769,
       "runnerRate": 29.9
     },
     "low": {
-      "n": 8792,
+      "n": 8793,
       "runnerRate": 13
     }
   }
