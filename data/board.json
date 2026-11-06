@@ -1,32 +1,6 @@
 {
-  "closedThrough": "2026-11-06T19:07:00.000Z",
+  "closedThrough": "2026-11-06T19:17:00.000Z",
   "board": [
-    {
-      "ref": "5819c323",
-      "sym": "BTC",
-      "tf": "1m",
-      "dir": "short",
-      "stage": "watch",
-      "st": "confirmed",
-      "lv": {
-        "ent": 75674.3,
-        "stop": 75786.3,
-        "inv": 75786.3,
-        "tp1": 75488.5,
-        "tp2": 75420.5,
-        "tp2src": "level",
-        "rr": 1.66,
-        "cap": 75615.77
-      },
-      "score": "5/7",
-      "gate": false,
-      "tfs": "1m⚠️ 3m✅ 5m✅ 15m✅ 1h✅ 4h✅ 1d⚠️",
-      "ev": {
-        "verdict": "STAY OUT",
-        "vol": "Volume WEAK · 0.2x avg → STAY OUT",
-        "mom": "RSI 47 · Stoch 62/52 rising · bullish div ⚠️"
-      }
-    },
     {
       "ref": "3c8a1c56",
       "sym": "BTC",
@@ -46,7 +20,7 @@
       },
       "score": "5/7",
       "gate": false,
-      "tfs": "1m⚠️ 3m✅ 5m✅ 15m✅ 1h✅ 4h✅ 1d⚠️",
+      "tfs": "1m✅ 3m⚠️ 5m✅ 15m✅ 1h✅ 4h✅ 1d⚠️",
       "ev": {
         "verdict": "STAY OUT",
         "vol": "Volume WEAK · 0.5x avg → STAY OUT",
@@ -72,19 +46,45 @@
       },
       "score": "2/7",
       "gate": false,
-      "tfs": "1m⚠️ 3m❌ 5m✅ 15m⚠️ 1h✅ 4h⚠️ 1d⚠️",
+      "tfs": "1m✅ 3m❌ 5m⚠️ 15m⚠️ 1h✅ 4h⚠️ 1d⚠️",
       "ev": {
         "verdict": "STAY OUT",
         "vol": "Volume WEAK · 1.5x avg → STAY OUT",
         "mom": "RSI 42 · Stoch 21/18 rising · bullish div ⚠️"
       }
+    },
+    {
+      "ref": "6573078a",
+      "sym": "SOL",
+      "tf": "1h",
+      "dir": "short",
+      "stage": "watch",
+      "st": "forming",
+      "lv": {
+        "ent": 88.82,
+        "stop": 92.15,
+        "inv": 92.15,
+        "tp1": 80.18,
+        "tp2": 77.34,
+        "tp2src": "level",
+        "rr": 2.59,
+        "cap": 87.54
+      },
+      "score": "2/7",
+      "gate": true,
+      "tfs": "1m✅ 3m❌ 5m⚠️ 15m⚠️ 1h✅ 4h⚠️ 1d⚠️",
+      "ev": {
+        "verdict": "STAY OUT",
+        "vol": "Volume WEAK · 0.6x avg → STAY OUT",
+        "mom": "RSI 44 · Stoch 66/77 falling · no divergence"
+      }
     }
   ],
   "pulse": {
-    "found": 254,
+    "found": 252,
     "opps": 102,
     "locked": 0,
-    "since": "2026-11-05T19:07:28.954Z",
+    "since": "2026-11-05T19:17:28.021Z",
     "partial": false
   },
   "flowRules": {
