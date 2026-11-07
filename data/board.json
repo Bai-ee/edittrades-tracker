@@ -1,5 +1,5 @@
 {
-  "closedThrough": "2026-11-07T12:47:00.000Z",
+  "closedThrough": "2026-11-07T12:57:00.000Z",
   "board": [
     {
       "ref": "19ddc371",
@@ -7,7 +7,7 @@
       "tf": "5m",
       "dir": "short",
       "stage": "lockable",
-      "st": "triggering",
+      "st": "confirmed",
       "lv": {
         "ent": 89.72,
         "stop": 89.97,
@@ -22,35 +22,35 @@
       "gate": true,
       "tfs": "1m✅ 3m✅ 5m✅ 15m✅ 1h✅ 4h⚠️ 1d⚠️",
       "ev": {
-        "verdict": "CAUTION",
-        "vol": "Volume STRONG · 2.4x avg · quiet flag → GO",
-        "mom": "RSI 35 · Stoch 8/32 falling · no divergence"
+        "verdict": "STAY OUT",
+        "vol": "Volume WEAK · 0.7x avg → STAY OUT",
+        "mom": "RSI 32 · Stoch 0/3 oversold · no divergence"
       }
     },
     {
-      "ref": "86905593",
+      "ref": "0cc2c11b",
       "sym": "BTC",
-      "tf": "1h",
+      "tf": "15m",
       "dir": "short",
-      "stage": "found",
-      "st": "forming",
+      "stage": "lockable",
+      "st": "triggering",
       "lv": {
-        "ent": 75692.6,
-        "stop": 76146.9,
-        "inv": 76146.9,
-        "tp1": 74224.5,
-        "tp2": 64995.2,
+        "ent": 75860.8,
+        "stop": 76000,
+        "inv": 76000,
+        "tp1": 75547.2,
+        "tp2": 75420.5,
         "tp2src": "level",
-        "rr": 3.23,
-        "cap": 75464.12
+        "rr": 2.25,
+        "cap": 75765.13
       },
-      "score": "5/7",
+      "score": "4/7",
       "gate": true,
-      "tfs": "1m⚠️ 3m✅ 5m✅ 15m✅ 1h✅ 4h✅ 1d⚠️",
+      "tfs": "1m✅ 3m⚠️ 5m⚠️ 15m✅ 1h✅ 4h✅ 1d⚠️",
       "ev": {
-        "verdict": "STAY OUT",
-        "vol": "Volume WEAK · 0.2x avg → STAY OUT",
-        "mom": "RSI 46 · Stoch 50/69 falling · no divergence"
+        "verdict": "CAUTION",
+        "vol": "Volume OK · 1.4x avg → GO",
+        "mom": "RSI 34 · Stoch 13/16 oversold · no divergence"
       }
     },
     {
@@ -81,10 +81,10 @@
     }
   ],
   "pulse": {
-    "found": 242,
+    "found": 243,
     "opps": 83,
     "locked": 0,
-    "since": "2026-11-06T12:47:26.601Z",
+    "since": "2026-11-06T12:57:26.586Z",
     "partial": false
   },
   "flowRules": {
