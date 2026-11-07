@@ -1,32 +1,6 @@
 {
-  "closedThrough": "2026-11-07T06:27:00.000Z",
+  "closedThrough": "2026-11-07T06:37:00.000Z",
   "board": [
-    {
-      "ref": "8cd78898",
-      "sym": "SOL",
-      "tf": "1m",
-      "dir": "short",
-      "stage": "watch",
-      "st": "triggering",
-      "lv": {
-        "ent": 90.06,
-        "stop": 90.11,
-        "inv": 90.11,
-        "tp1": 89.91,
-        "tp2": 89.81,
-        "tp2src": "level",
-        "rr": 3,
-        "cap": 90.01
-      },
-      "score": "2/7",
-      "gate": false,
-      "tfs": "1m⚠️ 3m⚠️ 5m⚠️ 15m⚠️ 1h✅ 4h✅ 1d⚠️",
-      "ev": {
-        "verdict": "CAUTION",
-        "vol": "Volume OK · 3x avg → GO",
-        "mom": "RSI 38 · Stoch 10/17 oversold · no divergence"
-      }
-    },
     {
       "ref": "cbfd2dc2",
       "sym": "SOL",
@@ -44,13 +18,39 @@
         "rr": 2.45,
         "cap": 85.2
       },
-      "score": "2/7",
+      "score": "3/6",
       "gate": true,
-      "tfs": "1m⚠️ 3m⚠️ 5m⚠️ 15m⚠️ 1h✅ 4h✅ 1d⚠️",
+      "tfs": "1m⚠️ 3m⚠️ 5m· 15m✅ 1h✅ 4h✅ 1d⚠️",
       "ev": {
         "verdict": "STAY OUT",
         "vol": "Volume WEAK · 0.3x avg → STAY OUT",
         "mom": "RSI 40 · Stoch 19/20 falling · bullish div ⚠️"
+      }
+    },
+    {
+      "ref": "03ebea06",
+      "sym": "SOL",
+      "tf": "1m",
+      "dir": "short",
+      "stage": "watch",
+      "st": "forming",
+      "lv": {
+        "ent": 90.02,
+        "stop": 90.05,
+        "inv": 90.05,
+        "tp1": 89.84,
+        "tp2": 89.81,
+        "tp2src": "level",
+        "rr": 6,
+        "cap": 89.97
+      },
+      "score": "3/6",
+      "gate": false,
+      "tfs": "1m⚠️ 3m⚠️ 5m· 15m✅ 1h✅ 4h✅ 1d⚠️",
+      "ev": {
+        "verdict": "GO",
+        "vol": "Volume OK · 3.5x avg → GO",
+        "mom": "RSI 44 · Stoch 43/45 falling · no divergence"
       }
     },
     {
@@ -84,7 +84,7 @@
     "found": 238,
     "opps": 84,
     "locked": 0,
-    "since": "2026-11-06T06:27:27.645Z",
+    "since": "2026-11-06T06:37:28.032Z",
     "partial": false
   },
   "flowRules": {
