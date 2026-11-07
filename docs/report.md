@@ -1,6 +1,6 @@
 # EditTrades call tracker report
 
-Generated 2026-11-07 09:02Z. R is gross, before fees and slippage. Not evidence of an edge. Scores the engine's calls against later closed candles.
+Generated 2026-11-07 09:07Z. R is gross, before fees and slippage. Not evidence of an edge. Scores the engine's calls against later closed candles.
 
 
 ## Strategy scoreboard · each from its own start
@@ -77,7 +77,7 @@ _provisional; not evidence of an edge_
 
 | Expectancy 7d | Scored 7d | Win rate 7d | Fills 7d | Losing streak 7d | Avg win R 7d | Last capture |
 | --- | --- | --- | --- | --- | --- | --- |
-| −1.00R | 3 | 0% | 4 / 4 | 3 | – | 2026-11-07 09:02Z |
+| −1.00R | 3 | 0% | 4 / 4 | 3 | – | 2026-11-07 09:07Z |
 
 
 ## Class check
@@ -104,7 +104,7 @@ _provisional; not evidence of an edge_
 
 | Called | Symbol | Call | TF | Dir | Entry / stop / TP1 | Status |
 | --- | --- | --- | --- | --- | --- | --- |
-| 2026-11-07 09:02Z | SOL | WATCH | 1m | short | 90.18 / 90.23 / 90.07 | pending |
+| 2026-11-07 09:02Z | SOL | WATCH | 1m | short | 90.18 / 90.23 / 90.07 | open |
 | 2026-11-07 08:47Z | SOL | BAD | 5m | long | 90.2 / 89.28 / 90.3 | open |
 | 2026-11-07 08:37Z | BTC | WATCH | 3m | long | 76040 / 76000 / 76174 | open |
 | 2026-11-07 08:17Z | BTC | WATCH | 3m | long | 76040 / 76000 / 76178.8 | open |
@@ -122,14 +122,14 @@ By class:
 | Class | Calls | Fills | TP1 | Stop | Open | Win rate | Exp. (gross R) | Net exp. (net of fees) | Avg net R:R (plan) | Max loss streak | Median min to TP1 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | BAD | 755 | 215 | 158 | 51 | 4 | 75.6% | −0.00R | −0.33R | 0.43 | 4 | 28 |
-| WATCH | 508 | 215 | 58 | 151 | 3 | 27.8% | +0.11R | −2.49R | 2.48 | 11 | 33 |
+| WATCH | 508 | 216 | 58 | 151 | 3 | 27.8% | +0.11R | −2.49R | 2.48 | 11 | 33 |
 | GOOD | 4 | 4 | 0 | 3 | 0 | 0% | −1.00R | −1.27R | 3.29 | 3 | – |
 
 By reason:
 
 | Reason | Calls | Fills | TP1 | Stop | Open | Win rate | Exp. (gross R) | Net exp. (net of fees) | Avg net R:R (plan) | Max loss streak | Median min to TP1 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| need_confirmed_flag_plan | 504 | 213 | 58 | 150 | 3 | 27.9% | +0.11R | −2.49R | – | 11 | 33 |
+| need_confirmed_flag_plan | 504 | 214 | 58 | 150 | 3 | 27.9% | +0.11R | −2.49R | – | 11 | 33 |
 | rr_below_min | 339 | 215 | 158 | 51 | 4 | 75.6% | −0.00R | −0.33R | 0.43 | 4 | 28 |
 | chase | 227 | 0 | 0 | 0 | 0 | – | – | – | – | 0 | – |
 | room_at_entry | 189 | 0 | 0 | 0 | 0 | – | – | – | – | 0 | – |
@@ -153,14 +153,14 @@ By class:
 | Class | Calls | Fills | TP1 | Stop | Open | Win rate | Exp. (gross R) | Net exp. (net of fees) | Avg net R:R (plan) | Max loss streak | Median min to TP1 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | BAD | 3315 | 983 | 735 | 241 | 4 | 75.3% | −0.01R | −0.34R | 0.36 | 6 | 21 |
-| WATCH | 2189 | 984 | 282 | 693 | 3 | 28.9% | +0.17R | −2.94R | 2.28 | 23 | 40 |
+| WATCH | 2189 | 985 | 282 | 693 | 3 | 28.9% | +0.17R | −2.94R | 2.28 | 23 | 40 |
 | GOOD | 12 | 12 | 1 | 10 | 0 | 9.1% | −0.65R | −0.94R | 2.61 | 10 | 89 |
 
 By reason:
 
 | Reason | Calls | Fills | TP1 | Stop | Open | Win rate | Exp. (gross R) | Net exp. (net of fees) | Avg net R:R (plan) | Max loss streak | Median min to TP1 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| need_confirmed_flag_plan | 2174 | 973 | 280 | 686 | 3 | 29% | +0.18R | −2.96R | – | 23 | 40 |
+| need_confirmed_flag_plan | 2174 | 974 | 280 | 686 | 3 | 29% | +0.18R | −2.96R | – | 23 | 40 |
 | rr_below_min | 1486 | 983 | 735 | 241 | 4 | 75.3% | −0.01R | −0.34R | 0.36 | 6 | 21 |
 | chase | 1004 | 0 | 0 | 0 | 0 | – | – | – | – | 0 | – |
 | room_at_entry | 823 | 0 | 0 | 0 | 0 | – | – | – | – | 0 | – |
@@ -265,4 +265,4 @@ _provisional; not evidence of an edge_
 
 _provisional; not evidence of an edge_
 
-Captures 19638, gaps 36, DATA_UNAVAILABLE 6, mark drift |bps| median 2.5 / max 153.3, missing 1m candles 0.
+Captures 19641, gaps 36, DATA_UNAVAILABLE 6, mark drift |bps| median 2.5 / max 153.3, missing 1m candles 0.
