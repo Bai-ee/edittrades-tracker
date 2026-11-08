@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-08T19:47:32.686Z",
+  "generatedAt": "2026-11-08T19:57:32.891Z",
   "target": 70,
   "minN": 30,
   "scored": 1442,
@@ -46,18 +46,18 @@
       },
       {
         "key": "3m",
-        "n": 370,
+        "n": 371,
         "right": 182,
-        "wrong": 188,
+        "wrong": 189,
         "flat": 4,
         "rate": 49,
         "status": "below"
       },
       {
         "key": "5m",
-        "n": 259,
+        "n": 258,
         "right": 116,
-        "wrong": 143,
+        "wrong": 142,
         "flat": 5,
         "rate": 45,
         "status": "below"
@@ -111,18 +111,18 @@
     "symbol": [
       {
         "key": "BTC",
-        "n": 506,
+        "n": 505,
         "right": 224,
-        "wrong": 282,
+        "wrong": 281,
         "flat": 8,
         "rate": 44,
         "status": "below"
       },
       {
         "key": "ETH",
-        "n": 460,
+        "n": 461,
         "right": 241,
-        "wrong": 219,
+        "wrong": 220,
         "flat": 8,
         "rate": 52,
         "status": "below"
@@ -332,7 +332,6 @@
       "rule": {
         "minScore": "5/7",
         "timeframes": [
-          "3m",
           "5m",
           "15m",
           "30m",
@@ -340,16 +339,16 @@
           "2h",
           "4h"
         ],
-        "minRR": 1.5,
+        "minRR": 1,
         "nextTf": null
       },
       "projected": {
-        "n": 248,
-        "right": 128,
-        "wrong": 120,
+        "n": 147,
+        "right": 76,
+        "wrong": 71,
         "rate": 52
       },
-      "reason": "Best rule (5/7+ on 3m–4h with R:R ≥ 1.5) hit 52% over 248 calls, below the 70% target."
+      "reason": "Best rule (5/7+ on 5m–4h with R:R ≥ 1) hit 52% over 147 calls, below the 70% target."
     }
   ]
 }
