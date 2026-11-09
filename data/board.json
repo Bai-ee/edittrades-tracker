@@ -1,6 +1,32 @@
 {
-  "closedThrough": "2026-11-09T00:47:00.000Z",
+  "closedThrough": "2026-11-09T00:57:00.000Z",
   "board": [
+    {
+      "ref": "cbfd2dc2",
+      "sym": "SOL",
+      "tf": "4h",
+      "dir": "short",
+      "stage": "lockable",
+      "st": "triggering",
+      "lv": {
+        "ent": 88.62,
+        "stop": 90.71,
+        "inv": 90.71,
+        "tp1": 78.71,
+        "tp2": 73.76,
+        "tp2src": "1.5x",
+        "rr": 4.74,
+        "cap": 86.96
+      },
+      "score": "4/7",
+      "gate": true,
+      "tfs": "1m⚠️ 3m⚠️ 5m⚠️ 15m✅ 1h✅ 4h✅ 1d✅",
+      "ev": {
+        "verdict": "GO",
+        "vol": "Volume STRONG · 4.3x avg · quiet flag → GO",
+        "mom": "RSI 27 · Stoch 42/52 falling · no divergence"
+      }
+    },
     {
       "ref": "ad4ed846",
       "sym": "SOL",
@@ -44,47 +70,21 @@
         "rr": 1.84,
         "cap": 73702.63
       },
-      "score": "2/6",
+      "score": "2/7",
       "gate": true,
-      "tfs": "1m⚠️ 3m⚠️ 5m· 15m✅ 1h⚠️ 4h✅ 1d⚠️",
+      "tfs": "1m❌ 3m⚠️ 5m⚠️ 15m✅ 1h⚠️ 4h✅ 1d⚠️",
       "ev": {
         "verdict": "STAY OUT",
         "vol": "Volume WEAK · 6.9x avg → STAY OUT",
         "mom": "RSI 35 · Stoch 22/15 rising · bearish div"
       }
-    },
-    {
-      "ref": "b87d47d9",
-      "sym": "ETH",
-      "tf": "15m",
-      "dir": "short",
-      "stage": "watch",
-      "st": "forming",
-      "lv": {
-        "ent": 2098.04,
-        "stop": 2165.78,
-        "inv": 2165.78,
-        "tp1": 1934.5,
-        "tp2": 1921.53,
-        "tp2src": "level",
-        "rr": 2.41,
-        "cap": 2057.77
-      },
-      "score": "5/7",
-      "gate": false,
-      "tfs": "1m⚠️ 3m✅ 5m✅ 15m⚠️ 1h✅ 4h✅ 1d✅",
-      "ev": {
-        "verdict": "STAY OUT",
-        "vol": "Volume WEAK · 0.1x avg → STAY OUT",
-        "mom": "RSI 31 · Stoch 89/75 rising · no divergence"
-      }
     }
   ],
   "pulse": {
-    "found": 310,
-    "opps": 100,
+    "found": 305,
+    "opps": 99,
     "locked": 0,
-    "since": "2026-11-08T00:47:27.890Z",
+    "since": "2026-11-08T00:57:28.192Z",
     "partial": false
   },
   "flowRules": {
