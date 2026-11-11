@@ -1,29 +1,29 @@
 {
-  "generatedAt": "2026-11-11T08:27:49.068Z",
-  "n": 11788,
+  "generatedAt": "2026-11-11T08:37:50.007Z",
+  "n": 11791,
   "phases": {
     "tightening": {
-      "n": 9001,
-      "brier": 0.6737,
-      "baselineBrier": 0.6695,
+      "n": 9003,
+      "brier": 0.6738,
+      "baselineBrier": 0.6696,
       "baseline": {
         "retest_go": 14.21,
-        "runner": 11.69,
-        "false_break": 11.39,
-        "fail_first": 52.22,
+        "runner": 11.7,
+        "false_break": 11.4,
+        "fail_first": 52.2,
         "chop": 10.5
       }
     },
     "broken": {
-      "n": 2787,
-      "brier": 0.836,
+      "n": 2788,
+      "brier": 0.8361,
       "baselineBrier": 0.7185,
       "baseline": {
-        "retest_go": 37.21,
-        "runner": 29.35,
-        "false_break": 18.98,
+        "retest_go": 37.2,
+        "runner": 29.34,
+        "false_break": 19.01,
         "fail_first": 0,
-        "chop": 14.46
+        "chop": 14.45
       }
     }
   },
@@ -31,15 +31,15 @@
     "runner": [
       {
         "bucket": "0-10",
-        "n": 5286,
+        "n": 5287,
         "meanPredicted": 5.5,
         "realisedRate": 13.1
       },
       {
         "bucket": "10-20",
-        "n": 5582,
+        "n": 5584,
         "meanPredicted": 14.5,
-        "realisedRate": 16.8
+        "realisedRate": 16.9
       },
       {
         "bucket": "20-30",
@@ -93,7 +93,7 @@
     "fail_first": [
       {
         "bucket": "0-10",
-        "n": 2787,
+        "n": 2788,
         "meanPredicted": 0,
         "realisedRate": 0
       },
@@ -123,7 +123,7 @@
       },
       {
         "bucket": "50-60",
-        "n": 2307,
+        "n": 2309,
         "meanPredicted": 55.2,
         "realisedRate": 56.8
       },
@@ -154,16 +154,16 @@
     ]
   },
   "likely": {
-    "n": 11788,
+    "n": 11791,
     "hitRate": 43.4
   },
   "chase": {
     "highElevated": {
-      "n": 1995,
+      "n": 1996,
       "runnerRate": 30
     },
     "low": {
-      "n": 9793,
+      "n": 9795,
       "runnerRate": 13
     }
   }
