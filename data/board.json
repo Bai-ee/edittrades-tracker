@@ -1,6 +1,32 @@
 {
-  "closedThrough": "2026-11-11T11:07:00.000Z",
+  "closedThrough": "2026-11-11T11:17:00.000Z",
   "board": [
+    {
+      "ref": "c04b386e",
+      "sym": "BTC",
+      "tf": "1m",
+      "dir": "long",
+      "stage": "found",
+      "st": "forming",
+      "lv": {
+        "ent": 73986.1,
+        "stop": 73864.6,
+        "inv": 73864.6,
+        "tp1": 74193.1,
+        "tp2": 74250.8,
+        "tp2src": "level",
+        "rr": 1.7,
+        "cap": 74029.55
+      },
+      "score": "2/7",
+      "gate": true,
+      "tfs": "1m✅ 3m✅ 5m⚠️ 15m⚠️ 1h⚠️ 4h❌ 1d⚠️",
+      "ev": {
+        "verdict": "STAY OUT",
+        "vol": "Volume WEAK · 0.4x avg → STAY OUT",
+        "mom": "RSI 53 · Stoch 86/86 overbought · no divergence"
+      }
+    },
     {
       "ref": "7fbfb17e",
       "sym": "ETH",
@@ -20,7 +46,7 @@
       },
       "score": "2/7",
       "gate": false,
-      "tfs": "1m⚠️ 3m⚠️ 5m⚠️ 15m⚠️ 1h✅ 4h⚠️ 1d✅",
+      "tfs": "1m❌ 3m❌ 5m⚠️ 15m⚠️ 1h✅ 4h⚠️ 1d✅",
       "ev": {
         "verdict": "STAY OUT",
         "vol": "Volume WEAK · 0.4x avg → STAY OUT",
@@ -46,45 +72,19 @@
       },
       "score": "2/7",
       "gate": true,
-      "tfs": "1m⚠️ 3m⚠️ 5m⚠️ 15m⚠️ 1h✅ 4h⚠️ 1d✅",
+      "tfs": "1m❌ 3m❌ 5m⚠️ 15m⚠️ 1h✅ 4h⚠️ 1d✅",
       "ev": {
         "verdict": "STAY OUT",
         "vol": "Volume WEAK · 0.3x avg → STAY OUT",
         "mom": "RSI 45 · Stoch 68/75 falling · no divergence"
       }
-    },
-    {
-      "ref": "8da3afad",
-      "sym": "ETH",
-      "tf": "15m",
-      "dir": "short",
-      "stage": "watch",
-      "st": "forming",
-      "lv": {
-        "ent": 2047.08,
-        "stop": 2066.24,
-        "inv": 2066.24,
-        "tp1": 2022.01,
-        "tp2": 2009.48,
-        "tp2src": "1.5x",
-        "rr": 1.31,
-        "cap": 2037.54
-      },
-      "score": "2/7",
-      "gate": false,
-      "tfs": "1m⚠️ 3m⚠️ 5m⚠️ 15m⚠️ 1h✅ 4h⚠️ 1d✅",
-      "ev": {
-        "verdict": "CAUTION",
-        "vol": "Volume OK · 1.5x avg → GO",
-        "mom": "RSI 50 · Stoch 58/51 rising · no divergence"
-      }
     }
   ],
   "pulse": {
-    "found": 237,
+    "found": 241,
     "opps": 81,
     "locked": 0,
-    "since": "2026-11-10T11:07:30.581Z",
+    "since": "2026-11-10T11:17:28.727Z",
     "partial": false
   },
   "flowRules": {
