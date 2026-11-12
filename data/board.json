@@ -1,32 +1,6 @@
 {
-  "closedThrough": "2026-11-12T15:00:00.000Z",
+  "closedThrough": "2026-11-12T15:07:00.000Z",
   "board": [
-    {
-      "ref": "ab3dd8c9",
-      "sym": "SOL",
-      "tf": "1h",
-      "dir": "short",
-      "stage": "lockable",
-      "st": "confirmed",
-      "lv": {
-        "ent": 82.1,
-        "stop": 83.96,
-        "inv": 83.96,
-        "tp1": 78.43,
-        "tp2": 76.6,
-        "tp2src": "1.5x",
-        "rr": 1.97,
-        "cap": 81.02
-      },
-      "score": "4/7",
-      "gate": true,
-      "tfs": "1m⚠️ 3m⚠️ 5m✅ 15m⚠️ 1h✅ 4h✅ 1d✅",
-      "ev": {
-        "verdict": "CAUTION",
-        "vol": "Volume OK · 3.2x avg → GO",
-        "mom": "RSI 28 · Stoch 0/3 oversold · no divergence"
-      }
-    },
     {
       "ref": "861c07c9",
       "sym": "SOL",
@@ -46,11 +20,37 @@
       },
       "score": "4/7",
       "gate": true,
-      "tfs": "1m⚠️ 3m⚠️ 5m✅ 15m⚠️ 1h✅ 4h✅ 1d✅",
+      "tfs": "1m⚠️ 3m✅ 5m⚠️ 15m⚠️ 1h✅ 4h✅ 1d✅",
       "ev": {
         "verdict": "STAY OUT",
         "vol": "Volume WEAK · 1.8x avg → STAY OUT",
         "mom": "RSI 34 · Stoch 29/14 rising · no divergence"
+      }
+    },
+    {
+      "ref": "7fbfb17e",
+      "sym": "ETH",
+      "tf": "4h",
+      "dir": "short",
+      "stage": "found",
+      "st": "forming",
+      "lv": {
+        "ent": 2007.4,
+        "stop": 2105.22,
+        "inv": 2105.22,
+        "tp1": 1760.2,
+        "tp2": 1636.6,
+        "tp2src": "1.5x",
+        "rr": 2.53,
+        "cap": 1953.4
+      },
+      "score": "4/7",
+      "gate": true,
+      "tfs": "1m⚠️ 3m✅ 5m⚠️ 15m⚠️ 1h✅ 4h✅ 1d✅",
+      "ev": {
+        "verdict": "STAY OUT",
+        "vol": "Volume WEAK · 0.7x avg → STAY OUT",
+        "mom": "RSI 30 · Stoch 64/74 falling · bullish div ⚠️"
       }
     },
     {
@@ -72,7 +72,7 @@
       },
       "score": "4/7",
       "gate": true,
-      "tfs": "1m⚠️ 3m⚠️ 5m✅ 15m⚠️ 1h✅ 4h✅ 1d✅",
+      "tfs": "1m⚠️ 3m✅ 5m⚠️ 15m⚠️ 1h✅ 4h✅ 1d✅",
       "ev": {
         "verdict": "STAY OUT",
         "vol": "Volume WEAK · 0.3x avg → STAY OUT",
@@ -81,10 +81,10 @@
     }
   ],
   "pulse": {
-    "found": 339,
+    "found": 336,
     "opps": 109,
     "locked": 0,
-    "since": "2026-11-11T15:00:05.672Z",
+    "since": "2026-11-11T15:07:29.953Z",
     "partial": false
   },
   "flowRules": {
