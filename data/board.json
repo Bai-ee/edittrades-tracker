@@ -1,5 +1,5 @@
 {
-  "closedThrough": "2026-11-12T13:17:00.000Z",
+  "closedThrough": "2026-11-12T13:27:00.000Z",
   "board": [
     {
       "ref": "ab3dd8c9",
@@ -18,9 +18,9 @@
         "rr": 1.97,
         "cap": 81.1
       },
-      "score": "7/7",
+      "score": "5/7",
       "gate": true,
-      "tfs": "1m✅ 3m✅ 5m✅ 15m✅ 1h✅ 4h✅ 1d✅",
+      "tfs": "1m✅ 3m⚠️ 5m⚠️ 15m✅ 1h✅ 4h✅ 1d✅",
       "ev": {
         "verdict": "STAY OUT",
         "vol": "Volume WEAK · 0.5x avg → STAY OUT",
@@ -28,29 +28,29 @@
       }
     },
     {
-      "ref": "b5732727",
-      "sym": "ETH",
-      "tf": "5m",
+      "ref": "c8ee51ac",
+      "sym": "BTC",
+      "tf": "15m",
       "dir": "short",
       "stage": "lockable",
-      "st": "confirmed",
+      "st": "triggering",
       "lv": {
-        "ent": 2010.92,
-        "stop": 2033.49,
-        "inv": 2033.49,
-        "tp1": 1971.31,
-        "tp2": 1951.51,
+        "ent": 72584.6,
+        "stop": 73092.61,
+        "inv": 73092.61,
+        "tp1": 71647.7,
+        "tp2": 71179.25,
         "tp2src": "1.5x",
-        "rr": 1.75,
-        "cap": 1999.23
+        "rr": 1.84,
+        "cap": 72243.56
       },
-      "score": "7/7",
+      "score": "4/7",
       "gate": true,
-      "tfs": "1m✅ 3m✅ 5m✅ 15m✅ 1h✅ 4h✅ 1d✅",
+      "tfs": "1m✅ 3m⚠️ 5m⚠️ 15m✅ 1h✅ 4h✅ 1d⚠️",
       "ev": {
-        "verdict": "STAY OUT",
-        "vol": "Volume WEAK · 4.2x avg → STAY OUT",
-        "mom": "RSI 31 · Stoch 37/55 falling · no divergence"
+        "verdict": "CAUTION",
+        "vol": "Volume OK · 7.4x avg → GO",
+        "mom": "RSI 24 · Stoch 18/20 falling · no divergence"
       }
     },
     {
@@ -70,9 +70,9 @@
         "rr": 1.75,
         "cap": 1996.95
       },
-      "score": "7/7",
+      "score": "4/7",
       "gate": true,
-      "tfs": "1m✅ 3m✅ 5m✅ 15m✅ 1h✅ 4h✅ 1d✅",
+      "tfs": "1m⚠️ 3m⚠️ 5m⚠️ 15m✅ 1h✅ 4h✅ 1d✅",
       "ev": {
         "verdict": "CAUTION",
         "vol": "Volume OK · 13.7x avg → GO",
@@ -81,10 +81,10 @@
     }
   ],
   "pulse": {
-    "found": 330,
+    "found": 331,
     "opps": 103,
     "locked": 0,
-    "since": "2026-11-11T13:17:30.682Z",
+    "since": "2026-11-11T13:27:28.561Z",
     "partial": false
   },
   "flowRules": {
