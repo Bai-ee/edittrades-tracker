@@ -1,29 +1,29 @@
 {
-  "generatedAt": "2026-11-13T11:17:51.410Z",
-  "n": 12187,
+  "generatedAt": "2026-11-13T11:27:51.225Z",
+  "n": 12191,
   "phases": {
     "tightening": {
-      "n": 9297,
-      "brier": 0.6727,
-      "baselineBrier": 0.6679,
+      "n": 9300,
+      "brier": 0.6728,
+      "baselineBrier": 0.668,
       "baseline": {
-        "retest_go": 14.29,
+        "retest_go": 14.32,
         "runner": 11.53,
-        "false_break": 11.36,
-        "fail_first": 52.4,
+        "false_break": 11.35,
+        "fail_first": 52.39,
         "chop": 10.41
       }
     },
     "broken": {
-      "n": 2890,
+      "n": 2891,
       "brier": 0.8372,
-      "baselineBrier": 0.7179,
+      "baselineBrier": 0.7178,
       "baseline": {
-        "retest_go": 37.4,
-        "runner": 29.24,
-        "false_break": 19.03,
+        "retest_go": 37.43,
+        "runner": 29.23,
+        "false_break": 19.02,
         "fail_first": 0,
-        "chop": 14.33
+        "chop": 14.32
       }
     }
   },
@@ -31,13 +31,13 @@
     "runner": [
       {
         "bucket": "0-10",
-        "n": 5475,
+        "n": 5477,
         "meanPredicted": 5.5,
         "realisedRate": 13
       },
       {
         "bucket": "10-20",
-        "n": 5770,
+        "n": 5772,
         "meanPredicted": 14.5,
         "realisedRate": 16.7
       },
@@ -93,7 +93,7 @@
     "fail_first": [
       {
         "bucket": "0-10",
-        "n": 2890,
+        "n": 2891,
         "meanPredicted": 0,
         "realisedRate": 0
       },
@@ -111,19 +111,19 @@
       },
       {
         "bucket": "30-40",
-        "n": 2553,
+        "n": 2554,
         "meanPredicted": 36.4,
         "realisedRate": 47.7
       },
       {
         "bucket": "40-50",
-        "n": 2533,
+        "n": 2534,
         "meanPredicted": 44.5,
         "realisedRate": 49.3
       },
       {
         "bucket": "50-60",
-        "n": 2375,
+        "n": 2376,
         "meanPredicted": 55.2,
         "realisedRate": 56.8
       },
@@ -154,7 +154,7 @@
     ]
   },
   "likely": {
-    "n": 12187,
+    "n": 12191,
     "hitRate": 43.4
   },
   "chase": {
@@ -163,7 +163,7 @@
       "runnerRate": 29.8
     },
     "low": {
-      "n": 10130,
+      "n": 10134,
       "runnerRate": 12.9
     }
   }
