@@ -1,5 +1,5 @@
 {
-  "closedThrough": "2026-11-13T12:27:00.000Z",
+  "closedThrough": "2026-11-13T12:37:00.000Z",
   "board": [
     {
       "ref": "2335b4dc",
@@ -20,11 +20,37 @@
       },
       "score": "2/7",
       "gate": true,
-      "tfs": "1m⚠️ 3m⚠️ 5m⚠️ 15m⚠️ 1h⚠️ 4h✅ 1d✅",
+      "tfs": "1m⚠️ 3m❌ 5m⚠️ 15m⚠️ 1h⚠️ 4h✅ 1d✅",
       "ev": {
         "verdict": "STAY OUT",
         "vol": "Volume WEAK · 2x avg → STAY OUT",
         "mom": "RSI 41 · Stoch 86/72 rising · no divergence"
+      }
+    },
+    {
+      "ref": "f6145b78",
+      "sym": "ETH",
+      "tf": "1m",
+      "dir": "short",
+      "stage": "watch",
+      "st": "forming",
+      "lv": {
+        "ent": 1957.33,
+        "stop": 1960.55,
+        "inv": 1960.55,
+        "tp1": 1950.25,
+        "tp2": 1946.71,
+        "tp2src": "1.5x",
+        "rr": 2.2,
+        "cap": 1955.53
+      },
+      "score": "2/7",
+      "gate": false,
+      "tfs": "1m⚠️ 3m❌ 5m⚠️ 15m⚠️ 1h⚠️ 4h✅ 1d✅",
+      "ev": {
+        "verdict": "GO",
+        "vol": "Volume OK · 3x avg → GO",
+        "mom": "RSI 46 · Stoch 47/55 falling · no divergence"
       }
     },
     {
@@ -44,47 +70,21 @@
         "rr": 3.6,
         "cap": 66750.13
       },
-      "score": "4/7",
+      "score": "2/6",
       "gate": false,
-      "tfs": "1m⚠️ 3m✅ 5m✅ 15m⚠️ 1h✅ 4h✅ 1d⚠️",
+      "tfs": "1m⚠️ 3m· 5m⚠️ 15m⚠️ 1h✅ 4h✅ 1d⚠️",
       "ev": {
         "verdict": "STAY OUT",
         "vol": "Volume WEAK · 0.3x avg → STAY OUT",
         "mom": "RSI 35 · Stoch 100/98 overbought · no divergence"
       }
-    },
-    {
-      "ref": "56e3695b",
-      "sym": "BTC",
-      "tf": "5m",
-      "dir": "short",
-      "stage": "watch",
-      "st": "proto",
-      "lv": {
-        "ent": 69212.6,
-        "stop": 69332,
-        "inv": 69332,
-        "tp1": 68799.7,
-        "tp2": 68500,
-        "tp2src": "level",
-        "rr": 3.46,
-        "cap": 69034.6
-      },
-      "score": "4/7",
-      "gate": true,
-      "tfs": "1m⚠️ 3m✅ 5m✅ 15m⚠️ 1h✅ 4h✅ 1d⚠️",
-      "ev": {
-        "verdict": "GO",
-        "vol": "Volume OK · 1.8x avg → GO",
-        "mom": "RSI 49 · Stoch 38/55 falling · bearish div"
-      }
     }
   ],
   "pulse": {
-    "found": 356,
-    "opps": 129,
+    "found": 355,
+    "opps": 126,
     "locked": 0,
-    "since": "2026-11-12T12:27:36.935Z",
+    "since": "2026-11-12T12:37:30.198Z",
     "partial": false
   },
   "flowRules": {
