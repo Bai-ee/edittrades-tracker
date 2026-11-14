@@ -1,32 +1,6 @@
 {
-  "closedThrough": "2026-11-14T04:57:00.000Z",
+  "closedThrough": "2026-11-14T05:07:00.000Z",
   "board": [
-    {
-      "ref": "38ebd140",
-      "sym": "BTC",
-      "tf": "1h",
-      "dir": "short",
-      "stage": "lockable",
-      "st": "confirmed",
-      "lv": {
-        "ent": 67794.8,
-        "stop": 69513.6,
-        "inv": 69513.6,
-        "tp1": 63293.8,
-        "tp2": 61043.3,
-        "tp2src": "1.5x",
-        "rr": 2.62,
-        "cap": 66892.79
-      },
-      "score": "3/7",
-      "gate": true,
-      "tfs": "1m⚠️ 3m⚠️ 5m⚠️ 15m⚠️ 1h✅ 4h✅ 1d✅",
-      "ev": {
-        "verdict": "CAUTION",
-        "vol": "Volume OK · 1.7x avg → GO",
-        "mom": "RSI 20 · Stoch 4/9 oversold · no divergence"
-      }
-    },
     {
       "ref": "0c92cb14",
       "sym": "ETH",
@@ -42,15 +16,15 @@
         "tp2": 1709.44,
         "tp2src": "1.5x",
         "rr": 1.93,
-        "cap": 1877.65
+        "cap": 1877.91
       },
-      "score": "3/7",
+      "score": "6/7",
       "gate": true,
-      "tfs": "1m⚠️ 3m⚠️ 5m⚠️ 15m⚠️ 1h✅ 4h✅ 1d✅",
+      "tfs": "1m✅ 3m✅ 5m✅ 15m⚠️ 1h✅ 4h✅ 1d✅",
       "ev": {
         "verdict": "STAY OUT",
-        "vol": "Volume WEAK · 0.7x avg → STAY OUT",
-        "mom": "RSI 27 · Stoch 17/34 falling · no divergence"
+        "vol": "Volume WEAK · 0.5x avg → STAY OUT",
+        "mom": "RSI 34 · Stoch 16/23 falling · no divergence"
       }
     },
     {
@@ -70,21 +44,47 @@
         "rr": 3.27,
         "cap": 65831.57
       },
-      "score": "3/7",
+      "score": "6/7",
       "gate": true,
-      "tfs": "1m⚠️ 3m⚠️ 5m⚠️ 15m⚠️ 1h✅ 4h✅ 1d✅",
+      "tfs": "1m✅ 3m✅ 5m✅ 15m⚠️ 1h✅ 4h✅ 1d✅",
       "ev": {
         "verdict": "CAUTION",
         "vol": "Volume OK · 1.2x avg → GO",
         "mom": "RSI 18 · Stoch 18/23 falling · no divergence"
       }
+    },
+    {
+      "ref": "1074b3e7",
+      "sym": "ETH",
+      "tf": "4h",
+      "dir": "short",
+      "stage": "lockable",
+      "st": "triggering",
+      "lv": {
+        "ent": 1911.26,
+        "stop": 1993.86,
+        "inv": 1993.86,
+        "tp1": 1667.7,
+        "tp2": 1545.92,
+        "tp2src": "1.5x",
+        "rr": 2.95,
+        "cap": 1844.54
+      },
+      "score": "6/7",
+      "gate": true,
+      "tfs": "1m✅ 3m✅ 5m✅ 15m⚠️ 1h✅ 4h✅ 1d✅",
+      "ev": {
+        "verdict": "CAUTION",
+        "vol": "Volume OK · 1.7x avg → GO",
+        "mom": "RSI 25 · Stoch 40/43 falling · no divergence"
+      }
     }
   ],
   "pulse": {
-    "found": 252,
-    "opps": 97,
+    "found": 245,
+    "opps": 92,
     "locked": 0,
-    "since": "2026-11-13T04:57:28.452Z",
+    "since": "2026-11-13T05:07:29.397Z",
     "partial": false
   },
   "flowRules": {
