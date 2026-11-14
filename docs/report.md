@@ -1,6 +1,6 @@
 # EditTrades call tracker report
 
-Generated 2026-11-14 20:37Z. R is gross, before fees and slippage. Not evidence of an edge. Scores the engine's calls against later closed candles.
+Generated 2026-11-14 20:48Z. R is gross, before fees and slippage. Not evidence of an edge. Scores the engine's calls against later closed candles.
 
 
 ## Strategy scoreboard · each from its own start
@@ -77,7 +77,7 @@ _provisional; not evidence of an edge_
 
 | Expectancy 7d | Scored 7d | Win rate 7d | Fills 7d | Losing streak 7d | Avg win R 7d | Last capture |
 | --- | --- | --- | --- | --- | --- | --- |
-| +0.20R | 18 | 27.8% | 19 / 19 | 6 | +3.32R | 2026-11-14 20:37Z |
+| +0.20R | 18 | 27.8% | 19 / 19 | 6 | +3.32R | 2026-11-14 20:47Z |
 
 
 ## Class check
@@ -87,7 +87,7 @@ _provisional; not evidence of an edge_
 | Class | Calls | Scored | Win rate | Exp. (gross R) | TP1 / Stop | Open | Not filled | No levels | Levels from (plan / candidate) | Calls (1-min log) | Of which captured | Median GOOD window (min) | Verdict |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | GOOD | 32 | 30 | 23.3% | −0.03R | 7 / 23 | 1 | 1 | 0 | 30 / 0 | 1 | 31 | – | NOT WORKING YET |
-| WATCH | 3566 | 1601 | 27.8% | +0.10R | 445 / 1156 | 4 | 1656 | 305 | 23 / 1578 | – | – | – | FILTER MAY BE BLOCKING WINNERS |
+| WATCH | 3568 | 1601 | 27.8% | +0.10R | 445 / 1156 | 6 | 1656 | 305 | 23 / 1578 | – | – | – | FILTER MAY BE BLOCKING WINNERS |
 | BAD | 5374 | 1579 | 73.3% | −0.02R | 1157 / 422 | 2 | 799 | 2994 | 1579 / 0 | – | – | – | FILTER CONFIRMED |
 | DATA_UNAVAILABLE | 1 | 0 | – | – | 0 / 0 | 0 | 0 | 1 | 0 / 0 | – | – | – | [0 SCORED · TOO FEW TO JUDGE] |
 
@@ -104,10 +104,12 @@ _provisional; not evidence of an edge_
 
 | Called | Symbol | Call | TF | Dir | Entry / stop / TP1 | Status |
 | --- | --- | --- | --- | --- | --- | --- |
+| 2026-11-14 20:47Z | ETH | WATCH | 3m | short | 1817.24 / 1825.39 / 1793.0345 | pending |
+| 2026-11-14 20:47Z | SOL | WATCH | 3m | short | 71.37 / 71.84 / 70.1292 | pending |
 | 2026-11-14 20:37Z | ETH | plan:conditional | 3m | short | 1822.11 / 1829.76 / 1800.3 | pending |
-| 2026-11-14 20:37Z | ETH | WATCH | 3m | short | 1822.11 / 1829.76 / 1800.3 | pending |
-| 2026-11-14 20:37Z | ETH | plan:null | 3m | short | 1822.11 / 1829.76 / 1800.3 | pending |
-| 2026-11-14 20:37Z | SOL | BAD | 3m | short | 71.57 / 72.06 / 70.55 | pending |
+| 2026-11-14 20:37Z | ETH | WATCH | 3m | short | 1822.11 / 1829.76 / 1800.3 | open |
+| 2026-11-14 20:37Z | ETH | plan:null | 3m | short | 1822.11 / 1829.76 / 1800.3 | open |
+| 2026-11-14 20:37Z | SOL | BAD | 3m | short | 71.57 / 72.06 / 70.55 | open |
 | 2026-11-14 20:27Z | ETH | WATCH | 3m | short | 1818.69 / 1826.67 / 1796.9046 | open |
 | 2026-11-14 19:27Z | ETH | plan:conditional | 3m | short | 1826.08 / 1834.64 / 1804.58 | pending |
 | 2026-11-14 19:07Z | SOL | BAD | 5m | short | 72.25 / 72.8 / 71.04 | open |
@@ -137,19 +139,19 @@ By class:
 
 | Class | Calls | Fills | TP1 | Stop | Open | Win rate | Exp. (gross R) | Net exp. (net of fees) | Avg net R:R (plan) | Max loss streak | Median min to TP1 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| BAD | 719 | 238 | 139 | 98 | 2 | 58.7% | −0.04R | −0.37R | 0.57 | 6 | 31 |
-| WATCH | 524 | 242 | 65 | 174 | 4 | 27.2% | +0.07R | −4.64R | 2.28 | 15 | 27 |
+| BAD | 717 | 239 | 139 | 98 | 2 | 58.7% | −0.04R | −0.37R | 0.58 | 6 | 31 |
+| WATCH | 525 | 243 | 65 | 174 | 6 | 27.2% | +0.07R | −4.64R | 2.26 | 15 | 27 |
 | GOOD | 19 | 19 | 5 | 13 | 1 | 27.8% | +0.20R | −0.07R | 2.36 | 6 | 94 |
 
 By reason:
 
 | Reason | Calls | Fills | TP1 | Stop | Open | Win rate | Exp. (gross R) | Net exp. (net of fees) | Avg net R:R (plan) | Max loss streak | Median min to TP1 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| need_confirmed_flag_plan | 494 | 227 | 62 | 163 | 2 | 27.6% | +0.09R | −4.90R | – | 15 | 25 |
-| rr_below_min | 368 | 238 | 139 | 98 | 2 | 58.7% | −0.04R | −0.37R | 0.57 | 6 | 31 |
-| chase | 205 | 0 | 0 | 0 | 0 | – | – | – | – | 0 | – |
+| need_confirmed_flag_plan | 495 | 227 | 62 | 163 | 4 | 27.6% | +0.09R | −4.90R | – | 15 | 25 |
+| rr_below_min | 367 | 239 | 139 | 98 | 2 | 58.7% | −0.04R | −0.37R | 0.58 | 6 | 31 |
+| chase | 204 | 0 | 0 | 0 | 0 | – | – | – | – | 0 | – |
 | room_at_entry | 146 | 0 | 0 | 0 | 0 | – | – | – | – | 0 | – |
-| entry_condition | 30 | 15 | 3 | 11 | 2 | 21.4% | −0.15R | −0.41R | 2.28 | 7 | 80 |
+| entry_condition | 30 | 16 | 3 | 11 | 2 | 21.4% | −0.15R | −0.41R | 2.26 | 7 | 80 |
 | ready_flag_plan | 19 | 19 | 5 | 13 | 1 | 27.8% | +0.20R | −0.07R | 2.36 | 6 | 94 |
 
 Ready plans by symbol:
@@ -169,19 +171,19 @@ By class:
 
 | Class | Calls | Fills | TP1 | Stop | Open | Win rate | Exp. (gross R) | Net exp. (net of fees) | Avg net R:R (plan) | Max loss streak | Median min to TP1 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| BAD | 3274 | 963 | 690 | 269 | 2 | 72% | −0.01R | −0.34R | 0.44 | 6 | 23 |
-| WATCH | 2175 | 970 | 274 | 688 | 4 | 28.5% | +0.14R | −2.77R | 2.34 | 23 | 37 |
+| BAD | 3274 | 964 | 690 | 269 | 2 | 72% | −0.01R | −0.34R | 0.45 | 6 | 23 |
+| WATCH | 2176 | 971 | 274 | 688 | 6 | 28.5% | +0.14R | −2.77R | 2.32 | 23 | 37 |
 | GOOD | 28 | 28 | 5 | 21 | 1 | 19.2% | −0.17R | −0.44R | 2.49 | 8 | 94 |
 
 By reason:
 
 | Reason | Calls | Fills | TP1 | Stop | Open | Win rate | Exp. (gross R) | Net exp. (net of fees) | Avg net R:R (plan) | Max loss streak | Median min to TP1 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| need_confirmed_flag_plan | 2135 | 948 | 271 | 671 | 2 | 28.8% | +0.15R | −2.81R | – | 23 | 36 |
-| rr_below_min | 1468 | 963 | 690 | 269 | 2 | 72% | −0.01R | −0.34R | 0.44 | 6 | 23 |
+| need_confirmed_flag_plan | 2136 | 948 | 271 | 671 | 4 | 28.8% | +0.15R | −2.81R | – | 23 | 36 |
+| rr_below_min | 1468 | 964 | 690 | 269 | 2 | 72% | −0.01R | −0.34R | 0.45 | 6 | 23 |
 | chase | 989 | 0 | 0 | 0 | 0 | – | – | – | – | 0 | – |
 | room_at_entry | 815 | 0 | 0 | 0 | 0 | – | – | – | – | 0 | – |
-| entry_condition | 40 | 22 | 3 | 17 | 2 | 15% | −0.41R | −0.67R | 2.34 | 8 | 80 |
+| entry_condition | 40 | 23 | 3 | 17 | 2 | 15% | −0.41R | −0.67R | 2.32 | 8 | 80 |
 | ready_flag_plan | 28 | 28 | 5 | 21 | 1 | 19.2% | −0.17R | −0.44R | 2.49 | 8 | 94 |
 | invalid_levels | 2 | 0 | 0 | 0 | 0 | – | – | – | – | 0 | – |
 
@@ -200,7 +202,7 @@ _provisional; not evidence of an edge_
 
 | Day | Calls | GOOD | WATCH | BAD | Ready | Fills | TP1 | Stop | Exp. |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 2026-11-14 | 175 | 7 | 74 | 94 | 8 | 8 | 2 | 4 | +0.62R |
+| 2026-11-14 | 177 | 7 | 76 | 94 | 8 | 8 | 2 | 4 | +0.62R |
 | 2026-11-13 | 197 | 5 | 85 | 107 | 5 | 5 | 2 | 3 | +0.68R |
 | 2026-11-12 | 138 | 1 | 53 | 84 | 1 | 1 | 0 | 1 | −1.00R |
 | 2026-11-11 | 154 | 0 | 62 | 92 | 0 | 0 | 0 | 0 | – |
@@ -264,7 +266,7 @@ _provisional; not evidence of an edge_
 | Live | 48 | 0.93 | 48 | 26.1% | +0.11R | −1.40R |
 | NF | 31 | 0.6 | 31 | 20.7% | −0.12R | −0.40R |
 
-n=48 over 51.36 d (engine 0, backfill 48). NF (live since 2026-09-27): the same live ready calls, scored twice - Live with the plan's own stop, NF with the stop floored at max(0.5 x ATR(15m), 3 x round-trip cost: 0.34 % long / 0.14 % short), TP1 unchanged, taken only when gross >= 2.5R and net >= 1.0R. Net R charges the direction cost once per trade. Before 2026-09-27 (config 2026.09.24-5 and earlier) NF was a shadow comparator only, never traded; since config 2026.09.27-1 the floor is baked into the live plan itself, so Live IS the NF stop and the two columns converge going forward - historical divergence predates the cutover. Rows the engine could not source an NF verdict for are backfilled here (ATR from stored 15m candles, filled at the live ready close) - an approximation.
+n=48 over 51.37 d (engine 0, backfill 48). NF (live since 2026-09-27): the same live ready calls, scored twice - Live with the plan's own stop, NF with the stop floored at max(0.5 x ATR(15m), 3 x round-trip cost: 0.34 % long / 0.14 % short), TP1 unchanged, taken only when gross >= 2.5R and net >= 1.0R. Net R charges the direction cost once per trade. Before 2026-09-27 (config 2026.09.24-5 and earlier) NF was a shadow comparator only, never traded; since config 2026.09.27-1 the floor is baked into the live plan itself, so Live IS the NF stop and the two columns converge going forward - historical divergence predates the cutover. Rows the engine could not source an NF verdict for are backfilled here (ATR from stored 15m candles, filled at the live ready close) - an approximation.
 
 
 ## RETEST 1H · paper
@@ -289,4 +291,4 @@ _provisional; not evidence of an edge_
 
 _provisional; not evidence of an edge_
 
-Captures 22734, gaps 48, DATA_UNAVAILABLE 6, mark drift |bps| median 2.8 / max 153.3, missing 1m candles 0.
+Captures 22737, gaps 48, DATA_UNAVAILABLE 6, mark drift |bps| median 2.8 / max 153.3, missing 1m candles 0.
