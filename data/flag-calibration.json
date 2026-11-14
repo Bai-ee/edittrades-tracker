@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-11-14T03:57:34.828Z",
+  "generatedAt": "2026-11-14T04:07:34.019Z",
   "target": 70,
   "minN": 30,
-  "scored": 1810,
+  "scored": 1812,
   "legacyCount": 0,
   "buckets": {
     "score": [
       {
         "key": "5/7",
-        "n": 427,
-        "right": 222,
+        "n": 428,
+        "right": 223,
         "wrong": 205,
         "flat": 4,
         "rate": 52,
@@ -26,20 +26,20 @@
       },
       {
         "key": "7/7",
-        "n": 37,
+        "n": 38,
         "right": 19,
-        "wrong": 18,
+        "wrong": 19,
         "flat": 0,
-        "rate": 51,
+        "rate": 50,
         "status": "below"
       }
     ],
     "timeframe": [
       {
         "key": "1m",
-        "n": 952,
+        "n": 953,
         "right": 459,
-        "wrong": 493,
+        "wrong": 494,
         "flat": 10,
         "rate": 48,
         "status": "below"
@@ -55,11 +55,11 @@
       },
       {
         "key": "5m",
-        "n": 271,
-        "right": 126,
+        "n": 272,
+        "right": 127,
         "wrong": 145,
         "flat": 3,
-        "rate": 46,
+        "rate": 47,
         "status": "below"
       },
       {
@@ -111,8 +111,8 @@
     "symbol": [
       {
         "key": "BTC",
-        "n": 632,
-        "right": 297,
+        "n": 633,
+        "right": 298,
         "wrong": 335,
         "flat": 11,
         "rate": 47,
@@ -129,9 +129,9 @@
       },
       {
         "key": "SOL",
-        "n": 598,
+        "n": 599,
         "right": 283,
-        "wrong": 315,
+        "wrong": 316,
         "flat": 4,
         "rate": 47,
         "status": "below"
@@ -149,9 +149,9 @@
       },
       {
         "key": "short",
-        "n": 1199,
-        "right": 604,
-        "wrong": 595,
+        "n": 1201,
+        "right": 605,
+        "wrong": 596,
         "flat": 13,
         "rate": 50,
         "status": "below"
@@ -178,9 +178,9 @@
       },
       {
         "key": "2R+",
-        "n": 1333,
-        "right": 660,
-        "wrong": 673,
+        "n": 1335,
+        "right": 661,
+        "wrong": 674,
         "flat": 22,
         "rate": 50,
         "status": "below"
@@ -189,9 +189,9 @@
     "nextTf": [
       {
         "key": "agrees",
-        "n": 1810,
-        "right": 894,
-        "wrong": 916,
+        "n": 1812,
+        "right": 895,
+        "wrong": 917,
         "flat": 25,
         "rate": 49,
         "status": "below"
@@ -325,10 +325,8 @@
     },
     {
       "rule": {
-        "minScore": "7/7",
+        "minScore": "5/7",
         "timeframes": [
-          "1m",
-          "3m",
           "5m",
           "15m",
           "30m",
@@ -340,12 +338,12 @@
         "nextTf": null
       },
       "projected": {
-        "n": 35,
-        "right": 19,
-        "wrong": 16,
+        "n": 178,
+        "right": 97,
+        "wrong": 81,
         "rate": 54
       },
-      "reason": "Best rule (7/7+ on 1m–4h with R:R ≥ 1.5) hit 54% over 35 calls, below the 70% target."
+      "reason": "Best rule (5/7+ on 5m–4h with R:R ≥ 1.5) hit 54% over 178 calls, below the 70% target."
     }
   ]
 }
