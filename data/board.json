@@ -1,32 +1,6 @@
 {
-  "closedThrough": "2026-11-15T09:27:00.000Z",
+  "closedThrough": "2026-11-15T09:37:00.000Z",
   "board": [
-    {
-      "ref": "40337c69",
-      "sym": "ETH",
-      "tf": "3m",
-      "dir": "long",
-      "stage": "found",
-      "st": "forming",
-      "lv": {
-        "ent": 1839.45,
-        "stop": 1828,
-        "inv": 1828,
-        "tp1": 1906.63,
-        "tp2": 1911.26,
-        "tp2src": "level",
-        "rr": 5.87,
-        "cap": 1850.57
-      },
-      "score": "2/7",
-      "gate": true,
-      "tfs": "1m✅ 3m⚠️ 5m✅ 15m⚠️ 1h❌ 4h❌ 1d❌",
-      "ev": {
-        "verdict": "CAUTION",
-        "vol": "Volume OK · 1.7x avg → GO",
-        "mom": "RSI 71 · Stoch 50/62 falling · no divergence"
-      }
-    },
     {
       "ref": "105376c6",
       "sym": "SOL",
@@ -46,11 +20,37 @@
       },
       "score": "3/7",
       "gate": false,
-      "tfs": "1m❌ 3m❌ 5m⚠️ 15m⚠️ 1h✅ 4h✅ 1d✅",
+      "tfs": "1m⚠️ 3m❌ 5m⚠️ 15m⚠️ 1h✅ 4h✅ 1d✅",
       "ev": {
         "verdict": "STAY OUT",
         "vol": "Volume WEAK · 0.4x avg → STAY OUT",
         "mom": "RSI 44 · Stoch 89/89 overbought · no divergence"
+      }
+    },
+    {
+      "ref": "c4ff5cfa",
+      "sym": "ETH",
+      "tf": "1m",
+      "dir": "short",
+      "stage": "watch",
+      "st": "confirmed",
+      "lv": {
+        "ent": 1827.19,
+        "stop": 1833.22,
+        "inv": 1833.22,
+        "tp1": 1815.58,
+        "tp2": 1811.64,
+        "tp2src": "level",
+        "rr": 1.93,
+        "cap": 1823.62
+      },
+      "score": "2/7",
+      "gate": false,
+      "tfs": "1m⚠️ 3m❌ 5m❌ 15m⚠️ 1h✅ 4h⚠️ 1d✅",
+      "ev": {
+        "verdict": "CAUTION",
+        "vol": "Volume OK · 0.8x avg → GO",
+        "mom": "RSI 40 · Stoch 0/3 oversold · no divergence"
       }
     },
     {
@@ -72,7 +72,7 @@
       },
       "score": "2/7",
       "gate": false,
-      "tfs": "1m❌ 3m❌ 5m❌ 15m⚠️ 1h✅ 4h⚠️ 1d✅",
+      "tfs": "1m⚠️ 3m❌ 5m❌ 15m⚠️ 1h✅ 4h⚠️ 1d✅",
       "ev": {
         "verdict": "STAY OUT",
         "vol": "Volume WEAK · 0.5x avg → STAY OUT",
@@ -84,7 +84,7 @@
     "found": 295,
     "opps": 112,
     "locked": 0,
-    "since": "2026-11-14T09:27:32.283Z",
+    "since": "2026-11-14T09:37:30.804Z",
     "partial": false
   },
   "flowRules": {
