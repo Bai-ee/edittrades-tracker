@@ -1,6 +1,6 @@
 # EditTrades call tracker report
 
-Generated 2026-11-16 02:47Z. R is gross, before fees and slippage. Not evidence of an edge. Scores the engine's calls against later closed candles.
+Generated 2026-11-16 02:56Z. R is gross, before fees and slippage. Not evidence of an edge. Scores the engine's calls against later closed candles.
 
 
 ## Strategy scoreboard · each from its own start
@@ -77,7 +77,7 @@ _provisional; not evidence of an edge_
 
 | Expectancy 7d | Scored 7d | Win rate 7d | Fills 7d | Losing streak 7d | Avg win R 7d | Last capture |
 | --- | --- | --- | --- | --- | --- | --- |
-| +0.58R | 24 | 37.5% | 24 / 24 | 6 | +3.20R | 2026-11-16 02:47Z |
+| +0.58R | 24 | 37.5% | 24 / 24 | 6 | +3.20R | 2026-11-16 02:56Z |
 
 
 ## Class check
@@ -87,7 +87,7 @@ _provisional; not evidence of an edge_
 | Class | Calls | Scored | Win rate | Exp. (gross R) | TP1 / Stop | Open | Not filled | No levels | Levels from (plan / candidate) | Calls (1-min log) | Of which captured | Median GOOD window (min) | Verdict |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | GOOD | 37 | 36 | 30.6% | +0.26R | 11 / 25 | 0 | 1 | 0 | 36 / 0 | 1 | 36 | – | WORKING |
-| WATCH | 3654 | 1644 | 27.9% | +0.10R | 458 / 1186 | 1 | 1695 | 314 | 26 / 1618 | – | – | – | FILTER MAY BE BLOCKING WINNERS |
+| WATCH | 3654 | 1645 | 27.8% | +0.10R | 458 / 1187 | 0 | 1695 | 314 | 26 / 1619 | – | – | – | FILTER MAY BE BLOCKING WINNERS |
 | BAD | 5490 | 1621 | 72.9% | −0.02R | 1181 / 440 | 0 | 815 | 3054 | 1621 / 0 | – | – | – | FILTER CONFIRMED |
 | DATA_UNAVAILABLE | 1 | 0 | – | – | 0 / 0 | 0 | 0 | 1 | 0 / 0 | – | – | – | [0 SCORED · TOO FEW TO JUDGE] |
 
@@ -102,9 +102,7 @@ GOOD calls come from the engine's 1-minute alert log since 2026-09-25; before th
 
 _provisional; not evidence of an edge_
 
-| Called | Symbol | Call | TF | Dir | Entry / stop / TP1 | Status |
-| --- | --- | --- | --- | --- | --- | --- |
-| 2026-11-16 02:37Z | BTC | WATCH | 3m | long | 65191 / 65010.1 / 65977.915 | open |
+_none yet_
 
 
 ## Last 7d
@@ -116,14 +114,14 @@ By class:
 | Class | Calls | Fills | TP1 | Stop | Open | Win rate | Exp. (gross R) | Net exp. (net of fees) | Avg net R:R (plan) | Max loss streak | Median min to TP1 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | BAD | 690 | 242 | 138 | 104 | 0 | 57% | −0.01R | −0.33R | 0.6 | 7 | 32 |
-| WATCH | 507 | 238 | 65 | 172 | 1 | 27.4% | +0.04R | −1.00R | 2.31 | 15 | 27 |
+| WATCH | 507 | 238 | 65 | 173 | 0 | 27.3% | +0.04R | −1.00R | 2.31 | 16 | 27 |
 | GOOD | 24 | 24 | 9 | 15 | 0 | 37.5% | +0.58R | +0.33R | 2.37 | 6 | 151 |
 
 By reason:
 
 | Reason | Calls | Fills | TP1 | Stop | Open | Win rate | Exp. (gross R) | Net exp. (net of fees) | Avg net R:R (plan) | Max loss streak | Median min to TP1 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| need_confirmed_flag_plan | 478 | 223 | 60 | 162 | 1 | 27% | +0.03R | −1.07R | – | 15 | 25 |
+| need_confirmed_flag_plan | 478 | 223 | 60 | 163 | 0 | 26.9% | +0.02R | −1.07R | – | 16 | 25 |
 | rr_below_min | 362 | 242 | 138 | 104 | 0 | 57% | −0.01R | −0.33R | 0.6 | 7 | 32 |
 | chase | 193 | 0 | 0 | 0 | 0 | – | – | – | – | 0 | – |
 | room_at_entry | 135 | 0 | 0 | 0 | 0 | – | – | – | – | 0 | – |
@@ -148,14 +146,14 @@ By class:
 | Class | Calls | Fills | TP1 | Stop | Open | Win rate | Exp. (gross R) | Net exp. (net of fees) | Avg net R:R (plan) | Max loss streak | Median min to TP1 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | BAD | 3242 | 964 | 683 | 279 | 0 | 71% | −0.01R | −0.34R | 0.47 | 7 | 23 |
-| WATCH | 2167 | 966 | 278 | 682 | 1 | 29% | +0.16R | −2.67R | 2.33 | 23 | 36 |
+| WATCH | 2167 | 966 | 278 | 683 | 0 | 28.9% | +0.16R | −2.67R | 2.33 | 23 | 36 |
 | GOOD | 33 | 33 | 9 | 23 | 0 | 28.1% | +0.18R | −0.07R | 2.48 | 8 | 151 |
 
 By reason:
 
 | Reason | Calls | Fills | TP1 | Stop | Open | Win rate | Exp. (gross R) | Net exp. (net of fees) | Avg net R:R (plan) | Max loss streak | Median min to TP1 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| need_confirmed_flag_plan | 2125 | 942 | 273 | 664 | 1 | 29.1% | +0.16R | −2.73R | – | 23 | 34 |
+| need_confirmed_flag_plan | 2125 | 942 | 273 | 665 | 0 | 29.1% | +0.16R | −2.73R | – | 23 | 34 |
 | rr_below_min | 1467 | 964 | 683 | 279 | 0 | 71% | −0.01R | −0.34R | 0.47 | 7 | 23 |
 | chase | 982 | 0 | 0 | 0 | 0 | – | – | – | – | 0 | – |
 | room_at_entry | 791 | 0 | 0 | 0 | 0 | – | – | – | – | 0 | – |
@@ -269,4 +267,4 @@ _provisional; not evidence of an edge_
 
 _provisional; not evidence of an edge_
 
-Captures 23292, gaps 48, DATA_UNAVAILABLE 6, mark drift |bps| median 2.9 / max 153.3, missing 1m candles 0.
+Captures 23295, gaps 48, DATA_UNAVAILABLE 6, mark drift |bps| median 2.9 / max 153.3, missing 1m candles 0.
