@@ -1,32 +1,6 @@
 {
-  "closedThrough": "2026-11-16T17:27:00.000Z",
+  "closedThrough": "2026-11-16T17:47:00.000Z",
   "board": [
-    {
-      "ref": "1c97ecc2",
-      "sym": "ETH",
-      "tf": "1m",
-      "dir": "long",
-      "stage": "lockable",
-      "st": "triggering",
-      "lv": {
-        "ent": 1833.03,
-        "stop": 1828.78,
-        "inv": 1828.78,
-        "tp1": 1844.52,
-        "tp2": 1864.27,
-        "tp2src": "level",
-        "rr": 2.7,
-        "cap": 1836.86
-      },
-      "score": "2/7",
-      "gate": true,
-      "tfs": "1m⚠️ 3m✅ 5m✅ 15m⚠️ 1h⚠️ 4h❌ 1d❌",
-      "ev": {
-        "verdict": "STAY OUT",
-        "vol": "Volume WEAK · 0.5x avg → STAY OUT",
-        "mom": "RSI 60 · Stoch 64/69 falling · bearish div ⚠️"
-      }
-    },
     {
       "ref": "212c545d",
       "sym": "BTC",
@@ -46,7 +20,7 @@
       },
       "score": "2/7",
       "gate": true,
-      "tfs": "1m❌ 3m❌ 5m❌ 15m⚠️ 1h⚠️ 4h✅ 1d✅",
+      "tfs": "1m⚠️ 3m❌ 5m❌ 15m⚠️ 1h⚠️ 4h✅ 1d✅",
       "ev": {
         "verdict": "STAY OUT",
         "vol": "Volume WEAK · 1.6x avg → STAY OUT",
@@ -72,19 +46,45 @@
       },
       "score": "2/7",
       "gate": true,
-      "tfs": "1m❌ 3m❌ 5m⚠️ 15m⚠️ 1h⚠️ 4h✅ 1d✅",
+      "tfs": "1m⚠️ 3m❌ 5m❌ 15m⚠️ 1h⚠️ 4h✅ 1d✅",
       "ev": {
         "verdict": "STAY OUT",
         "vol": "Volume WEAK · 0.7x avg → STAY OUT",
         "mom": "RSI 32 · Stoch 79/85 falling · bullish div ⚠️"
       }
+    },
+    {
+      "ref": "8d7c9617",
+      "sym": "SOL",
+      "tf": "1h",
+      "dir": "short",
+      "stage": "found",
+      "st": "proto",
+      "lv": {
+        "ent": 70.17,
+        "stop": 71.4,
+        "inv": 71.4,
+        "tp1": 67.12,
+        "tp2": 65.6,
+        "tp2src": "1.5x",
+        "rr": 2.48,
+        "cap": 68.69
+      },
+      "score": "2/7",
+      "gate": true,
+      "tfs": "1m⚠️ 3m❌ 5m❌ 15m⚠️ 1h⚠️ 4h✅ 1d✅",
+      "ev": {
+        "verdict": "STAY OUT",
+        "vol": "Volume WEAK · 2.3x avg → STAY OUT",
+        "mom": "RSI 49 · Stoch 66/50 rising · no divergence"
+      }
     }
   ],
   "pulse": {
-    "found": 288,
-    "opps": 111,
+    "found": 282,
+    "opps": 110,
     "locked": 0,
-    "since": "2026-11-15T17:27:38.875Z",
+    "since": "2026-11-15T17:47:30.744Z",
     "partial": false
   },
   "flowRules": {
