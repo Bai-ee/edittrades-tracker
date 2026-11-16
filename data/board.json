@@ -1,5 +1,5 @@
 {
-  "closedThrough": "2026-11-16T14:27:00.000Z",
+  "closedThrough": "2026-11-16T14:47:00.000Z",
   "board": [
     {
       "ref": "8d7c9617",
@@ -20,11 +20,37 @@
       },
       "score": "3/7",
       "gate": true,
-      "tfs": "1m❌ 3m⚠️ 5m⚠️ 15m⚠️ 1h✅ 4h✅ 1d✅",
+      "tfs": "1m❌ 3m❌ 5m❌ 15m⚠️ 1h✅ 4h✅ 1d✅",
       "ev": {
         "verdict": "STAY OUT",
         "vol": "Volume WEAK · 1.3x avg → STAY OUT",
         "mom": "RSI 43 · Stoch 18/27 falling · no divergence"
+      }
+    },
+    {
+      "ref": "cf7a579c",
+      "sym": "BTC",
+      "tf": "1m",
+      "dir": "long",
+      "stage": "found",
+      "st": "forming",
+      "lv": {
+        "ent": 65448.9,
+        "stop": 64999.1,
+        "inv": 64999.1,
+        "tp1": 66822.5,
+        "tp2": 67451.5,
+        "tp2src": "level",
+        "rr": 3.05,
+        "cap": 65745
+      },
+      "score": "2/7",
+      "gate": true,
+      "tfs": "1m✅ 3m✅ 5m⚠️ 15m⚠️ 1h❌ 4h❌ 1d❌",
+      "ev": {
+        "verdict": "STAY OUT",
+        "vol": "Volume WEAK · 1.2x avg → STAY OUT",
+        "mom": "RSI 56 · Stoch 2/18 oversold · no divergence"
       }
     },
     {
@@ -46,45 +72,19 @@
       },
       "score": "3/7",
       "gate": false,
-      "tfs": "1m❌ 3m⚠️ 5m⚠️ 15m⚠️ 1h✅ 4h✅ 1d✅",
+      "tfs": "1m❌ 3m❌ 5m⚠️ 15m⚠️ 1h✅ 4h✅ 1d✅",
       "ev": {
         "verdict": "STAY OUT",
         "vol": "Volume WEAK · 0.5x avg → STAY OUT",
         "mom": "RSI 30 · Stoch 88/93 overbought · bullish div ⚠️"
       }
-    },
-    {
-      "ref": "72103874",
-      "sym": "SOL",
-      "tf": "4h",
-      "dir": "short",
-      "stage": "watch",
-      "st": "forming",
-      "lv": {
-        "ent": 69.45,
-        "stop": 73.24,
-        "inv": 73.24,
-        "tp1": 51.74,
-        "tp2": 42.89,
-        "tp2src": "1.5x",
-        "rr": 4.67,
-        "cap": 66.09
-      },
-      "score": "3/7",
-      "gate": false,
-      "tfs": "1m❌ 3m⚠️ 5m⚠️ 15m⚠️ 1h✅ 4h✅ 1d✅",
-      "ev": {
-        "verdict": "STAY OUT",
-        "vol": "Volume WEAK · 0.3x avg → STAY OUT",
-        "mom": "RSI 34 · Stoch 85/89 overbought · bullish div ⚠️"
-      }
     }
   ],
   "pulse": {
-    "found": 302,
-    "opps": 114,
+    "found": 303,
+    "opps": 115,
     "locked": 0,
-    "since": "2026-11-15T14:27:29.638Z",
+    "since": "2026-11-15T14:47:32.939Z",
     "partial": false
   },
   "flowRules": {
