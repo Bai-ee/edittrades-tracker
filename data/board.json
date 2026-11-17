@@ -1,32 +1,6 @@
 {
-  "closedThrough": "2026-11-17T20:47:00.000Z",
+  "closedThrough": "2026-11-17T20:57:00.000Z",
   "board": [
-    {
-      "ref": "a8b1b1b2",
-      "sym": "SOL",
-      "tf": "5m",
-      "dir": "long",
-      "stage": "lockable",
-      "st": "confirmed",
-      "lv": {
-        "ent": 72.98,
-        "stop": 72.51,
-        "inv": 72.51,
-        "tp1": 73.92,
-        "tp2": 74.09,
-        "tp2src": "level",
-        "rr": 2,
-        "cap": 73.27
-      },
-      "score": "2/7",
-      "gate": true,
-      "tfs": "1m⚠️ 3m⚠️ 5m✅ 15m✅ 1h⚠️ 4h❌ 1d❌",
-      "ev": {
-        "verdict": "STAY OUT",
-        "vol": "Volume WEAK · 0.3x avg → STAY OUT",
-        "mom": "RSI 61 · Stoch 86/92 overbought · no divergence"
-      }
-    },
     {
       "ref": "d5703b58",
       "sym": "BTC",
@@ -44,9 +18,9 @@
         "rr": 4.7,
         "cap": 61680.51
       },
-      "score": "3/7",
+      "score": "5/7",
       "gate": true,
-      "tfs": "1m⚠️ 3m⚠️ 5m⚠️ 15m⚠️ 1h✅ 4h✅ 1d✅",
+      "tfs": "1m⚠️ 3m✅ 5m✅ 15m⚠️ 1h✅ 4h✅ 1d✅",
       "ev": {
         "verdict": "CAUTION",
         "vol": "Volume OK · 1.3x avg → GO",
@@ -72,19 +46,45 @@
       },
       "score": "2/7",
       "gate": true,
-      "tfs": "1m⚠️ 3m❌ 5m❌ 15m❌ 1h⚠️ 4h✅ 1d✅",
+      "tfs": "1m⚠️ 3m⚠️ 5m❌ 15m❌ 1h⚠️ 4h✅ 1d✅",
       "ev": {
         "verdict": "STAY OUT",
         "vol": "Volume WEAK · 0.8x avg → STAY OUT",
         "mom": "RSI 44 · Stoch 86/92 overbought · no divergence"
       }
+    },
+    {
+      "ref": "d020799c",
+      "sym": "ETH",
+      "tf": "4h",
+      "dir": "short",
+      "stage": "found",
+      "st": "forming",
+      "lv": {
+        "ent": 1749.17,
+        "stop": 1864.27,
+        "inv": 1864.27,
+        "tp1": 1431.32,
+        "tp2": 1272.4,
+        "tp2src": "1.5x",
+        "rr": 2.76,
+        "cap": 1691
+      },
+      "score": "2/5",
+      "gate": true,
+      "tfs": "1m⚠️ 3m· 5m· 15m⚠️ 1h⚠️ 4h✅ 1d✅",
+      "ev": {
+        "verdict": "STAY OUT",
+        "vol": "Volume WEAK · 1.8x avg → STAY OUT",
+        "mom": "RSI 35 · Stoch 35/64 falling · no divergence"
+      }
     }
   ],
   "pulse": {
-    "found": 292,
-    "opps": 93,
+    "found": 288,
+    "opps": 91,
     "locked": 0,
-    "since": "2026-11-16T20:47:31.415Z",
+    "since": "2026-11-16T20:57:33.589Z",
     "partial": false
   },
   "flowRules": {
