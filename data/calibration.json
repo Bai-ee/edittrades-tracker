@@ -1,29 +1,29 @@
 {
-  "generatedAt": "2026-11-17T20:17:53.075Z",
-  "n": 13253,
+  "generatedAt": "2026-11-17T20:27:56.475Z",
+  "n": 13260,
   "phases": {
     "tightening": {
-      "n": 10144,
+      "n": 10148,
       "brier": 0.675,
-      "baselineBrier": 0.6702,
+      "baselineBrier": 0.6703,
       "baseline": {
         "retest_go": 14.36,
         "runner": 11.71,
-        "false_break": 11.46,
-        "fail_first": 52.12,
-        "chop": 10.34
+        "false_break": 11.47,
+        "fail_first": 52.11,
+        "chop": 10.36
       }
     },
     "broken": {
-      "n": 3109,
+      "n": 3112,
       "brier": 0.8388,
-      "baselineBrier": 0.7164,
+      "baselineBrier": 0.7165,
       "baseline": {
-        "retest_go": 37.57,
-        "runner": 29.5,
-        "false_break": 18.98,
+        "retest_go": 37.56,
+        "runner": 29.47,
+        "false_break": 18.99,
         "fail_first": 0,
-        "chop": 13.96
+        "chop": 13.98
       }
     }
   },
@@ -31,13 +31,13 @@
     "runner": [
       {
         "bucket": "0-10",
-        "n": 5962,
+        "n": 5966,
         "meanPredicted": 5.5,
         "realisedRate": 13.2
       },
       {
         "bucket": "10-20",
-        "n": 6276,
+        "n": 6279,
         "meanPredicted": 14.5,
         "realisedRate": 16.9
       },
@@ -93,7 +93,7 @@
     "fail_first": [
       {
         "bucket": "0-10",
-        "n": 3109,
+        "n": 3112,
         "meanPredicted": 0,
         "realisedRate": 0
       },
@@ -105,19 +105,19 @@
       },
       {
         "bucket": "20-30",
-        "n": 217,
+        "n": 218,
         "meanPredicted": 26,
-        "realisedRate": 35.5
+        "realisedRate": 35.8
       },
       {
         "bucket": "30-40",
-        "n": 2774,
+        "n": 2776,
         "meanPredicted": 36.4,
         "realisedRate": 47.2
       },
       {
         "bucket": "40-50",
-        "n": 2789,
+        "n": 2790,
         "meanPredicted": 44.4,
         "realisedRate": 49
       },
@@ -154,7 +154,7 @@
     ]
   },
   "likely": {
-    "n": 13253,
+    "n": 13260,
     "hitRate": 43.3
   },
   "chase": {
@@ -163,7 +163,7 @@
       "runnerRate": 29.7
     },
     "low": {
-      "n": 11036,
+      "n": 11043,
       "runnerRate": 13.1
     }
   }
