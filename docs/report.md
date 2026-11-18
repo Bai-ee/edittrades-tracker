@@ -1,6 +1,6 @@
 # EditTrades call tracker report
 
-Generated 2026-11-18 05:38Z. R is gross, before fees and slippage. Not evidence of an edge. Scores the engine's calls against later closed candles.
+Generated 2026-11-18 05:48Z. R is gross, before fees and slippage. Not evidence of an edge. Scores the engine's calls against later closed candles.
 
 
 ## Strategy scoreboard · each from its own start
@@ -77,7 +77,7 @@ _provisional; not evidence of an edge_
 
 | Expectancy 7d | Scored 7d | Win rate 7d | Fills 7d | Losing streak 7d | Avg win R 7d | Last capture |
 | --- | --- | --- | --- | --- | --- | --- |
-| +0.91R | 18 | 44.4% | 18 / 18 | 3 | +3.29R | 2026-11-18 05:37Z |
+| +0.91R | 18 | 44.4% | 18 / 18 | 3 | +3.29R | 2026-11-18 05:47Z |
 
 
 ## Class check
@@ -113,16 +113,16 @@ By class:
 
 | Class | Calls | Fills | TP1 | Stop | Open | Win rate | Exp. (gross R) | Net exp. (net of fees) | Avg net R:R (plan) | Max loss streak | Median min to TP1 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| BAD | 683 | 221 | 131 | 90 | 0 | 59.3% | −0.02R | −0.34R | 0.6 | 7 | 23 |
-| WATCH | 483 | 232 | 66 | 166 | 0 | 28.5% | +0.09R | −0.90R | 2.54 | 25 | 28 |
+| BAD | 682 | 221 | 131 | 90 | 0 | 59.3% | −0.02R | −0.34R | 0.6 | 7 | 23 |
+| WATCH | 482 | 231 | 66 | 165 | 0 | 28.6% | +0.09R | −0.90R | 2.54 | 25 | 28 |
 | GOOD | 18 | 18 | 8 | 10 | 0 | 44.4% | +0.91R | +0.67R | 2.47 | 3 | 193 |
 
 By reason:
 
 | Reason | Calls | Fills | TP1 | Stop | Open | Win rate | Exp. (gross R) | Net exp. (net of fees) | Avg net R:R (plan) | Max loss streak | Median min to TP1 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| need_confirmed_flag_plan | 459 | 219 | 62 | 157 | 0 | 28.3% | +0.08R | −0.95R | – | 25 | 27 |
-| rr_below_min | 333 | 221 | 131 | 90 | 0 | 59.3% | −0.02R | −0.34R | 0.6 | 7 | 23 |
+| need_confirmed_flag_plan | 458 | 218 | 62 | 156 | 0 | 28.4% | +0.08R | −0.95R | – | 25 | 27 |
+| rr_below_min | 332 | 221 | 131 | 90 | 0 | 59.3% | −0.02R | −0.34R | 0.6 | 7 | 23 |
 | chase | 187 | 0 | 0 | 0 | 0 | – | – | – | – | 0 | – |
 | room_at_entry | 163 | 0 | 0 | 0 | 0 | – | – | – | – | 0 | – |
 | entry_condition | 24 | 13 | 4 | 9 | 0 | 30.8% | +0.24R | +0.01R | 2.54 | 7 | 76 |
@@ -269,4 +269,4 @@ _provisional; not evidence of an edge_
 
 _provisional; not evidence of an edge_
 
-Captures 24213, gaps 48, DATA_UNAVAILABLE 6, mark drift |bps| median 2.9 / max 153.3, missing 1m candles 0.
+Captures 24216, gaps 48, DATA_UNAVAILABLE 6, mark drift |bps| median 2.9 / max 153.3, missing 1m candles 0.
