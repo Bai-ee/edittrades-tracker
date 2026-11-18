@@ -1,32 +1,6 @@
 {
-  "closedThrough": "2026-11-18T04:57:00.000Z",
+  "closedThrough": "2026-11-18T05:07:00.000Z",
   "board": [
-    {
-      "ref": "d16e8e9a",
-      "sym": "BTC",
-      "tf": "15m",
-      "dir": "short",
-      "stage": "found",
-      "st": "forming",
-      "lv": {
-        "ent": 64011,
-        "stop": 64690.4,
-        "inv": 64690.4,
-        "tp1": 62899.4,
-        "tp2": 62343.6,
-        "tp2src": "1.5x",
-        "rr": 1.64,
-        "cap": 63692.06
-      },
-      "score": "4/7",
-      "gate": true,
-      "tfs": "1m✅ 3m⚠️ 5m✅ 15m⚠️ 1h✅ 4h⚠️ 1d✅",
-      "ev": {
-        "verdict": "STAY OUT",
-        "vol": "Volume WEAK · 0.4x avg → STAY OUT",
-        "mom": "RSI 46 · Stoch 53/49 rising · no divergence"
-      }
-    },
     {
       "ref": "82f6a4e2",
       "sym": "ETH",
@@ -46,7 +20,7 @@
       },
       "score": "3/7",
       "gate": true,
-      "tfs": "1m⚠️ 3m⚠️ 5m⚠️ 15m✅ 1h✅ 4h⚠️ 1d✅",
+      "tfs": "1m⚠️ 3m✅ 5m⚠️ 15m⚠️ 1h✅ 4h⚠️ 1d✅",
       "ev": {
         "verdict": "CAUTION",
         "vol": "Volume OK · 1x avg → GO",
@@ -72,19 +46,45 @@
       },
       "score": "3/7",
       "gate": true,
-      "tfs": "1m⚠️ 3m⚠️ 5m⚠️ 15m✅ 1h✅ 4h⚠️ 1d✅",
+      "tfs": "1m⚠️ 3m✅ 5m⚠️ 15m⚠️ 1h✅ 4h⚠️ 1d✅",
+      "ev": {
+        "verdict": "STAY OUT",
+        "vol": "Volume WEAK · 0.5x avg → STAY OUT",
+        "mom": "RSI 47 · Stoch 41/36 rising · no divergence"
+      }
+    },
+    {
+      "ref": "7cb4c761",
+      "sym": "ETH",
+      "tf": "1m",
+      "dir": "short",
+      "stage": "found",
+      "st": "forming",
+      "lv": {
+        "ent": 1799.85,
+        "stop": 1801.98,
+        "inv": 1801.98,
+        "tp1": 1795.41,
+        "tp2": 1795.05,
+        "tp2src": "level",
+        "rr": 2.08,
+        "cap": 1797.96
+      },
+      "score": "3/7",
+      "gate": true,
+      "tfs": "1m⚠️ 3m✅ 5m⚠️ 15m⚠️ 1h✅ 4h⚠️ 1d✅",
       "ev": {
         "verdict": "STAY OUT",
         "vol": "Volume WEAK · 0.1x avg → STAY OUT",
-        "mom": "RSI 42 · Stoch 30/31 falling · no divergence"
+        "mom": "RSI 44 · Stoch 51/51 rising · no divergence"
       }
     }
   ],
   "pulse": {
     "found": 255,
-    "opps": 82,
+    "opps": 81,
     "locked": 0,
-    "since": "2026-11-17T04:57:33.441Z",
+    "since": "2026-11-17T05:07:30.381Z",
     "partial": false
   },
   "flowRules": {
