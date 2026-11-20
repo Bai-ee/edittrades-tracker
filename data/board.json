@@ -1,32 +1,6 @@
 {
-  "closedThrough": "2026-11-20T03:17:00.000Z",
+  "closedThrough": "2026-11-20T03:27:00.000Z",
   "board": [
-    {
-      "ref": "366cbfed",
-      "sym": "ETH",
-      "tf": "1h",
-      "dir": "short",
-      "stage": "lockable",
-      "st": "triggering",
-      "lv": {
-        "ent": 1734.23,
-        "stop": 1772.13,
-        "inv": 1772.13,
-        "tp1": 1652.94,
-        "tp2": 1612.3,
-        "tp2src": "1.5x",
-        "rr": 2.14,
-        "cap": 1696.7
-      },
-      "score": "4/7",
-      "gate": true,
-      "tfs": "1m⚠️ 3m✅ 5m✅ 15m⚠️ 1h✅ 4h✅ 1d⚠️",
-      "ev": {
-        "verdict": "STAY OUT",
-        "vol": "Volume WEAK · 0.6x avg → STAY OUT",
-        "mom": "RSI 40 · Stoch 23/26 falling · bullish div ⚠️"
-      }
-    },
     {
       "ref": "1156d1d4",
       "sym": "BTC",
@@ -72,19 +46,45 @@
       },
       "score": "2/7",
       "gate": true,
-      "tfs": "1m⚠️ 3m⚠️ 5m⚠️ 15m⚠️ 1h✅ 4h✅ 1d⚠️",
+      "tfs": "1m❌ 3m⚠️ 5m⚠️ 15m⚠️ 1h✅ 4h✅ 1d⚠️",
       "ev": {
         "verdict": "STAY OUT",
         "vol": "Volume WEAK · 0.9x avg → STAY OUT",
         "mom": "RSI 45 · Stoch 26/29 falling · no divergence"
       }
+    },
+    {
+      "ref": "366cbfed",
+      "sym": "ETH",
+      "tf": "1h",
+      "dir": "short",
+      "stage": "lockable",
+      "st": "triggering",
+      "lv": {
+        "ent": 1734.23,
+        "stop": 1772.13,
+        "inv": 1772.13,
+        "tp1": 1652.94,
+        "tp2": 1612.3,
+        "tp2src": "1.5x",
+        "rr": 2.14,
+        "cap": 1696.7
+      },
+      "score": "2/6",
+      "gate": true,
+      "tfs": "1m⚠️ 3m⚠️ 5m· 15m⚠️ 1h✅ 4h✅ 1d⚠️",
+      "ev": {
+        "verdict": "STAY OUT",
+        "vol": "Volume WEAK · 0.6x avg → STAY OUT",
+        "mom": "RSI 40 · Stoch 23/26 falling · bullish div ⚠️"
+      }
     }
   ],
   "pulse": {
     "found": 305,
-    "opps": 132,
+    "opps": 131,
     "locked": 0,
-    "since": "2026-11-19T03:17:32.224Z",
+    "since": "2026-11-19T03:27:34.130Z",
     "partial": false
   },
   "flowRules": {
