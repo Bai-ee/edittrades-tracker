@@ -1,32 +1,6 @@
 {
-  "closedThrough": "2026-11-20T15:17:00.000Z",
+  "closedThrough": "2026-11-20T15:27:00.000Z",
   "board": [
-    {
-      "ref": "f0058324",
-      "sym": "BTC",
-      "tf": "1h",
-      "dir": "short",
-      "stage": "lockable",
-      "st": "triggering",
-      "lv": {
-        "ent": 61353.2,
-        "stop": 62550,
-        "inv": 62550,
-        "tp1": 58552,
-        "tp2": 57151.4,
-        "tp2src": "1.5x",
-        "rr": 2.34,
-        "cap": 60386.56
-      },
-      "score": "6/7",
-      "gate": true,
-      "tfs": "1m✅ 3m✅ 5m✅ 15m✅ 1h⚠️ 4h✅ 1d✅",
-      "ev": {
-        "verdict": "CAUTION",
-        "vol": "Volume OK · 0.9x avg → GO",
-        "mom": "RSI 44 · Stoch 77/77 rising · no divergence"
-      }
-    },
     {
       "ref": "366cbfed",
       "sym": "ETH",
@@ -44,21 +18,47 @@
         "rr": 2.21,
         "cap": 1682.68
       },
-      "score": "6/7",
+      "score": "5/7",
       "gate": true,
-      "tfs": "1m✅ 3m✅ 5m✅ 15m✅ 1h✅ 4h✅ 1d⚠️",
+      "tfs": "1m⚠️ 3m✅ 5m✅ 15m✅ 1h✅ 4h✅ 1d⚠️",
       "ev": {
         "verdict": "CAUTION",
         "vol": "Volume OK · 0.9x avg → GO",
         "mom": "RSI 44 · Stoch 76/77 falling · bullish div ⚠️"
       }
+    },
+    {
+      "ref": "4d660fa5",
+      "sym": "BTC",
+      "tf": "1m",
+      "dir": "short",
+      "stage": "watch",
+      "st": "proto",
+      "lv": {
+        "ent": 60002.1,
+        "stop": 60169.9,
+        "inv": 60169.9,
+        "tp1": 58569.7,
+        "tp2": 57853.5,
+        "tp2src": "1.5x",
+        "rr": 8.54,
+        "cap": 59742.01
+      },
+      "score": "5/7",
+      "gate": false,
+      "tfs": "1m⚠️ 3m✅ 5m✅ 15m✅ 1h⚠️ 4h✅ 1d✅",
+      "ev": {
+        "verdict": "STAY OUT",
+        "vol": "Volume WEAK · 0.3x avg → STAY OUT",
+        "mom": "RSI 27 · Stoch 69/53 rising · no divergence"
+      }
     }
   ],
   "pulse": {
-    "found": 297,
+    "found": 296,
     "opps": 115,
     "locked": 0,
-    "since": "2026-11-19T15:17:33.437Z",
+    "since": "2026-11-19T15:27:32.045Z",
     "partial": false
   },
   "flowRules": {
