@@ -1,5 +1,5 @@
 {
-  "closedThrough": "2026-11-21T07:47:00.000Z",
+  "closedThrough": "2026-11-21T07:57:00.000Z",
   "board": [
     {
       "ref": "c1e6cc45",
@@ -28,37 +28,11 @@
       }
     },
     {
-      "ref": "47558874",
-      "sym": "ETH",
-      "tf": "1m",
-      "dir": "short",
-      "stage": "watch",
-      "st": "confirmed",
-      "lv": {
-        "ent": 1629.51,
-        "stop": 1634.8,
-        "inv": 1634.8,
-        "tp1": 1620.45,
-        "tp2": 1583.46,
-        "tp2src": "level",
-        "rr": 1.71,
-        "cap": 1626.95
-      },
-      "score": "2/7",
-      "gate": false,
-      "tfs": "1m⚠️ 3m❌ 5m⚠️ 15m⚠️ 1h⚠️ 4h✅ 1d✅",
-      "ev": {
-        "verdict": "CAUTION",
-        "vol": "Volume OK · 1.7x avg → GO",
-        "mom": "RSI 44 · Stoch 0/19 oversold · no divergence"
-      }
-    },
-    {
       "ref": "fa0b508a",
       "sym": "SOL",
       "tf": "1h",
       "dir": "short",
-      "stage": "watch",
+      "stage": "lockable",
       "st": "confirmed",
       "lv": {
         "ent": 67.37,
@@ -70,13 +44,39 @@
         "rr": 2.46,
         "cap": 65.37
       },
-      "score": "1/7",
+      "score": "2/7",
       "gate": true,
-      "tfs": "1m⚠️ 3m⚠️ 5m⚠️ 15m⚠️ 1h⚠️ 4h✅ 1d⚠️",
+      "tfs": "1m⚠️ 3m✅ 5m⚠️ 15m⚠️ 1h⚠️ 4h✅ 1d⚠️",
       "ev": {
         "verdict": "STAY OUT",
         "vol": "Volume WEAK · 1.1x avg → STAY OUT",
         "mom": "RSI 44 · Stoch 40/32 rising · no divergence"
+      }
+    },
+    {
+      "ref": "5173bd5f",
+      "sym": "SOL",
+      "tf": "1m",
+      "dir": "short",
+      "stage": "watch",
+      "st": "forming",
+      "lv": {
+        "ent": 67.38,
+        "stop": 67.56,
+        "inv": 67.56,
+        "tp1": 66.79,
+        "tp2": 65.02,
+        "tp2src": "level",
+        "rr": 3.28,
+        "cap": 67.23
+      },
+      "score": "2/7",
+      "gate": false,
+      "tfs": "1m⚠️ 3m✅ 5m⚠️ 15m⚠️ 1h⚠️ 4h✅ 1d⚠️",
+      "ev": {
+        "verdict": "STAY OUT",
+        "vol": "Volume WEAK · 0.7x avg → STAY OUT",
+        "mom": "RSI 40 · Stoch 50/48 rising · no divergence"
       }
     }
   ],
@@ -84,7 +84,7 @@
     "found": 315,
     "opps": 105,
     "locked": 0,
-    "since": "2026-11-20T07:47:31.663Z",
+    "since": "2026-11-20T07:57:33.677Z",
     "partial": false
   },
   "flowRules": {
