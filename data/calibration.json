@@ -1,27 +1,27 @@
 {
-  "generatedAt": "2026-11-21T16:37:59.052Z",
-  "n": 14159,
+  "generatedAt": "2026-11-21T16:47:54.058Z",
+  "n": 14162,
   "phases": {
     "tightening": {
-      "n": 10867,
+      "n": 10869,
       "brier": 0.673,
       "baselineBrier": 0.6682,
       "baseline": {
-        "retest_go": 14.3,
+        "retest_go": 14.31,
         "runner": 11.59,
         "false_break": 11.42,
         "fail_first": 52.37,
-        "chop": 10.32
+        "chop": 10.31
       }
     },
     "broken": {
-      "n": 3292,
-      "brier": 0.839,
-      "baselineBrier": 0.715,
+      "n": 3293,
+      "brier": 0.8389,
+      "baselineBrier": 0.7149,
       "baseline": {
-        "retest_go": 38.06,
-        "runner": 29.16,
-        "false_break": 19.05,
+        "retest_go": 38.08,
+        "runner": 29.15,
+        "false_break": 19.04,
         "fail_first": 0,
         "chop": 13.73
       }
@@ -31,13 +31,13 @@
     "runner": [
       {
         "bucket": "0-10",
-        "n": 6361,
+        "n": 6362,
         "meanPredicted": 5.5,
         "realisedRate": 13
       },
       {
         "bucket": "10-20",
-        "n": 6703,
+        "n": 6705,
         "meanPredicted": 14.5,
         "realisedRate": 16.6
       },
@@ -93,7 +93,7 @@
     "fail_first": [
       {
         "bucket": "0-10",
-        "n": 3292,
+        "n": 3293,
         "meanPredicted": 0,
         "realisedRate": 0
       },
@@ -117,13 +117,13 @@
       },
       {
         "bucket": "40-50",
-        "n": 3007,
+        "n": 3008,
         "meanPredicted": 44.4,
         "realisedRate": 49
       },
       {
         "bucket": "50-60",
-        "n": 2755,
+        "n": 2756,
         "meanPredicted": 55.2,
         "realisedRate": 57.1
       },
@@ -154,16 +154,16 @@
     ]
   },
   "likely": {
-    "n": 14159,
+    "n": 14162,
     "hitRate": 43.5
   },
   "chase": {
     "highElevated": {
-      "n": 2352,
+      "n": 2353,
       "runnerRate": 29.5
     },
     "low": {
-      "n": 11807,
+      "n": 11809,
       "runnerRate": 12.9
     }
   }
