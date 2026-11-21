@@ -1,32 +1,6 @@
 {
-  "closedThrough": "2026-11-21T08:47:00.000Z",
+  "closedThrough": "2026-11-21T08:57:00.000Z",
   "board": [
-    {
-      "ref": "b9fdfbf1",
-      "sym": "SOL",
-      "tf": "3m",
-      "dir": "short",
-      "stage": "found",
-      "st": "forming",
-      "lv": {
-        "ent": 66.58,
-        "stop": 67.11,
-        "inv": 67.11,
-        "tp1": 65.24,
-        "tp2": 65.02,
-        "tp2src": "level",
-        "rr": 2.53,
-        "cap": 66.25
-      },
-      "score": "2/7",
-      "gate": true,
-      "tfs": "1m⚠️ 3m⚠️ 5m✅ 15m⚠️ 1h⚠️ 4h✅ 1d⚠️",
-      "ev": {
-        "verdict": "STAY OUT",
-        "vol": "Volume WEAK · 1.1x avg → STAY OUT",
-        "mom": "RSI 49 · Stoch 57/31 rising · no divergence"
-      }
-    },
     {
       "ref": "c1e6cc45",
       "sym": "BTC",
@@ -46,7 +20,7 @@
       },
       "score": "2/7",
       "gate": false,
-      "tfs": "1m❌ 3m⚠️ 5m⚠️ 15m⚠️ 1h⚠️ 4h✅ 1d✅",
+      "tfs": "1m⚠️ 3m⚠️ 5m⚠️ 15m⚠️ 1h⚠️ 4h✅ 1d✅",
       "ev": {
         "verdict": "STAY OUT",
         "vol": "Volume WEAK · 0.7x avg → STAY OUT",
@@ -70,21 +44,47 @@
         "rr": 2.46,
         "cap": 65.34
       },
-      "score": "2/7",
+      "score": "1/7",
       "gate": false,
-      "tfs": "1m⚠️ 3m⚠️ 5m✅ 15m⚠️ 1h⚠️ 4h✅ 1d⚠️",
+      "tfs": "1m❌ 3m⚠️ 5m⚠️ 15m⚠️ 1h⚠️ 4h✅ 1d⚠️",
       "ev": {
         "verdict": "STAY OUT",
         "vol": "Volume WEAK · 0.8x avg → STAY OUT",
         "mom": "RSI 41 · Stoch 61/38 rising · bullish div ⚠️"
       }
+    },
+    {
+      "ref": "65445cc9",
+      "sym": "ETH",
+      "tf": "1h",
+      "dir": "short",
+      "stage": "watch",
+      "st": "forming",
+      "lv": {
+        "ent": 1542.99,
+        "stop": 1654.99,
+        "inv": 1654.99,
+        "tp1": 1317.99,
+        "tp2": 1205.49,
+        "tp2src": "1.5x",
+        "rr": 2.01,
+        "cap": 1495.23
+      },
+      "score": "1/7",
+      "gate": true,
+      "tfs": "1m❌ 3m❌ 5m⚠️ 15m⚠️ 1h⚠️ 4h⚠️ 1d✅",
+      "ev": {
+        "verdict": "CAUTION",
+        "vol": "Volume OK · 0.8x avg → GO",
+        "mom": "RSI 45 · Stoch 65/34 rising · no divergence"
+      }
     }
   ],
   "pulse": {
-    "found": 316,
+    "found": 317,
     "opps": 107,
     "locked": 0,
-    "since": "2026-11-20T08:47:30.547Z",
+    "since": "2026-11-20T08:57:30.061Z",
     "partial": false
   },
   "flowRules": {
