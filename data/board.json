@@ -1,32 +1,6 @@
 {
-  "closedThrough": "2026-11-23T08:07:00.000Z",
+  "closedThrough": "2026-11-23T08:17:00.000Z",
   "board": [
-    {
-      "ref": "ce0fd34d",
-      "sym": "SOL",
-      "tf": "3m",
-      "dir": "long",
-      "stage": "found",
-      "st": "forming",
-      "lv": {
-        "ent": 72.11,
-        "stop": 71.79,
-        "inv": 71.79,
-        "tp1": 72.89,
-        "tp2": 72.9,
-        "tp2src": "level",
-        "rr": 2.44,
-        "cap": 72.26
-      },
-      "score": "3/7",
-      "gate": true,
-      "tfs": "1m✅ 3m✅ 5m✅ 15m⚠️ 1h⚠️ 4h⚠️ 1d❌",
-      "ev": {
-        "verdict": "STAY OUT",
-        "vol": "Volume WEAK · 0.3x avg → STAY OUT",
-        "mom": "RSI 61 · Stoch 39/21 rising · no divergence"
-      }
-    },
     {
       "ref": "f6605a6e",
       "sym": "SOL",
@@ -44,9 +18,9 @@
         "rr": 1.47,
         "cap": 72.16
       },
-      "score": "3/7",
+      "score": "1/7",
       "gate": false,
-      "tfs": "1m✅ 3m✅ 5m✅ 15m⚠️ 1h⚠️ 4h⚠️ 1d❌",
+      "tfs": "1m⚠️ 3m⚠️ 5m✅ 15m⚠️ 1h⚠️ 4h⚠️ 1d❌",
       "ev": {
         "verdict": "STAY OUT",
         "vol": "Volume WEAK · 0.8x avg → STAY OUT",
@@ -54,37 +28,63 @@
       }
     },
     {
-      "ref": "52004ed8",
+      "ref": "3214e3d4",
+      "sym": "ETH",
+      "tf": "3m",
+      "dir": "short",
+      "stage": "watch",
+      "st": "confirmed",
+      "lv": {
+        "ent": 1719.17,
+        "stop": 1722.53,
+        "inv": 1722.53,
+        "tp1": 1711.96,
+        "tp2": 1709.27,
+        "tp2src": "level",
+        "rr": 2.15,
+        "cap": 1715.17
+      },
+      "score": "1/7",
+      "gate": false,
+      "tfs": "1m✅ 3m⚠️ 5m⚠️ 15m⚠️ 1h⚠️ 4h⚠️ 1d⚠️",
+      "ev": {
+        "verdict": "GO",
+        "vol": "Volume OK · 6.5x avg → GO",
+        "mom": "RSI 36 · Stoch 26/45 falling · no divergence"
+      }
+    },
+    {
+      "ref": "9f16a66a",
       "sym": "SOL",
-      "tf": "15m",
+      "tf": "5m",
       "dir": "long",
       "stage": "watch",
-      "st": "forming",
+      "st": "triggering",
       "lv": {
         "ent": 72.28,
         "stop": 71.79,
         "inv": 71.79,
-        "tp1": 74.78,
-        "tp2": 75.56,
+        "tp1": 73.06,
+        "tp2": 73.1,
         "tp2src": "level",
-        "rr": 5.1,
-        "cap": 72.73
+        "rr": 1.59,
+        "cap": 72.52
       },
-      "score": "3/7",
-      "gate": false,
-      "tfs": "1m✅ 3m✅ 5m✅ 15m⚠️ 1h⚠️ 4h⚠️ 1d❌",
+      "score": "1/7",
+      "gate": true,
+      "tfs": "1m⚠️ 3m⚠️ 5m✅ 15m⚠️ 1h⚠️ 4h⚠️ 1d❌",
       "ev": {
         "verdict": "STAY OUT",
-        "vol": "Volume WEAK · 0.5x avg → STAY OUT",
-        "mom": "RSI 65 · Stoch 19/37 falling · no divergence"
+        "vol": "Volume WEAK · 2.8x avg → STAY OUT",
+        "mom": "RSI 54 · Stoch 36/28 rising · no divergence"
       }
     }
   ],
   "pulse": {
-    "found": 294,
-    "opps": 83,
+    "found": 295,
+    "opps": 84,
     "locked": 0,
-    "since": "2026-11-22T08:07:32.637Z",
+    "since": "2026-11-22T08:17:35.618Z",
     "partial": false
   },
   "flowRules": {
