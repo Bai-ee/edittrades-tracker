@@ -1,32 +1,6 @@
 {
-  "closedThrough": "2026-11-24T10:07:00.000Z",
+  "closedThrough": "2026-11-24T10:17:00.000Z",
   "board": [
-    {
-      "ref": "a6223fd9",
-      "sym": "SOL",
-      "tf": "3m",
-      "dir": "short",
-      "stage": "lockable",
-      "st": "triggering",
-      "lv": {
-        "ent": 70.55,
-        "stop": 71.02,
-        "inv": 71.02,
-        "tp1": 69.49,
-        "tp2": 67.37,
-        "tp2src": "level",
-        "rr": 2.26,
-        "cap": 70.32
-      },
-      "score": "4/7",
-      "gate": true,
-      "tfs": "1m⚠️ 3m⚠️ 5m✅ 15m⚠️ 1h✅ 4h✅ 1d✅",
-      "ev": {
-        "verdict": "STAY OUT",
-        "vol": "Volume WEAK · 4.9x avg → STAY OUT",
-        "mom": "RSI 43 · Stoch 25/20 rising · bullish div ⚠️"
-      }
-    },
     {
       "ref": "7cc7a6e0",
       "sym": "SOL",
@@ -46,7 +20,7 @@
       },
       "score": "4/7",
       "gate": true,
-      "tfs": "1m⚠️ 3m⚠️ 5m✅ 15m⚠️ 1h✅ 4h✅ 1d✅",
+      "tfs": "1m✅ 3m⚠️ 5m⚠️ 15m⚠️ 1h✅ 4h✅ 1d✅",
       "ev": {
         "verdict": "STAY OUT",
         "vol": "Volume WEAK · 0.3x avg → STAY OUT",
@@ -72,11 +46,37 @@
       },
       "score": "4/7",
       "gate": true,
-      "tfs": "1m⚠️ 3m⚠️ 5m✅ 15m⚠️ 1h✅ 4h✅ 1d✅",
+      "tfs": "1m✅ 3m⚠️ 5m⚠️ 15m⚠️ 1h✅ 4h✅ 1d✅",
       "ev": {
         "verdict": "STAY OUT",
         "vol": "Volume WEAK · 0.3x avg → STAY OUT",
         "mom": "RSI 39 · Stoch 17/29 falling · no divergence"
+      }
+    },
+    {
+      "ref": "809b50fc",
+      "sym": "BTC",
+      "tf": "1h",
+      "dir": "short",
+      "stage": "found",
+      "st": "forming",
+      "lv": {
+        "ent": 59362.8,
+        "stop": 60883.4,
+        "inv": 60883.4,
+        "tp1": 54205.3,
+        "tp2": 51626.55,
+        "tp2src": "1.5x",
+        "rr": 3.39,
+        "cap": 58633.68
+      },
+      "score": "3/7",
+      "gate": true,
+      "tfs": "1m✅ 3m⚠️ 5m⚠️ 15m⚠️ 1h✅ 4h✅ 1d⚠️",
+      "ev": {
+        "verdict": "STAY OUT",
+        "vol": "Volume WEAK · 0.5x avg → STAY OUT",
+        "mom": "RSI 37 · Stoch 27/35 falling · no divergence"
       }
     }
   ],
@@ -84,7 +84,7 @@
     "found": 217,
     "opps": 78,
     "locked": 0,
-    "since": "2026-11-23T10:07:34.017Z",
+    "since": "2026-11-23T10:17:34.604Z",
     "partial": false
   },
   "flowRules": {
