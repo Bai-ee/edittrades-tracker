@@ -1,32 +1,6 @@
 {
-  "closedThrough": "2026-11-25T02:17:00.000Z",
+  "closedThrough": "2026-11-25T02:27:00.000Z",
   "board": [
-    {
-      "ref": "942bf2f9",
-      "sym": "BTC",
-      "tf": "1h",
-      "dir": "short",
-      "stage": "lockable",
-      "st": "triggering",
-      "lv": {
-        "ent": 59362.8,
-        "stop": 60267.6,
-        "inv": 60267.6,
-        "tp1": 56968,
-        "tp2": 55770.6,
-        "tp2src": "1.5x",
-        "rr": 2.65,
-        "cap": 58578.25
-      },
-      "score": "5/7",
-      "gate": true,
-      "tfs": "1m✅ 3m⚠️ 5m✅ 15m✅ 1h✅ 4h✅ 1d⚠️",
-      "ev": {
-        "verdict": "CAUTION",
-        "vol": "Volume OK · 1.4x avg → GO",
-        "mom": "RSI 38 · Stoch 45/66 falling · bullish div ⚠️"
-      }
-    },
     {
       "ref": "6835fe0e",
       "sym": "ETH",
@@ -46,11 +20,37 @@
       },
       "score": "4/7",
       "gate": true,
-      "tfs": "1m✅ 3m⚠️ 5m⚠️ 15m✅ 1h✅ 4h✅ 1d⚠️",
+      "tfs": "1m⚠️ 3m✅ 5m⚠️ 15m✅ 1h✅ 4h✅ 1d⚠️",
       "ev": {
         "verdict": "STAY OUT",
         "vol": "Volume WEAK · 0.8x avg → STAY OUT",
         "mom": "RSI 35 · Stoch 37/59 falling · no divergence"
+      }
+    },
+    {
+      "ref": "942bf2f9",
+      "sym": "BTC",
+      "tf": "1h",
+      "dir": "short",
+      "stage": "lockable",
+      "st": "triggering",
+      "lv": {
+        "ent": 59362.8,
+        "stop": 60267.6,
+        "inv": 60267.6,
+        "tp1": 56968,
+        "tp2": 55770.6,
+        "tp2src": "1.5x",
+        "rr": 2.65,
+        "cap": 58578.25
+      },
+      "score": "3/7",
+      "gate": true,
+      "tfs": "1m⚠️ 3m⚠️ 5m⚠️ 15m✅ 1h✅ 4h✅ 1d⚠️",
+      "ev": {
+        "verdict": "CAUTION",
+        "vol": "Volume OK · 1.4x avg → GO",
+        "mom": "RSI 38 · Stoch 45/66 falling · bullish div ⚠️"
       }
     },
     {
@@ -70,9 +70,9 @@
         "rr": 3.01,
         "cap": 67.27
       },
-      "score": "6/7",
+      "score": "4/7",
       "gate": true,
-      "tfs": "1m✅ 3m⚠️ 5m✅ 15m✅ 1h✅ 4h✅ 1d✅",
+      "tfs": "1m⚠️ 3m⚠️ 5m⚠️ 15m✅ 1h✅ 4h✅ 1d✅",
       "ev": {
         "verdict": "GO",
         "vol": "Volume STRONG · 2.1x avg · quiet flag → GO",
@@ -82,9 +82,9 @@
   ],
   "pulse": {
     "found": 281,
-    "opps": 128,
+    "opps": 125,
     "locked": 0,
-    "since": "2026-11-24T02:17:32.781Z",
+    "since": "2026-11-24T02:27:32.943Z",
     "partial": false
   },
   "flowRules": {
