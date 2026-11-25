@@ -1,6 +1,32 @@
 {
-  "closedThrough": "2026-11-25T09:17:00.000Z",
+  "closedThrough": "2026-11-25T09:27:00.000Z",
   "board": [
+    {
+      "ref": "d16a001a",
+      "sym": "SOL",
+      "tf": "5m",
+      "dir": "short",
+      "stage": "lockable",
+      "st": "confirmed",
+      "lv": {
+        "ent": 67.62,
+        "stop": 68.31,
+        "inv": 68.31,
+        "tp1": 66.31,
+        "tp2": 65.66,
+        "tp2src": "1.5x",
+        "rr": 1.9,
+        "cap": 67.23
+      },
+      "score": "5/7",
+      "gate": true,
+      "tfs": "1m⚠️ 3m⚠️ 5m✅ 15m✅ 1h✅ 4h✅ 1d✅",
+      "ev": {
+        "verdict": "STAY OUT",
+        "vol": "Volume WEAK · 0.5x avg → STAY OUT",
+        "mom": "RSI 36 · Stoch 18/21 falling · bullish div ⚠️"
+      }
+    },
     {
       "ref": "beaf59fb",
       "sym": "SOL",
@@ -18,39 +44,13 @@
         "rr": 1.85,
         "cap": 67.03
       },
-      "score": "6/7",
+      "score": "5/7",
       "gate": true,
-      "tfs": "1m⚠️ 3m✅ 5m✅ 15m✅ 1h✅ 4h✅ 1d✅",
+      "tfs": "1m⚠️ 3m⚠️ 5m✅ 15m✅ 1h✅ 4h✅ 1d✅",
       "ev": {
         "verdict": "GO",
         "vol": "Volume OK · 1x avg → GO",
         "mom": "RSI 28 · Stoch 33/37 falling · no divergence"
-      }
-    },
-    {
-      "ref": "d16a001a",
-      "sym": "SOL",
-      "tf": "5m",
-      "dir": "short",
-      "stage": "lockable",
-      "st": "triggering",
-      "lv": {
-        "ent": 67.62,
-        "stop": 68.31,
-        "inv": 68.31,
-        "tp1": 66.31,
-        "tp2": 65.66,
-        "tp2src": "1.5x",
-        "rr": 1.9,
-        "cap": 67.24
-      },
-      "score": "6/7",
-      "gate": true,
-      "tfs": "1m⚠️ 3m✅ 5m✅ 15m✅ 1h✅ 4h✅ 1d✅",
-      "ev": {
-        "verdict": "STAY OUT",
-        "vol": "Volume WEAK · 0.5x avg → STAY OUT",
-        "mom": "RSI 32 · Stoch 26/49 falling · bullish div ⚠️"
       }
     },
     {
@@ -81,10 +81,10 @@
     }
   ],
   "pulse": {
-    "found": 317,
+    "found": 318,
     "opps": 135,
     "locked": 0,
-    "since": "2026-11-24T09:17:42.156Z",
+    "since": "2026-11-24T09:27:32.711Z",
     "partial": false
   },
   "flowRules": {
