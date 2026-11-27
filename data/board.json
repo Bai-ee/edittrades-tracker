@@ -1,32 +1,6 @@
 {
-  "closedThrough": "2026-11-27T23:17:00.000Z",
+  "closedThrough": "2026-11-27T23:27:00.000Z",
   "board": [
-    {
-      "ref": "e46460bb",
-      "sym": "ETH",
-      "tf": "1m",
-      "dir": "short",
-      "stage": "lockable",
-      "st": "triggering",
-      "lv": {
-        "ent": 1655.22,
-        "stop": 1657.76,
-        "inv": 1657.76,
-        "tp1": 1651.65,
-        "tp2": 1649,
-        "tp2src": "level",
-        "rr": 1.41,
-        "cap": 1653.75
-      },
-      "score": "5/7",
-      "gate": true,
-      "tfs": "1m⚠️ 3m✅ 5m✅ 15m⚠️ 1h✅ 4h✅ 1d✅",
-      "ev": {
-        "verdict": "STAY OUT",
-        "vol": "Volume WEAK · 0.7x avg → STAY OUT",
-        "mom": "RSI 47 · Stoch 25/22 rising · no divergence"
-      }
-    },
     {
       "ref": "db6b6728",
       "sym": "ETH",
@@ -44,9 +18,9 @@
         "rr": 2.55,
         "cap": 1620.82
       },
-      "score": "5/7",
+      "score": "4/7",
       "gate": true,
-      "tfs": "1m⚠️ 3m✅ 5m✅ 15m⚠️ 1h✅ 4h✅ 1d✅",
+      "tfs": "1m⚠️ 3m⚠️ 5m✅ 15m⚠️ 1h✅ 4h✅ 1d✅",
       "ev": {
         "verdict": "STAY OUT",
         "vol": "Volume WEAK · 0.3x avg → STAY OUT",
@@ -70,21 +44,47 @@
         "rr": 1.99,
         "cap": 1644.5
       },
-      "score": "5/7",
+      "score": "4/7",
       "gate": true,
-      "tfs": "1m⚠️ 3m✅ 5m✅ 15m⚠️ 1h✅ 4h✅ 1d✅",
+      "tfs": "1m⚠️ 3m⚠️ 5m✅ 15m⚠️ 1h✅ 4h✅ 1d✅",
       "ev": {
         "verdict": "STAY OUT",
         "vol": "Volume WEAK · 1x avg → STAY OUT",
         "mom": "RSI 35 · Stoch 21/14 rising · no divergence"
       }
+    },
+    {
+      "ref": "4f356de6",
+      "sym": "ETH",
+      "tf": "3m",
+      "dir": "short",
+      "stage": "found",
+      "st": "forming",
+      "lv": {
+        "ent": 1654.85,
+        "stop": 1658.96,
+        "inv": 1658.96,
+        "tp1": 1642.94,
+        "tp2": 1633.66,
+        "tp2src": "level",
+        "rr": 2.9,
+        "cap": 1652.2
+      },
+      "score": "4/7",
+      "gate": true,
+      "tfs": "1m⚠️ 3m⚠️ 5m✅ 15m⚠️ 1h✅ 4h✅ 1d✅",
+      "ev": {
+        "verdict": "CAUTION",
+        "vol": "Volume OK · 2.5x avg → GO",
+        "mom": "RSI 48 · Stoch 80/77 rising · no divergence"
+      }
     }
   ],
   "pulse": {
-    "found": 287,
+    "found": 288,
     "opps": 103,
     "locked": 0,
-    "since": "2026-11-26T23:17:33.207Z",
+    "since": "2026-11-26T23:27:34.697Z",
     "partial": false
   },
   "flowRules": {
