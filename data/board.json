@@ -1,5 +1,5 @@
 {
-  "closedThrough": "2026-11-27T07:47:00.000Z",
+  "closedThrough": "2026-11-27T07:57:00.000Z",
   "board": [
     {
       "ref": "31a791d4",
@@ -18,13 +18,39 @@
         "rr": 3.91,
         "cap": 73.78
       },
-      "score": "3/7",
+      "score": "5/7",
       "gate": true,
-      "tfs": "1m✅ 3m⚠️ 5m⚠️ 15m✅ 1h✅ 4h⚠️ 1d❌",
+      "tfs": "1m✅ 3m✅ 5m✅ 15m✅ 1h✅ 4h⚠️ 1d❌",
       "ev": {
         "verdict": "STAY OUT",
         "vol": "Volume WEAK · 0.9x avg → STAY OUT",
         "mom": "RSI 59 · Stoch 8/12 oversold · bearish div ⚠️"
+      }
+    },
+    {
+      "ref": "444dfe27",
+      "sym": "ETH",
+      "tf": "3m",
+      "dir": "long",
+      "stage": "found",
+      "st": "proto",
+      "lv": {
+        "ent": 1737.04,
+        "stop": 1729.87,
+        "inv": 1729.87,
+        "tp1": 1743.61,
+        "tp2": 1748.29,
+        "tp2src": "level",
+        "rr": 0.92,
+        "cap": 1741.57
+      },
+      "score": "2/7",
+      "gate": true,
+      "tfs": "1m⚠️ 3m✅ 5m✅ 15m⚠️ 1h⚠️ 4h⚠️ 1d❌",
+      "ev": {
+        "verdict": "STAY OUT",
+        "vol": "Volume WEAK · 3.4x avg → STAY OUT",
+        "mom": "RSI 51 · Stoch 87/70 rising · no divergence"
       }
     },
     {
@@ -44,47 +70,21 @@
         "rr": 2.5,
         "cap": 75.57
       },
-      "score": "3/7",
+      "score": "5/7",
       "gate": false,
-      "tfs": "1m✅ 3m⚠️ 5m⚠️ 15m✅ 1h✅ 4h⚠️ 1d❌",
+      "tfs": "1m✅ 3m✅ 5m✅ 15m✅ 1h✅ 4h⚠️ 1d❌",
       "ev": {
         "verdict": "CAUTION",
         "vol": "Volume OK · 1.1x avg → GO",
         "mom": "RSI 61 · Stoch 97/98 overbought · no divergence"
       }
-    },
-    {
-      "ref": "9b03bc06",
-      "sym": "ETH",
-      "tf": "5m",
-      "dir": "short",
-      "stage": "watch",
-      "st": "confirmed",
-      "lv": {
-        "ent": 1729.56,
-        "stop": 1737.04,
-        "inv": 1737.04,
-        "tp1": 1706.19,
-        "tp2": 1693.91,
-        "tp2src": "level",
-        "rr": 3.12,
-        "cap": 1724.52
-      },
-      "score": "1/7",
-      "gate": false,
-      "tfs": "1m⚠️ 3m⚠️ 5m⚠️ 15m⚠️ 1h⚠️ 4h⚠️ 1d✅",
-      "ev": {
-        "verdict": "CAUTION",
-        "vol": "Volume OK · 1.2x avg → GO",
-        "mom": "RSI 36 · Stoch 17/38 falling · no divergence"
-      }
     }
   ],
   "pulse": {
-    "found": 276,
-    "opps": 107,
+    "found": 277,
+    "opps": 108,
     "locked": 0,
-    "since": "2026-11-26T07:47:35.048Z",
+    "since": "2026-11-26T07:57:33.847Z",
     "partial": false
   },
   "flowRules": {
