@@ -1,6 +1,6 @@
 # EditTrades call tracker report
 
-Generated 2026-11-28 09:28Z. R is gross, before fees and slippage. Not evidence of an edge. Scores the engine's calls against later closed candles.
+Generated 2026-11-28 09:38Z. R is gross, before fees and slippage. Not evidence of an edge. Scores the engine's calls against later closed candles.
 
 
 ## Strategy scoreboard · each from its own start
@@ -21,7 +21,7 @@ TP1 or stop from the flag plan’s own levels, stop floored at the net floor (ma
 
 ### HTF-anchored entries · LIVE · TRADABLE
 
-Since 2026-09-28 (days live 61).
+Since 2026-09-28 (days live 61.1).
 
 | Signals | Resolved | Wins | Win % | Net R mean | Net R median | Net R 90% LB | Max DD (R) | Toward 30 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -77,7 +77,7 @@ _provisional; not evidence of an edge_
 
 | Expectancy 7d | Scored 7d | Win rate 7d | Fills 7d | Losing streak 7d | Avg win R 7d | Last capture |
 | --- | --- | --- | --- | --- | --- | --- |
-| +0.94R | 6 | 50% | 6 / 6 | 2 | +2.88R | 2026-11-28 09:27Z |
+| +0.94R | 6 | 50% | 6 / 6 | 2 | +2.88R | 2026-11-28 09:37Z |
 
 
 ## Class check
@@ -118,7 +118,7 @@ By class:
 
 | Class | Calls | Fills | TP1 | Stop | Open | Win rate | Exp. (gross R) | Net exp. (net of fees) | Avg net R:R (plan) | Max loss streak | Median min to TP1 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| BAD | 719 | 222 | 151 | 69 | 2 | 68.6% | −0.02R | −0.34R | 0.33 | 9 | 21 |
+| BAD | 718 | 221 | 150 | 69 | 2 | 68.5% | −0.03R | −0.34R | 0.33 | 9 | 21 |
 | WATCH | 481 | 228 | 73 | 153 | 2 | 32.3% | +0.28R | −1.03R | – | 13 | 43 |
 | GOOD | 6 | 6 | 3 | 3 | 0 | 50% | +0.94R | +0.65R | 2.08 | 2 | 722 |
 
@@ -127,7 +127,7 @@ By reason:
 | Reason | Calls | Fills | TP1 | Stop | Open | Win rate | Exp. (gross R) | Net exp. (net of fees) | Avg net R:R (plan) | Max loss streak | Median min to TP1 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | need_confirmed_flag_plan | 481 | 228 | 73 | 153 | 2 | 32.3% | +0.28R | −1.03R | – | 13 | 43 |
-| rr_below_min | 310 | 222 | 151 | 69 | 2 | 68.6% | −0.02R | −0.34R | 0.33 | 9 | 21 |
+| rr_below_min | 309 | 221 | 150 | 69 | 2 | 68.5% | −0.03R | −0.34R | 0.33 | 9 | 21 |
 | room_at_entry | 248 | 0 | 0 | 0 | 0 | – | – | – | – | 0 | – |
 | chase | 161 | 0 | 0 | 0 | 0 | – | – | – | – | 0 | – |
 | ready_flag_plan | 6 | 6 | 3 | 3 | 0 | 50% | +0.94R | +0.65R | 2.08 | 2 | 722 |
@@ -149,7 +149,7 @@ By class:
 
 | Class | Calls | Fills | TP1 | Stop | Open | Win rate | Exp. (gross R) | Net exp. (net of fees) | Avg net R:R (plan) | Max loss streak | Median min to TP1 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| BAD | 3082 | 948 | 632 | 312 | 2 | 67% | −0.01R | −0.33R | 0.48 | 9 | 24 |
+| BAD | 3081 | 947 | 632 | 311 | 2 | 67% | −0.01R | −0.33R | 0.48 | 9 | 24 |
 | WATCH | 2156 | 981 | 288 | 686 | 2 | 29.6% | +0.16R | −2.29R | 2.7 | 25 | 35 |
 | GOOD | 49 | 49 | 15 | 33 | 0 | 31.3% | +0.42R | +0.16R | 2.56 | 7 | 210 |
 
@@ -158,7 +158,7 @@ By reason:
 | Reason | Calls | Fills | TP1 | Stop | Open | Win rate | Exp. (gross R) | Net exp. (net of fees) | Avg net R:R (plan) | Max loss streak | Median min to TP1 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | need_confirmed_flag_plan | 2101 | 947 | 281 | 660 | 2 | 29.9% | +0.17R | −2.36R | – | 25 | 34 |
-| rr_below_min | 1423 | 948 | 632 | 312 | 2 | 67% | −0.01R | −0.33R | 0.48 | 9 | 24 |
+| rr_below_min | 1422 | 947 | 632 | 311 | 2 | 67% | −0.01R | −0.33R | 0.48 | 9 | 24 |
 | chase | 852 | 0 | 0 | 0 | 0 | – | – | – | – | 0 | – |
 | room_at_entry | 805 | 0 | 0 | 0 | 0 | – | – | – | – | 0 | – |
 | entry_condition | 55 | 34 | 7 | 26 | 0 | 21.2% | −0.06R | −0.31R | 2.7 | 8 | 114 |
@@ -283,4 +283,4 @@ _provisional; not evidence of an edge_
 
 _provisional; not evidence of an edge_
 
-Captures 28653, gaps 51, DATA_UNAVAILABLE 6, mark drift |bps| median 3.3 / max 153.3, missing 1m candles 0.
+Captures 28656, gaps 51, DATA_UNAVAILABLE 6, mark drift |bps| median 3.3 / max 153.3, missing 1m candles 0.
